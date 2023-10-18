@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "dropout-degens-core",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "npx prisma db pull && npx prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5",
+    "@whop-sdk/api": "^1.1.1",
+    "@whop-sdk/core": "^0.0.4",
+    "checkeasy": "^1.1.0",
+    "discord.js": "^14",
+    "prisma": "^5",
+    "stripe": "^12.18.0",
+    "typescript": "^5",
+    "yaml": "^2.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  }
+}

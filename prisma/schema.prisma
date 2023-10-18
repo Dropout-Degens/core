@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model coupons {
+  whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
+  stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
+  associated_user BigInt? @map("associated-user") @db.UnsignedBigInt
+  promo_code      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
+  discount_amount Float   @map("discount-amount") @db.Float
+  duration        Int     @db.SmallInt
+  billing_period  String  @map("billing-period") @db.TinyText
+  plan_type       Int     @map("plan-type") @db.TinyInt
+
+  @@index([associated_user], map: "associated-user")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model users {
+  snowflake                      BigInt  @id @db.UnsignedBigInt
+  auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
+  auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
+  discord_email                  String? @map("discord-email") @db.Text
+  discord_pfp                    String? @map("discord-pfp") @db.Text
+  discord_name                   String? @map("discord-name") @db.Text
+  subscription_type              Int     @default(0) @map("subscription-type") @db.UnsignedInt
+  subscription_expiration        BigInt  @default(-1) @map("subscription-expiration")
+  discord_access_token           String? @map("discord-access-token") @db.LongText
+  discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry") @db.UnsignedBigInt
+  discord_refresh_token          String? @map("discord-refresh-token") @db.LongText
+  timezone                       String  @default(dbgenerated("(_utf8mb4\\'America/New_York\\')")) @db.Text
+  timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted") @db.UnsignedBigInt
+  weekly_reward_last_claimed     String  @default(dbgenerated("(_utf8mb4\\'December 31 1969 20:00 GMT-4\\')")) @map("weekly-reward-last-claimed") @db.LongText
+  weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak") @db.UnsignedInt
+  weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best") @db.UnsignedInt
+  discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+  whop_membership_id             String? @unique(map: "whop-id_UNIQUE") @map("whop-membership-id") @db.VarChar(45)
+  whop_email                     String? @map("whop-email") @db.Text
+  stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
+}
