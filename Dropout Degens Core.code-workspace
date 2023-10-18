@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"javascript.preferences.importModuleSpecifierEnding": "index",
+		"cSpell.customDictionaries": {
+			"degen-words": {
+				"name": "Degen Words",
+				"addWords": true,
+				"scope": "workspace",
+				"description": "Custom dictionary for the degens' words",
+				"path": "./.vscode/degen-words.cspell"
+			},
+			"extended-english": {
+				"name": "Extended English",
+				"addWords": true,
+				"scope": "workspace",
+				"description": "Valid English words that cSpell doesn't recognize",
+				"path": "./.vscode/extended-english.cspell"
+			},
+			"nerd-words": {
+				"name": "Nerd Words",
+				"addWords": true,
+				"scope": "workspace",
+				"description": "Words for nerds!",
+				"path": "./.vscode/nerd-words.cspell"
+			},
+		},
+	}
+}

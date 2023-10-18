@@ -3,8 +3,7 @@
   "name": "dropout-degens-core",
   "private": true,
   "scripts": {
-    "build": "tsc",
-    "postinstall": "npx prisma db pull && npx prisma generate"
+    "build": "tsc"
   },
   "dependencies": {
     "@prisma/client": "^5",
@@ -15,7 +14,7 @@
     "prisma": "^5",
     "stripe": "^12.18.0",
     "typescript": "^5",
-    "yaml": "^2.3.2"
+    "yaml": "^2.3"
   },
   "devDependencies": {
     "eslint": "^8.51.0"

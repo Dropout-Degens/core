@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "module": "NodeNext",
+        "moduleResolution": "Node16",
+        "outDir": "dist",
+        "pretty": true,
+        "removeComments": true,
+        "strict": true,
+        "target": "ESNext",
+        "rootDir": "./src",
+
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+
+        "sourceMap": false,
+        "declaration": false,
+        "declarationMap": false,
+
+        // Thank you, TypeScript, for hating the `long` module.
+        "skipLibCheck": true,
+
+        "types": [
+            "node",
+        ],
+
+    },
+    "include": [
+        "./src/**/*.ts",
+    ]
+}
