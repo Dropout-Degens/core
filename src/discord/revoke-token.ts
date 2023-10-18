@@ -1,7 +1,7 @@
 import { users } from "@prisma/client";
-import db from "../db";
+import db from "../db.js";
 import { Routes } from 'discord.js';
-import { botREST } from "./REST";
+import { botREST } from "./REST.js";
 
 
 export async function revokeToken(user: Pick<users, 'snowflake'|'discord_access_token'>) {
@@ -11,22 +11,22 @@ export async function revokeToken(user: Pick<users, 'snowflake'|'discord_access_
     const token = user?.discord_access_token;
     if (!token) return;
 
-    await Promise.all([
-
-        db.users.update({where: {snowflake: user.snowflake}, data: {discord_access_token: null, discord_refresh_token: null, discord_access_expiry: 0}}).then(
-            updatedUser => Object.assign(user, updatedUser)
-        ),
-
-        botREST.post(Routes.oauth2TokenRevocation(), {
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded', },
-            body: new URLSearchParams({
-                token,
-                client_id: process.env.DISCORD_CLIENT_ID,
-                client_secret: process.env.DISCORD_CLIENT_SECRET,
-            }),
+    await botREST.post(Routes.oauth2TokenRevocation(), {
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded', },
+        body: new URLSearchParams({
+            token,
+            client_id: process.env.DISCORD_CLIENT_ID,
+            client_secret: process.env.DISCORD_CLIENT_SECRET,
         }),
+    }),
 
-    ]);
+    Object.assign(user, await db.users.update({
+        where: {snowflake: user.snowflake},
+        data: {
+            discord_access_token: null,
+            discord_refresh_token: null,
+            discord_access_expiry: 0
+        }}));
 
     return user;
 }

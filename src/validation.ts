@@ -1,5 +1,5 @@
 import { object, int, oneOf, string, optional, arrayOf, Validator } from 'checkeasy';
-import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, Discounts, PurchasablePlan, UsersDiscount } from './definitions';
+import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, Discounts, PurchasablePlan, UsersDiscount } from './definitions.js';
 
 type ObjectValidator<T> = { [K in keyof T]: Validator<T[K]> };
 

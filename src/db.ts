@@ -1,4 +1,3 @@
-import './env.js';
 import { PrismaClient } from '@prisma/client'
 
 if (!process.env.DATABASE_URL) throw new Error('No DATABASE_URL env var');

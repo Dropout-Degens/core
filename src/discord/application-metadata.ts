@@ -1,7 +1,7 @@
 import { users } from "@prisma/client";
 import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, RouteBases, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody } from "discord.js";
-import RoleFlags from "../definitions";
-import { bearerTokenREST, botREST } from "./REST";
+import RoleFlags from "../definitions.js";
+import { bearerTokenREST, botREST } from "./REST.js";
 
 export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnectionMetadata, 'key'>>;
 

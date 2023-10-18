@@ -1,4 +1,4 @@
-import { BillingPeriod, PurchasablePlan } from "./definitions"
+import { BillingPeriod, PurchasablePlan } from "./definitions.js"
 
 export const StripePrices = {
     AllAccess: {
