@@ -19,5 +19,17 @@
   },
   "devDependencies": {
     "eslint": "^8.51.0"
+  },
+  "exports": {
+    "./discord": "./src/discord/index.ts",
+    "./discord/application-metadata": "./src/discord/application-metadata.ts",
+    "./discord/refresh-token": "./src/discord/refresh-token.ts",
+    "./discord/REST": "./src/discord/REST.ts",
+    "./discord/revoke-token": "./src/discord/revoke-token.ts",
+    "./db": "./src/db.ts",
+    "./definitions": "./src/definition.ts",
+    ".": "./src/index.ts",
+    "./prices": "./src/prices.ts",
+    "./validation": "./src/validation.ts"
   }
 }
