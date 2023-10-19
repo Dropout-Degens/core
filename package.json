@@ -30,7 +30,7 @@
     "./definitions": "./src/definition.ts",
     ".": "./src/index.ts",
     "./prices": "./src/prices.ts",
-    "./stringify-role": "./src/stringify-role.ts",
+    "./stringify": "./src/stringify.ts",
     "./validation": "./src/validation.ts"
   }
 }

@@ -1,4 +1,4 @@
-import RoleFlags from "./definitions.js"
+import RoleFlags, { DiscountSource } from "./definitions.js"
 
 
 
@@ -84,4 +84,12 @@ export function stringifyPlan(role: number): string {
     if (role & RoleFlags.PremiumRole8) return 'Unknown Premium Subscription'
 
     return 'No Plan'
+}
+
+export function stringifyDiscountSource(source: DiscountSource) {
+    switch (source) {
+        case DiscountSource['weekly-reward']: return 'Weekly Reward';
+        case DiscountSource.manual: return 'Special Considerations';
+        default: return 'Unknown Source';
+    }
 }
