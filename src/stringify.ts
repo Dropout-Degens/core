@@ -31,15 +31,15 @@ export function stringifyUserRole(role: number): string {
     if (role & RoleFlags.VanityRole7) return 'Unknown Premium Vanity Role'
     if (role & RoleFlags.VanityRole8) return 'Unknown Premium Vanity Role'
 
-    if (role & RoleFlags.AllAccess) return 'All Access';
-    if (role & RoleFlags.PlayerProps) return 'Player Props';
-    if (role & RoleFlags.Sportsbook) return 'Sportsbook';
-    if (role & RoleFlags.PremiumRole3) return 'Unknown Premium Role'
-    if (role & RoleFlags.PremiumRole4) return 'Unknown Premium Role'
-    if (role & RoleFlags.PremiumRole5) return 'Unknown Premium Role'
-    if (role & RoleFlags.PremiumRole6) return 'Unknown Premium Role'
-    if (role & RoleFlags.PremiumRole7) return 'Unknown Premium Role'
-    if (role & RoleFlags.PremiumRole8) return 'Unknown Premium Role'
+    if (role & RoleFlags.AllAccess) return 'All Access Subscriber';
+    if (role & RoleFlags.PlayerProps) return 'Player Props Subscriber';
+    if (role & RoleFlags.Sportsbook) return 'Sportsbook Subscriber';
+    if (role & RoleFlags.PremiumRole3) return 'Unknown Type of Premium Subscriber'
+    if (role & RoleFlags.PremiumRole4) return 'Unknown Type of Premium Subscriber'
+    if (role & RoleFlags.PremiumRole5) return 'Unknown Type of Premium Subscriber'
+    if (role & RoleFlags.PremiumRole6) return 'Unknown Type of Premium Subscriber'
+    if (role & RoleFlags.PremiumRole7) return 'Unknown Type of Premium Subscriber'
+    if (role & RoleFlags.PremiumRole8) return 'Unknown Type of Premium Subscriber'
 
     return 'Free User'
 }
