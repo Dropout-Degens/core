@@ -31,6 +31,7 @@
     ".": "./src/index.ts",
     "./prices": "./src/prices.ts",
     "./stringify": "./src/stringify.ts",
+    "./utils": "./src/utils.ts",
     "./validation": "./src/validation.ts"
   }
 }
