@@ -142,7 +142,7 @@ export interface CouponDefinition {
     amount: number;
 
     /** The type of subscription this coupon is applicable to */
-    planType: PurchasablePlan;
+    planType: Exclude<PurchasablePlan, PurchasablePlan.Any>;
 
     /** The billing period this coupon should apply to */
     billingPeriod: BillingPeriod;

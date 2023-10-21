@@ -1,12 +1,21 @@
-import { object, int, oneOf, string, optional, arrayOf, Validator } from 'checkeasy';
+import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError } from 'checkeasy';
 import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, Discounts, PurchasablePlan, UsersDiscount } from './definitions.js';
 
 type ObjectValidator<T> = Required<{ [K in keyof T]: Validator<T[K]> }>;
 
-export const validatePurchasableSubscriptionType = oneOf<PurchasablePlan>(Object.values(PurchasablePlan).filter(v => typeof v === 'number') as PurchasablePlan[]);
+export const validatePurchasableSubscriptionType = oneOf<Exclude<PurchasablePlan, PurchasablePlan.Any>>(Object.values(PurchasablePlan).filter(v => typeof v === 'number' && v !== PurchasablePlan.Any) as Exclude<PurchasablePlan, PurchasablePlan.Any>[]);
 
 export const validateBillingPeriod = oneOf<BillingPeriod>(Object.values(BillingPeriod));
 
+// make able to pass in a validator
+export function not<T>(value: T): Validator<T> {
+    return function notValidator<V>(v: V, path: string): Exclude<V, T> {
+        // @ts-ignore: This logic is completely fine. TypeScript just doesn't get it.
+        if (value === v) throw new ValidationError(`[${path}] This value is exactly the value we expected it not to be!`);
+        // @ts-ignore: This logic is completely fine. TypeScript just doesn't get it.
+        return v;
+    }
+};
 const CouponValidatorDefinitions = {
     amount: int({min: 0, max: 1}),
     planType: validatePurchasableSubscriptionType,
