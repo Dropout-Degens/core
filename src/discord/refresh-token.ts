@@ -13,7 +13,7 @@ export async function refreshToken(user: Pick<users, 'snowflake'|'discord_access
 
     const tokenResponse = await botREST.post(Routes.oauth2TokenExchange(), {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded', },
-        query: new URLSearchParams({
+        body: new URLSearchParams({
             grant_type: 'refresh_token',
             refresh_token: user.discord_refresh_token!,
             client_id: process.env.DISCORD_CLIENT_ID,
