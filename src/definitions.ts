@@ -15,8 +15,8 @@ export enum RoleFlags {
     UnknownStaff4   = 0b00010000000000000000000000000000,
     /** Reserved staff flag for potential later use */
     UnknownStaff5   = 0b00001000000000000000000000000000,
-    /** Reserved staff flag for potential later use */
-    UnknownStaff6   = 0b00000100000000000000000000000000,
+    /** An affiliate of Dropout Degens */
+    Degen           = 0b00000100000000000000000000000000,
     /** Cappers are the people who voice their opinions on who might win a game professionally */
     Capper          = 0b00000010000000000000000000000000,
     /** Staff get this one if they don't fit any other role */
@@ -27,8 +27,8 @@ export enum RoleFlags {
     AnyStaffRole    = 0b11111111000000000000000000000000,
 
 
-    /** An affiliate of Dropout Degens */
-    Degen           = 0b00000000100000000000000000000000,
+    /** Generic, reserved flag for potential later use */
+    Reserved1       = 0b00000000100000000000000000000000,
     /** Generic, reserved flag for potential later use */
     Reserved2       = 0b00000000010000000000000000000000,
     /** Generic, reserved flag for potential later use */
