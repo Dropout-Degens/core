@@ -21,14 +21,14 @@
     "eslint": "^8.51.0"
   },
   "exports": {
-    "./discord": "./src/discord/index.js",
+    "./discord/index.js": "./src/discord/index.js",
     "./discord/application-metadata.js": "./src/discord/application-metadata.js",
     "./discord/refresh-token.js": "./src/discord/refresh-token.js",
     "./discord/RES.jsT": "./src/discord/REST.js",
     "./discord/revoke-token.js": "./src/discord/revoke-token.js",
     "./db.js": "./src/db.js",
     "./definitions.js": "./src/definitions.js",
-    ".": "./src/index.js",
+    "./index.js": "./src/index.js",
     "./prices.js": "./src/prices.js",
     "./stringify.js": "./src/stringify.js",
     "./utils.js": "./src/utils.js",
