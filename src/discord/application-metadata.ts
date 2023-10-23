@@ -8,7 +8,7 @@ export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnect
 export const applicationMetadataSchemaObject = {
     karma: {
         name: 'Karma',
-        description: `Karma is a representation of how long you've been with Dropout Degens.`,
+        description: `Karma is a representation of how long you've active with Dropout Degens.`,
         type: ApplicationRoleConnectionMetadataType.IntegerGreaterThanOrEqual,
     },
     high_roller: {
@@ -18,12 +18,12 @@ export const applicationMetadataSchemaObject = {
     },
     sportsbook: {
         name: 'Sportsbook',
-        description: 'Your Dropout Degens subscription grants you access to our Sportsbook',
+        description: 'Your Dropout Degens subscription grants you access to our premium Sportsbook picks',
         type: ApplicationRoleConnectionMetadataType.BooleanEqual,
     },
     player_props: {
         name: 'Player Props',
-        description: 'Your Dropout Degens subscription grants you access to our Player Props',
+        description: 'Your Dropout Degens subscription grants you access to our premium Player Props picks',
         type: ApplicationRoleConnectionMetadataType.BooleanEqual,
     },
     staff: {
