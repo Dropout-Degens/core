@@ -7,11 +7,13 @@ export async function refreshToken(user: Pick<users, 'snowflake'|'discord_access
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
     if (!process.env.DISCORD_CLIENT_SECRET) throw new Error('Environment variable `DISCORD_CLIENT_SECRET` not set!');
 
+    if (!user.discord_refresh_token) throw new Error(`User by id ${user.snowflake} does not have a refresh token!`);
+
     if (!force && user.discord_access_expiry + 60000n > Date.now()) return;
 
     const tokenResponse = await botREST.post(Routes.oauth2TokenExchange(), {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded', },
-        body: new URLSearchParams({
+        query: new URLSearchParams({
             grant_type: 'refresh_token',
             refresh_token: user.discord_refresh_token!,
             client_id: process.env.DISCORD_CLIENT_ID,

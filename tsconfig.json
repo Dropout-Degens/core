@@ -3,11 +3,11 @@
         "esModuleInterop": true,
         "module": "NodeNext",
         "moduleResolution": "Node16",
-        "outDir": "dist",
         "pretty": true,
         "removeComments": true,
         "strict": true,
         "target": "ESNext",
+
         "rootDir": "./src",
 
         "allowJs": true,

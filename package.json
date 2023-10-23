@@ -2,7 +2,7 @@
   "type": "module",
   "name": "dropout-degens-core",
   "private": true,
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "scripts": {
     "build": "tsc"
   },
@@ -21,17 +21,17 @@
     "eslint": "^8.51.0"
   },
   "exports": {
-    "./discord": "./src/discord/index.ts",
-    "./discord/application-metadata": "./src/discord/application-metadata.ts",
-    "./discord/refresh-token": "./src/discord/refresh-token.ts",
-    "./discord/REST": "./src/discord/REST.ts",
-    "./discord/revoke-token": "./src/discord/revoke-token.ts",
-    "./db": "./src/db.ts",
-    "./definitions": "./src/definition.ts",
-    ".": "./src/index.ts",
-    "./prices": "./src/prices.ts",
-    "./stringify": "./src/stringify.ts",
-    "./utils": "./src/utils.ts",
-    "./validation": "./src/validation.ts"
+    "./discord": "./src/discord/index.js",
+    "./discord/application-metadata.js": "./src/discord/application-metadata.js",
+    "./discord/refresh-token.js": "./src/discord/refresh-token.js",
+    "./discord/RES.jsT": "./src/discord/REST.js",
+    "./discord/revoke-token.js": "./src/discord/revoke-token.js",
+    "./db.js": "./src/db.js",
+    "./definitions.js": "./src/definitions.js",
+    ".": "./src/index.js",
+    "./prices.js": "./src/prices.js",
+    "./stringify.js": "./src/stringify.js",
+    "./utils.js": "./src/utils.js",
+    "./validation.js": "./src/validation.js"
   }
 }

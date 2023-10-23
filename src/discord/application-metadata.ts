@@ -38,15 +38,6 @@ for (const key in applicationMetadataSchemaObject)
 
 export const applicationMetadataSchema = Object.values(applicationMetadataSchemaObject) as {[K in keyof typeof applicationMetadataSchemaObject]: typeof applicationMetadataSchemaObject[K] & {key: K}}[keyof typeof applicationMetadataSchemaObject][] satisfies RESTPutAPIApplicationRoleConnectionMetadataJSONBody;
 
-//const linkedRolesSchemaPutRequest = fetch(RouteBases.api + Routes.applicationRoleConnectionMetadata(process.env.DISCORD_CLIENT_ID!), {
-//    method: 'PUT',
-//    headers: {
-//        'Content-Type': 'application/json',
-//        'Authorization': `Bot ${process.env.DISCORD_BOT_TOKEN}`,
-//    },
-//    body: JSON.stringify(applicationMetadataSchema),
-//});
-
 export const linkedRolesSchemaPutRequest = botREST.put(Routes.applicationRoleConnectionMetadata(process.env.DISCORD_CLIENT_ID!), {
     body: applicationMetadataSchema,
 });
