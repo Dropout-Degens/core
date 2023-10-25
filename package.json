@@ -23,6 +23,7 @@
   "exports": {
     "./discord/index.js": "./src/discord/index.js",
     "./discord/application-metadata.js": "./src/discord/application-metadata.js",
+    "./discord/audit-log.js": "./src/discord/audit-log.js",
     "./discord/refresh-token.js": "./src/discord/refresh-token.js",
     "./discord/RES.jsT": "./src/discord/REST.js",
     "./discord/revoke-token.js": "./src/discord/revoke-token.js",
