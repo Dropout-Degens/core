@@ -8,7 +8,7 @@ export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnect
 export const applicationMetadataSchemaObject = {
     karma: {
         name: 'Karma',
-        description: `Karma is a representation of how long you've active with Dropout Degens.`,
+        description: `Karma is a representation of how long you've been active with Dropout Degens.`,
         type: ApplicationRoleConnectionMetadataType.IntegerGreaterThanOrEqual,
     },
     high_roller: {

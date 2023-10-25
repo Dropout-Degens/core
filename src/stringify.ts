@@ -7,9 +7,9 @@ export function stringifyUserRole(role: number): ['a'|'an', string] {
     if (role & RoleFlags.Admin) return ['an', 'Administrator'];
     if (role & RoleFlags.UnknownStaff2) return ['an', 'Unknown Type of Staff'];
     if (role & RoleFlags.UnknownStaff3) return ['an', 'Unknown Type of Staff'];
-    if (role & RoleFlags.UnknownStaff4) return ['an', 'Unknown Type of Staff'];
     if (role & RoleFlags.Degen) return ['a', 'Degen'];
     if (role & RoleFlags.Capper) return ['a', 'Capper'];
+    if (role & RoleFlags.Moderator) return ['a', 'Moderator'];
     if (role & RoleFlags.GenericStaff) return ['a', 'Staff Member'];
 
     //if (role & RoleFlags.Reserved1) return 'Unknown Subscription';
@@ -34,12 +34,12 @@ export function stringifyUserRole(role: number): ['a'|'an', string] {
     if (role & RoleFlags.AllAccess) return ['an', 'All Access Subscriber'];
     if (role & RoleFlags.PlayerProps) return ['a', 'Player Props Subscriber'];
     if (role & RoleFlags.Sportsbook) return ['a', 'Sportsbook Subscriber'];
-    if (role & RoleFlags.PremiumRole3) return ['an', 'Unknown Type of Premium Subscription'];
-    if (role & RoleFlags.PremiumRole4) return ['an', 'Unknown Type of Premium Subscription'];
-    if (role & RoleFlags.PremiumRole5) return ['an', 'Unknown Type of Premium Subscription'];
-    if (role & RoleFlags.PremiumRole6) return ['an', 'Unknown Type of Premium Subscription'];
-    if (role & RoleFlags.PremiumRole7) return ['an', 'Unknown Type of Premium Subscription'];
-    if (role & RoleFlags.PremiumRole8) return ['an', 'Unknown Type of Premium Subscription'];
+    if (role & RoleFlags.PremiumRole3) return ['an', 'Unknown Type of Premium Subscriber'];
+    if (role & RoleFlags.PremiumRole4) return ['an', 'Unknown Type of Premium Subscriber'];
+    if (role & RoleFlags.PremiumRole5) return ['an', 'Unknown Type of Premium Subscriber'];
+    if (role & RoleFlags.PremiumRole6) return ['an', 'Unknown Type of Premium Subscriber'];
+    if (role & RoleFlags.PremiumRole7) return ['an', 'Unknown Type of Premium Subscriber'];
+    if (role & RoleFlags.PremiumRole8) return ['an', 'Unknown Type of Premium Subscriber'];
 
     return ['a', 'free user'];
 }
@@ -48,12 +48,12 @@ export function stringifyUserRole(role: number): ['a'|'an', string] {
 
 export function stringifyPlan(role: number): string {
 
-    if (role & RoleFlags.Admin) return 'Administrator Status';
+    if (role & RoleFlags.Admin) return 'Administrator';
     if (role & RoleFlags.UnknownStaff2) return 'Unknown Staff Role';
     if (role & RoleFlags.UnknownStaff3) return 'Unknown Staff Role';
-    if (role & RoleFlags.UnknownStaff4) return 'Unknown Staff Role';
     if (role & RoleFlags.Degen) return 'Degen';
     if (role & RoleFlags.Capper) return 'Capper';
+    if (role & RoleFlags.Moderator) return 'Moderator';
     if (role & RoleFlags.GenericStaff) return 'Staff';
 
     if (role & RoleFlags.Reserved1) return 'Unknown Subscription';

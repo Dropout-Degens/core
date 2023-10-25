@@ -12,8 +12,8 @@ export enum RoleFlags {
     UnknownStaff2   = 0b0100000000000000000000000000000,
     /** Reserved staff flag for potential later use */
     UnknownStaff3   = 0b0010000000000000000000000000000,
-    /** Reserved staff flag for potential later use */
-    UnknownStaff4   = 0b0001000000000000000000000000000,
+    /** A moderator of Dropout Degens */
+    Moderator       = 0b0001000000000000000000000000000,
     /** An affiliate of Dropout Degens */
     Degen           = 0b0000100000000000000000000000000,
     /** Cappers are the people who voice their opinions on who might win a game professionally */
@@ -69,17 +69,17 @@ export enum RoleFlags {
     /** All of the flags that should be treated as Sportsbook */
     Sportsbook      = 0b1111111000000000000000000000001,
     /** Reserved premium role flag for potential later use */
-    PremiumRole3    = 0b0000000000000000010000000000000,
+    PremiumRole3    = 0b0000000000000000000000010000000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole4    = 0b0000000000000000001000000000000,
+    PremiumRole4    = 0b0000000000000000000000001000000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole5    = 0b0000000000000000000100000000000,
+    PremiumRole5    = 0b0000000000000000000000000100000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole6    = 0b0000000000000000000010000000000,
+    PremiumRole6    = 0b0000000000000000000000000010000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole7    = 0b0000000000000000000001000000000,
+    PremiumRole7    = 0b0000000000000000000000000001000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole8    = 0b0000000000000000000000100000000,
+    PremiumRole8    = 0b0000000000000000000000000000100,
 
     /** The two flags for All Access players */
     AllAccessRaw    = 0b0000000000000000000000000000011,
