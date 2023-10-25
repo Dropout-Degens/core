@@ -1,4 +1,4 @@
-import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError } from 'checkeasy';
+import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError, float } from 'checkeasy';
 import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, Discounts, PurchasablePlan, UsersDiscount } from './definitions.js';
 
 type ObjectValidator<T> = Required<{ [K in keyof T]: Validator<T[K]> }>;
@@ -17,10 +17,10 @@ export function not<T>(value: T): Validator<T> {
     }
 };
 const CouponValidatorDefinitions = {
-    amount: int({min: 0, max: 1}),
+    amount: float({min: 0, max: 1}),
     planType: validatePurchasableSubscriptionType,
     billingPeriod: validateBillingPeriod,
-    duration: int({min: 0}),
+    duration: float({min: 0}),
     promoCode: string({pattern: /^\d+-[a-zA-Z0-9]*-[a-zA-Z0-9]+-\d+-[\.0-9]+$/, max: 40}) as Validator<`${bigint}-${string}-${string}-${bigint}-${number}`>,
     source: oneOf<DiscountSource>([DiscountSource['weekly-reward'], DiscountSource.manual])
 } satisfies ObjectValidator<CouponDefinition>;

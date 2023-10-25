@@ -61,7 +61,7 @@ export async function recalcMetadata(user: Pick<users, 'subscription_type'|'disc
             sportsbook: user.subscription_type & RoleFlags.Sportsbook ? 1 : 0,
             player_props: user.subscription_type & RoleFlags.PlayerProps ? 1 : 0,
             high_roller: user.subscription_type & RoleFlags.Van_HighRoller ? 1 : 0,
-            staff: user.subscription_type * RoleFlags.AnyStaffRole ? 1 : 0,
+            staff: user.subscription_type & RoleFlags.AnyStaffRole ? 1 : 0,
         } as Record<keyof typeof applicationMetadataSchemaObject, string | number>,
         platform_name,
     } satisfies RESTPutAPICurrentUserApplicationRoleConnectionJSONBody;
