@@ -6,11 +6,6 @@ import { bearerTokenREST, botREST } from "./REST.js";
 export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnectionMetadata, 'key'>>;
 
 export const applicationMetadataSchemaObject = {
-    karma: {
-        name: 'Karma',
-        description: `Karma is a representation of how long you've been active with Dropout Degens.`,
-        type: ApplicationRoleConnectionMetadataType.IntegerGreaterThanOrEqual,
-    },
     high_roller: {
         name: 'High Roller',
         description: 'You are a High Roller',
@@ -30,6 +25,11 @@ export const applicationMetadataSchemaObject = {
         name: 'Staff',
         description: 'You are a staff member of Dropout Degens',
         type: ApplicationRoleConnectionMetadataType.BooleanEqual,
+    },
+    karma: {
+        name: 'Karma',
+        description: `Karma is a representation of how long you've been active with Dropout Degens.`,
+        type: ApplicationRoleConnectionMetadataType.IntegerGreaterThanOrEqual,
     },
 } as const satisfies Readonly<MetadataSchemaObject>;
 

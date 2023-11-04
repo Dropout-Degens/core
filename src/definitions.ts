@@ -11,7 +11,7 @@ export enum RoleFlags {
     /** Reserved staff flag for potential later use */
     UnknownStaff2   = 0b0100000000000000000000000000000,
     /** Reserved staff flag for potential later use */
-    UnknownStaff3   = 0b0010000000000000000000000000000,
+    Developer       = 0b0010000000000000000000000000000,
     /** A moderator of Dropout Degens */
     Moderator       = 0b0001000000000000000000000000000,
     /** An affiliate of Dropout Degens */

@@ -6,7 +6,7 @@ export function stringifyUserRole(role: number): ['a'|'an', string] {
 
     if (role & RoleFlags.Admin) return ['an', 'Administrator'];
     if (role & RoleFlags.UnknownStaff2) return ['an', 'Unknown Type of Staff'];
-    if (role & RoleFlags.UnknownStaff3) return ['an', 'Unknown Type of Staff'];
+    if (role & RoleFlags.Developer) return ['a', 'Developer'];
     if (role & RoleFlags.Degen) return ['a', 'Degen'];
     if (role & RoleFlags.Capper) return ['a', 'Capper'];
     if (role & RoleFlags.Moderator) return ['a', 'Moderator'];
@@ -50,7 +50,7 @@ export function stringifyPlan(role: number): string {
 
     if (role & RoleFlags.Admin) return 'Administrator';
     if (role & RoleFlags.UnknownStaff2) return 'Unknown Staff Role';
-    if (role & RoleFlags.UnknownStaff3) return 'Unknown Staff Role';
+    if (role & RoleFlags.Developer) return 'Developer';
     if (role & RoleFlags.Degen) return 'Degen';
     if (role & RoleFlags.Capper) return 'Capper';
     if (role & RoleFlags.Moderator) return 'Moderator';
