@@ -1,16 +1,17 @@
 {
   "type": "module",
-  "name": "dropout-degens-core",
+  "name": "core",
   "private": true,
   "main": "src/index.js",
   "scripts": {
     "build": "tsc"
   },
   "dependencies": {
+    "@discordjs/rest": "^2",
     "@prisma/client": "^5",
-    "@whop-sdk/api": "^1.1.1",
     "@whop-sdk/core": "^0.0.4",
     "checkeasy": "^1.1.0",
+    "discord-api-types": "^0.37.62",
     "discord.js": "^14",
     "prisma": "^5",
     "stripe": "^12.18.0",

@@ -1,6 +1,6 @@
 import { users } from "@prisma/client";
 import db from "../db.js";
-import { Routes } from 'discord.js';
+import { Routes } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
 
 

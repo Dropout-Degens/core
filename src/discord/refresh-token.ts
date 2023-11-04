@@ -1,6 +1,6 @@
 import { users } from "@prisma/client";
 import db from "../db.js";
-import { Routes, RESTPostOAuth2RefreshTokenURLEncodedData, RESTPostOAuth2RefreshTokenResult } from 'discord.js';
+import { Routes, RESTPostOAuth2RefreshTokenURLEncodedData, RESTPostOAuth2RefreshTokenResult } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
 
 export class NoRefreshTokenError extends Error {

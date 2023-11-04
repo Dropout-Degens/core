@@ -1,4 +1,5 @@
-import { ChatInputCommandInteraction, RawFile, Routes, WebhookMessageCreateOptions } from "discord.js";
+import type { ChatInputCommandInteraction, RawFile, WebhookMessageCreateOptions } from "discord.js";
+import { Routes } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
 
 const AuditLogChannelID = process.env.DISCORD_AUDIT_LOG_CHANNEL!;

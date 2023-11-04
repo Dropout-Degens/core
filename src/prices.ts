@@ -26,7 +26,7 @@ export const StripePrices: SubscriptionPriceMap = {
     }
 } as const satisfies SubscriptionPriceMap;
 
-export const WhopPrices = {
+export const WhopPrices: SubscriptionPriceMap = {
     [PurchasablePlan.AllAccess]: {
         [BillingPeriod.year]: 'plan_dJMpw98NBBnvy',
         [BillingPeriod.months3]: 'plan_MoNgrgc2tYhWM',
@@ -68,7 +68,7 @@ export const WhopPrices = {
     ignored: [
         'plan_75go6xsLFQuGx' // General Access (join the server)
     ],
-};
+} as const satisfies SubscriptionPriceMap;
 
 export type PricePeriods =  Readonly<Partial<{ other: readonly string[] } & Record<BillingPeriod, string>>>;
 
