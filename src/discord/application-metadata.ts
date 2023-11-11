@@ -47,6 +47,13 @@ export const linkedRolesSchemaPutRequest = botREST.put(Routes.applicationRoleCon
 
 export const platform_name = 'Dropout Degens';
 
+export class ExpiredAccessTokenError extends Error {
+    constructor(id?: bigint) {
+        super(`User with ID ${id} has an expired access token! Did you forget to call refreshToken() before calling recalcMetadata()?`);
+        this.name = 'ExpiredAccessTokenError';
+    }
+}
+
 // TODO: Add karma
 /**
  * MAKE SURE YOU REFRESH THE ACCESS TOKEN BEFORE SENDING THIS REQUEST!!!
@@ -55,6 +62,9 @@ export const platform_name = 'Dropout Degens';
  */
 export async function recalcMetadata(user: Pick<users, 'subscription_type'|'discord_access_token'>) {
     await linkedRolesSchemaPutRequest;
+
+    if ('discord_access_expiry' in user && typeof user.discord_access_expiry === 'bigint' && Date.now() > user.discord_access_expiry )
+        throw new ExpiredAccessTokenError('id' in user && typeof user.id === 'bigint' && user.id || undefined);
 
     const body = {
         metadata: {
