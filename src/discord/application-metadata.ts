@@ -1,5 +1,5 @@
 import { users } from "@prisma/client";
-import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody } from "discord-api-types/v10";
+import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody, RESTPutAPICurrentUserApplicationRoleConnectionResult } from "discord-api-types/v10";
 import RoleFlags from "../definitions.js";
 import { bearerTokenREST, botREST } from "./REST.js";
 
@@ -60,11 +60,11 @@ export class ExpiredAccessTokenError extends Error {
  *
  * @param user The user's database entry. Only the the subscription and access token are strictly needed. Access token should be refreshed.
  */
-export async function recalcMetadata(user: Pick<users, 'subscription_type'|'discord_access_token'>) {
+export async function recalcMetadata(user: Pick<users, 'subscription_type'|'discord_access_token'> & Partial<users>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
     await linkedRolesSchemaPutRequest;
 
-    if ('discord_access_expiry' in user && typeof user.discord_access_expiry === 'bigint' && Date.now() > user.discord_access_expiry )
-        throw new ExpiredAccessTokenError('snowflake' in user && typeof user.snowflake === 'bigint' && user.snowflake || undefined);
+    if (user.discord_access_expiry && Date.now() > user.discord_access_expiry )
+        throw new ExpiredAccessTokenError(user.snowflake);
 
     const body = {
         metadata: {
@@ -77,5 +77,15 @@ export async function recalcMetadata(user: Pick<users, 'subscription_type'|'disc
     } satisfies RESTPutAPICurrentUserApplicationRoleConnectionJSONBody;
 
     bearerTokenREST.setToken(user.discord_access_token!);
-    return await bearerTokenREST.put(Routes.userApplicationRoleConnection(process.env.DISCORD_CLIENT_ID!), {body});
+
+    const res = await bearerTokenREST.put(Routes.userApplicationRoleConnection(process.env.DISCORD_CLIENT_ID!), {body}) as RESTPutAPICurrentUserApplicationRoleConnectionResult;
+
+    for (const key in body.metadata) {
+        const expected = body.metadata[key as keyof typeof body.metadata];
+        const actual = res.metadata[key as keyof typeof res.metadata];
+
+        if (expected.toString() !== actual.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
+    }
+
+    return res;
 }

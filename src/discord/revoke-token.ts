@@ -4,7 +4,7 @@ import { Routes } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
 
 
-export async function revokeToken(user: Pick<users, 'snowflake'|'discord_access_token'>) {
+export async function revokeToken<T extends Pick<users, 'snowflake'|'discord_access_token'> & Partial<users>>(user: T): Promise<(T & { discord_access_token: null, discord_refresh_token: null, discord_access_expiry: 0n }) | undefined> {
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
     if (!process.env.DISCORD_CLIENT_SECRET) throw new Error('Environment variable `DISCORD_CLIENT_SECRET` not set!');
 
@@ -18,15 +18,17 @@ export async function revokeToken(user: Pick<users, 'snowflake'|'discord_access_
             client_id: process.env.DISCORD_CLIENT_ID,
             client_secret: process.env.DISCORD_CLIENT_SECRET,
         }),
-    }),
+    });
 
-    Object.assign(user, await db.users.update({
-        where: {snowflake: user.snowflake},
-        data: {
-            discord_access_token: null,
-            discord_refresh_token: null,
-            discord_access_expiry: 0
-        }}));
-
-    return user;
+    return Object.assign(
+        user,
+        await db.users.update({
+            where: {snowflake: user.snowflake},
+            data: {
+                discord_access_token: null,
+                discord_refresh_token: null,
+                discord_access_expiry: 0,
+            }
+        })
+    ) as T & { discord_access_token: null, discord_refresh_token: null, discord_access_expiry: 0n };
 }

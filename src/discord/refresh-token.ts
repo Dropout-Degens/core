@@ -10,12 +10,12 @@ export class NoRefreshTokenError extends Error {
     }
 }
 
-export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'>>(user: T, force = false) {
+export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'> & Partial<users>>(user: T, force = false): Promise<T & Pick<users, 'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'>> {
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
     if (!process.env.DISCORD_CLIENT_SECRET) throw new Error('Environment variable `DISCORD_CLIENT_SECRET` not set!');
 
     if (!user.discord_refresh_token) {
-        if ('auth_session_token' in user && !user.auth_session_token) await db.users.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
+        if (user.auth_session_token === null) await db.users.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
         console.log(`User ${user.snowflake} does not have a refresh token!`, {user});
         throw new NoRefreshTokenError(user.snowflake);
     }
@@ -51,5 +51,5 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
             discord_refresh_token: tokenResponse.refresh_token,
             discord_access_expiry: Date.now() + tokenResponse.expires_in * 1000,
         },
-    })) as users;
+    })) as T;
 }
