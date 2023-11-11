@@ -16,11 +16,15 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
 
     if (!user.discord_refresh_token) {
         if ('auth_session_token' in user && !user.auth_session_token) await db.users.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
-        throw new Error(`User by id ${user.snowflake} does not have a refresh token!`);
+        console.log(`User ${user.snowflake} does not have a refresh token!`, {user});
+        throw new NoRefreshTokenError(user.snowflake);
     }
 
 
-    if (!force && Date.now() > user.discord_access_expiry + 60000n ) return user;
+    if (!force && Date.now() > (user.discord_access_expiry - 60000n) ) {
+        console.log(`Not refreshing Discord access token for user ${user.snowflake} because it is not expired yet`, {expiry: user.discord_access_expiry, now: Date.now()});
+        return user;
+    }
 
     let tokenResponse: RESTPostOAuth2RefreshTokenResult;
     try {

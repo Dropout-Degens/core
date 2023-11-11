@@ -64,7 +64,7 @@ export async function recalcMetadata(user: Pick<users, 'subscription_type'|'disc
     await linkedRolesSchemaPutRequest;
 
     if ('discord_access_expiry' in user && typeof user.discord_access_expiry === 'bigint' && Date.now() > user.discord_access_expiry )
-        throw new ExpiredAccessTokenError('id' in user && typeof user.id === 'bigint' && user.id || undefined);
+        throw new ExpiredAccessTokenError('snowflake' in user && typeof user.snowflake === 'bigint' && user.snowflake || undefined);
 
     const body = {
         metadata: {
