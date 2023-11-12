@@ -63,7 +63,7 @@ export class ExpiredAccessTokenError extends Error {
 export async function recalcMetadata(user: Pick<users, 'subscription_type'|'discord_access_token'> & Partial<users>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
     await linkedRolesSchemaPutRequest;
 
-    if (user.discord_access_expiry && Date.now() > user.discord_access_expiry )
+    if (user.discord_access_expiry && Date.now() < (user.discord_access_expiry * 1000n) )
         throw new ExpiredAccessTokenError(user.snowflake);
 
     const body = {
