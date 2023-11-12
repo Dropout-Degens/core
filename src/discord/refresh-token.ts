@@ -14,17 +14,26 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
     if (!process.env.DISCORD_CLIENT_SECRET) throw new Error('Environment variable `DISCORD_CLIENT_SECRET` not set!');
 
+    console.log(`Token refresh has been requested for user ${user.snowflake}. Checking if a refresh is needed.`)
+
     if (!user.discord_refresh_token) {
-        if (user.auth_session_token === null) await db.users.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
         console.log(`User ${user.snowflake} does not have a refresh token!`, {user});
+
+        if (user.auth_session_token) {
+            console.log(`User ${user.snowflake} does have an auth session token. Removing it so they're forced to log in again...`);
+            await db.users.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
+        }
+
         throw new NoRefreshTokenError(user.snowflake);
     }
 
 
     if (!force && Date.now() > (user.discord_access_expiry - 60000n) ) {
-        console.log(`Not refreshing Discord access token for user ${user.snowflake} because it is not expired yet`, {expiry: user.discord_access_expiry, now: Date.now()});
+        console.log(`Not refreshing Discord access token for user ${user.snowflake} because it has not yet expired.`, {expiry: user.discord_access_expiry, now: Date.now()});
         return user;
     }
+
+    console.log(`Refreshing Discord access token for user ${user.snowflake}. Forced? ${force}`);
 
     let tokenResponse: RESTPostOAuth2RefreshTokenResult;
     try {
@@ -38,11 +47,11 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
             passThroughBody: true,
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }) as RESTPostOAuth2RefreshTokenResult;
-    } catch {
-        throw new Error(`Failed to refresh Discord access token for user ${user.snowflake}`);
+    } catch(e) {
+        throw new Error(`Failed to refresh Discord access token for user ${user.snowflake}`, {cause: e});
     }
 
-    console.log('Refreshed Discord access token', {tokenResponse});
+    console.log('Refreshed Discord access token. Updating DB entry.', {tokenResponse});
 
     return Object.assign(user, await db.users.update({
         where: {snowflake: user.snowflake},
