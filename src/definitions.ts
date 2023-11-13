@@ -1,115 +1,118 @@
 export enum RoleFlags {
-    //                                          Premium
-    //                             Vanity Roles ^^^^^^^^
-    //                         Reserved ^^^^^^^^^^^^^^^^
-    //              Staff Perms ^^^^^^^^^^^^^^^^^^^^^^^^
-    //                  -^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    AllRoles =        0b1111111111111111111111111111111,
+    //                                            Premium
+    //                               Vanity Roles ^^^^^^^^
+    //                           Reserved ^^^^^^^^^^^^^^^^
+    //                Staff Perms ^^^^^^^^^^^^^^^^^^^^^^^^
+    //                    -^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    AllRoles =          0b1111111111111111111111111111111,
 
     /** An admin has so much power they can even change a user's subscription status! */
-    Admin           = 0b1000000000000000000000000000000,
+    Admin             = 0b1000000000000000000000000000000,
     /** Reserved staff flag for potential later use */
-    UnknownStaff2   = 0b0100000000000000000000000000000,
+    UnknownStaff2     = 0b0100000000000000000000000000000,
     /** Reserved staff flag for potential later use */
-    Developer       = 0b0010000000000000000000000000000,
+    Developer         = 0b0010000000000000000000000000000,
     /** A moderator of Dropout Degens */
-    Moderator       = 0b0001000000000000000000000000000,
+    Moderator         = 0b0001000000000000000000000000000,
     /** An affiliate of Dropout Degens */
-    Degen           = 0b0000100000000000000000000000000,
+    Degen             = 0b0000100000000000000000000000000,
     /** Cappers are the people who voice their opinions on who might win a game professionally */
-    Capper          = 0b0000010000000000000000000000000,
+    Capper            = 0b0000010000000000000000000000000,
     /** Staff get this one if they don't fit any other role */
-    GenericStaff    = 0b0000001000000000000000000000000,
+    GenericStaff      = 0b0000001000000000000000000000000,
 
 
     /** All of the flags that should be treated as a staff role */
-    AnyStaffRole    = 0b1111111000000000000000000000000,
+    AnyStaffRole      = 0b1111111000000000000000000000000,
 
 
     /** Generic, reserved flag for potential later use */
-    Reserved1       = 0b0000000100000000000000000000000,
+    Reserved1         = 0b0000000100000000000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved2       = 0b0000000010000000000000000000000,
+    Reserved2         = 0b0000000010000000000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved3       = 0b0000000001000000000000000000000,
+    Reserved3         = 0b0000000001000000000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved4       = 0b0000000000100000000000000000000,
+    Reserved4         = 0b0000000000100000000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved5       = 0b0000000000010000000000000000000,
+    Reserved5         = 0b0000000000010000000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved6       = 0b0000000000001000000000000000000,
+    Reserved6         = 0b0000000000001000000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved7       = 0b0000000000000100000000000000000,
+    Reserved7         = 0b0000000000000100000000000000000,
     /** Generic, reserved flag for potential later use */
-    Reserved8       = 0b0000000000000010000000000000000,
+    Reserved8         = 0b0000000000000010000000000000000,
 
     /** Someone who pays $50/year just to have a fancy name and some extra Karma. What a sucker. */
-    Van_HighRoller  = 0b0000000000000001000000000000000,
+    Van_HighRoller    = 0b0000000000000001000000000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole2     = 0b0000000000000000100000000000000,
+    VanityRole2       = 0b0000000000000000100000000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole3     = 0b0000000000000000010000000000000,
+    VanityRole3       = 0b0000000000000000010000000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole4     = 0b0000000000000000001000000000000,
+    VanityRole4       = 0b0000000000000000001000000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole5     = 0b0000000000000000000100000000000,
+    VanityRole5       = 0b0000000000000000000100000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole6     = 0b0000000000000000000010000000000,
+    VanityRole6       = 0b0000000000000000000010000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole7     = 0b0000000000000000000001000000000,
+    VanityRole7       = 0b0000000000000000000001000000000,
     /** Reserved vanity role flag for potential later use */
-    VanityRole8     = 0b0000000000000000000000100000000,
+    VanityRole8       = 0b0000000000000000000000100000000,
 
     /** The flag for Player Props players */
-    PlayerPropsRaw  = 0b0000000000000000000000000000010,
+    PlayerPropsRaw    = 0b0000000000000000000000000000010,
     /** All of the flags that should be treated as Player Props */
-    PlayerProps     = 0b1111111000000000000000000000010,
+    PlayerProps       = 0b1111111000000000000000000000010,
     /** The flag for Sportsbook players */
-    SportsbookRaw   = 0b0000000000000000000000000000001,
+    SportsbookRaw     = 0b0000000000000000000000000000001,
     /** All of the flags that should be treated as Sportsbook */
-    Sportsbook      = 0b1111111000000000000000000000001,
+    Sportsbook        = 0b1111111000000000000000000000001,
     /** Reserved premium role flag for potential later use */
-    PremiumRole3    = 0b0000000000000000000000010000000,
+    PremiumRole3      = 0b0000000000000000000000010000000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole4    = 0b0000000000000000000000001000000,
+    PremiumRole4      = 0b0000000000000000000000001000000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole5    = 0b0000000000000000000000000100000,
+    PremiumRole5      = 0b0000000000000000000000000100000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole6    = 0b0000000000000000000000000010000,
+    PremiumRole6      = 0b0000000000000000000000000010000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole7    = 0b0000000000000000000000000001000,
+    PremiumRole7      = 0b0000000000000000000000000001000,
     /** Reserved premium role flag for potential later use */
-    PremiumRole8    = 0b0000000000000000000000000000100,
+    PremiumRole8      = 0b0000000000000000000000000000100,
 
     /** The two flags for All Access players */
-    AllAccessRaw    = 0b0000000000000000000000000000011,
+    AllAccessRaw      = 0b0000000000000000000000000000011,
     /** All of the flags that should be treated as All Access */
-    AllAccess       = 0b1111111000000000000000000000011,
+    AllAccess         = 0b1111111000000000000000000000011,
 
     /** All of the flags that should be treated as a Premium user */
-    AnyPremiumRole  = 0b1111111000000000000000011111111,
+    AnyPremiumRole    = 0b1111111000000000000000011111111,
+    /** All of the flags that should be treated as a Premium user WITHOUT staff flags */
+    AnyPremiumRoleRaw = 0b0000000000000000000000011111111,
 }
 
 export default RoleFlags;
 
 export enum KarmaPerMessageByRole {
-    _DEFAULT = 0.25,
-    AllAccessRaw    = 1,
-    Van_HighRoller  = 2,
-    AnyStaffRole    = 2,
+    AllRoles = 1,
+    AllAccessRaw    = 2,
+    Van_HighRoller  = 5,
+    AnyStaffRole    = 0.25,
 }
 
 export enum KarmaMaxByMessagePerDayByRole {
-    _DEFAULT = 25,
-    AllAccessRaw = 125,
-    Van_HighRoller = 250,
-    AnyStaffRole = 500,
+    AllRoles = 10,
+    AnyPremiumRole = 250,
+    Van_HighRoller = 500,
+    AnyStaffRole = -1,
 }
 
 export enum KarmaPerDayByRole {
-    _DEFAULT = 0,
-    AllAccessRaw = 10,
-    Van_HighRoller = 25,
+    AllRoles = 0,
+    AnyPremiumRole = 20,
+    Van_HighRoller = 50,
+    AnyStaffRole = -1,
 }
 
 export enum PurchasablePlan {
