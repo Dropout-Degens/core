@@ -27,9 +27,10 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
         throw new NoRefreshTokenError(user.snowflake);
     }
 
-
-    if (!force && Date.now() > ((user.discord_access_expiry * 1000n) - 60000n) ) {
-        console.log(`Not refreshing Discord access token for user ${user.snowflake} because it has not yet expired.`, {expiry: user.discord_access_expiry, now: Date.now()});
+    const now = Math.ceil(Date.now() / 1000);
+    const expiry = Number(user.discord_access_expiry) + 60;
+    if (!force && now < expiry ) {
+        console.log(`Not refreshing Discord access token for user ${user.snowflake} because it has not yet expired.`, {expiry, now});
         return user;
     }
 
