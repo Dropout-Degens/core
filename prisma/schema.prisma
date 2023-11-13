@@ -12,7 +12,8 @@ datasource db {
 model coupons {
   whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
   stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
-  associated_user BigInt? @map("associated-user") @db.UnsignedBigInt
+  associated_user BigInt  @map("associated-user") @db.UnsignedBigInt
+  user            user    @relation(fields: [associated_user], references: [snowflake])
   promo_code      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
   discount_amount Float   @map("discount-amount") @db.Float
   duration        Int     @db.SmallInt
@@ -23,25 +24,74 @@ model coupons {
 }
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
-model users {
+model user {
   snowflake                      BigInt  @id @db.UnsignedBigInt
-  auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
-  auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
   discord_email                  String? @map("discord-email") @db.Text
   discord_pfp                    String? @map("discord-pfp") @db.Text
   discord_name                   String? @map("discord-name") @db.Text
-  subscription_type              Int     @default(0) @map("subscription-type") @db.UnsignedInt
-  subscription_expiration        BigInt  @default(-1) @map("subscription-expiration")
+
   discord_access_token           String? @map("discord-access-token") @db.LongText
   discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry") @db.UnsignedBigInt
   discord_refresh_token          String? @map("discord-refresh-token") @db.LongText
+
   timezone                       String  @default(dbgenerated("(_utf8mb4\\'America/New_York\\')")) @db.Text
   timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted") @db.UnsignedBigInt
   weekly_reward_last_claimed     String  @default(dbgenerated("(_utf8mb4\\'December 31 1969 20:00 GMT-4\\')")) @map("weekly-reward-last-claimed") @db.LongText
   weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak") @db.UnsignedInt
   weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best") @db.UnsignedInt
-  discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+
+  sessions                       session[]
+  memberships                    membership[]
+
+  // Record<source, count>
+  free_days                      Json   @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+  coupons                        coupons[]
+
+
+  // NOTE: This value is shifted [[2]] decimal places in order to store it as a BigInt
+  karma                          BigInt     @default(0) @db.UnsignedBigInt
+
+
+
+  // OLD: Remove these after migration
+  auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
+  auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
+
   whop_membership_id             String? @unique(map: "whop-id_UNIQUE") @map("whop-membership-id") @db.VarChar(45)
   whop_email                     String? @map("whop-email") @db.Text
+
   stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
+
+  discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+}
+
+model session {
+  token          String   @unique @db.VarChar(45)
+  expires        BigInt   @db.UnsignedBigInt
+
+  user_snowflake BigInt   @db.UnsignedBigInt
+  user           user     @relation(fields: [user_snowflake], references: [snowflake])
+
+  created_at     DateTime @default(now()) @db.Timestamp(0)
+  updated_at     DateTime @default(now()) @db.Timestamp(0)
+
+  @@index([user_snowflake])
+}
+
+model membership {
+  backendId     Int     @id @default(autoincrement())
+
+  whop_id       String? @unique @db.VarChar(45)
+  stripe_id     String? @unique @db.VarChar(32)
+
+  email         String? @map("email") @db.Text
+
+  flags         Int     @db.UnsignedInt
+  expiration    BigInt  @db.UnsignedBigInt
+  active        Boolean
+
+  userSnowflake BigInt  @db.UnsignedBigInt
+  user          user    @relation(fields: [userSnowflake], references: [snowflake])
+  @@index([userSnowflake])
+
 }
