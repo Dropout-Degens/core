@@ -88,7 +88,7 @@ export async function recalcMetadata(user: Pick<users, 'subscription_type'|'disc
         const expected = body.metadata[key as keyof typeof body.metadata];
         const actual = res.metadata[key as keyof typeof res.metadata];
 
-        if (expected.toString() !== actual.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
+        if (expected.toString() !== actual?.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
     }
 
     return res;
