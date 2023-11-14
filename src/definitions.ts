@@ -112,7 +112,7 @@ export enum KarmaPerDayByRole {
     AllRoles = 0,
     AnyPremiumRole = 20,
     Van_HighRoller = 50,
-    AnyStaffRole = -1,
+    AnyStaffRole = 0,
 }
 
 export enum PurchasablePlan {
