@@ -118,6 +118,7 @@ model auth_session {
 model membership {
   @@map ("memberships")
 
+  /// @deprecated
   backendId     Int     @id @default(autoincrement())
 
   whop_id       String? @unique @db.VarChar(45)
