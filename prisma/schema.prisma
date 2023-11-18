@@ -8,19 +8,28 @@ datasource db {
   relationMode = "prisma"
 }
 
+
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model coupon {
   @@map ("coupons")
 
+  associated_user BigInt?  @map("associated-user") @db.UnsignedBigInt
+  user            user?    @relation(fields: [associated_user], references: [snowflake])
+
+  /// The promo code string used for Whop
+  ///
+  /// Schema:
+  ///    ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
+  promo_code      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
+
   whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
   stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
-  associated_user BigInt  @map("associated-user") @db.UnsignedBigInt
-  user            user    @relation(fields: [associated_user], references: [snowflake])
-  promo_code      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
+
   discount_amount Float   @map("discount-amount") @db.Float
   duration        Int     @db.SmallInt
   billing_period  String  @map("billing-period") @db.TinyText
   plan_type       Int     @map("plan-type") @db.TinyInt
+  source          String  @db.TinyText
 
   @@index([associated_user], map: "associated-user")
 }
@@ -47,17 +56,28 @@ model user {
   auth_sessions                  auth_session[]
 
   memberships                    membership[]
-  /// Flattened subscription type
+  /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MMODIFIED!
   subscription_type              Int     @default(0) @map("subscription-type") @db.UnsignedInt
 
 
-  /// @type { Record<string, number> }
+  /// Record<PurchasablePlan, Record<DiscountSource, number>>
+  /// @type { Record<number, Record<string, number>> }
   free_days                      Json   @default(dbgenerated("(_utf8mb4\\'{}\\')"))
   coupons                        coupon[]
 
 
+
+
+
+  //  TODO: Adjust these Karam row types upon karma completion
+
   /// NOTE: This value is shifted [[2]] decimal places in order to store it as a BigInt
-  karma                          BigInt     @default(0) @db.UnsignedBigInt
+  karma                          Int     @default(0)
+  max_daily_karma                Int     @default(0)
+  max_daily_react                Int     @default(0)
+
+
+
 
 
   // OLD: Remove these after migration
@@ -74,7 +94,7 @@ model user {
   /// @deprecated to be removed after migration
   stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
   /// @deprecated to be removed after migration
-  subscription_expiration        BigInt  @default(0) @map("subscription-expiration") @db.UnsignedBigInt
+  subscription_expiration        BigInt  @default(0) @map("subscription-expiration") @db.BigInt
 
   /// @deprecated to be removed after migration
   discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
@@ -97,7 +117,7 @@ model auth_session {
 
 model membership {
   @@map ("memberships")
-  
+
   backendId     Int     @id @default(autoincrement())
 
   whop_id       String? @unique @db.VarChar(45)
