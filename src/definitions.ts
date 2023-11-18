@@ -103,14 +103,22 @@ export enum KarmaPerMessageByRole {
     AnyStaffRole    = 0.25,
 }
 
-export enum KarmaMaxByMessagePerDayByRole {
+export enum KarmaPerMessageDailyCapByRole {
     AllRoles = 10,
     AnyPremiumRole = 250,
     Van_HighRoller = 500,
     AnyStaffRole = -1,
 }
 
-export enum KarmaPerDayByRole {
+export enum KarmaPerReactionByRole {
+    AllRoles = 5,
+}
+
+export enum KarmaPerReactionDailyCapByRole {
+    AllRoles = 25,
+}
+
+export enum KarmaDailyBonusByRole {
     AllRoles = 0,
     AnyPremiumRole = 20,
     Van_HighRoller = 50,
