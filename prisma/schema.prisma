@@ -72,9 +72,9 @@ model user {
   //  TODO: Adjust these Karam row types upon karma completion
 
   /// NOTE: This value is shifted [[2]] decimal places in order to store it as a BigInt
-  karma                          Int     @default(0)
-  max_daily_karma                Int     @default(0)
-  max_daily_react                Int     @default(0)
+  karma                          BigInt     @default(0)
+  karma_today_from_messages      BigInt     @default(0)
+  karma_today_from_reactions     BigInt     @default(0)
 
 
 
