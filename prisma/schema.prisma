@@ -9,7 +9,9 @@ datasource db {
 }
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
-model coupons {
+model coupon {
+  @@map ("coupons")
+
   whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
   stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
   associated_user BigInt  @map("associated-user") @db.UnsignedBigInt
@@ -25,6 +27,8 @@ model coupons {
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model user {
+  @@map ("users")
+
   snowflake                      BigInt  @id @db.UnsignedBigInt
   discord_email                  String? @map("discord-email") @db.Text
   discord_pfp                    String? @map("discord-pfp") @db.Text
@@ -40,32 +44,45 @@ model user {
   weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak") @db.UnsignedInt
   weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best") @db.UnsignedInt
 
-  sessions                       session[]
+  auth_sessions                  auth_session[]
+
   memberships                    membership[]
+  /// Flattened subscription type
+  subscription_type              Int     @default(0) @map("subscription-type") @db.UnsignedInt
 
-  // Record<source, count>
+
+  /// @type { Record<string, number> }
   free_days                      Json   @default(dbgenerated("(_utf8mb4\\'{}\\')"))
-  coupons                        coupons[]
+  coupons                        coupon[]
 
 
-  // NOTE: This value is shifted [[2]] decimal places in order to store it as a BigInt
+  /// NOTE: This value is shifted [[2]] decimal places in order to store it as a BigInt
   karma                          BigInt     @default(0) @db.UnsignedBigInt
 
 
-
   // OLD: Remove these after migration
+  /// @deprecated to be removed after migration
   auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
+  /// @deprecated to be removed after migration
   auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
 
+  /// @deprecated to be removed after migration
   whop_membership_id             String? @unique(map: "whop-id_UNIQUE") @map("whop-membership-id") @db.VarChar(45)
+  /// @deprecated to be removed after migration
   whop_email                     String? @map("whop-email") @db.Text
 
+  /// @deprecated to be removed after migration
   stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
+  /// @deprecated to be removed after migration
+  subscription_expiration        BigInt  @default(0) @map("subscription-expiration") @db.UnsignedBigInt
 
+  /// @deprecated to be removed after migration
   discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
 }
 
-model session {
+model auth_session {
+  @@map ("auth_sessions")
+
   token          String   @unique @db.VarChar(45)
   expires        BigInt   @db.UnsignedBigInt
 
@@ -79,6 +96,8 @@ model session {
 }
 
 model membership {
+  @@map ("memberships")
+  
   backendId     Int     @id @default(autoincrement())
 
   whop_id       String? @unique @db.VarChar(45)
@@ -93,5 +112,4 @@ model membership {
   userSnowflake BigInt  @db.UnsignedBigInt
   user          user    @relation(fields: [userSnowflake], references: [snowflake])
   @@index([userSnowflake])
-
 }

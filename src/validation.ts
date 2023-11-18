@@ -16,6 +16,7 @@ export function not<T>(value: T): Validator<T> {
         return v;
     }
 };
+
 const CouponValidatorDefinitions = {
     amount: float({min: 0, max: 1}),
     planType: validatePurchasableSubscriptionType,

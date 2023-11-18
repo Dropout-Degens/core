@@ -1,4 +1,4 @@
-import { users } from "@prisma/client";
+import { user } from '@prisma/client';
 import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody, RESTPutAPICurrentUserApplicationRoleConnectionResult } from "discord-api-types/v10";
 import RoleFlags from "../definitions.js";
 import { bearerTokenREST, botREST } from "./REST.js";
@@ -60,7 +60,7 @@ export class ExpiredAccessTokenError extends Error {
  *
  * @param user The user's database entry. Only the the subscription and access token are strictly needed. Access token should be refreshed.
  */
-export async function recalcMetadata(user: Pick<users, 'subscription_type'|'discord_access_token'> & Partial<users>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
+export async function recalcMetadata(user: Pick<user, 'subscription_type'|'discord_access_token'> & Partial<user>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
     await linkedRolesSchemaPutRequest;
 
     const now = Math.ceil(Date.now() / 1000);
