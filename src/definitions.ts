@@ -97,17 +97,17 @@ export enum RoleFlags {
 export default RoleFlags;
 
 export enum KarmaPerMessageByRole {
-    AllRoles = 1,
+    AllRoles        = 1,
     AllAccessRaw    = 2,
     Van_HighRoller  = 5,
     AnyStaffRole    = 0.25,
 }
 
 export enum KarmaPerMessageDailyCapByRole {
-    AllRoles = 10,
-    AnyPremiumRole = 250,
-    Van_HighRoller = 500,
-    AnyStaffRole = -1,
+    AllRoles        = 10,
+    AnyPremiumRole  = 250,
+    Van_HighRoller  = 500,
+    AnyStaffRole    = -1,
 }
 
 export enum KarmaPerReactionByRole {
@@ -146,31 +146,79 @@ export enum BillingPeriod {
     daily = 'daily'
 }
 
+///** Represents a single coupon */
+//export interface CouponDefinition extends coupon {
+//    /** The type of subscription this coupon is applicable to */
+//    plan_type: Exclude<PurchasablePlan, PurchasablePlan.Any>;
+//
+//    /** The billing period this coupon should apply to */
+//    billing_period: BillingPeriod;
+//
+//    /** The promo code string used for Whop
+//     *
+//     * Schema:
+//     * ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
+//    */
+//    promo_code: `${bigint}-${string}-${string}-${bigint}-${number}`;
+//
+//    /** Where the coupon was obtained from */
+//    source: DiscountSource;
+//}
+
+//export interface CouponGenerated<TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> extends CouponDefinition {
+//    whop_id: TUsesWhop extends true ? NonNullable<CouponDefinition['whop_id']> : CouponDefinition['whop_id'];
+//    stripe_id: TUsesStripe extends true ? NonNullable<CouponDefinition['stripe_id']>: CouponDefinition['stripe_id'];
+//}
+
+//export type Coupon<TGenerated extends boolean = false, TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> = TGenerated extends true ? CouponGenerated<TUsesStripe, TUsesWhop> : CouponDefinition;
+
+export type PlanFreeDays = Partial<Record<DiscountSource, number>>;
+export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
+
+
+
+
 /** Represents a single coupon */
-export interface CouponDefinition extends coupon {
+export interface CouponDefinition {
+    /** Number multiplied against the price to determine how much should be waived (e.g. a 75% discount would be 0.75) */
+    amount: number;
+
     /** The type of subscription this coupon is applicable to */
-    plan_type: Exclude<PurchasablePlan, PurchasablePlan.Any>;
+    planType: Exclude<PurchasablePlan, PurchasablePlan.Any>;
 
     /** The billing period this coupon should apply to */
-    billing_period: BillingPeriod;
+    billingPeriod: BillingPeriod;
+
+    /** How many billing periods this coupon lasts for */
+    duration: number;
 
     /** The promo code string used for Whop
      *
      * Schema:
      * ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
     */
-    promo_code: `${bigint}-${string}-${string}-${bigint}-${number}`;
+    promoCode?: string;
 
     /** Where the coupon was obtained from */
     source: DiscountSource;
 }
 
-export interface CouponGenerated<TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> extends CouponDefinition {
-    whop_id: TUsesWhop extends true ? NonNullable<CouponDefinition['whop_id']> : CouponDefinition['whop_id'];
-    stripe_id: TUsesStripe extends true ? NonNullable<CouponDefinition['stripe_id']>: CouponDefinition['stripe_id'];
+export interface CouponGenerated extends CouponDefinition {
+    promoCode: string;
 }
 
-export type Coupon<TGenerated extends boolean = false, TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> = TGenerated extends true ? CouponGenerated<TUsesStripe, TUsesWhop> : CouponDefinition;
+export type Coupon<TGenerated extends boolean = false> = TGenerated extends true ? CouponGenerated : CouponDefinition;
 
-export type PlanFreeDays = Partial<Record<DiscountSource, number>>;
-export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
+
+/** A list of discounts applicable to a given subscription type */
+export interface Discounts {
+    /** How many days the user has for free in this tier
+     *
+     * Organized by the source of the discount
+    */
+    free: Partial<Record<DiscountSource, number>>;
+    /** A list of coupons for this tier in this customer's arsenal */
+    coupons: Coupon<true>[];
+}
+
+export type UsersDiscount = Partial<Record<PurchasablePlan, Discounts>>;
