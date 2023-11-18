@@ -97,16 +97,16 @@ export enum RoleFlags {
 export default RoleFlags;
 
 export enum KarmaPerMessageByRole {
-    AllRoles        = 1,
-    AllAccessRaw    = 2,
-    Van_HighRoller  = 5,
-    AnyStaffRole    = 0.25,
+    AllRoles        = 5,
+    AnyPremiumRole  = 10,
+    Van_HighRoller  = 25,
+    AnyStaffRole    = 5,
 }
 
 export enum KarmaPerMessageDailyCapByRole {
-    AllRoles        = 10,
-    AnyPremiumRole  = 250,
-    Van_HighRoller  = 500,
+    AllRoles        = 500,
+    AnyPremiumRole  = 1250,
+    Van_HighRoller  = 2500,
     AnyStaffRole    = -1,
 }
 
@@ -120,8 +120,8 @@ export enum KarmaPerReactionDailyCapByRole {
 
 export enum KarmaDailyBonusByRole {
     AllRoles = 0,
-    AnyPremiumRole = 20,
-    Van_HighRoller = 50,
+    AnyPremiumRole = 250,
+    Van_HighRoller = 500,
     AnyStaffRole = 0,
 }
 

@@ -17,9 +17,9 @@ export function getGenericMappingAgainstRoleFlags<T extends Record<string, unkno
         const roleName = roleName_ as keyof V;
         const roleMappedValue = roleMappedValue_ as V[keyof V];
 
-        if (typeof roleName !== 'string') continue;
+        if (Number(roleName) == roleName || typeof roleName !== 'string') continue;
         if ( !(roleName in RoleFlags) ) {
-            console.warn(`WARN: Invalid role name ${roleName}`);
+            console.warn(`WARN: Invalid role name ${roleName} (type ${typeof roleName}) in mapping!`);
             continue;
         }
 
