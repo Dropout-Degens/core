@@ -62,7 +62,7 @@ model user {
 
   /// Record<PurchasablePlan, Record<DiscountSource, number>>
   /// @type { Record<number, Record<string, number>> }
-  free_days                      Json   @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+  free_days                      Json?
   coupons                        coupon[]
 
 
