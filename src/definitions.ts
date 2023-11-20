@@ -45,6 +45,9 @@ export enum RoleFlags {
     /** Generic, reserved flag for potential later use */
     Reserved8         = 0b0000000000000010000000000000000,
 
+    /** All of the flags that should be treated as one of the reserved roles */
+    AnyReservedRole   = 0b0000000111111110000000000000000,
+
     /** Someone who pays $50/year just to have a fancy name and some extra Karma. What a sucker. */
     Van_HighRoller    = 0b0000000000000001000000000000000,
     /** Reserved vanity role flag for potential later use */
@@ -61,6 +64,9 @@ export enum RoleFlags {
     VanityRole7       = 0b0000000000000000000001000000000,
     /** Reserved vanity role flag for potential later use */
     VanityRole8       = 0b0000000000000000000000100000000,
+
+    /** All of the flags that should be treated as a vanity role */
+    AnyVanityRole     = 0b0000000000000001111111100000000,
 
     /** The flag for Player Props players */
     PlayerPropsRaw    = 0b0000000000000000000000000000010,

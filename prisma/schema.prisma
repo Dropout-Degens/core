@@ -76,6 +76,7 @@ model user {
 
 
 
+  admin_created_memberships membership[] @relation("manual_adder")
 
 
   // OLD: Remove these after migration
@@ -122,13 +123,28 @@ model membership {
   whop_id       String? @unique @db.VarChar(45)
   stripe_id     String? @unique @db.VarChar(32)
 
+  /// Admin who added this membership, if any.
+  manual_adder  user?  @relation("manual_adder", fields: [manual_adder_snowflake], references: [snowflake])
+  manual_adder_snowflake BigInt? @map("manual-adder") @db.UnsignedBigInt
+
+  /// Email associated with this membership, if any
   email         String? @map("email") @db.Text
 
-  flags         Int     @db.UnsignedInt
+  /// RoleFlags to grant to this user
+  /// @see RoleFlags
+  positive_flags         Int     @db.UnsignedInt
+  /// RoleFlags to remove from this user
+  /// @see RoleFlags
+  negative_flags         Int     @db.UnsignedInt
+
+  /// When this subscription should be considered no longer active if not renewed
   expiration    BigInt  @db.UnsignedBigInt
+  /// Whether this subscription is active. If false, it will be ignored.
   active        Boolean
 
   userSnowflake BigInt  @db.UnsignedBigInt
   user          user    @relation(fields: [userSnowflake], references: [snowflake])
+
   @@index([userSnowflake])
+  @@index([manual_adder_snowflake], map: "manual-adder")
 }
