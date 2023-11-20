@@ -2,13 +2,8 @@ import { user } from '@prisma/client';
 import db from "../db.js";
 import { Routes, RESTPostOAuth2RefreshTokenURLEncodedData, RESTPostOAuth2RefreshTokenResult } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
-
-export class NoRefreshTokenError extends Error {
-    constructor(id: bigint) {
-        super(`User with ID ${id} does not have a refresh token!`);
-        this.name = 'NoRefreshTokenError';
-    }
-}
+import { DiscordAPIError } from 'discord.js';
+import { InvalidGrantError, NoRefreshTokenError } from '../errors.js';
 
 export async function refreshToken<T extends Pick<user, 'snowflake'|'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'> & Partial<user>>(user: T, force = false): Promise<T & Pick<user, 'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'>> {
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
@@ -19,10 +14,8 @@ export async function refreshToken<T extends Pick<user, 'snowflake'|'discord_acc
     if (!user.discord_refresh_token) {
         console.log(`User ${user.snowflake} does not have a refresh token!`, {user});
 
-        if (user.auth_session_token) {
-            console.log(`User ${user.snowflake} does have an auth session token. Removing it so they're forced to log in again...`);
-            await db.user.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
-        }
+        console.log(`User ${user.snowflake} does not have a refresh token! Removing any active auth sessions.`, {user});
+        await db.auth_session.deleteMany({ where: { user: { snowflake: user.snowflake } }});
 
         throw new NoRefreshTokenError(user.snowflake);
     }
@@ -49,7 +42,14 @@ export async function refreshToken<T extends Pick<user, 'snowflake'|'discord_acc
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
         }) as RESTPostOAuth2RefreshTokenResult;
     } catch(e) {
-        throw new Error(`Failed to refresh Discord access token for user ${user.snowflake}`, {cause: e});
+        if (e instanceof DiscordAPIError && e.message == 'invalid_grant') {
+            console.log(`Failed to refresh Discord access token for user ${user.snowflake} because the refresh token is invalid. Removing any active auth sessions.`, {user});
+            await db.auth_session.deleteMany({ where: { user: { snowflake: user.snowflake } }});
+            throw new InvalidGrantError(user.snowflake, e);
+        }
+
+        console.error(`Failed to refresh Discord access token for user ${user.snowflake}!`, {user, e})
+        throw e;
     }
 
     console.log('Refreshed Discord access token. Updating DB entry.', {tokenResponse});

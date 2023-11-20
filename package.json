@@ -30,6 +30,7 @@
     "./discord/revoke-token.js": "./src/discord/revoke-token.js",
     "./db.js": "./src/db.js",
     "./definitions.js": "./src/definitions.js",
+    "./errors.js": "./src/errors.js",
     "./index.js": "./src/index.js",
     "./prices.js": "./src/prices.js",
     "./stringify.js": "./src/stringify.js",
