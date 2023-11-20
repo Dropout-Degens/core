@@ -106,7 +106,7 @@ export enum KarmaPerMessageByRole {
     AllRoles        = 5,
     AnyPremiumRole  = 10,
     Van_HighRoller  = 25,
-    AnyStaffRole    = 5,
+    AnyStaffRole    = 10,
 }
 
 export enum KarmaPerMessageDailyCapByRole {
