@@ -1,4 +1,4 @@
-import { users } from "@prisma/client";
+import { user } from '@prisma/client';
 import db from "../db.js";
 import { Routes, RESTPostOAuth2RefreshTokenURLEncodedData, RESTPostOAuth2RefreshTokenResult } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
@@ -10,7 +10,7 @@ export class NoRefreshTokenError extends Error {
     }
 }
 
-export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'> & Partial<users>>(user: T, force = false): Promise<T & Pick<users, 'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'>> {
+export async function refreshToken<T extends Pick<user, 'snowflake'|'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'> & Partial<user>>(user: T, force = false): Promise<T & Pick<user, 'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'>> {
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
     if (!process.env.DISCORD_CLIENT_SECRET) throw new Error('Environment variable `DISCORD_CLIENT_SECRET` not set!');
 
@@ -21,7 +21,7 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
 
         if (user.auth_session_token) {
             console.log(`User ${user.snowflake} does have an auth session token. Removing it so they're forced to log in again...`);
-            await db.users.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
+            await db.user.update({ where: { snowflake: user.snowflake }, data: { auth_session_token: null, auth_session_token_expires: 0 }});
         }
 
         throw new NoRefreshTokenError(user.snowflake);
@@ -54,7 +54,7 @@ export async function refreshToken<T extends Pick<users, 'snowflake'|'discord_ac
 
     console.log('Refreshed Discord access token. Updating DB entry.', {tokenResponse});
 
-    return Object.assign(user, await db.users.update({
+    return Object.assign(user, await db.user.update({
         where: {snowflake: user.snowflake},
         data: {
             discord_access_token: tokenResponse.access_token,

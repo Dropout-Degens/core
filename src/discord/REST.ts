@@ -15,7 +15,6 @@ export const botREST = (()=> {
 
     const botREST = new DiscordREST({authPrefix: 'Bot'});
     botREST.setToken(process.env.DISCORD_BOT_TOKEN!);
-    console.log('botRESTToken', process.env.DISCORD_BOT_TOKEN);
     return botREST;
 })();
 
