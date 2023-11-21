@@ -152,31 +152,25 @@ export enum BillingPeriod {
     daily = 'daily'
 }
 
-///** Represents a single coupon */
-//export interface CouponDefinition extends coupon {
-//    /** The type of subscription this coupon is applicable to */
-//    plan_type: Exclude<PurchasablePlan, PurchasablePlan.Any>;
-//
-//    /** The billing period this coupon should apply to */
-//    billing_period: BillingPeriod;
-//
-//    /** The promo code string used for Whop
-//     *
-//     * Schema:
-//     * ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
-//    */
-//    promo_code: `${bigint}-${string}-${string}-${bigint}-${number}`;
-//
-//    /** Where the coupon was obtained from */
-//    source: DiscountSource;
-//}
+/** Represents a single coupon. More specific type definitions than Prisma allows. */
+export interface CouponDefinition extends Omit<Omit<coupon, 'promo_code'|'whop_id'|'stripe_id'> & Partial<Pick<coupon, 'promo_code'|'whop_id'|'stripe_id'>>, never> {
+    /** The type of subscription this coupon is applicable to */
+    plan_type: Exclude<PurchasablePlan, PurchasablePlan.Any>;
 
-//export interface CouponGenerated<TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> extends CouponDefinition {
-//    whop_id: TUsesWhop extends true ? NonNullable<CouponDefinition['whop_id']> : CouponDefinition['whop_id'];
-//    stripe_id: TUsesStripe extends true ? NonNullable<CouponDefinition['stripe_id']>: CouponDefinition['stripe_id'];
-//}
+    /** The billing period this coupon should apply to */
+    billing_period: BillingPeriod;
 
-//export type Coupon<TGenerated extends boolean = false, TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> = TGenerated extends true ? CouponGenerated<TUsesStripe, TUsesWhop> : CouponDefinition;
+    /** Where the coupon was obtained from */
+    source: DiscountSource;
+}
+
+export interface CouponGenerated<TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> extends Omit<CouponDefinition & coupon, never> {
+    whop_id: TUsesWhop extends true ? NonNullable<coupon['whop_id']> : coupon['whop_id'];
+    stripe_id: TUsesStripe extends true ? NonNullable<coupon['stripe_id']>: coupon['stripe_id'];
+    promo_code: string;
+}
+
+export type Coupon<TGenerated extends boolean = false, TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> = TGenerated extends true ? CouponGenerated<TUsesStripe, TUsesWhop> : CouponDefinition;
 
 export type PlanFreeDays = Partial<Record<DiscountSource, number>>;
 export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
@@ -185,46 +179,46 @@ export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
 
 
 /** Represents a single coupon */
-export interface CouponDefinition {
-    /** Number multiplied against the price to determine how much should be waived (e.g. a 75% discount would be 0.75) */
-    amount: number;
+//export interface CouponDefinition {
+//    /** Number multiplied against the price to determine how much should be waived (e.g. a 75% discount would be 0.75) */
+//    amount: number;
+//
+//    /** The type of subscription this coupon is applicable to */
+//    planType: Exclude<PurchasablePlan, PurchasablePlan.Any>;
+//
+//    /** The billing period this coupon should apply to */
+//    billingPeriod: BillingPeriod;
+//
+//    /** How many billing periods this coupon lasts for */
+//    duration: number;
+//
+//    /** The promo code string used for Whop
+//     *
+//     * Schema:
+//     * ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
+//    */
+//    promoCode?: string;
+//
+//    /** Where the coupon was obtained from */
+//    source: DiscountSource;
+//}
 
-    /** The type of subscription this coupon is applicable to */
-    planType: Exclude<PurchasablePlan, PurchasablePlan.Any>;
+//export interface CouponGenerated extends CouponDefinition {
+//    promoCode: string;
+//}
 
-    /** The billing period this coupon should apply to */
-    billingPeriod: BillingPeriod;
-
-    /** How many billing periods this coupon lasts for */
-    duration: number;
-
-    /** The promo code string used for Whop
-     *
-     * Schema:
-     * ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
-    */
-    promoCode?: string;
-
-    /** Where the coupon was obtained from */
-    source: DiscountSource;
-}
-
-export interface CouponGenerated extends CouponDefinition {
-    promoCode: string;
-}
-
-export type Coupon<TGenerated extends boolean = false> = TGenerated extends true ? CouponGenerated : CouponDefinition;
+//export type Coupon<TGenerated extends boolean = false> = TGenerated extends true ? CouponGenerated : CouponDefinition;
 
 
 /** A list of discounts applicable to a given subscription type */
-export interface Discounts {
-    /** How many days the user has for free in this tier
-     *
-     * Organized by the source of the discount
-    */
-    free: Partial<Record<DiscountSource, number>>;
-    /** A list of coupons for this tier in this customer's arsenal */
-    coupons: Coupon<true>[];
-}
+//export interface Discounts {
+//    /** How many days the user has for free in this tier
+//     *
+//     * Organized by the source of the discount
+//    */
+//    free: Partial<Record<DiscountSource, number>>;
+//    /** A list of coupons for this tier in this customer's arsenal */
+//    coupons: Coupon<true>[];
+//}
 
-export type UsersDiscount = Partial<Record<PurchasablePlan, Discounts>>;
+//export type UsersDiscount = Partial<Record<PurchasablePlan, Discounts>>;

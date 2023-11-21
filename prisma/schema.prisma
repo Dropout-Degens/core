@@ -81,22 +81,22 @@ model user {
 
   // OLD: Remove these after migration
   /// @deprecated to be removed after migration
-  auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
+  //auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
   /// @deprecated to be removed after migration
-  auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
+  //auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
 
   /// @deprecated to be removed after migration
-  whop_membership_id             String? @unique(map: "whop-id_UNIQUE") @map("whop-membership-id") @db.VarChar(45)
+  //whop_membership_id             String? @unique(map: "whop-id_UNIQUE") @map("whop-membership-id") @db.VarChar(45)
   /// @deprecated to be removed after migration
-  whop_email                     String? @map("whop-email") @db.Text
+  //whop_email                     String? @map("whop-email") @db.Text
 
   /// @deprecated to be removed after migration
-  stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
+  //stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
   /// @deprecated to be removed after migration
-  subscription_expiration        BigInt  @default(0) @map("subscription-expiration") @db.BigInt
+  //subscription_expiration        BigInt  @default(0) @map("subscription-expiration") @db.BigInt
 
   /// @deprecated to be removed after migration
-  discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+  //discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
 }
 
 model auth_session {
@@ -134,8 +134,10 @@ model membership {
   /// @see RoleFlags
   positive_flags         Int     @db.UnsignedInt
   /// RoleFlags to remove from this user
+  ///
+  /// Negative flags have the final say! Use sparingly!
   /// @see RoleFlags
-  negative_flags         Int     @db.UnsignedInt
+  negative_flags         Int     @default(0) @db.UnsignedInt
 
   /// When this subscription should be considered no longer active if not renewed
   expiration    BigInt  @db.UnsignedBigInt

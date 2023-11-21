@@ -28,6 +28,8 @@
     "./discord/refresh-token.js": "./src/discord/refresh-token.js",
     "./discord/RES.jsT": "./src/discord/REST.js",
     "./discord/revoke-token.js": "./src/discord/revoke-token.js",
+    "./memberships/index.js": "./src/memberships/index.js",
+    "./memberships/flatten.js": "./src/memberships/flatten.js",
     "./db.js": "./src/db.js",
     "./definitions.js": "./src/definitions.js",
     "./errors.js": "./src/errors.js",
