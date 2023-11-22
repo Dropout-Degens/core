@@ -29,7 +29,7 @@ model coupon {
   duration        Int     @db.SmallInt
   billing_period  String  @map("billing-period") @db.TinyText
   plan_type       Int     @map("plan-type") @db.TinyInt
-  source          String  @db.TinyText
+  source          String? @db.TinyText
 
   @@index([associated_user], map: "associated-user")
 }
