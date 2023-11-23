@@ -69,7 +69,7 @@ model user {
 
 
   karma                          BigInt     @default(0)
-  // NOTE: When adding new caps, be sure to run the following SQL to create a reset event:
+  // NOTE: When adding new caps, be sure to run the following SQL to create a reset event. THIS MUST BE DONE IN PRODUCTION TOO!!!
   // CREATE EVENT `reset_NEW_COLUMN` ON SCHEDULE EVERY 1 DAY STARTS `YEAR-MONTH-TOMORROW 05:00:00` DO UPDATE  `users`  SET `NEW_COLUMN` = 0;
   karma_today_from_messages      BigInt     @default(0)
   karma_today_from_reactions     BigInt     @default(0)

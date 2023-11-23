@@ -30,6 +30,8 @@
     "./discord/revoke-token.js": "./src/discord/revoke-token.js",
     "./memberships/index.js": "./src/memberships/index.js",
     "./memberships/flatten.js": "./src/memberships/flatten.js",
+    "./prisma/index.js": "./src/prisma/index.js",
+    "./prisma/type-utils.js": "./src/prisma/type-utils.js",
     "./db.js": "./src/db.js",
     "./definitions.js": "./src/definitions.js",
     "./errors.js": "./src/errors.js",

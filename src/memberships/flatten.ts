@@ -1,13 +1,11 @@
 import { membership, user } from "@prisma/client";
 import db from "../db.js";
 import { recalcMetadata } from "../discord/application-metadata.js";
+import { FindUniqueReturn, WithSnowflake } from "../index.js";
 
-const a = await db.user.findUnique({
-    where: { snowflake: 1n },
-    include: { memberships: true }
-});
+type DBUser = FindUniqueReturn<WithSnowflake<{include: {memberships: true}}>>;
 
-export async function flattenMemberships(user: {memberships: (Pick<membership, 'active'|'backendId'|'positive_flags'|'negative_flags'> & Partial<membership>)[]} & Partial<user>) {
+export async function flattenMemberships<T extends {memberships: (Pick<DBUser['memberships'][number], 'active'|'backendId'|'positive_flags'|'negative_flags'> & Partial<DBUser['memberships'][number]>)[]} & Omit<Partial<DBUser>, 'memberships'>>(user: T): Promise<T & Pick<DBUser, 'subscription_type'>> {
     let positiveFlags: number = 0;
     let negativeFlags: number = 0;
 
@@ -47,5 +45,5 @@ export async function flattenMemberships(user: {memberships: (Pick<membership, '
         },
     ])
 
-    return user;
+    return user as T & Pick<user, 'subscription_type'>;
 }
