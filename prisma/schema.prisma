@@ -150,3 +150,15 @@ model membership {
   @@index([userSnowflake])
   @@index([manual_adder_snowflake], map: "manual-adder")
 }
+model votes{
+  poll_id        String    
+  user_id        String
+  vote           String
+  @@unique([poll_id, user_id])
+}
+model poll {
+    id        String  @unique
+    question  String
+    answer1   String
+    answer2   String
+}
