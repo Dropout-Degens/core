@@ -7,19 +7,19 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@discordjs/rest": "^2.0.1",
-    "@prisma/client": "^5.5.2",
+    "@discordjs/rest": "^2.2.0",
+    "@prisma/client": "^5.6.0",
     "@whop-sdk/core": "^0.0.4",
     "checkeasy": "^1.1.0",
-    "discord-api-types": "^0.37.62",
-    "discord.js": "^14.13.0",
-    "prisma": "^5.5.2",
+    "discord-api-types": "^0.37.65",
+    "discord.js": "^14.14.1",
+    "prisma": "^5.6.0",
     "stripe": "^12.18.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.2",
     "yaml": "^2.3.4"
   },
   "devDependencies": {
-    "eslint": "^8.53.0"
+    "eslint": "^8.54.0"
   },
   "exports": {
     "./discord/index.js": "./src/discord/index.js",
