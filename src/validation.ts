@@ -1,4 +1,4 @@
-import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError, float, alternatives, exact, nullable } from 'checkeasy';
+import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError, float, alternatives, exact, nullable, defaultValue } from 'checkeasy';
 import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, PurchasablePlan, FreeDays, PlanFreeDays } from './definitions.js';
 
 type ObjectValidator<T> = Required<{ [K in keyof T]: Validator<T[K]> }>;
@@ -70,44 +70,8 @@ export const validatePlanPlanFreeDays = object<ObjectValidator<PlanFreeDays>>(
     ) as ObjectValidator<PlanFreeDays>
 );
 
-export const validateFreeDays = object<ObjectValidator<FreeDays>>(
+export const validateFreeDays = nullable<FreeDays>(object<ObjectValidator<FreeDays>>(
     Object.fromEntries(
         Object.values(PurchasablePlan).filter(v => typeof v === 'number').map(v => [v, optional(validatePlanPlanFreeDays)])
     ) as ObjectValidator<FreeDays>
-);
-
-
-
-//const CouponValidatorDefinitions = {
-//    amount: float({min: 0, max: 1}),
-//    planType: validatePurchasableSubscriptionType,
-//    billingPeriod: validateBillingPeriod,
-//    duration: float({min: 0}),
-//    promoCode: string({pattern: /^\d+-[a-zA-Z0-9]*-[a-zA-Z0-9]+-\d+-[\.0-9]+$/, max: 40}) as Validator<`${bigint}-${string}-${string}-${bigint}-${number}`>,
-//    source: oneOf<DiscountSource>([DiscountSource['weekly-reward'], DiscountSource.manual])
-//} satisfies ObjectValidator<CouponDefinition>;
-//
-//
-//export const validateCouponDefinition: Validator<CouponDefinition> = object<ObjectValidator<CouponDefinition>>(Object.assign({}, CouponValidatorDefinitions, {promoCode: optional(CouponValidatorDefinitions.promoCode)}));
-//
-//export const validateGeneratedCoupon: Validator<CouponGenerated> = object<ObjectValidator<CouponGenerated>>(CouponValidatorDefinitions);
-//
-//export const validateCoupon = oneOf<Validator<Coupon<boolean>>>([validateCouponDefinition, validateGeneratedCoupon]);
-//
-//
-//export const validateFreeDays= object<ObjectValidator<Discounts['free']>>(
-//    Object.fromEntries(
-//        Object.values(DiscountSource).map(v => [v, optional(int({min: 0}))])
-//    ) as ObjectValidator<Discounts['free']>
-//);
-//
-//export const validateDiscounts: Validator<Discounts> = object({
-//    free: validateFreeDays,
-//    coupons: arrayOf(validateGeneratedCoupon)
-//});
-//
-//export const validateUsersDiscounts = object<ObjectValidator<UsersDiscount>>(
-//    Object.fromEntries(
-//        Object.values(PurchasablePlan).filter(v => typeof v === 'number').map(v => [v, optional(validateDiscounts)])
-//    ) as ObjectValidator<UsersDiscount>
-//);
+));

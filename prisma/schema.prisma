@@ -140,6 +140,8 @@ model membership {
   negative_flags         Int     @default(0) @db.UnsignedInt
 
   /// When this subscription should be considered no longer active if not renewed
+  //
+  // Unix millis.
   expiration    BigInt  @db.UnsignedBigInt
   /// Whether this subscription is active. If false, it will be ignored.
   active        Boolean
