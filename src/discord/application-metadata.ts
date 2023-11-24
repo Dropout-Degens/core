@@ -1,7 +1,11 @@
-import { users } from "@prisma/client";
+import { user } from '@prisma/client';
 import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody, RESTPutAPICurrentUserApplicationRoleConnectionResult } from "discord-api-types/v10";
 import RoleFlags from "../definitions.js";
 import { bearerTokenREST, botREST } from "./REST.js";
+import { DiscordAPIError } from '@discordjs/rest';
+import { ExpiredAccessTokenError, InvalidGrantError } from '../errors.js';
+import db from '../db.js';
+import { refreshToken } from './refresh-token.js';
 
 export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnectionMetadata, 'key'>>;
 
@@ -47,27 +51,18 @@ export const linkedRolesSchemaPutRequest = botREST.put(Routes.applicationRoleCon
 
 export const platform_name = 'Dropout Degens';
 
-export class ExpiredAccessTokenError extends Error {
-    constructor(id?: bigint) {
-        super(`User with ID ${id} has an expired access token! Did you forget to call refreshToken() before calling recalcMetadata()?`);
-        this.name = 'ExpiredAccessTokenError';
-    }
-}
-
-// TODO: Add karma
-/**
- * MAKE SURE YOU REFRESH THE ACCESS TOKEN BEFORE SENDING THIS REQUEST!!!
- *
- * @param user The user's database entry. Only the the subscription and access token are strictly needed. Access token should be refreshed.
- */
-export async function recalcMetadata(user: Pick<users, 'subscription_type'|'discord_access_token'> & Partial<users>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
+export async function recalcMetadata(user: Pick<user, 'subscription_type'|'discord_access_token'|'karma'> & Partial<user>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
     await linkedRolesSchemaPutRequest;
 
     const now = Math.ceil(Date.now() / 1000);
     const expiry = Number(user.discord_access_expiry) + 2;
     if (user.discord_access_expiry && now > expiry ) {
-        console.log('Not recalculating metadata because the access token has expired.', {expiry, now});
-        throw new ExpiredAccessTokenError(user.snowflake);
+        if (user.snowflake && user.discord_refresh_token)
+            await refreshToken(user as typeof user & Pick<user, 'snowflake'|'discord_refresh_token'|'discord_access_expiry'>);
+        else {
+            console.log('Not recalculating metadata because the access token has expired.', {expiry, now});
+            throw new ExpiredAccessTokenError(user.snowflake);
+        }
     }
 
     const body = {
@@ -76,20 +71,34 @@ export async function recalcMetadata(user: Pick<users, 'subscription_type'|'disc
             player_props: user.subscription_type & RoleFlags.PlayerProps ? 1 : 0,
             high_roller: user.subscription_type & RoleFlags.Van_HighRoller ? 1 : 0,
             staff: user.subscription_type & RoleFlags.AnyStaffRole ? 1 : 0,
+            karma: user.karma.toString(),
         } as Record<keyof typeof applicationMetadataSchemaObject, string | number>,
         platform_name,
     } satisfies RESTPutAPICurrentUserApplicationRoleConnectionJSONBody;
 
     bearerTokenREST.setToken(user.discord_access_token!);
 
-    const res = await bearerTokenREST.put(Routes.userApplicationRoleConnection(process.env.DISCORD_CLIENT_ID!), {body}) as RESTPutAPICurrentUserApplicationRoleConnectionResult;
+    try {
 
-    for (const key in body.metadata) {
-        const expected = body.metadata[key as keyof typeof body.metadata];
-        const actual = res.metadata[key as keyof typeof res.metadata];
+        const res = await bearerTokenREST.put(Routes.userApplicationRoleConnection(process.env.DISCORD_CLIENT_ID!), {body}) as RESTPutAPICurrentUserApplicationRoleConnectionResult;
 
-        if (expected.toString() !== actual?.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
+        for (const key in body.metadata) {
+            const expected = body.metadata[key as keyof typeof body.metadata];
+            const actual = res.metadata[key as keyof typeof res.metadata];
+
+            if (expected.toString() !== actual?.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
+        }
+
+        return res;
+    } catch (e) {
+
+        if (e instanceof DiscordAPIError && e.message == 'invalid_grant') {
+            console.log(`Failed to refresh Discord access token for user ${user.snowflake} because the refresh token is invalid. Removing any active auth sessions.`, {user});
+            await db.auth_session.deleteMany({ where: { user: { snowflake: user.snowflake } }});
+            throw new InvalidGrantError(user.snowflake, e);
+        }
+
+        console.error('Failed to recalculate metadata!', {user, body, e});
+        throw e;
     }
-
-    return res;
 }

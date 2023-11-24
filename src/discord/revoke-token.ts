@@ -1,10 +1,10 @@
-import { users } from "@prisma/client";
+import { user } from '@prisma/client';
 import db from "../db.js";
 import { Routes } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
 
 
-export async function revokeToken<T extends Pick<users, 'snowflake'|'discord_access_token'> & Partial<users>>(user: T): Promise<(T & { discord_access_token: null, discord_refresh_token: null, discord_access_expiry: 0n }) | undefined> {
+export async function revokeToken<T extends Pick<user, 'snowflake'|'discord_access_token'> & Partial<user>>(user: T): Promise<(T & { discord_access_token: null, discord_refresh_token: null, discord_access_expiry: 0n }) | undefined> {
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');
     if (!process.env.DISCORD_CLIENT_SECRET) throw new Error('Environment variable `DISCORD_CLIENT_SECRET` not set!');
 
@@ -22,7 +22,7 @@ export async function revokeToken<T extends Pick<users, 'snowflake'|'discord_acc
 
     return Object.assign(
         user,
-        await db.users.update({
+        await db.user.update({
             where: {snowflake: user.snowflake},
             data: {
                 discord_access_token: null,
