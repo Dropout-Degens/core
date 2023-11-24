@@ -2,7 +2,7 @@ import { user } from '@prisma/client';
 import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody, RESTPutAPICurrentUserApplicationRoleConnectionResult } from "discord-api-types/v10";
 import RoleFlags from "../definitions.js";
 import { bearerTokenREST, botREST } from "./REST.js";
-import { DiscordAPIError } from 'discord.js';
+import { DiscordAPIError } from '@discordjs/rest';
 import { ExpiredAccessTokenError, InvalidGrantError } from '../errors.js';
 import db from '../db.js';
 import { refreshToken } from './refresh-token.js';
