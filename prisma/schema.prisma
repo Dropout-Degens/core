@@ -56,7 +56,7 @@ model user {
   auth_sessions                  auth_session[]
 
   memberships                    membership[]
-  /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MMODIFIED!
+  /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MODIFIED!
   subscription_type              Int     @default(0) @map("subscription-type") @db.UnsignedInt
 
 

@@ -22,7 +22,7 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
     }
 
     const oldFlags = user.subscription_type;
-    const newFlags: number = positiveFlags & ~negativeFlags;
+    const newFlags = positiveFlags & ~negativeFlags;
 
     console.log({oldFlags, newFlags, positiveFlags, negativeFlags});
 

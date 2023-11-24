@@ -51,12 +51,6 @@ export const linkedRolesSchemaPutRequest = botREST.put(Routes.applicationRoleCon
 
 export const platform_name = 'Dropout Degens';
 
-// TODO: Add karma
-/**
- * MAKE SURE YOU REFRESH THE ACCESS TOKEN BEFORE SENDING THIS REQUEST!!!
- *
- * @param user The user's database entry. Only the the subscription and access token are strictly needed. Access token should be refreshed.
- */
 export async function recalcMetadata(user: Pick<user, 'subscription_type'|'discord_access_token'|'karma'> & Partial<user>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
     await linkedRolesSchemaPutRequest;
 

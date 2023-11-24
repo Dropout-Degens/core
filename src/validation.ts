@@ -47,18 +47,11 @@ const CouponValidatorDefinitions = {
 
 
 export const validateCouponDefinition: Validator<CouponDefinition> = object<ObjectValidator<CouponDefinition>>(CouponValidatorDefinitions);
-export const validateStripeGeneratedCoupon: Validator<CouponGenerated<true, false>> = object<ObjectValidator<CouponGenerated<true, false>>>({
+export const validateGeneratedCoupon: Validator<CouponGenerated<boolean, boolean>> = object<ObjectValidator<CouponGenerated<boolean, boolean>>>({
     ...CouponValidatorDefinitions,
-    stripe_id: string(),
+    stripe_id: nullable(string()),
+    whop_id: nullable(string()),
 });
-export const validateWhopGeneratedCoupon: Validator<CouponGenerated<false, true>> = object<ObjectValidator<CouponGenerated<false, true>>>({
-    ...CouponValidatorDefinitions,
-    whop_id: string(),
-});
-export const validateGeneratedCoupon: Validator<CouponGenerated<false, true> | CouponGenerated<true, false>> = alternatives([
-    validateStripeGeneratedCoupon,
-    validateWhopGeneratedCoupon,
-]);
 export const validateGeneratedCouponList = arrayOf<CouponGenerated<false, true> | CouponGenerated<true, false>>(validateGeneratedCoupon);
 
 export const validateCoupon = alternatives<Validator<Coupon<boolean>>[]>([validateCouponDefinition, validateGeneratedCoupon]);
