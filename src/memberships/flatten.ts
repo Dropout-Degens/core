@@ -14,8 +14,10 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
     for (const membership of user.memberships) {
         if (!membership.active) continue;
 
-        if (membership.expiration && membership.expiration > 0 && membership.expiration < Math.floor(new Date().getTime() / 1000))
+        if (membership.expiration && membership.expiration > 0 && membership.expiration < Math.floor(new Date().getTime() / 1000)) {
             noLongerActiveMembershipORSelector.push({backendId: membership.backendId});
+            continue;
+        }
 
         positiveFlags |= membership.positive_flags;
         negativeFlags |= membership.negative_flags;
