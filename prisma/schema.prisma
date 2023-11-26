@@ -47,9 +47,9 @@ model user {
   discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry") @db.UnsignedBigInt
   discord_refresh_token          String? @map("discord-refresh-token") @db.LongText
 
-  timezone                       String  @default(dbgenerated("(_utf8mb4\\'America/New_York\\')")) @db.Text
+  timezone                       String  @default("'America/New_York") @db.VarChar(48)
   timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted") @db.UnsignedBigInt
-  weekly_reward_last_claimed     String  @default(dbgenerated("(_utf8mb4\\'December 31 1969 20:00 GMT-4\\')")) @map("weekly-reward-last-claimed") @db.LongText
+  weekly_reward_last_claimed     String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed") @db.VarChar(64)
   weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak") @db.UnsignedInt
   weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best") @db.UnsignedInt
 
@@ -76,27 +76,9 @@ model user {
 
 
 
-  admin_created_memberships membership[] @relation("manual_adder")
+  admin_created_memberships      membership[] @relation("manual_adder")
 
-
-  // OLD: Remove these after migration
-  /// @deprecated to be removed after migration
-  //auth_session_token             String? @unique(map: "auth-session-token_UNIQUE") @map("auth-session-token") @db.VarChar(45)
-  /// @deprecated to be removed after migration
-  //auth_session_token_expires     BigInt  @default(0) @map("auth-session-token-expires") @db.UnsignedBigInt
-
-  /// @deprecated to be removed after migration
-  //whop_membership_id             String? @unique(map: "whop-id_UNIQUE") @map("whop-membership-id") @db.VarChar(45)
-  /// @deprecated to be removed after migration
-  //whop_email                     String? @map("whop-email") @db.Text
-
-  /// @deprecated to be removed after migration
-  //stripe_subscription_id         String? @unique(map: "stripe-subscription-id_UNIQUE") @map("stripe-subscription-id") @db.Char(32)
-  /// @deprecated to be removed after migration
-  //subscription_expiration        BigInt  @default(0) @map("subscription-expiration") @db.BigInt
-
-  /// @deprecated to be removed after migration
-  //discounts                      Json    @default(dbgenerated("(_utf8mb4\\'{}\\')"))
+  votes                          votes[]
 }
 
 model auth_session {
@@ -132,12 +114,12 @@ model membership {
 
   /// RoleFlags to grant to this user
   /// @see RoleFlags
-  positive_flags         Int     @db.UnsignedInt
+  positive_flags Int     @db.UnsignedInt
   /// RoleFlags to remove from this user
   ///
   /// Negative flags have the final say! Use sparingly!
   /// @see RoleFlags
-  negative_flags         Int     @default(0) @db.UnsignedInt
+  negative_flags Int     @default(0) @db.UnsignedInt
 
   /// When this subscription should be considered no longer active if not renewed
   //
@@ -154,19 +136,27 @@ model membership {
 }
 model votes {
 
-  poll_id        String @id
+  poll_id        BigInt @db.UnsignedBigInt
   poll           poll @relation(fields: [poll_id], references: [id])
 
-  user_id        String
-  vote           String
+  user_id        BigInt @db.UnsignedBigInt
+  user           user @relation(fields: [user_id], references: [snowflake])
+
+  vote           Int  @db.TinyInt
+
+  won            Boolean?
 
   @@unique([poll_id, user_id])
+  @@index([poll_id])
+  @@index([user_id])
 }
 model poll {
-    id        String  @unique
-    question  String
-    answer1   String
-    answer2   String
+    id         BigInt  @id @db.UnsignedBigInt
+    channel_id BigInt  @db.UnsignedBigInt
+    question   String
+    options    Json
+    expiration BigInt?  @db.UnsignedBigInt
+    open       Boolean @default(true)
 
-    votes     votes[]
+    votes      votes[]
 }

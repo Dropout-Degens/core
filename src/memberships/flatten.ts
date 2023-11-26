@@ -44,7 +44,7 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
                 data: { subscription_type: newFlags },
                 include: { memberships: false }
             }));
-            console.log('Updated user flags', {user});
+            console.log('Updated user DB flags.');
         }(),
         async function() {
             console.log('Checking if user metadata needs to be recalculated', {snowflake: user.snowflake, newFlags, oldFlags});
@@ -56,7 +56,7 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
         }(),
     ]);
 
-    console.log('Returning user', {user});
+    console.log('User membership recalculates successfully.')
 
     return user as T & Pick<user, 'subscription_type'>;
 }

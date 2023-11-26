@@ -68,3 +68,5 @@ export const validateFreeDays = nullable<FreeDays>(object<ObjectValidator<FreeDa
         Object.values(PurchasablePlan).filter(v => typeof v === 'number').map(v => [v, optional(validatePlanPlanFreeDays)])
     ) as ObjectValidator<FreeDays>
 ));
+
+export const validatePollOptions = arrayOf<string>(string({min: 2}));
