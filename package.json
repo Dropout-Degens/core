@@ -38,7 +38,7 @@
     "./index.js": "./src/index.js",
     "./prices.js": "./src/prices.js",
     "./stringify.js": "./src/stringify.js",
-    "./utils.js": "./src/utils.js",
+    "./util.js": "./src/util.js",
     "./validation.js": "./src/validation.js"
   }
 }
