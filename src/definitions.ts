@@ -103,29 +103,29 @@ export enum RoleFlags {
 export default RoleFlags;
 
 export enum KarmaPerMessageByRole {
-    AllRoles        = 5,
+    _any        = 5,
     AnyPremiumRole  = 10,
     Van_HighRoller  = 25,
     AnyStaffRole    = 10,
 }
 
 export enum KarmaPerMessageDailyCapByRole {
-    AllRoles        = 500,
+    _any        = 500,
     AnyPremiumRole  = 1250,
     Van_HighRoller  = 2500,
     AnyStaffRole    = -1,
 }
 
 export enum KarmaPerReactionByRole {
-    AllRoles = 5,
+    _any = 5,
 }
 
 export enum KarmaPerReactionDailyCapByRole {
-    AllRoles = 25,
+    _any = 25,
 }
 
 export enum KarmaDailyBonusByRole {
-    AllRoles = 0,
+    _any = 0,
     AnyPremiumRole = 250,
     Van_HighRoller = 500,
     AnyStaffRole = 0,
