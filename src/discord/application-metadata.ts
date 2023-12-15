@@ -71,7 +71,7 @@ export async function recalcMetadata(user: Pick<user, 'subscription_type'|'disco
             player_props: user.subscription_type & RoleFlags.PlayerProps ? 1 : 0,
             high_roller: user.subscription_type & RoleFlags.Van_HighRoller ? 1 : 0,
             staff: user.subscription_type & RoleFlags.AnyStaffRole ? 1 : 0,
-            karma: user.karma.toString(),
+            karma: user.karma?.toString() ?? '0',
         } as Record<keyof typeof applicationMetadataSchemaObject, string | number>,
         platform_name,
     } satisfies RESTPutAPICurrentUserApplicationRoleConnectionJSONBody;
@@ -86,7 +86,7 @@ export async function recalcMetadata(user: Pick<user, 'subscription_type'|'disco
             const expected = body.metadata[key as keyof typeof body.metadata];
             const actual = res.metadata[key as keyof typeof res.metadata];
 
-            if (expected.toString() !== actual?.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
+            if (expected?.toString() !== actual?.toString()) throw new Error(`Role metadata for key ${key} was not set correctly! Expected ${expected} but got ${actual}!`);
         }
 
         return res;
