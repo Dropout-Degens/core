@@ -32,3 +32,28 @@ export function getGenericMappingAgainstRoleFlags<T extends Record<string, unkno
 
     return returnValue;
 }
+
+export function getLowestRoleInMapping<T extends Partial<Record<keyof typeof RoleFlags|'_any', unknown>>>(mapping: T): RoleFlags | null {
+    let returnValue: RoleFlags | null = null;
+
+    const roleNames = Object.keys(mapping) as unknown[];
+
+    for (let i = roleNames.length - 1; i >= 0; i--) {
+        const roleName = roleNames[i];
+
+        if (Number(roleName) == roleName || typeof roleName !== 'string') continue;
+        if ( !(roleName in RoleFlags) ) {
+            if (roleName !== '_any') console.warn(`WARN: Invalid role name ${roleName} (type ${typeof roleName}) in mapping!`);
+            continue;
+        }
+
+        const flags = RoleFlags[roleName as keyof typeof RoleFlags]
+        const lowestApplicableRoleFlag = flags & -flags;
+
+        const oldRole = returnValue;
+        if (returnValue === null || lowestApplicableRoleFlag < returnValue) returnValue = lowestApplicableRoleFlag as RoleFlags;
+        console.log(`getLowestRoleInMapping: ${oldRole} < ${lowestApplicableRoleFlag} = ${returnValue}`)
+    }
+
+    return returnValue;
+}
