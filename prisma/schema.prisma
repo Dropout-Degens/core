@@ -47,7 +47,7 @@ model user {
   discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry") @db.UnsignedBigInt
   discord_refresh_token          String? @map("discord-refresh-token") @db.LongText
 
-  timezone                       String  @default("'America/New_York") @db.VarChar(48)
+  timezone                       String  @default("America/New_York") @db.VarChar(48)
   timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted") @db.UnsignedBigInt
   weekly_reward_last_claimed     String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed") @db.VarChar(64)
   weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak") @db.UnsignedInt
