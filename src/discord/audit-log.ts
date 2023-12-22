@@ -2,7 +2,7 @@ import type { ChatInputCommandInteraction, RawFile, WebhookMessageCreateOptions 
 import { Routes } from 'discord-api-types/v10';
 import { botREST } from "./REST.js";
 
-const AuditLogChannelID = process.env.DISCORD_AUDIT_LOG_CHANNEL!;
+const AuditLogChannelIDs = process.env.DISCORD_AUDIT_LOG_CHANNELS!.trim().split(",").map((c) => c.trim());
 
 //export async function auditInfo(message: string, ...attachments: RawFile[]) {
 //    auditRaw({
@@ -32,5 +32,7 @@ export async function auditAdminCommand(execution: ChatInputCommandInteraction, 
 }
 
 export async function auditRaw(body: WebhookMessageCreateOptions, ...attachments: RawFile[]) {
-    return await botREST.post(Routes.channelMessages(AuditLogChannelID), { body, files: attachments.length ? attachments : undefined } );
+    await Promise.all(AuditLogChannelIDs.map(id => botREST.post(Routes.channelMessages(id), {
+        body, files: attachments.length ? attachments : undefined
+    } )));
 }

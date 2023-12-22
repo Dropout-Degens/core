@@ -148,6 +148,8 @@ model votes {
 
   won            Boolean?
 
+  wager          Int? @db.SmallInt
+
   @@unique([poll_id, user_id])
   @@index([poll_id])
   @@index([user_id])

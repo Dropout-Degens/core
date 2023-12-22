@@ -19,3 +19,10 @@ export class ExpiredAccessTokenError extends Error {
         this.name = 'ExpiredAccessTokenError';
     }
 }
+
+export class PollExpiredError extends Error {
+    constructor(id?: bigint) {
+        super(`Poll with ID ${id} has expired!`);
+        this.name = 'PollExpiredError';
+    }
+}
