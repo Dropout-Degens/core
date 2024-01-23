@@ -97,10 +97,7 @@ interface ExecutableInteractionDefinition<TType extends Exclude<Interactable, Ap
     /** Function called when this interaction is executed */
     execute(execution : InteractionFromData<TType>): Awaitable<unknown>;
 
-    /** Whether this interaction is a debug function and should not be used outside of debug mode
-     *
-     * @deprecated This is not implemented.
-    */
+    /** Whether this interaction is a debug function and should not be used outside of development */
     debug?: boolean;
 }
 
