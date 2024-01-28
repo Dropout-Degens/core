@@ -56,7 +56,7 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
         }(),
     ]);
 
-    console.log('User membership recalculates successfully.')
+    console.log('User membership recalculated successfully.')
 
     return user as T & Pick<user, 'subscription_type'>;
 }
