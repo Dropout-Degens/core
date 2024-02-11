@@ -8,12 +8,12 @@
   },
   "dependencies": {
     "@discordjs/rest": "^2.2.0",
-    "@prisma/client": "^5.7.1",
+    "@prisma/client": "^5.9.1",
     "@whop-sdk/core": "^0.0.4",
     "checkeasy": "^1.1.0",
     "discord-api-types": "^0.37.67",
     "discord.js": "^14.14.1",
-    "prisma": "^5.7.1",
+    "prisma": "^5.9.1",
     "stripe": "^12.18.0",
     "typescript": "^5.3.3",
     "yaml": "^2.3.4"
