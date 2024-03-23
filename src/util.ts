@@ -52,7 +52,6 @@ export function getLowestRoleInMapping<T extends Partial<Record<keyof typeof Rol
 
         const oldRole = returnValue;
         if (returnValue === null || lowestApplicableRoleFlag < returnValue) returnValue = lowestApplicableRoleFlag as RoleFlags;
-        console.log(`getLowestRoleInMapping: ${oldRole} < ${lowestApplicableRoleFlag} = ${returnValue}`)
     }
 
     return returnValue;
