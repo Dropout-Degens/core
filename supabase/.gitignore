@@ -1,0 +1,6 @@
+migrations
+
+# Supabase
+.branches
+.temp
+.env

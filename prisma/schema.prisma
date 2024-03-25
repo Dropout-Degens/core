@@ -3,9 +3,10 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
-  url          = env("DATABASE_URL")
-  relationMode = "prisma"
+  provider     = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+  relationMode = "foreignKeys"
 }
 
 
@@ -13,7 +14,7 @@ datasource db {
 model coupon {
   @@map ("coupons")
 
-  associated_user BigInt?  @map("associated-user") @db.UnsignedBigInt
+  associated_user BigInt?  @map("associated-user")
   user            user?    @relation(fields: [associated_user], references: [snowflake])
 
   /// The promo code string used for Whop
@@ -25,11 +26,11 @@ model coupon {
   whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
   stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
 
-  discount_amount Float   @map("discount-amount") @db.Float
+  discount_amount Float   @map("discount-amount") @db.Real
   duration        Int     @db.SmallInt
-  billing_period  String  @map("billing-period") @db.TinyText
-  plan_type       Int     @map("plan-type") @db.TinyInt
-  source          String? @db.TinyText
+  billing_period  String  @map("billing-period")
+  plan_type       Int     @map("plan-type")
+  source          String?
 
   @@index([associated_user], map: "associated-user")
 }
@@ -38,26 +39,26 @@ model coupon {
 model user {
   @@map ("users")
 
-  snowflake                      BigInt  @id @db.UnsignedBigInt
+  snowflake                      BigInt  @id
   discord_email                  String? @map("discord-email") @db.Text
   discord_pfp                    String? @map("discord-pfp") @db.Text
   discord_name                   String? @map("discord-name") @db.Text
 
-  discord_access_token           String? @map("discord-access-token") @db.LongText
-  discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry") @db.UnsignedBigInt
-  discord_refresh_token          String? @map("discord-refresh-token") @db.LongText
+  discord_access_token           String? @map("discord-access-token")
+  discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry")
+  discord_refresh_token          String? @map("discord-refresh-token")
 
-  timezone                       String  @default("America/New_York") @db.VarChar(48)
-  timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted") @db.UnsignedBigInt
-  weekly_reward_last_claimed     String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed") @db.VarChar(64)
-  weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak") @db.UnsignedInt
-  weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best") @db.UnsignedInt
+  timezone                       String  @default("America/New_York")
+  timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted")
+  weekly_reward_last_claimed     String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
+  weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak")
+  weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best")
 
   auth_sessions                  auth_session[]
 
   memberships                    membership[]
   /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MODIFIED!
-  subscription_type              Int     @default(0) @map("subscription-type") @db.UnsignedInt
+  subscription_type              Int     @default(0) @map("subscription-type")
 
 
   /// Record<PurchasablePlan, Record<DiscountSource, number>>
@@ -86,10 +87,10 @@ model user {
 model auth_session {
   @@map ("auth_sessions")
 
-  token          String   @unique @db.VarChar(45)
-  expires        BigInt   @db.UnsignedBigInt
+  token          String   @id @db.VarChar(45)
+  expires        BigInt
 
-  user_snowflake BigInt   @db.UnsignedBigInt
+  user_snowflake BigInt
   user           user     @relation(fields: [user_snowflake], references: [snowflake])
 
   created_at     DateTime @default(now()) @db.Timestamp(0)
@@ -109,28 +110,28 @@ model membership {
 
   /// Admin who added this membership, if any.
   manual_adder  user?  @relation("manual_adder", fields: [manual_adder_snowflake], references: [snowflake])
-  manual_adder_snowflake BigInt? @map("manual-adder") @db.UnsignedBigInt
+  manual_adder_snowflake BigInt? @map("manual-adder")
 
   /// Email associated with this membership, if any
   email         String? @map("email") @db.Text
 
   /// RoleFlags to grant to this user
   /// @see RoleFlags
-  positive_flags Int     @db.UnsignedInt
+  positive_flags Int
   /// RoleFlags to remove from this user
   ///
   /// Negative flags have the final say! Use sparingly!
   /// @see RoleFlags
-  negative_flags Int     @default(0) @db.UnsignedInt
+  negative_flags Int     @default(0)
 
   /// When this subscription should be considered no longer active if not renewed
   //
   // Unix millis.
-  expiration    BigInt  @db.UnsignedBigInt
+  expiration    BigInt
   /// Whether this subscription is active. If false, it will be ignored.
   active        Boolean
 
-  userSnowflake BigInt  @db.UnsignedBigInt
+  userSnowflake BigInt
   user          user    @relation(fields: [userSnowflake], references: [snowflake])
 
   @@index([userSnowflake])
@@ -138,13 +139,13 @@ model membership {
 }
 model votes {
 
-  poll_id        BigInt @db.UnsignedBigInt
+  poll_id        BigInt
   poll           poll @relation(fields: [poll_id], references: [id])
 
-  user_id        BigInt @db.UnsignedBigInt
+  user_id        BigInt
   user           user @relation(fields: [user_id], references: [snowflake])
 
-  vote           Int  @db.TinyInt
+  vote           Int
 
   won            Boolean?
 
@@ -155,11 +156,11 @@ model votes {
   @@index([user_id])
 }
 model poll {
-    id         BigInt  @id @db.UnsignedBigInt
-    channel_id BigInt  @db.UnsignedBigInt
+    id         BigInt  @id
+    channel_id BigInt
     question   String
-    options    Json
-    expiration BigInt?  @db.UnsignedBigInt
+    options    String[]
+    expiration BigInt?
     open       Boolean @default(true)
 
     votes      votes[]
