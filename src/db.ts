@@ -17,11 +17,7 @@ function newPrismaClientBase() {
     const db = new PrismaClient({
         log: ['query', 'info', 'warn', 'error'],
         errorFormat: 'pretty',
-    })
-    .$extends({
-        name: 'Community Masterlist Custom Search Extension',
     });
-    ;
 
     db.$connect();
     process.on('exit', () => db.$disconnect());

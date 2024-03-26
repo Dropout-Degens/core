@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
 }
 
 datasource db {
@@ -7,11 +8,13 @@ datasource db {
   url       = env("DATABASE_URL")
   directUrl = env("DATABASE_DIRECT_URL")
   relationMode = "foreignKeys"
+  schemas = ["private"]
 }
 
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model coupon {
+  @@schema("private")
   @@map ("coupons")
 
   associated_user BigInt?  @map("associated-user")
@@ -37,6 +40,7 @@ model coupon {
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model user {
+  @@schema("private")
   @@map ("users")
 
   snowflake                      BigInt  @id
@@ -85,6 +89,7 @@ model user {
 }
 
 model auth_session {
+  @@schema("private")
   @@map ("auth_sessions")
 
   token          String   @id @db.VarChar(45)
@@ -100,6 +105,7 @@ model auth_session {
 }
 
 model membership {
+  @@schema("private")
   @@map ("memberships")
 
   /// @deprecated
@@ -138,6 +144,7 @@ model membership {
   @@index([manual_adder_snowflake], map: "manual-adder")
 }
 model votes {
+  @@schema("private")
 
   poll_id        BigInt
   poll           poll @relation(fields: [poll_id], references: [id])
@@ -156,6 +163,7 @@ model votes {
   @@index([user_id])
 }
 model poll {
+    @@schema("private")
     id         BigInt  @id
     channel_id BigInt
     question   String
