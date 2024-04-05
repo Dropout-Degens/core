@@ -134,9 +134,7 @@ export enum KarmaDailyBonusByRole {
 export enum PurchasablePlan {
     Van_HighRoller = RoleFlags.Van_HighRoller,
     AllAccess = RoleFlags.AllAccessRaw,
-    PlayerProps = RoleFlags.PlayerPropsRaw,
-    Sportsbook = RoleFlags.SportsbookRaw,
-    Any = RoleFlags.Van_HighRoller | RoleFlags.AllAccessRaw | RoleFlags.PlayerPropsRaw | RoleFlags.SportsbookRaw
+    Any = RoleFlags.Van_HighRoller | RoleFlags.AllAccessRaw,
 }
 
 export enum DiscountSource {
@@ -149,7 +147,6 @@ export enum BillingPeriod {
     months3 = 'months3',
     months1 = 'months1',
     weekly = 'weekly',
-    daily = 'daily'
 }
 
 /** Represents a single coupon. More specific type definitions than Prisma allows. */
