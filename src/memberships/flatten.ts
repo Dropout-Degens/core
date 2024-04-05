@@ -9,7 +9,7 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
     let positiveFlags: number = 0;
     let negativeFlags: number = 0;
 
-    const noLongerActiveMembershipORSelector: {backendId: number}[] = [];
+    const noLongerActiveMembershipORSelector: {backendId: string}[] = [];
 
     for (const membership of user.memberships) {
         if (!membership.active) continue;
