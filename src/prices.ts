@@ -6,7 +6,12 @@ export const StripePrices: SubscriptionPriceMap = {
         [BillingPeriod.months3]: ['price_1P22XyKuVSp9UKA3LHVU6czR'],
         [BillingPeriod.months1]: ['price_1P22HNKuVSp9UKA3gTswgUcP'],
         [BillingPeriod.weekly]: ['price_1NNNNcKuVSp9UKA3ernITrTU'],
-    }
+    },
+
+    [PurchasablePlan.Van_HighRoller]: {
+        [BillingPeriod.year]: ['price_1P6h9vKuVSp9UKA3Xz2EsZRL'],
+    },
+
 } as const satisfies SubscriptionPriceMap;
 
 export const WhopPrices: SubscriptionPriceMap = {

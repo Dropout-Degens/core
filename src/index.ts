@@ -1,6 +1,7 @@
 export * from './discord/index.js';
 export * from './memberships/index.js';
 export * from './prisma/index.js';
+export * from './stripe/index.js';
 export * from './db.js';
 export * from './definitions.js';
 export * from './errors.js'

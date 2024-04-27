@@ -113,6 +113,7 @@ model membership {
 
   whop_id       String? @unique @db.VarChar(45)
   stripe_id     String? @unique @db.VarChar(32)
+  stripe_customer_id String?
 
   /// Admin who added this membership, if any.
   manual_adder  user?  @relation("manual_adder", fields: [manual_adder_snowflake], references: [snowflake])

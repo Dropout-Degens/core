@@ -1,4 +1,4 @@
-import { Prisma, PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 if (typeof window !== 'undefined') throw new Error('Cannot connect to the database from the client!');
 

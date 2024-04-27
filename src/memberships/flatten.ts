@@ -1,4 +1,4 @@
-import { membership, user } from "@prisma/client";
+import { user } from "@prisma/client";
 import db from "../db.js";
 import { recalcMetadata } from "../discord/application-metadata.js";
 import { FindUniqueReturn, WithSnowflake } from "../index.js";
