@@ -1,5 +1,3 @@
-import 'server-only';
-
 import Stripe from 'stripe';
 
 if (!process.env.STRIPE_SECRET_KEY) throw new Error('No STRIPE_SECRET_KEY env var');
