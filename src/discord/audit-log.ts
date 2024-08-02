@@ -32,7 +32,13 @@ export async function auditAdminCommand(execution: ChatInputCommandInteraction, 
 }
 
 export async function auditRaw(body: WebhookMessageCreateOptions, ...attachments: RawFile[]) {
-    await Promise.all(AuditLogChannelIDs.map(id => botREST.post(Routes.channelMessages(id), {
+    const promise = Promise.all(AuditLogChannelIDs.map(id => botREST.post(Routes.channelMessages(id), {
         body, files: attachments.length ? attachments : undefined
     } )));
+
+    if (process.env.NODE_ENV === 'development') {
+        await promise.catch(console.error);
+    } else {
+        await promise
+    }
 }
