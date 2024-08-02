@@ -15,14 +15,9 @@ export const applicationMetadataSchemaObject = {
         description: 'You are a High Roller',
         type: ApplicationRoleConnectionMetadataType.BooleanEqual,
     },
-    sportsbook: {
-        name: 'Sportsbook',
-        description: 'Your Dropout Degens subscription grants you access to our premium Sportsbook picks',
-        type: ApplicationRoleConnectionMetadataType.BooleanEqual,
-    },
-    player_props: {
-        name: 'Player Props',
-        description: 'Your Dropout Degens subscription grants you access to our premium Player Props picks',
+    all_access: {
+        name: 'All Access',
+        description: 'Your have a premium All Access subscription with Dropout Degens',
         type: ApplicationRoleConnectionMetadataType.BooleanEqual,
     },
     staff: {
@@ -67,8 +62,7 @@ export async function recalcMetadata(user: Pick<user, 'subscription_type'|'disco
 
     const body = {
         metadata: {
-            sportsbook: user.subscription_type & RoleFlags.Sportsbook ? 1 : 0,
-            player_props: user.subscription_type & RoleFlags.PlayerProps ? 1 : 0,
+            all_access: user.subscription_type & (RoleFlags.Betting | RoleFlags.ExpectedValue) ? 1 : 0,
             high_roller: user.subscription_type & RoleFlags.Van_HighRoller ? 1 : 0,
             staff: user.subscription_type & RoleFlags.AnyStaffRole ? 1 : 0,
             karma: user.karma?.toString() ?? '0',

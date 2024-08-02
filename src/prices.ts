@@ -1,19 +1,5 @@
 import { BillingPeriod, PurchasablePlan } from "./definitions.js"
 
-export const StripePrices: SubscriptionPriceMap = {
-    [PurchasablePlan.AllAccess]: {
-        [BillingPeriod.year]: ['price_1NpHNvKuVSp9UKA3Cx3NRd9q'],
-        [BillingPeriod.months3]: ['price_1P22XyKuVSp9UKA3LHVU6czR'],
-        [BillingPeriod.months1]: ['price_1P22HNKuVSp9UKA3gTswgUcP'],
-        [BillingPeriod.weekly]: ['price_1NNNNcKuVSp9UKA3ernITrTU'],
-    },
-
-    [PurchasablePlan.Van_HighRoller]: {
-        [BillingPeriod.year]: ['price_1P6h9vKuVSp9UKA3Xz2EsZRL'],
-    },
-
-} as const satisfies SubscriptionPriceMap;
-
 export const WhopPrices: SubscriptionPriceMap = {
     [PurchasablePlan.AllAccess]: {
         [BillingPeriod.year]: ['plan_dJMpw98NBBnvy', 'plan_GAEa8emHiWSJO'],

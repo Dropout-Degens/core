@@ -5,7 +5,7 @@ import { FindUniqueReturn, WithSnowflake } from "../index.js";
 
 type DBUser = FindUniqueReturn<WithSnowflake<{include: {memberships: true}}>>;
 
-export async function flattenMemberships<T extends {memberships: (Pick<DBUser['memberships'][number], 'active'|'backendId'|'positive_flags'|'negative_flags'> & Partial<DBUser['memberships'][number]>)[]} & Omit<Partial<DBUser>, 'memberships'> & Pick<DBUser, 'subscription_type'>>(user: T): Promise<T & Pick<DBUser, 'subscription_type'>> {
+export async function flattenMemberships<T extends {memberships: (Pick<DBUser['memberships'][number], 'active'|'backendId'|'positive_flags'|'negative_flags'> & Partial<DBUser['memberships'][number]>)[]} & Omit<Partial<DBUser>, 'memberships'> & Pick<DBUser, 'subscription_type'>>(user: T, alwaysRefreshDiscordMetadata = false): Promise<T & Pick<DBUser, 'subscription_type'>> {
     let positiveFlags: number = 0;
     let negativeFlags: number = 0;
 
@@ -37,12 +37,11 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
         }),
         async function() {
             console.log('Checking if user flags need to be updated', {snowflake: user.snowflake, newFlags, oldFlags});
-            if (newFlags === oldFlags) return;
+            if (alwaysRefreshDiscordMetadata || newFlags === oldFlags) return;
             console.log('Updating user flags for', {snowflake: user.snowflake, newFlags, oldFlags});
             Object.assign(user, await db.user.update({
                 where: { snowflake: user.snowflake },
                 data: { subscription_type: newFlags },
-                include: { memberships: false }
             }));
             console.log('Updated user DB flags.');
         }(),

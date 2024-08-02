@@ -32,8 +32,8 @@ export function stringifyUserRole(role: number): ['a'|'an', string] {
     if (role & RoleFlags.VanityRole8) return ['an', 'Unknown Premium Vanity Status']
 
     if (role & RoleFlags.AllAccess) return ['an', 'All Access Subscriber'];
-    if (role & RoleFlags.PlayerProps) return ['a', 'Player Props Subscriber'];
-    if (role & RoleFlags.Sportsbook) return ['a', 'Sportsbook Subscriber'];
+    if (role & RoleFlags.ExpectedValue) return ['a', 'Expected Value Subscriber'];
+    if (role & RoleFlags.Betting) return ['a', 'Betting Access Subscriber'];
     if (role & RoleFlags.PremiumRole3) return ['an', 'Unknown Type of Premium Subscriber'];
     if (role & RoleFlags.PremiumRole4) return ['an', 'Unknown Type of Premium Subscriber'];
     if (role & RoleFlags.PremiumRole5) return ['an', 'Unknown Type of Premium Subscriber'];
@@ -75,8 +75,8 @@ export function stringifyPlan(role: number): string {
     if (role & RoleFlags.VanityRole8) return 'Unknown Premium Vanity Status'
 
     if (role & RoleFlags.AllAccess) return 'All Access';
-    if (role & RoleFlags.PlayerProps) return 'Player Props Access';
-    if (role & RoleFlags.Sportsbook) return 'Sportsbook Access';
+    if (role & RoleFlags.ExpectedValue) return 'Expected Value Access';
+    if (role & RoleFlags.Betting) return 'Betting Access';
     if (role & RoleFlags.PremiumRole3) return 'Unknown Premium Subscription'
     if (role & RoleFlags.PremiumRole4) return 'Unknown Premium Subscription'
     if (role & RoleFlags.PremiumRole5) return 'Unknown Premium Subscription'
