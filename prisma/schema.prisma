@@ -109,6 +109,8 @@ model user {
   votes                          votes[]
 
   hasJoinedDiscord               Boolean    @default(false)
+
+  eligibleForStripeMigrationPrice Boolean   @default(false)
 }
 
 model auth_session {

@@ -2,6 +2,12 @@ import RoleFlags, { DiscountSource } from "./definitions"
 
 
 
+/** Stringifies the user role flag number into a string describing a subscriber with their role, such as "All Access Subscriber" or "Moderator".
+ *
+ * Includes an article, such as "a" or "an", for use in sentences.
+ *
+ * Example usage: "James is an All Access Subscriber."
+ */
 export function stringifyUserRole(role: number): ['a'|'an', string] {
 
     if (role & RoleFlags.Admin) return ['an', 'Administrator'];
@@ -45,7 +51,10 @@ export function stringifyUserRole(role: number): ['a'|'an', string] {
 }
 
 
-
+/** Stringifies the plan flag number into a plan name, such as "All Access" or "Moderator".
+ *
+ * Example usage: "This is an All Access plan"
+ */
 export function stringifyPlan(role: number): string {
 
     if (role & RoleFlags.Admin) return 'Administrator';
