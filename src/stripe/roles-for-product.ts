@@ -1,5 +1,5 @@
 import type Stripe from "stripe";
-import RoleFlags, { type PurchasablePlan } from "../definitions.js";
+import RoleFlags, { type PurchasablePlan } from "../definitions";
 
 export function getRolesForProduct(product: Stripe.Product) {
     const rolesToGrantRaw = product.metadata['grants-roles'];

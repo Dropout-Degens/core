@@ -1,4 +1,4 @@
-import RoleFlags, { DiscountSource } from "./definitions.js"
+import RoleFlags, { DiscountSource } from "./definitions"
 
 
 

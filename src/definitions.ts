@@ -109,7 +109,7 @@ export enum PurchasablePlan {
 }
 
 export enum DiscountSource {
-    ['weekly-reward'] = 'weekly-reward',
+    'weekly-reward' = 'weekly-reward',
     manual = 'manual'
 }
 
@@ -143,3 +143,17 @@ export type Coupon<TGenerated extends boolean = false, TUsesStripe extends boole
 
 export type PlanFreeDays = Partial<Record<DiscountSource, number>>;
 export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
+
+
+export type IsNullable<T> = Extract<T, null> extends never ? false : true
+export type IsOptional<T> = Extract<T, undefined> extends never ? false : true
+
+export type ZodWithEffects<T extends import('zod').ZodTypeAny> = T | import('zod').ZodEffects<T, unknown, unknown>
+
+export type ToZodSchema<T extends Record<string, any>> = {
+  [K in keyof T]-?: IsNullable<T[K]> extends true
+    ? ZodWithEffects<import('zod').ZodNullable<import('zod').ZodType<T[K]>>>
+    : IsOptional<T[K]> extends true
+      ? ZodWithEffects<import('zod').ZodOptional<import('zod').ZodType<T[K]>>>
+      : ZodWithEffects<import('zod').ZodType<T[K]>>
+}

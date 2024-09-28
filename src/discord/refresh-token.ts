@@ -1,9 +1,9 @@
 import { user } from '@prisma/client';
-import db from "../db.js";
+import db from "../db";
 import { Routes, RESTPostOAuth2RefreshTokenURLEncodedData, RESTPostOAuth2RefreshTokenResult } from 'discord-api-types/v10';
-import { botREST } from "./REST.js";
+import { botREST } from "./REST";
 import { DiscordAPIError } from '@discordjs/rest';
-import { InvalidGrantError, NoRefreshTokenError } from '../errors.js';
+import { InvalidGrantError, NoRefreshTokenError } from '../errors';
 
 export async function refreshToken<T extends Pick<user, 'snowflake'|'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'> & Partial<user>>(user: T, force = false): Promise<T & Pick<user, 'discord_access_token'|'discord_access_expiry'|'discord_refresh_token'>> {
     if (!process.env.DISCORD_CLIENT_ID) throw new Error('Environment variable `DISCORD_CLIENT_ID` not set!');

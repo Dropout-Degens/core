@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
         "esModuleInterop": true,
-        "module": "NodeNext",
-        "moduleResolution": "Node16",
+        "module": "ESNext",
         "pretty": true,
+        "moduleResolution": "Bundler",
         "removeComments": true,
         "strict": true,
         "target": "ESNext",
@@ -22,11 +22,12 @@
         "skipLibCheck": true,
 
         "types": [
-            "node",
+            "node"
         ],
 
     },
     "include": [
         "./src/**/*.ts",
+        "./src/**/*.d.ts",
     ]
 }

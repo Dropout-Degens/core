@@ -108,3 +108,26 @@ type InteractionDefinition<TType extends Interactable = Interactable, TRaw = fal
         : TType extends Exclude<Interactable, ApplicationCommandSubGroupData> ? ExecutableInteractionDefinition<TType, TRaw> : never
 
 type RecursiveReadonly<T> = T extends object ? { readonly [P in keyof T]: RecursiveReadonly<T[P]> } : T;
+
+type IfEquals<X, Y, A=X, B=never> =
+  (<T>() => T extends X ? 1 : 2) extends
+  (<T>() => T extends Y ? 1 : 2) ? A : B;
+
+type WritableKeys<T> = {
+  [P in keyof T]: IfEquals<{ [Q in P]: T[P] }, { -readonly [Q in P]: T[P] }, P>
+}[keyof T];
+
+type DeepWritablePrimitive = undefined | null | boolean | string | number | Function;
+type DeepWritable<T> =
+    T extends DeepWritablePrimitive ? T :
+    T extends Array<infer U> ? DeepWritableArray<U> :
+    T extends Map<infer K, infer V> ? DeepWritableMap<K, V> :
+    T extends Set<infer T> ? DeepWriableSet<T> : DeepWritableObject<T>;
+
+type DeepWritableArray<T> = Array<DeepWritable<T>>;
+type DeepWritableMap<K, V> = Map<K, DeepWritable<V>>;
+type DeepWriableSet<T> = Set<DeepWritable<T>>;
+
+type DeepWritableObject<T> = {
+    [K in WritableKeys<T>]: DeepWritable<T[K]>
+};

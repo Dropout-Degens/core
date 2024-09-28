@@ -1,4 +1,4 @@
-import { BillingPeriod, PurchasablePlan } from "./definitions.js"
+import { BillingPeriod, PurchasablePlan } from "./definitions"
 
 export const WhopPrices: SubscriptionPriceMap = {
     [PurchasablePlan.AllAccess]: {

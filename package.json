@@ -4,45 +4,33 @@
   "private": true,
   "main": "src/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsup src/index.ts -d=dist --format=esm --platform=node --treeshake --sourcemap --dts --target esnext",
+    "prepare": "prisma generate && pnpm run build",
+    "dev": "tsup src/index.ts -d=dist --format=esm --platform=node --treeshake --sourcemap --dts --target esnext --watch"
   },
   "dependencies": {
-    "@discordjs/rest": "^2.2.0",
-    "@prisma/client": "^5.12.1",
+    "checkeasy": "^1.2.1",
+    "yaml": "^2.5.1"
+  },
+  "peerDependencies": {
+    "@discordjs/rest": "^2.4.0",
+    "discord.js": ">=14.16.2",
     "@whop-sdk/core": "^0.0.4",
-    "checkeasy": "^1.1.0",
-    "discord-api-types": "^0.37.79",
-    "discord.js": "^14.14.1",
-    "prisma": "^5.12.1",
-    "stripe": "^15.2.0",
-    "typescript": "^5.4.5",
-    "yaml": "^2.4.1"
+    "discord-api-types": ">=0.37.97",
+    "prisma": "^5.19.1",
+    "@prisma/client": "^5.19.1",
+    "typescript": ">=5.6.2",
+    "stripe": "^15.12.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "eslint": "^8.56.0"
+    "@types/nodemailer": "^6.4.15",
+    "eslint": "^8.57.0",
+    "tsup": "^8.2.4",
+    "zod": "^3.23.8"
   },
   "exports": {
-    "./discord/index.js": "./src/discord/index.js",
-    "./discord/application-metadata.js": "./src/discord/application-metadata.js",
-    "./discord/audit-log.js": "./src/discord/audit-log.js",
-    "./discord/refresh-token.js": "./src/discord/refresh-token.js",
-    "./discord/RES.jsT": "./src/discord/REST.js",
-    "./discord/revoke-token.js": "./src/discord/revoke-token.js",
-    "./memberships/index.js": "./src/memberships/index.js",
-    "./memberships/flatten.js": "./src/memberships/flatten.js",
-    "./stripe/index.js": "./src/stripe/index.js",
-    "./stripe/instance.js": "./src/stripe/instance.js",
-    "./stripe/roles-for-product.js": "./src/stripe/roles-for-product.js",
-    "./stripe/billing-period.js": "./src/stripe/billing-period.js",
-    "./prisma/index.js": "./src/prisma/index.js",
-    "./prisma/type-utils.js": "./src/prisma/type-utils.js",
-    "./db.js": "./src/db.js",
-    "./definitions.js": "./src/definitions.js",
-    "./errors.js": "./src/errors.js",
-    "./index.js": "./src/index.js",
-    "./prices.js": "./src/prices.js",
-    "./stringify.js": "./src/stringify.js",
-    "./util.js": "./src/util.js",
-    "./validation.js": "./src/validation.js"
+    ".": "./dist/index.js",
+    "./*": "./dist/index.js"
   }
 }

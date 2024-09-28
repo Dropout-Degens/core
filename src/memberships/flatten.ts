@@ -1,7 +1,7 @@
 import { user } from "@prisma/client";
-import db from "../db.js";
-import { recalcMetadata } from "../discord/application-metadata.js";
-import { FindUniqueReturn, WithSnowflake } from "../index.js";
+import db from "../db";
+import { recalcMetadata } from "../discord/application-metadata";
+import { FindUniqueReturn, WithSnowflake } from "../index";
 
 type DBUser = FindUniqueReturn<WithSnowflake<{include: {memberships: true}}>>;
 

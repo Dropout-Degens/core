@@ -1,4 +1,6 @@
-export * from './application-metadata.js';
-export * from './refresh-token.js';
-export * from './REST.js';
-export * from './revoke-token.js';
+export * from './application-metadata';
+export * from './audit-log';
+//export * from './interactions' -- should be imported as global types if used
+export * from './refresh-token';
+export * from './REST';
+export * from './revoke-token';

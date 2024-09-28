@@ -1,7 +1,7 @@
 import { user } from '@prisma/client';
-import db from "../db.js";
+import db from "../db";
 import { Routes } from 'discord-api-types/v10';
-import { botREST } from "./REST.js";
+import { botREST } from "./REST";
 
 
 export async function revokeToken<T extends Pick<user, 'snowflake'|'discord_access_token'> & Partial<user>>(user: T): Promise<(T & { discord_access_token: null, discord_refresh_token: null, discord_access_expiry: 0n }) | undefined> {

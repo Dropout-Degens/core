@@ -1,5 +1,5 @@
 import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError, float, alternatives, exact, nullable, defaultValue } from 'checkeasy';
-import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, PurchasablePlan, FreeDays, PlanFreeDays } from './definitions.js';
+import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, PurchasablePlan, FreeDays, PlanFreeDays } from './definitions';
 
 type ObjectValidator<T> = Required<{ [K in keyof T]: Validator<T[K]> }>;
 

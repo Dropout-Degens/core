@@ -1,11 +1,11 @@
 import { user } from '@prisma/client';
 import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody, RESTPutAPICurrentUserApplicationRoleConnectionResult } from "discord-api-types/v10";
-import RoleFlags from "../definitions.js";
-import { bearerTokenREST, botREST } from "./REST.js";
+import RoleFlags from "../definitions";
+import { bearerTokenREST, botREST } from "./REST";
 import { DiscordAPIError } from '@discordjs/rest';
-import { ExpiredAccessTokenError, InvalidGrantError } from '../errors.js';
-import db from '../db.js';
-import { refreshToken } from './refresh-token.js';
+import { ExpiredAccessTokenError, InvalidGrantError } from '../errors';
+import db from '../db';
+import { refreshToken } from './refresh-token';
 
 export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnectionMetadata, 'key'>>;
 

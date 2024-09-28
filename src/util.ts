@@ -1,4 +1,4 @@
-import RoleFlags from "./definitions.js";
+import RoleFlags from "./definitions";
 
 export function findHighestApplicableRole(roleFlags: number): [keyof typeof RoleFlags, RoleFlags] | undefined {
     const sortedRoleFlags = ((Object.entries(roleFlags) as ([keyof typeof RoleFlags, RoleFlags]|[RoleFlags, keyof typeof RoleFlags])[])
