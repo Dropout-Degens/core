@@ -58,59 +58,73 @@ model user {
   @@schema("private")
   @@map ("users")
 
-  snowflake                      BigInt  @id
-  discord_email                  String? @map("discord-email") @db.Text
-  discord_pfp                    String? @map("discord-pfp") @db.Text
-  discord_name                   String? @map("discord-name") @db.Text
+  snowflake                       BigInt  @id
+  discord_email                   String? @map("discord-email") @db.Text
+  discord_pfp                     String? @map("discord-pfp") @db.Text
+  discord_name                    String? @map("discord-name") @db.Text
 
-  discord_access_token           String? @map("discord-access-token")
-  discord_access_expiry          BigInt  @default(0) @map("discord-access-expiry")
-  discord_refresh_token          String? @map("discord-refresh-token")
+  discord_access_token            String? @map("discord-access-token")
+  discord_access_expiry           BigInt  @default(0) @map("discord-access-expiry")
+  discord_refresh_token           String? @map("discord-refresh-token")
 
-  timezone                       String  @default("America/New_York")
-  timezone_last_adjusted         BigInt  @default(0) @map("timezone-last-adjusted")
-  weekly_reward_last_claimed     String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
-  weekly_reward_streak           Int     @default(0) @map("weekly-reward-streak")
-  weekly_reward_streak_last_best Int     @default(0) @map("weekly-reward-streak-last-best")
+  timezone                        String  @default("America/New_York")
+  timezone_last_adjusted          BigInt  @default(0) @map("timezone-last-adjusted")
+  weekly_reward_last_claimed      String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
+  weekly_reward_streak            Int     @default(0) @map("weekly-reward-streak")
+  weekly_reward_streak_last_best  Int     @default(0) @map("weekly-reward-streak-last-best")
 
-  auth_sessions                  auth_session[]
+  auth_sessions                   auth_session[]
 
-  memberships                    membership[]
+  memberships                     membership[]
   /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MODIFIED!
-  subscription_type              Int     @default(0) @map("subscription-type")
+  subscription_type               Int     @default(0) @map("subscription-type")
 
 
   /// Record<PurchasablePlan, Record<DiscountSource, number>>
   /// @type { Record<number, Record<string, number>> }
-  free_days                      Json?
-  coupons                        coupon[]
+  free_days                       Json?
+  coupons                         coupon[]
 
 
-  stripe_customer_id             String? @db.VarChar(32)
-  stripe_email                   String? @db.Text
+  stripe_customer_id              String? @db.VarChar(32)
+  stripe_email                    String? @db.Text
 
 
 
 
-  karma                          BigInt     @default(0)
+  karma                           BigInt     @default(0)
   @@index([karma(sort: Desc)])
 
   // NOTE: When adding new caps, be sure to add them to the Daily Reset code in the bot!
   // src/web-server/routes/daily-reset.ts
-  karma_today_from_messages      BigInt     @default(0)
-  karma_today_from_reactions     BigInt     @default(0)
+  karma_today_from_messages       BigInt     @default(0)
+  karma_today_from_reactions      BigInt     @default(0)
 
 
-  email_marketing_consent        Boolean    @default(false)
+  email_marketing_consent         Boolean    @default(false)
 
 
-  admin_created_memberships      membership[] @relation("manual_adder")
+  admin_created_memberships       membership[] @relation("manual_adder")
 
-  votes                          votes[]
+  votes                           votes[]
 
-  hasJoinedDiscord               Boolean    @default(false)
+  hasJoinedDiscord                Boolean    @default(false)
 
   eligibleForStripeMigrationPrice Boolean   @default(false)
+
+  // The user's bankroll in USD cents
+  bankrollUSDCents                Int?
+  bettingStrategy                 BETTING_STRATEGY @default(UNSET)
+}
+
+enum BETTING_STRATEGY {
+  UNSET
+
+  PASSIVE
+  NORMAL
+  AGGRESSIVE
+
+  @@schema("private")
 }
 
 model auth_session {
