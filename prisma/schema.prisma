@@ -212,3 +212,57 @@ model poll {
 
     votes      votes[]
 }
+
+model EVChannel {
+  @@schema("private")
+
+  id                BigInt @id @default(autoincrement())
+
+  filters           Json?
+  channel           BigInt
+  notificationRoles Json?
+}
+
+model EVAlertEvent {
+  @@schema("private")
+
+  id BigInt @id @default(autoincrement())
+
+  alertProvider String
+
+  /// The sport this event will occur in
+  sport      String?
+
+  /// The sports league this event will occur in
+  league      String?
+
+  /// The game this event will occur in
+  game      String
+
+  /// The expected profit from this event, represented as a decimal (e.g. 0.5 = 50%)
+  EV      Decimal? @db.Decimal(6, 4)
+
+  /// Odds to hit (TODO: ask AsiaD about what this is), represented as a decimal (e.g. 0.5 = 50%)
+  oddsToHit      Decimal? @db.Decimal(6, 4)
+
+  /// The sportsbook sending this event
+  sportsbook      String
+
+  /// The time the event is scheduled to occur, represented in Unix seconds
+  eventTime      BigInt?
+
+  /// The time our systems received the EV event, represented in Unix seconds
+  receivedTime      BigInt
+
+  /// Odds number as provided by the sportsbook (e.g. +100 or -220)
+  odds      Int @db.SmallInt
+
+  /// The bet size recommended by the event provider in US Dollars, based on a $1,000 bankroll
+  betSizeRecommendationFor1kBankroll      Decimal? @db.Decimal(6, 2)
+
+  /// The type of bet to place (e.g. "Total Points" or "Player Singles" or "Moneyline")
+  betType      String
+
+  /// The prediction the bet is making (e.g. "Over 61.5" or "Aaron Judge Over 0.5" or "Nanjing Monkey Kings")
+  betPrediction      String
+}
