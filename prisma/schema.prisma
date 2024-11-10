@@ -8,7 +8,7 @@ datasource db {
   url       = env("DATABASE_URL")
   directUrl = env("DATABASE_DIRECT_URL")
   relationMode = "foreignKeys"
-  schemas = ["private"]
+  schemas = ["private", "public"]
 }
 
 
@@ -214,13 +214,13 @@ model poll {
 }
 
 model EVChannel {
-  @@schema("private")
+  @@schema("public")
 
-  id                BigInt @id @default(autoincrement())
+  channelId         BigInt @id
+  enabled           Boolean @default(false)
 
   filters           Json?
-  channel           BigInt
-  notificationRoles Json?
+  pingConfig        Json?
 }
 
 model EVAlertEvent {

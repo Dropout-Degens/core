@@ -150,10 +150,14 @@ export type IsOptional<T> = Extract<T, undefined> extends never ? false : true
 
 export type ZodWithEffects<T extends import('zod').ZodTypeAny> = T | import('zod').ZodEffects<T, unknown, unknown>
 
+type ImprovedJsonObject = Record<never, unknown>;
+type PrismaJsonObject = import("@prisma/client/runtime/library").JsonValue;
+export type ReplacePrismaJsonObject<T extends any> = Extract<T, PrismaJsonObject> extends PrismaJsonObject ? Exclude<T, PrismaJsonObject> | ImprovedJsonObject : T;
+
 export type ToZodSchema<T extends Record<string, any>> = {
   [K in keyof T]-?: IsNullable<T[K]> extends true
-    ? ZodWithEffects<import('zod').ZodNullable<import('zod').ZodType<T[K]>>>
+    ? ZodWithEffects<import('zod').ZodNullable<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>>>>
     : IsOptional<T[K]> extends true
-      ? ZodWithEffects<import('zod').ZodOptional<import('zod').ZodType<T[K]>>>
-      : ZodWithEffects<import('zod').ZodType<T[K]>>
+      ? ZodWithEffects<import('zod').ZodOptional<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>>>>
+      : ZodWithEffects<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>>>
 }
