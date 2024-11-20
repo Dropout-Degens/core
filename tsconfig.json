@@ -22,7 +22,8 @@
         "skipLibCheck": true,
 
         "types": [
-            "node"
+            "node",
+            "./src/discord/interactions.d.ts",
         ],
 
     },
