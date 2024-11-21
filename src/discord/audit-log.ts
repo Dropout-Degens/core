@@ -2,7 +2,13 @@ import type { ChatInputCommandInteraction, RawFile, WebhookMessageCreateOptions 
 import { Routes } from 'discord-api-types/v10';
 import { botREST } from "./REST";
 
-const AuditLogChannelIDs = process.env.DISCORD_AUDIT_LOG_CHANNELS!.trim().split(",").map((c) => c.trim());
+
+const DISCORD_AUDIT_LOG_CHANNELS = process.env.DISCORD_AUDIT_LOG_CHANNELS || '';
+if (!DISCORD_AUDIT_LOG_CHANNELS && typeof window === 'undefined') {
+    throw new Error('DISCORD_AUDIT_LOG_CHANNELS is not defined in the environment variables.');
+}
+
+const AuditLogChannelIDs = DISCORD_AUDIT_LOG_CHANNELS!.trim().split(",").map((c) => c.trim());
 
 //export async function auditInfo(message: string, ...attachments: RawFile[]) {
 //    auditRaw({

@@ -10,11 +10,6 @@ import { refreshToken } from './refresh-token';
 export type MetadataSchemaObject = Record<string, Omit<APIApplicationRoleConnectionMetadata, 'key'>>;
 
 export const applicationMetadataSchemaObject = {
-    high_roller: {
-        name: 'High Roller',
-        description: 'You are a High Roller',
-        type: ApplicationRoleConnectionMetadataType.BooleanEqual,
-    },
     all_access: {
         name: 'All Access',
         description: 'Your have a premium All Access subscription with Dropout Degens',
@@ -63,10 +58,9 @@ export async function recalcMetadata(user: Pick<user, 'subscription_type'|'disco
     const body = {
         metadata: {
             all_access: user.subscription_type & (RoleFlags.Betting | RoleFlags.ExpectedValue) ? 1 : 0,
-            high_roller: user.subscription_type & RoleFlags.Van_HighRoller ? 1 : 0,
             staff: user.subscription_type & RoleFlags.AnyStaffRole ? 1 : 0,
             karma: user.karma?.toString() ?? '0',
-        } as Record<keyof typeof applicationMetadataSchemaObject, string | number>,
+        } satisfies Record<keyof typeof applicationMetadataSchemaObject, string | number>,
         platform_name,
     } satisfies RESTPutAPICurrentUserApplicationRoleConnectionJSONBody;
 

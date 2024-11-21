@@ -1,14 +1,22 @@
 import { PrismaClient } from '@prisma/client';
 
-if (typeof window !== 'undefined') throw new Error('Cannot connect to the database from the client!');
 
-if (!process.env.DATABASE_URL) throw new Error('No DATABASE_URL env var');
 
 declare global {
     var db____internal: undefined | ReturnType<typeof newPrismaClientBase> | Awaited<ReturnType<typeof newPrismaClientBase>>;
 }
 
-function newPrismaClient() {
+function newPrismaClient(): ReturnType<typeof newPrismaClientBase> {
+    if (typeof window !== 'undefined') {
+        return new Proxy({}, {
+            get() {
+                throw new Error('Cannot connect to the database from the client!');
+            }
+        }) as any;
+    }
+
+    if (!process.env.DATABASE_URL) throw new Error('No DATABASE_URL env var');
+
     if (globalThis.db____internal !== undefined) return globalThis.db____internal;
     return globalThis.db____internal = newPrismaClientBase();
 }
