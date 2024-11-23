@@ -51,6 +51,10 @@ model PromotionalPrice {
   active Boolean
 
   stripe_price String
+  /// Free days! Free days! Get your free days here!
+  free_days Int @db.SmallInt @default(0)
+  /// If you wish to layer a coupon on top of the custom Stripe price, you can specify it here.
+  coupon_id String?
 }
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
