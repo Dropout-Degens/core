@@ -17,6 +17,7 @@ describe('Example ENV has all keys', async () => {
     const envSchemaKeys = new Set(zodKeys(envSchema));
     envSchemaKeys.delete('WHOP_API_KEY');
     envSchemaKeys.delete('WHOP_WEBHOOK_SECRET');
+    envSchemaKeys.delete('GOOGLE_CLOUD_PROJECT_ID');
 
     for (const key of envSchemaKeys) {
         test(`${key}`, ()=>{

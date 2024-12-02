@@ -170,6 +170,11 @@ const envSchemaRawObject = {
         "Invite link to the Discord server. May be used in the frontend website."
     ),
 
+    /** Google Cloud Project ID for services such as logging */
+    GOOGLE_CLOUD_PROJECT_ID: z.string().optional().describe(
+        "Google Cloud Project ID for services such as logging"
+    ),
+
 
 
 
