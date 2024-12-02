@@ -15,7 +15,17 @@ function newPrismaClient(): ReturnType<typeof newPrismaClientBase> {
         }) as any;
     }
 
-    if (!process.env.DATABASE_URL) throw new Error('No DATABASE_URL env var');
+    if (!process.env.DATABASE_URL) {
+        queueMicrotask(()=>{
+            throw new Error('Could not connect to database because we are missing the DATABASE_URL env var');
+        });
+
+        return new Proxy({}, {
+            get() {
+                return ()=>{}
+            }
+        }) as any;
+    }
 
     if (globalThis.db____internal !== undefined) return globalThis.db____internal;
     return globalThis.db____internal = newPrismaClientBase();

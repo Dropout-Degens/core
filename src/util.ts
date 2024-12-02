@@ -56,3 +56,14 @@ export function getLowestRoleInMapping<T extends Partial<Record<keyof typeof Rol
 
     return returnValue;
 }
+
+
+export type ValidEntryForObjMap<T extends {}> = {
+	[K in keyof T]: [K, T[K]];
+}
+
+export type ValidEntryForObj<T extends {}> = ValidEntryForObjMap<T>[keyof T];
+
+export function accurateObjectEntries<T extends {}>(obj: T): ValidEntryForObj<T>[] {
+	return Object.entries(obj) as any;
+}

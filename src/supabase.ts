@@ -85,4 +85,4 @@ function generateClientSafe(): ReturnType<typeof generateClientRaw> {
     }) as any
 }
 
-export const client = generateClientSafe()
+export const supabase = generateClientSafe()
