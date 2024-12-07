@@ -1,214 +1,217 @@
 generator client {
-  provider = "prisma-client-js"
-  previewFeatures = ["multiSchema"]
+    provider = "prisma-client-js"
+    previewFeatures = ["multiSchema"]
 }
 
 datasource db {
-  provider     = "postgresql"
-  url       = env("DATABASE_URL")
-  directUrl = env("DATABASE_DIRECT_URL")
-  relationMode = "foreignKeys"
-  schemas = ["private", "public"]
+    provider     = "postgresql"
+    url       = env("DATABASE_URL")
+    directUrl = env("DATABASE_DIRECT_URL")
+    relationMode = "foreignKeys"
+    schemas = ["private", "public"]
 }
 
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model coupon {
-  @@schema("private")
-  @@map ("coupons")
+    @@schema("private")
+    @@map ("coupons")
 
-  associated_user BigInt?  @map("associated-user")
-  user            user?    @relation(fields: [associated_user], references: [snowflake])
+    associated_user BigInt?  @map("associated-user")
+    user            user?    @relation(fields: [associated_user], references: [snowflake])
 
-  /// The promo code string used for Whop
-  ///
-  /// Schema:
-  ///    ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
-  promo_code      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
+    /// The promo code string used for Whop
+    ///
+    /// Schema:
+    ///    ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
+    promo_code      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
 
-  whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
-  /// Stripe ID of the [Promotion Code](https://docs.stripe.com/api/promotion_codes) object
-  ///
-  /// Applied at checkout to show the promo cide to the user
-  stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
+    whop_id         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
+    /// Stripe ID of the [Promotion Code](https://docs.stripe.com/api/promotion_codes) object
+    ///
+    /// Applied at checkout to show the promo cide to the user
+    stripe_id       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
 
-  discount_amount Float   @map("discount-amount") @db.Real
-  duration        Int     @db.SmallInt
-  billing_period  String  @map("billing-period")
-  plan_type       Int     @map("plan-type")
-  source          String?
+    discount_amount Float   @map("discount-amount") @db.Real
+    duration        Int     @db.SmallInt
+    billing_period  String  @map("billing-period")
+    plan_type       Int     @map("plan-type")
+    source          String?
 
-  @@index([associated_user], map: "associated-user")
+    @@index([associated_user], map: "associated-user")
 }
 
 model PromotionalPrice {
-  @@schema("private")
+    @@schema("private")
 
-  id BigInt @id @default(autoincrement())
+    id BigInt @id @default(autoincrement())
 
-  promo_code String @unique
+    promo_code String @unique
 
-  active Boolean
+    active Boolean
 
-  stripe_price String
-  /// Free days! Free days! Get your free days here!
-  free_days Int @db.SmallInt @default(0)
-  /// If you wish to layer a coupon on top of the custom Stripe price, you can specify it here.
-  coupon_id String?
+    stripe_price String
+    /// Free days! Free days! Get your free days here!
+    free_days Int @db.SmallInt @default(0)
+    /// If you wish to layer a coupon on top of the custom Stripe price, you can specify it here.
+    coupon_id String?
 }
 
 /// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
 model user {
-  @@schema("private")
-  @@map ("users")
+    @@schema("private")
+    @@map ("users")
 
-  snowflake                       BigInt  @id
-  discord_email                   String? @map("discord-email") @db.Text
-  discord_pfp                     String? @map("discord-pfp") @db.Text
-  discord_name                    String? @map("discord-name") @db.Text
+    snowflake                       BigInt  @id
+    discord_email                   String? @map("discord-email") @db.Text
+    discord_pfp                     String? @map("discord-pfp") @db.Text
+    discord_name                    String? @map("discord-name") @db.Text
 
-  discord_access_token            String? @map("discord-access-token")
-  discord_access_expiry           BigInt  @default(0) @map("discord-access-expiry")
-  discord_refresh_token           String? @map("discord-refresh-token")
+    discord_access_token            String? @map("discord-access-token")
+    discord_access_expiry           BigInt  @default(0) @map("discord-access-expiry")
+    discord_refresh_token           String? @map("discord-refresh-token")
 
-  timezone                        String  @default("America/New_York")
-  timezone_last_adjusted          BigInt  @default(0) @map("timezone-last-adjusted")
-  weekly_reward_last_claimed      String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
-  weekly_reward_streak            Int     @default(0) @map("weekly-reward-streak")
-  weekly_reward_streak_last_best  Int     @default(0) @map("weekly-reward-streak-last-best")
+    timezone                        String  @default("America/New_York")
+    timezone_last_adjusted          BigInt  @default(0) @map("timezone-last-adjusted")
+    weekly_reward_last_claimed      String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
+    weekly_reward_streak            Int     @default(0) @map("weekly-reward-streak")
+    weekly_reward_streak_last_best  Int     @default(0) @map("weekly-reward-streak-last-best")
 
-  auth_sessions                   auth_session[]
+    auth_sessions                   auth_session[]
 
-  memberships                     membership[]
-  /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MODIFIED!
-  subscription_type               Int     @default(0) @map("subscription-type")
-
-
-  /// Record<PurchasablePlan, Record<DiscountSource, number>>
-  /// @type { Record<number, Record<string, number>> }
-  free_days                       Json?
-  coupons                         coupon[]
+    memberships                     membership[]
+    /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MODIFIED!
+    subscription_type               Int     @default(0) @map("subscription-type")
 
 
-  stripe_customer_id              String? @db.VarChar(32)
-  stripe_email                    String? @db.Text
+    /// Record<PurchasablePlan, Record<DiscountSource, number>>
+    /// @type { Record<number, Record<string, number>> }
+    free_days                       Json?
+    coupons                         coupon[]
+
+
+    stripe_customer_id              String? @db.VarChar(32)
+    stripe_email                    String? @db.Text
 
 
 
 
-  karma                           BigInt     @default(0)
-  @@index([karma(sort: Desc)])
+    karma                           BigInt     @default(0)
+    @@index([karma(sort: Desc)])
 
-  // NOTE: When adding new caps, be sure to add them to the Daily Reset code in the bot!
-  // src/web-server/routes/daily-reset.ts
-  karma_today_from_messages       BigInt     @default(0)
-  karma_today_from_reactions      BigInt     @default(0)
-
-
-  email_marketing_consent         Boolean    @default(false)
+    // NOTE: When adding new caps, be sure to add them to the Daily Reset code in the bot!
+    // src/web-server/routes/daily-reset.ts
+    karma_today_from_messages       BigInt     @default(0)
+    karma_today_from_reactions      BigInt     @default(0)
 
 
-  admin_created_memberships       membership[] @relation("manual_adder")
+    email_marketing_consent         Boolean    @default(false)
 
-  votes                           votes[]
 
-  hasJoinedDiscord                Boolean    @default(false)
+    admin_created_memberships       membership[] @relation("manual_adder")
 
-  eligibleForStripeMigrationPrice Boolean   @default(false)
+    votes                           votes[]
 
-  // The user's bankroll in USD cents
-  bankrollUSDCents                Int?
-  bettingStrategy                 BETTING_STRATEGY @default(UNSET)
+    hasJoinedDiscord                Boolean    @default(false)
+
+    eligibleForStripeMigrationPrice Boolean   @default(false)
+
+    // The user's bankroll in USD cents
+    bankrollUSDCents                Int?
+    bettingStrategy                 BETTING_STRATEGY @default(UNSET)
 }
 
 enum BETTING_STRATEGY {
-  UNSET
+    UNSET
 
-  PASSIVE
-  NORMAL
-  AGGRESSIVE
+    PASSIVE
+    NORMAL
+    AGGRESSIVE
 
-  @@schema("private")
+    @@schema("private")
 }
 
 model auth_session {
-  @@schema("private")
-  @@map ("auth_sessions")
+    @@schema("private")
+    @@map ("auth_sessions")
 
-  token          String   @id @db.VarChar(45)
-  expires        BigInt
+    token          String   @id @db.VarChar(45)
+    expires        BigInt
 
-  user_snowflake BigInt
-  user           user     @relation(fields: [user_snowflake], references: [snowflake])
+    user_snowflake BigInt
+    user           user     @relation(fields: [user_snowflake], references: [snowflake])
 
-  created_at     DateTime @default(now()) @db.Timestamp(0)
-  updated_at     DateTime @default(now()) @db.Timestamp(0)
+    created_at     DateTime @default(now()) @db.Timestamp(0)
+    updated_at     DateTime @default(now()) @db.Timestamp(0)
 
-  @@index([user_snowflake])
+    @@index([user_snowflake])
 }
 
 model membership {
-  @@schema("private")
-  @@map ("memberships")
+    @@schema("private")
+    @@map ("memberships")
 
-  /// @deprecated
-  backendId     String @default(uuid()) @id
+    /// @deprecated
+    backendId     String @default(uuid()) @id
 
-  whop_id       String? @unique @db.VarChar(45)
-  stripe_id     String? @unique @db.VarChar(32)
+    whop_id       String? @unique @db.VarChar(45)
+    stripe_id     String? @unique @db.VarChar(32)
 
-  /// Admin who added this membership, if any.
-  manual_adder  user?  @relation("manual_adder", fields: [manual_adder_snowflake], references: [snowflake])
-  manual_adder_snowflake BigInt? @map("manual-adder")
+    /// Admin who added this membership, if any.
+    manual_adder  user?  @relation("manual_adder", fields: [manual_adder_snowflake], references: [snowflake])
+    manual_adder_snowflake BigInt? @map("manual-adder")
 
-  /// Email associated with this membership, if any
-  email         String? @map("email") @db.Text
+    /// Email associated with this membership, if any
+    email         String? @map("email") @db.Text
 
-  /// RoleFlags to grant to this user
-  /// @see RoleFlags
-  positive_flags Int
-  /// RoleFlags to remove from this user
-  ///
-  /// Negative flags have the final say! Use sparingly!
-  /// @see RoleFlags
-  negative_flags Int     @default(0)
+    /// RoleFlags to grant to this user
+    /// @see RoleFlags
+    positive_flags Int
+    /// RoleFlags to remove from this user
+    ///
+    /// Negative flags have the final say! Use sparingly!
+    /// @see RoleFlags
+    negative_flags Int     @default(0)
 
-  /// When this subscription should be considered no longer active if not renewed
-  //
-  // Unix millis.
-  expiration    BigInt
-  /// Whether this subscription is active. If false, it will be ignored.
-  active        Boolean
+    /// When this subscription should be considered no longer active if not renewed
+    //
+    // Unix millis.
+    expiration    BigInt
+    /// Whether this subscription is active. If false, it will be ignored.
+    active        Boolean
 
-  userSnowflake BigInt
-  user          user    @relation(fields: [userSnowflake], references: [snowflake])
+    userSnowflake BigInt
+    user          user    @relation(fields: [userSnowflake], references: [snowflake])
 
-  @@index([userSnowflake])
-  @@index([manual_adder_snowflake], map: "manual-adder")
+    @@index([userSnowflake])
+    @@index([manual_adder_snowflake], map: "manual-adder")
 }
 model votes {
-  @@schema("private")
+    @@schema("private")
 
-  poll_id        BigInt
-  poll           poll @relation(fields: [poll_id], references: [id])
+    poll_id        BigInt
+    poll           poll @relation(fields: [poll_id], references: [id])
 
-  user_id        BigInt
-  user           user @relation(fields: [user_id], references: [snowflake])
+    user_id        BigInt
+    user           user @relation(fields: [user_id], references: [snowflake])
 
-  vote           Int
+    vote           Int
 
-  won            Boolean?
+    won            Boolean?
 
-  wager          Int? @db.SmallInt
+    wager          Int? @db.SmallInt
 
-  @@unique([poll_id, user_id])
-  @@index([poll_id])
-  @@index([user_id])
+    @@unique([poll_id, user_id])
+    @@index([poll_id])
+    @@index([user_id])
 }
 model poll {
     @@schema("private")
-    id         BigInt  @id
-    channel_id BigInt
+    /// Snowflake ID for the giveaway message
+    id           BigInt  @id
+    /// Snowflake ID for the channel the giveaway message is in
+    channel_id   BigInt
+    
     question   String
     options    String[]
     expiration BigInt?
@@ -218,55 +221,55 @@ model poll {
 }
 
 model EVChannel {
-  @@schema("public")
+    @@schema("public")
 
-  channelId         BigInt @id
-  enabled           Boolean @default(false)
+    channelId         BigInt @id
+    enabled           Boolean @default(false)
 
-  filters           Json?
-  pingConfig        Json?
+    filters           Json?
+    pingConfig        Json?
 }
 
 model EVAlertEvent {
-  @@schema("private")
+    @@schema("private")
 
-  id BigInt @id @default(autoincrement())
+    id BigInt @id @default(autoincrement())
 
-  alertProvider String
+    alertProvider String
 
-  /// The sport this event will occur in
-  sport      String?
+    /// The sport this event will occur in
+    sport      String?
 
-  /// The sports league this event will occur in
-  league      String?
+    /// The sports league this event will occur in
+    league      String?
 
-  /// The game this event will occur in
-  game      String
+    /// The game this event will occur in
+    game      String
 
-  /// The expected profit from this event, represented as a decimal (e.g. 0.5 = 50%)
-  EV      Decimal? @db.Decimal(6, 4)
+    /// The expected profit from this event, represented as a decimal (e.g. 0.5 = 50%)
+    EV      Decimal? @db.Decimal(6, 4)
 
-  /// Odds to hit (TODO: ask AsiaD about what this is), represented as a decimal (e.g. 0.5 = 50%)
-  oddsToHit      Decimal? @db.Decimal(6, 4)
+    /// Odds to hit (TODO: ask AsiaD about what this is), represented as a decimal (e.g. 0.5 = 50%)
+    oddsToHit      Decimal? @db.Decimal(6, 4)
 
-  /// The sportsbook sending this event
-  sportsbook      String
+    /// The sportsbook sending this event
+    sportsbook      String
 
-  /// The time the event is scheduled to occur, represented in Unix seconds
-  eventTime      BigInt?
+    /// The time the event is scheduled to occur, represented in Unix seconds
+    eventTime      BigInt?
 
-  /// The time our systems received the EV event, represented in Unix seconds
-  receivedTime      BigInt
+    /// The time our systems received the EV event, represented in Unix seconds
+    receivedTime      BigInt
 
-  /// Odds number as provided by the sportsbook (e.g. +100 or -220)
-  odds      Int @db.SmallInt
+    /// Odds number as provided by the sportsbook (e.g. +100 or -220)
+    odds      Int @db.SmallInt
 
-  /// The bet size recommended by the event provider in US Dollars, based on a $1,000 bankroll
-  betSizeRecommendationFor1kBankroll      Decimal? @db.Decimal(6, 2)
+    /// The bet size recommended by the event provider in US Dollars, based on a $1,000 bankroll
+    betSizeRecommendationFor1kBankroll      Decimal? @db.Decimal(6, 2)
 
-  /// The type of bet to place (e.g. "Total Points" or "Player Singles" or "Moneyline")
-  betType      String
+    /// The type of bet to place (e.g. "Total Points" or "Player Singles" or "Moneyline")
+    betType      String
 
-  /// The prediction the bet is making (e.g. "Over 61.5" or "Aaron Judge Over 0.5" or "Nanjing Monkey Kings")
-  betPrediction      String
+    /// The prediction the bet is making (e.g. "Over 61.5" or "Aaron Judge Over 0.5" or "Nanjing Monkey Kings")
+    betPrediction      String
 }
