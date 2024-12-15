@@ -185,7 +185,11 @@ model membership {
 
     @@index([userSnowflake])
     @@index([manual_adder_snowflake], map: "manual-adder")
+
+    updatedAt      DateTime @updatedAt @db.Timestamp(0) @default(now())
+    rolesUpdatesAt DateTime @default("1970-01-01T12:00:00Z") @db.Timestamp(0)
 }
+
 model votes {
     @@schema("private")
 
@@ -211,7 +215,7 @@ model poll {
     id           BigInt  @id
     /// Snowflake ID for the channel the giveaway message is in
     channel_id   BigInt
-    
+
     question   String
     options    String[]
     expiration BigInt?
