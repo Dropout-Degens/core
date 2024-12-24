@@ -187,6 +187,11 @@ const envSchemaRawObject = {
     WHOP_WEBHOOK_SECRET: z.string().optional().describe(
         "Secret token used to validate incoming Whop webhooks. Because Whop does not provide a staging/testing environment, only BellCube should have this key."
     ),
+
+    /** API key used to authenticate with Random.org for random number generation. */
+    RANDOM_ORG_API_KEY: z.string().optional().describe(
+        "API key used to authenticate with Random.org for random number generation."
+    ),
 } as const satisfies z.ZodRawShape
 
 

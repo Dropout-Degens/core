@@ -119,6 +119,8 @@ model user {
     // The user's bankroll in USD cents
     bankrollUSDCents                Int?
     bettingStrategy                 BETTING_STRATEGY @default(UNSET)
+
+    giveawayEntries                 GiveawayEntriesForUser[]
 }
 
 enum BETTING_STRATEGY {
@@ -152,7 +154,7 @@ model membership {
     @@map ("memberships")
 
     /// @deprecated
-    backendId     String @default(uuid()) @id
+    backendId     String @default(cuid()) @id
 
     whop_id       String? @unique @db.VarChar(45)
     stripe_id     String? @unique @db.VarChar(32)
@@ -205,7 +207,7 @@ model votes {
 
     wager          Int? @db.SmallInt
 
-    @@unique([poll_id, user_id])
+    @@id([poll_id, user_id])
     @@index([poll_id])
     @@index([user_id])
 }
@@ -276,4 +278,52 @@ model EVAlertEvent {
 
     /// The prediction the bet is making (e.g. "Over 61.5" or "Aaron Judge Over 0.5" or "Nanjing Monkey Kings")
     betPrediction      String
+}
+
+model Giveaway {
+    @@schema("private")
+
+    id                    String @id @default(cuid())
+
+    /// Snowflake ID for the giveaway message
+    messageId             BigInt?
+    @@unique([messageId])
+
+    /// Snowflake ID for the channel the giveaway message is in
+    channelId             BigInt
+
+    name                  String
+    description           String?
+    karmaCost             BigInt @default(0)
+    maxEntriesPerUser     Int? @default(1)
+    totalWinnersToChoose  Int @default(1)
+
+    expiration            DateTime?
+    open                  Boolean @default(true)
+    haveWinnersBeenDrawn  Boolean @default(false)
+
+    userEntries           GiveawayEntriesForUser[]
+}
+
+/// Entries for a user in a giveaway. Allows for multiple entries per user, tracked by one record per user.
+model GiveawayEntriesForUser {
+    @@schema("private")
+
+    giveawayId       String
+    giveaway         Giveaway @relation(fields: [giveawayId], references: [id])
+
+    giveawayMessage  BigInt
+
+    userId           BigInt
+    user             user @relation(fields: [userId], references: [snowflake])
+
+    won              Boolean?
+
+    entryCount       Int @db.SmallInt
+
+    @@id([giveawayId, userId])
+    @@index([giveawayId])
+    @@index([giveawayId, won])
+    @@index([giveawayMessage])
+    @@index([userId])
 }
