@@ -68,10 +68,12 @@ model user {
     discord_name                    String? @map("discord-name") @db.Text
 
     discord_access_token            String? @map("discord-access-token")
+    /// Expiration of the user's Discord access token, stored in Unix seconds
     discord_access_expiry           BigInt  @default(0) @map("discord-access-expiry")
     discord_refresh_token           String? @map("discord-refresh-token")
 
     timezone                        String  @default("America/New_York")
+    /// When the user last adjusted their timezone, stored in Unix millis
     timezone_last_adjusted          BigInt  @default(0) @map("timezone-last-adjusted")
     weekly_reward_last_claimed      String  @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
     weekly_reward_streak            Int     @default(0) @map("weekly-reward-streak")
@@ -175,9 +177,9 @@ model membership {
     /// @see RoleFlags
     negative_flags Int     @default(0)
 
-    /// When this subscription should be considered no longer active if not renewed
-    //
-    // Unix millis.
+    /// When this subscription should be considered no longer active, assuming it's not renewed before then.
+    ///
+    /// Stored in Unix millis.
     expiration    BigInt
     /// Whether this subscription is active. If false, it will be ignored.
     active        Boolean
@@ -220,6 +222,7 @@ model poll {
 
     question   String
     options    String[]
+    /// The time the poll is scheduled to stop accepting new votes, stored in Unix seconds
     expiration BigInt?
     open       Boolean @default(true)
 
