@@ -281,6 +281,12 @@ model EVAlertEvent {
 
     /// The prediction the bet is making (e.g. "Over 61.5" or "Aaron Judge Over 0.5" or "Nanjing Monkey Kings")
     betPrediction      String
+
+    /// Whether this event passed the filter defined for it and was sent in filtered channels. Possible values are:
+    /// * `true` - The event passed the filter and was sent in filtered channels
+    /// * `false` - The event did not pass the filter and was not sent in filtered channels
+    /// * `null` - The event had no filter to pass; whether it was sent in public channels depends on the configuration of the odds email worker at the time of the event
+    passedFilter      Boolean?
 }
 
 model Giveaway {
