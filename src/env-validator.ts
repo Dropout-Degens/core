@@ -198,7 +198,29 @@ const envSchemaRawObject = {
         "The JWT (credential JSON) for a Google Cloud service account to use when editing spreadsheets. If you do not have a service account credential, you may use the value `no-auth` instead. This will disable spreadsheet-based features.",
     ).transform(value => {
         if (value === "no-auth") return null;
-        try { return JSON.parse(value) } catch (e) { throw new Error("GOOGLE_SPREADSHEET_ACCOUNT_AUTH must be a valid JSON string") }
+        return value;
+    }).refine(value => {
+        if (value === null) return true;
+        return value.startsWith("auth__");
+    }, { message: "GOOGLE_SPREADSHEET_ACCOUNT_AUTH must either be the literal value 'no-auth' or a base64-encoded Google Cloud Service Account JWT" })
+    .transform(value => {
+        if (value === null) return null;
+        let decoded: string;
+
+        try {
+            const base64 = value.slice(6);
+            decoded = Buffer.from(base64, "base64").toString("utf-8");
+        } catch (e) {
+            console.error("GOOGLE_SPREADSHEET_ACCOUNT_AUTH:", {value});
+            throw new Error("GOOGLE_SPREADSHEET_ACCOUNT_AUTH must be a base64-encoded string");
+        }
+
+        try {
+            return JSON.parse(decoded)
+        } catch (e) {
+            console.error("GOOGLE_SPREADSHEET_ACCOUNT_AUTH:", {decoded});
+            throw new Error("GOOGLE_SPREADSHEET_ACCOUNT_AUTH must be a valid JSON string")
+        }
     }).pipe(z.union([z.null(), z.object({
         type: z.literal("service_account"),
         client_email: z.string(),
