@@ -287,6 +287,12 @@ model EVAlertEvent {
     /// * `false` - The event did not pass the filter and was not sent in filtered channels
     /// * `null` - The event had no filter to pass; whether it was sent in public channels depends on the configuration of the odds email worker at the time of the event
     passedFilter      Boolean?
+
+    /// Whether this event is included in the spreadsheet
+    ///
+    /// When the Discord bot starts up, it attempts to add all events that are not already in the spreadsheet to the spreadsheet.
+    isInSpreadsheet      Boolean? @default(false)
+    @@index([isInSpreadsheet])
 }
 
 model Giveaway {

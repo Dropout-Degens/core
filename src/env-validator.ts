@@ -192,6 +192,30 @@ const envSchemaRawObject = {
     RANDOM_ORG_API_KEY: z.string().optional().describe(
         "API key used to authenticate with Random.org for random number generation."
     ),
+
+    /** The JWT (credential JSON) for a Google Cloud service account to use when editing spreadsheets. If you do not have a service account credential, you may use the value `no-auth` instead. This will disable spreadsheet-based features. */
+    GOOGLE_SPREADSHEET_ACCOUNT_AUTH: z.string().describe(
+        "The JWT (credential JSON) for a Google Cloud service account to use when editing spreadsheets. If you do not have a service account credential, you may use the value `no-auth` instead. This will disable spreadsheet-based features.",
+    ).transform(value => {
+        if (value === "no-auth") return null;
+        try { return JSON.parse(value) } catch (e) { throw new Error("GOOGLE_SPREADSHEET_ACCOUNT_AUTH must be a valid JSON string") }
+    }).pipe(z.union([z.null(), z.object({
+        type: z.literal("service_account"),
+        client_email: z.string(),
+        private_key: z.string(),
+        private_key_id: z.string(),
+        project_id: z.string(),
+        client_id: z.string(),
+        universe_domain: z.literal("googleapis.com"),
+    }, {message: "GOOGLE_SPREADSHEET_ACCOUNT_AUTH must be a valid Google Cloud Service Account JWT"})])).optional(),
+    /** The ID of the Google Spreadsheet to use for EV alerts. This is used to store the EV alerts in a spreadsheet. */
+    GOOGLE_SPREADSHEET_EV_ALERTS_ID: z.string().optional().describe(
+        "The ID of the Google Spreadsheet to use for EV alerts. This is used to store the EV alerts in a spreadsheet."
+    ),
+    /** For the spreadsheet specified by GOOGLE_SPREADSHEET_EV_ALERTS_ID, this is the range to insert EV alerts into. Typically, you'll want a value like "'test - ALL ALERTS'!A:A" */
+    GOOGLE_SPREADSHEET_EV_ALERTS_RANGE: z.string().optional().describe(
+        `For the spreadsheet specified by GOOGLE_SPREADSHEET_EV_ALERTS_ID, this is the range to insert EV alerts into. Typically, you\'ll want a value like "'test - ALL ALERTS'!A:A"`
+    ),
 } as const satisfies z.ZodRawShape
 
 
