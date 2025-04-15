@@ -123,6 +123,17 @@ model user {
     bettingStrategy                 BETTING_STRATEGY @default(UNSET)
 
     giveawayEntries                 GiveawayEntriesForUser[]
+
+    /// The decoded name of the join method the user last used to join the Discord server
+    latestDiscordJoinMethod         String?
+    /// The latest invite link the user used to join the Discord server
+    latestDiscordJoinInviteCode     String?
+    /// The username of the latest user/bot that allowed the user to join the Discord server (typically via a user creating the invite link or a bot adding the user directly to the server)
+    latestDiscordJoinInviterUN      String?
+    /// When the user's Discord join data was last updated.
+    ///
+    /// This value can be used to determine if we need to fetch/re-fetch the user's join method from Discord.
+    latestDiscordJoinUpdated        DateTime? @db.Timestamp(0)
 }
 
 enum BETTING_STRATEGY {
