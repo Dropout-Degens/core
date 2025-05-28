@@ -1,0 +1,14 @@
+model AuthSession {
+    @@map("auth_sessions")
+    @@schema("private")
+
+    token   String @id @db.VarChar(45)
+    expires BigInt
+
+    userSnowflake BigInt @map("user_snowflake")
+    user          User   @relation(fields: [userSnowflake], references: [snowflake])
+    @@index([userSnowflake])
+
+    createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(0)
+    updatedAt DateTime @default(now()) @map("updated_at") @db.Timestamp(0)
+}

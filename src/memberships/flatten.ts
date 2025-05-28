@@ -1,11 +1,11 @@
-import { user } from "@prisma/client";
+import { User } from "@prisma/client";
 import db from "../db";
 import { recalcMetadata } from "../discord/application-metadata";
 import { FindUniqueReturn, WithSnowflake } from "../index";
 
 type DBUser = FindUniqueReturn<WithSnowflake<{include: {memberships: true}}>>;
 
-export async function flattenMemberships<T extends {memberships: (Pick<DBUser['memberships'][number], 'active'|'backendId'|'positive_flags'|'negative_flags'> & Partial<DBUser['memberships'][number]>)[]} & Omit<Partial<DBUser>, 'memberships'> & Pick<DBUser, 'subscription_type'>>(user: T, alwaysRefreshDiscordMetadata = false): Promise<T & Pick<DBUser, 'subscription_type'>> {
+export async function flattenMemberships<T extends {memberships: (Pick<DBUser['memberships'][number], 'active'|'backendId'|'positiveFlags'|'negativeFlags'> & Partial<DBUser['memberships'][number]>)[]} & Omit<Partial<DBUser>, 'memberships'> & Pick<DBUser, 'subscriptionType'>>(user: T, alwaysRefreshDiscordMetadata = false): Promise<T & Pick<DBUser, 'subscriptionType'>> {
     let positiveFlags: number = 0;
     let negativeFlags: number = 0;
 
@@ -19,16 +19,16 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
             continue;
         }
 
-        positiveFlags |= membership.positive_flags;
-        negativeFlags |= membership.negative_flags;
+        positiveFlags |= membership.positiveFlags;
+        negativeFlags |= membership.negativeFlags;
     }
 
-    const oldFlags = user.subscription_type;
+    const oldFlags = user.subscriptionType;
     const newFlags = positiveFlags & ~negativeFlags;
 
     console.log({oldFlags, newFlags, positiveFlags, negativeFlags});
 
-    user.subscription_type = newFlags;
+    user.subscriptionType = newFlags;
 
     await Promise.all([
         db.membership.updateMany({
@@ -41,7 +41,7 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
             console.log('Updating user flags for', {snowflake: user.snowflake, newFlags, oldFlags});
             Object.assign(user, await db.user.update({
                 where: { snowflake: user.snowflake },
-                data: { subscription_type: newFlags },
+                data: { subscriptionType: newFlags },
             }));
             console.log('Updated user DB flags.');
         }(),
@@ -49,13 +49,13 @@ export async function flattenMemberships<T extends {memberships: (Pick<DBUser['m
             console.log('Checking if user metadata needs to be recalculated', {snowflake: user.snowflake, newFlags, oldFlags});
             if (newFlags === oldFlags) return;
             console.log('Recalculating user metadata for', {snowflake: user.snowflake, newFlags, oldFlags});
-            if (!user.snowflake || !user.discord_access_token || typeof user.karma !== 'bigint' ) return console.warn('Missing Discord token for metadata recalculation', {snowflake: user.snowflake, newFlags, oldFlags});
-            await recalcMetadata(user as typeof user & Pick<user, 'discord_access_token'|'snowflake'|'subscription_type'|'karma'>);
+            if (!user.snowflake || !user.discordAccessToken || typeof user.karma !== 'bigint' ) return console.warn('Missing Discord token for metadata recalculation', {snowflake: user.snowflake, newFlags, oldFlags});
+            await recalcMetadata(user as typeof user & Pick<User, 'discordAccessToken'|'snowflake'|'subscriptionType'|'karma'>);
             console.log('Recalculated user metadata', {snowflake: user.snowflake, newFlags, oldFlags});
         }(),
     ]);
 
     console.log('User membership recalculated successfully.')
 
-    return user as T & Pick<user, 'subscription_type'>;
+    return user as T & Pick<User, 'subscriptionType'>;
 }

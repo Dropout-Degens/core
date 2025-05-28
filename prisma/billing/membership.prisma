@@ -1,0 +1,44 @@
+
+
+model Membership {
+    @@schema("private")
+    @@map ("memberships")
+
+    /// @deprecated
+    backendId     String @default(cuid()) @id
+
+    whopId       String? @unique @db.VarChar(45) @map("whop_id")
+    stripeId     String? @unique @db.VarChar(32) @map("stripe_id")
+
+    /// Admin who added this membership, if any.
+    manualAdder  User?  @relation("manual_adder", fields: [manualAdderSnowflake], references: [snowflake])
+    manualAdderSnowflake BigInt? @map("manual-adder")
+
+    /// Email associated with this membership, if any
+    email         String? @map("email") @db.Text
+
+    /// RoleFlags to grant to this user
+    /// @see RoleFlags
+    positiveFlags Int @map("positiveFlags")
+    /// RoleFlags to remove from this user
+    ///
+    /// Negative flags have the final say! Use sparingly!
+    /// @see RoleFlags
+    negativeFlags Int     @default(0) @map("negativeFlags")
+
+    /// When this subscription should be considered no longer active, assuming it's not renewed before then.
+    ///
+    /// Stored in Unix millis.
+    expiration    BigInt
+    /// Whether this subscription is active. If false, it will be ignored.
+    active        Boolean
+
+    userSnowflake BigInt
+    user          User    @relation(fields: [userSnowflake], references: [snowflake])
+
+    @@index([userSnowflake])
+    @@index([manualAdderSnowflake], map: "manual-adder")
+
+    updatedAt      DateTime @updatedAt @db.Timestamp(0) @default(now())
+    rolesUpdatesAt DateTime @default("1970-01-01T12:00:00Z") @db.Timestamp(0)
+}

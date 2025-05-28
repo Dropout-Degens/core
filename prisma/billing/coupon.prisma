@@ -1,0 +1,27 @@
+model BankedCoupon {
+    @@schema("private")
+    @@map ("coupons")
+
+    userSnowflake BigInt?  @map("associated-user")
+    user            User?    @relation(fields: [userSnowflake], references: [snowflake])
+
+    /// The promo code string used for Whop
+    ///
+    /// Schema:
+    ///    ${Snowflake}-${PseudoRandomFillTo40Chars}-${BillingPeriod}-${Duration}-${Amount}
+    promoCode      String  @id @unique(map: "promo-code_UNIQUE") @map("promo-code") @db.VarChar(64)
+
+    whopId         String? @unique(map: "whop-id_UNIQUE") @map("whop-id") @db.VarChar(32)
+    /// Stripe ID of the [Promotion Code](https://docs.stripe.com/api/promotion_codes) object
+    ///
+    /// Applied at checkout to show the promo cide to the user
+    stripeId       String? @unique(map: "stripe-id_UNIQUE") @map("stripe-id") @db.VarChar(32)
+
+    discountAmount Float   @map("discount-amount") @db.Real
+    duration        Int     @db.SmallInt
+    billingPeriod  String  @map("billing-period")
+    planType       Int     @map("plan-type")
+    source          String?
+
+    @@index([userSnowflake], map: "associated-user")
+}

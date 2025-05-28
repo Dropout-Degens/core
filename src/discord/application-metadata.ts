@@ -1,4 +1,4 @@
-import { user } from '@prisma/client';
+import { User } from '@prisma/client';
 import { ApplicationRoleConnectionMetadataType, APIApplicationRoleConnectionMetadata, RESTPutAPIApplicationRoleConnectionMetadataJSONBody, Routes, RESTPutAPICurrentUserApplicationRoleConnectionJSONBody, RESTPutAPICurrentUserApplicationRoleConnectionResult } from "discord-api-types/v10";
 import RoleFlags from "../definitions";
 import { bearerTokenREST, botREST } from "./REST";
@@ -41,14 +41,14 @@ export const linkedRolesSchemaPutRequest = botREST.put(Routes.applicationRoleCon
 
 export const platform_name = 'Dropout Degens';
 
-export async function recalcMetadata(user: Pick<user, 'subscription_type'|'discord_access_token'|'karma'> & Partial<user>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
+export async function recalcMetadata(user: Pick<User, 'subscriptionType'|'discordAccessToken'|'karma'> & Partial<User>): Promise<RESTPutAPICurrentUserApplicationRoleConnectionResult> {
     await linkedRolesSchemaPutRequest;
 
     const now = Math.ceil(Date.now() / 1000);
-    const expiry = Number(user.discord_access_expiry) + 2;
-    if (user.discord_access_expiry && now > expiry ) {
-        if (user.snowflake && user.discord_refresh_token)
-            await refreshToken(user as typeof user & Pick<user, 'snowflake'|'discord_refresh_token'|'discord_access_expiry'>);
+    const expiry = Number(user.discordAccessExpiry ?? 0) - 2;
+    if (user.discordAccessExpiry && now > expiry ) {
+        if (user.snowflake && user.discordRefreshToken)
+            await refreshToken(user as typeof user & Pick<User, 'snowflake'|'discordRefreshToken'|'discordAccessExpiry'>);
         else {
             console.log('Not recalculating metadata because the access token has expired.', {expiry, now});
             throw new ExpiredAccessTokenError(user.snowflake);
@@ -57,14 +57,14 @@ export async function recalcMetadata(user: Pick<user, 'subscription_type'|'disco
 
     const body = {
         metadata: {
-            all_access: user.subscription_type & (RoleFlags.Betting | RoleFlags.ExpectedValue) ? 1 : 0,
-            staff: user.subscription_type & RoleFlags.AnyStaffRole ? 1 : 0,
+            all_access: user.subscriptionType & (RoleFlags.Betting | RoleFlags.ExpectedValue) ? 1 : 0,
+            staff: user.subscriptionType & RoleFlags.AnyStaffRole ? 1 : 0,
             karma: user.karma?.toString() ?? '0',
         } satisfies Record<keyof typeof applicationMetadataSchemaObject, string | number>,
         platform_name,
     } satisfies RESTPutAPICurrentUserApplicationRoleConnectionJSONBody;
 
-    bearerTokenREST.setToken(user.discord_access_token!);
+    bearerTokenREST.setToken(user.discordAccessToken!);
 
     try {
 
@@ -82,7 +82,7 @@ export async function recalcMetadata(user: Pick<user, 'subscription_type'|'disco
 
         if (e instanceof DiscordAPIError && e.message == 'invalid_grant') {
             console.log(`Failed to refresh Discord access token for user ${user.snowflake} because the refresh token is invalid. Removing any active auth sessions.`, {user});
-            await db.auth_session.deleteMany({ where: { user: { snowflake: user.snowflake } }});
+            await db.authSession.deleteMany({ where: { user: { snowflake: user.snowflake } }});
             throw new InvalidGrantError(user.snowflake, e);
         }
 

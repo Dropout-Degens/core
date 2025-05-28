@@ -1,0 +1,24 @@
+model Giveaway {
+    @@schema("private")
+
+    id String @id @default(cuid())
+
+    /// Snowflake ID for the giveaway message
+    messageId BigInt?
+    @@unique([messageId])
+
+    /// Snowflake ID for the channel the giveaway message is in
+    channelId BigInt
+
+    name                 String
+    description          String?
+    karmaCost            BigInt  @default(0)
+    maxEntriesPerUser    Int?    @default(1)
+    totalWinnersToChoose Int     @default(1)
+
+    expiration           DateTime?
+    open                 Boolean   @default(true)
+    haveWinnersBeenDrawn Boolean   @default(false)
+
+    userEntries GiveawayEntriesForUser[]
+}

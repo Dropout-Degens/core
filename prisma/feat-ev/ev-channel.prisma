@@ -1,0 +1,9 @@
+model EVChannel {
+    @@schema("public")
+
+    channelId BigInt  @id
+    enabled   Boolean @default(false)
+
+    filters    Json?
+    pingConfig Json?
+}

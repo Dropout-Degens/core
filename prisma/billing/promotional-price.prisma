@@ -1,0 +1,15 @@
+model PromotionalPrice {
+    @@schema("private")
+
+    id BigInt @id @default(autoincrement())
+
+    promoCode String @unique @map("promo_code")
+
+    active Boolean
+
+    stripePrice String @map("stripe_price")
+    /// Free days! Free days! Get your free days here!
+    freeDays Int @db.SmallInt @default(0) @map("free_days")
+    /// If you wish to layer a coupon on top of the custom Stripe price, you can specify it here.
+    couponId String? @map("coupon_id")
+}

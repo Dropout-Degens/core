@@ -1,0 +1,20 @@
+model GiveawayEntriesForUser {
+    giveawayId String
+    giveaway   Giveaway @relation(fields: [giveawayId], references: [id])
+
+    giveawayMessage BigInt
+
+    userId BigInt
+    user   User   @relation(fields: [userId], references: [snowflake])
+
+    won Boolean?
+
+    entryCount Int @db.SmallInt
+
+    @@id([giveawayId, userId])
+    @@index([giveawayId])
+    @@index([giveawayId, won])
+    @@index([giveawayMessage])
+    @@index([userId])
+    @@schema("private")
+}

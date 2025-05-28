@@ -1,0 +1,20 @@
+model PollVotes {
+    @@map("votes")
+    @@schema("private")
+
+    pollId BigInt @map("poll_id")
+    poll   Poll   @relation(fields: [pollId], references: [id])
+    @@index([pollId])
+
+    userId BigInt @map("user_id")
+    user   User   @relation(fields: [userId], references: [snowflake])
+    @@index([userId])
+
+    @@id([pollId, userId])
+
+    vote Int
+
+    won Boolean?
+
+    wager Int? @db.SmallInt
+}

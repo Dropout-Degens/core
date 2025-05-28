@@ -1,0 +1,80 @@
+model User {
+    @@map("users")
+    @@schema("private")
+
+    snowflake    BigInt  @id
+    discordEmail String? @map("discord-email") @db.Text
+    discordPFP   String? @map("discord-pfp") @db.Text
+    discordName  String? @map("discord-name") @db.Text
+
+    discordAccessToken  String? @map("discord-access-token")
+    /// Expiration of the user's Discord access token, stored in Unix seconds
+    discordAccessExpiry BigInt  @default(0) @map("discord-access-expiry")
+    discordRefreshToken String? @map("discord-refresh-token")
+
+    timezone                   String @default("America/New_York")
+    /// When the user last adjusted their timezone, stored in Unix millis
+    timezoneLastAdjusted       BigInt @default(0) @map("timezone-last-adjusted")
+    weeklyRewardLastClaimed    String @default("December 31 1969 20:00 GMT-4") @map("weekly-reward-last-claimed")
+    weeklyRewardStreak         Int    @default(0) @map("weekly-reward-streak")
+    weeklyRewardStreakLastBest Int    @default(0) @map("weekly-reward-streak-last-best")
+
+    authSessions AuthSession[]
+
+    memberships      Membership[]
+    /// Flattened subscription type. THIS IS A CACHE OF SORTS AND SHOULD BE UPDATED AFTER `memberships` IS MODIFIED!
+    subscriptionType Int          @default(0) @map("subscription-type")
+
+    /// Record<PurchasablePlan, Record<DiscountSource, number>>
+    /// @type { Record<number, Record<string, number>> }
+    freeDays Json?          @map("free_days")
+    coupons  BankedCoupon[]
+
+    stripeCustomerId String? @map("stripe_customer_id") @db.VarChar(32)
+    stripeEmail      String? @map("stripe_email") @db.Text
+
+    karma BigInt @default(0)
+    @@index([karma(sort: Desc)])
+
+    // NOTE: When adding new caps, be sure to add them to the Daily Reset code in the bot!
+    // src/web-server/routes/daily-reset.ts
+    karmaTodayFromMessages  BigInt @default(0) @map("karma_today_from_messages")
+    karmaTodayFromReactions BigInt @default(0) @map("karma_today_from_reactions")
+
+    emailMarketingConsent Boolean @default(false) @map("email_marketing_consent")
+
+    adminCreatedMemberships Membership[] @relation("manual_adder")
+
+    pollVotes PollVotes[]
+
+    hasJoinedDiscord Boolean @default(false)
+
+    eligibleForStripeMigrationPrice Boolean @default(false)
+
+    // The user's bankroll in USD cents
+    bankrollUSDCents Int?
+    bettingStrategy  BETTING_STRATEGY @default(UNSET)
+
+    giveawayEntries GiveawayEntriesForUser[]
+
+    /// The decoded name of the join method the user last used to join the Discord server
+    latestDiscordJoinMethod     String?
+    /// The latest invite link the user used to join the Discord server
+    latestDiscordJoinInviteCode String?
+    /// The username of the latest user/bot that allowed the user to join the Discord server (typically via a user creating the invite link or a bot adding the user directly to the server)
+    latestDiscordJoinInviterUN  String?
+    /// When the user's Discord join data was last updated.
+    ///
+    /// This value can be used to determine if we need to fetch/re-fetch the user's join method from Discord.
+    latestDiscordJoinUpdated    DateTime? @db.Timestamp(0)
+}
+
+enum BETTING_STRATEGY {
+    @@schema("private")
+    
+    UNSET
+
+    PASSIVE
+    NORMAL
+    AGGRESSIVE
+}

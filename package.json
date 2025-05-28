@@ -8,6 +8,9 @@
     "prepare": "prisma generate && pnpm run build",
     "dev": "tsup src/index.ts -d=dist --format=esm --platform=node --treeshake --sourcemap --dts --target esnext --watch"
   },
+  "prisma": {
+    "schema": "./prisma/"
+  },
   "dependencies": {
     "@types/json-bigint": "^1.0.4",
     "checkeasy": "^1.2.1",
@@ -16,8 +19,8 @@
   },
   "peerDependencies": {
     "@discordjs/rest": "^2.4.2",
-    "@prisma/client": ">=6.3.0",
-    "prisma": ">=6.3.0",
+    "@prisma/client": ">=6.8.2",
+    "prisma": ">=6.8.2",
     "@supabase/supabase-js": "^2.45.4",
     "@whop-sdk/core": "^0.0.4",
     "discord-api-types": ">=0.37.118",

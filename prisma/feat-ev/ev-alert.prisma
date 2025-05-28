@@ -1,0 +1,55 @@
+model EVAlertEvent {
+    @@schema("private")
+
+    id BigInt @id @default(autoincrement())
+
+    alertProvider String
+
+    /// The sport this event will occur in
+    sport String?
+
+    /// The sports league this event will occur in
+    league String?
+
+    /// The game this event will occur in
+    game String
+
+    /// The expected profit from this event, represented as a decimal (e.g. 0.5 = 50%)
+    EV Decimal? @db.Decimal(6, 4)
+
+    /// Odds to hit (TODO: ask AsiaD about what this is), represented as a decimal (e.g. 0.5 = 50%)
+    oddsToHit Decimal? @db.Decimal(6, 4)
+
+    /// The sportsbook sending this event
+    sportsbook String
+
+    /// The time the event is scheduled to occur, represented in Unix seconds
+    eventTime BigInt?
+
+    /// The time our systems received the EV event, represented in Unix seconds
+    receivedTime BigInt
+
+    /// Odds number as provided by the sportsbook (e.g. +100 or -220)
+    odds Int @db.SmallInt
+
+    /// The bet size recommended by the event provider in US Dollars, based on a $1,000 bankroll
+    betSizeRecommendationFor1kBankroll Decimal? @db.Decimal(6, 2)
+
+    /// The type of bet to place (e.g. "Total Points" or "Player Singles" or "Moneyline")
+    betType String
+
+    /// The prediction the bet is making (e.g. "Over 61.5" or "Aaron Judge Over 0.5" or "Nanjing Monkey Kings")
+    betPrediction String
+
+    /// Whether this event passed the filter defined for it and was sent in filtered channels. Possible values are:
+    /// * `true` - The event passed the filter and was sent in filtered channels
+    /// * `false` - The event did not pass the filter and was not sent in filtered channels
+    /// * `null` - The event had no filter to pass; whether it was sent in public channels depends on the configuration of the odds email worker at the time of the event
+    passedFilter Boolean?
+
+    /// Whether this event is included in the spreadsheet
+    ///
+    /// When the Discord bot starts up, it attempts to add all events that are not already in the spreadsheet to the spreadsheet.
+    isInSpreadsheet Boolean? @default(false)
+    @@index([isInSpreadsheet])
+}

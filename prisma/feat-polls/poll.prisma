@@ -1,0 +1,17 @@
+model Poll {
+    @@schema("private")
+	@@map("poll")
+    
+    /// Snowflake ID for the giveaway message
+    id           BigInt  @id
+    /// Snowflake ID for the channel the giveaway message is in
+    channelId    BigInt @map("channel_id")
+
+    question     String
+    options      String[]
+    /// The time the poll is scheduled to stop accepting new votes, stored in Unix seconds
+    expiration   BigInt?
+    open         Boolean @default(true)
+
+    votes        PollVotes[]
+}

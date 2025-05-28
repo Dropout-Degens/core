@@ -1,72 +1,65 @@
-import { object, int, oneOf, string, optional, arrayOf, Validator, ValidationError, float, alternatives, exact, nullable, defaultValue } from 'checkeasy';
-import { BillingPeriod, Coupon, CouponDefinition, CouponGenerated, DiscountSource, PurchasablePlan, FreeDays, PlanFreeDays } from './definitions';
+import { BillingPeriod, BankedCoupon, BankedCouponDefinition, BankedCouponGenerated, DiscountSource, PurchasablePlan, FreeDays, PlanFreeDays, type ToZodSchema } from './definitions';
+import * as z from 'zod';
 
-type ObjectValidator<T> = Required<{ [K in keyof T]: Validator<T[K]> }>;
+//export const validatePurchasableSubscriptionType = oneOf<Exclude<PurchasablePlan, PurchasablePlan.Any>>(Object.values(PurchasablePlan).filter(v => typeof v === 'number' && v !== PurchasablePlan.Any) as Exclude<PurchasablePlan, PurchasablePlan.Any>[]);
+export const validatePurchasableSubscriptionType = z.nativeEnum(PurchasablePlan).refine(v => v !== PurchasablePlan.Any);
 
-export const validatePurchasableSubscriptionType = oneOf<Exclude<PurchasablePlan, PurchasablePlan.Any>>(Object.values(PurchasablePlan).filter(v => typeof v === 'number' && v !== PurchasablePlan.Any) as Exclude<PurchasablePlan, PurchasablePlan.Any>[]);
+export const validateBillingPeriod = z.nativeEnum(BillingPeriod);
 
-export const validateBillingPeriod = oneOf<BillingPeriod>(Object.values(BillingPeriod));
+const PromoCodeSchema = z.string().regex(/^\d+-[a-zA-Z0-9]*-[a-zA-Z0-9]+-\d+-[\.0-9]+$/).max(40) as z.ZodType<`${bigint}-${string}-${string}-${bigint}-${number}`>;
 
-// make able to pass in a validator
-export function not<T>(value: T): Validator<T> {
-    return function notValidator<V>(v: V, path: string): Exclude<V, T> {
-        // @ts-ignore: This logic is completely fine. TypeScript just doesn't get it.
-        if (value === v) throw new ValidationError(`[${path}] This value is exactly the value we expected it not to be!`);
-        // @ts-ignore: This logic is completely fine. TypeScript just doesn't get it.
-        return v;
-    }
-};
-
-export function bigint(options?: {min?: number|bigint, max?: number|bigint}): Validator<bigint> {
-    return function bigintValidator(v: unknown, path: string) {
-        if (typeof v !== 'bigint') {
-            throw new ValidationError(`[${path}] should be a bigint`);
-        }
-
-        if (options?.min && v < options.min) {
-            throw new ValidationError(`[${path}] is smaller than the allowed minimum (${options.min})`);
-        }
-        if (options?.max && v > options.max) {
-            throw new ValidationError(`[${path}] is larger than the allowed maximum (${options.max})`);
-        }
-        return v;
-    };
-}
-
-const CouponValidatorDefinitions = {
-    discount_amount: float({min: 0, max: 1}),
-    plan_type: validatePurchasableSubscriptionType,
-    billing_period: validateBillingPeriod,
-    duration: float({min: 0}),
-    promo_code: string({pattern: /^\d+-[a-zA-Z0-9]*-[a-zA-Z0-9]+-\d+-[\.0-9]+$/, max: 40}) as Validator<`${bigint}-${string}-${string}-${bigint}-${number}`>,
-    source: oneOf<DiscountSource>(Object.values(DiscountSource)),
-    associated_user: nullable(bigint()),
-    stripe_id: nullable(string()), // may want a more strict validator later
-    whop_id: nullable(string()), // may want a more strict validator later
-} satisfies ObjectValidator<CouponDefinition>;
+export const validateBankedCouponDefinition = z.object({
+    discountAmount: z.number().min(0).max(1),
+    planType: validatePurchasableSubscriptionType,
+    billingPeriod: validateBillingPeriod,
+    duration: z.number().min(0),
+    promoCode: PromoCodeSchema.optional(),
+    source: z.nativeEnum(DiscountSource),
+    userSnowflake: z.bigint().nullable(),
+    stripeId: z.string().nullable(), // may want a more strict validator later
+    whopId: z.string().nullable(), // may want a more strict validator later
+} satisfies ToZodSchema<BankedCouponDefinition>);
 
 
-export const validateCouponDefinition: Validator<CouponDefinition> = object<ObjectValidator<CouponDefinition>>(CouponValidatorDefinitions);
-export const validateGeneratedCoupon: Validator<CouponGenerated<boolean, boolean>> = object<ObjectValidator<CouponGenerated<boolean, boolean>>>({
-    ...CouponValidatorDefinitions,
-    stripe_id: nullable(string()),
-    whop_id: nullable(string()),
-});
-export const validateGeneratedCouponList = arrayOf<CouponGenerated<false, true> | CouponGenerated<true, false>>(validateGeneratedCoupon);
+export const validateGeneratedBankedCoupon = z.union([
+    validateBankedCouponDefinition.extend({
+        promoCode: PromoCodeSchema,
+        stripeId: z.null(),
+        whopId: z.string(),
+    }) satisfies z.ZodType<BankedCouponGenerated<boolean, boolean>, z.ZodTypeDef, unknown>,
 
-export const validateCoupon = alternatives<Validator<Coupon<boolean>>[]>([validateCouponDefinition, validateGeneratedCoupon]);
-export const validateCouponList = arrayOf<Coupon<boolean>>(validateCoupon);
+    validateBankedCouponDefinition.extend({
+        promoCode: PromoCodeSchema,
+        stripeId: z.string(),
+        whopId: z.null(),
+    }) satisfies z.ZodType<BankedCouponGenerated<boolean, boolean>, z.ZodTypeDef, unknown>,
 
-export const validatePlanPlanFreeDays = object<ObjectValidator<PlanFreeDays>>(
-    Object.fromEntries(
-        Object.values(DiscountSource).map(v => [v, optional(int({min: 0}))])
-    ) as ObjectValidator<PlanFreeDays>
-);
+    validateBankedCouponDefinition.extend({
+        promoCode: PromoCodeSchema,
+        stripeId: z.string(),
+        whopId: z.string(),
+    }) satisfies z.ZodType<BankedCouponGenerated<boolean, boolean>, z.ZodTypeDef, unknown>
+]);
 
-export const validateFreeDays = nullable<FreeDays>(object<ObjectValidator<FreeDays>>(
-    Object.fromEntries(
-        Object.values(PurchasablePlan).filter(v => typeof v === 'number').map(v => [v, optional(validatePlanPlanFreeDays)])
-    ) as ObjectValidator<FreeDays>
-));
+//export const validateGeneratedBankedCouponList = arrayOf<BankedCouponGenerated<false, true> | BankedCouponGenerated<true, false>>(validateGeneratedBankedCoupon);
+export const validateBankedCouponDefinitionList = z.array(validateBankedCouponDefinition);
 
-export const validatePollOptions = arrayOf<string>(string({min: 2}));
+//export const validateBankedCoupon = alternatives<Validator<BankedCoupon<boolean>>[]>([validateBankedCouponDefinition, validateGeneratedBankedCoupon]);
+export const validateBankedCoupon = z.union([validateBankedCouponDefinition, validateGeneratedBankedCoupon]);
+export const validateBankedCouponList = z.array(validateBankedCoupon);
+
+//export const validatePlanPlanFreeDays = object<ObjectValidator<PlanFreeDays>>(
+//    Object.fromEntries(
+//        Object.values(DiscountSource).map(v => [v, optional(int({min: 0}))])
+//    ) as ObjectValidator<PlanFreeDays>
+//);
+
+export const validatePlanPlanFreeDays = z.record(z.nativeEnum(DiscountSource), z.number().int().min(0).nullable());
+
+//export const validateFreeDays = nullable<FreeDays>(object<ObjectValidator<FreeDays>>(
+//    Object.fromEntries(
+//        Object.values(PurchasablePlan).filter(v => typeof v === 'number').map(v => [v, optional(validatePlanPlanFreeDays)])
+//    ) as ObjectValidator<FreeDays>
+//));
+
+export const validateFreeDays = z.record(validatePurchasableSubscriptionType, validatePlanPlanFreeDays.nullable())

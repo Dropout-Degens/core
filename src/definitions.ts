@@ -1,4 +1,4 @@
-import { coupon } from "@prisma/client";
+import { BankedCoupon as DBBankedCoupon } from "@prisma/client";
 
 export enum RoleFlags {
     //                                               Premium
@@ -122,24 +122,24 @@ export enum BillingPeriod {
 }
 
 /** Represents a single coupon. More specific type definitions than Prisma allows. */
-export interface CouponDefinition extends Omit<Omit<coupon, 'promo_code'|'whop_id'|'stripe_id'> & Partial<Pick<coupon, 'promo_code'|'whop_id'|'stripe_id'>>, never> {
+export interface BankedCouponDefinition extends Omit<Omit<DBBankedCoupon, 'promoCode'|'whopId'|'stripeId'> & Partial<Pick<DBBankedCoupon, 'promoCode'|'whopId'|'stripeId'>>, never> {
     /** The type of subscription this coupon is applicable to */
-    plan_type: Exclude<PurchasablePlan, PurchasablePlan.Any>;
+    planType: Exclude<PurchasablePlan, PurchasablePlan.Any>;
 
     /** The billing period this coupon should apply to */
-    billing_period: BillingPeriod;
+    billingPeriod: BillingPeriod;
 
     /** Where the coupon was obtained from */
     source: DiscountSource;
 }
 
-export interface CouponGenerated<TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> extends Omit<CouponDefinition & coupon, never> {
-    whop_id: TUsesWhop extends true ? NonNullable<coupon['whop_id']> : coupon['whop_id'];
-    stripe_id: TUsesStripe extends true ? NonNullable<coupon['stripe_id']>: coupon['stripe_id'];
-    promo_code: string;
+export interface BankedCouponGenerated<TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> extends Omit<BankedCouponDefinition & DBBankedCoupon, never> {
+    whopId: TUsesWhop extends true ? NonNullable<DBBankedCoupon['whopId']> : DBBankedCoupon['whopId'];
+    stripeId: TUsesStripe extends true ? NonNullable<DBBankedCoupon['stripeId']>: DBBankedCoupon['stripeId'];
+    promoCode: string;
 }
 
-export type Coupon<TGenerated extends boolean = false, TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> = TGenerated extends true ? CouponGenerated<TUsesStripe, TUsesWhop> : CouponDefinition;
+export type BankedCoupon<TGenerated extends boolean = false, TUsesStripe extends boolean = false, TUsesWhop extends boolean = true> = TGenerated extends true ? BankedCouponGenerated<TUsesStripe, TUsesWhop> : BankedCouponDefinition;
 
 export type PlanFreeDays = Partial<Record<DiscountSource, number>>;
 export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
@@ -151,13 +151,13 @@ export type IsOptional<T> = Extract<T, undefined> extends never ? false : true
 export type ZodWithEffects<T extends import('zod').ZodTypeAny> = T | import('zod').ZodEffects<T, unknown, unknown>
 
 type ImprovedJsonObject = Record<never, unknown>;
-type PrismaJsonObject = import("@prisma/client/runtime/library").JsonValue;
-export type ReplacePrismaJsonObject<T extends any> = Extract<T, PrismaJsonObject> extends PrismaJsonObject ? Exclude<T, PrismaJsonObject> | ImprovedJsonObject : T;
+type PrismaJsonObject = import("@prisma/client/runtime/library").JsonObject;
+export type ReplacePrismaJsonObject<T extends any> = PrismaJsonObject extends Extract<T, PrismaJsonObject> ? (Exclude<T, PrismaJsonObject> | ImprovedJsonObject) : T;
 
 export type ToZodSchema<T extends Record<string, any>> = {
   [K in keyof T]-?: IsNullable<T[K]> extends true
-    ? ZodWithEffects<import('zod').ZodNullable<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>>>>
+    ? import('zod').ZodNullable<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>, import('zod').ZodTypeDef, unknown>>
     : IsOptional<T[K]> extends true
-      ? ZodWithEffects<import('zod').ZodOptional<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>>>>
-      : ZodWithEffects<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>>>
+      ? import('zod').ZodOptional<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>, import('zod').ZodTypeDef, unknown>>
+      : import('zod').ZodType<ReplacePrismaJsonObject<T[K]>, import('zod').ZodTypeDef, unknown>
 }
