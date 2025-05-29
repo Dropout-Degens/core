@@ -148,16 +148,14 @@ export type FreeDays = Partial<Record<PurchasablePlan, PlanFreeDays>>;
 export type IsNullable<T> = Extract<T, null> extends never ? false : true
 export type IsOptional<T> = Extract<T, undefined> extends never ? false : true
 
-export type ZodWithEffects<T extends import('zod').ZodTypeAny> = T | import('zod').ZodEffects<T, unknown, unknown>
-
 type ImprovedJsonObject = Record<never, unknown>;
 type PrismaJsonObject = import("@prisma/client/runtime/library").JsonObject;
 export type ReplacePrismaJsonObject<T extends any> = PrismaJsonObject extends Extract<T, PrismaJsonObject> ? (Exclude<T, PrismaJsonObject> | ImprovedJsonObject) : T;
 
 export type ToZodSchema<T extends Record<string, any>> = {
   [K in keyof T]-?: IsNullable<T[K]> extends true
-    ? import('zod').ZodNullable<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>, import('zod').ZodTypeDef, unknown>>
+    ? import('zod/v4').ZodNullable<import('zod/v4').ZodType<ReplacePrismaJsonObject<T[K]>, unknown>>
     : IsOptional<T[K]> extends true
-      ? import('zod').ZodOptional<import('zod').ZodType<ReplacePrismaJsonObject<T[K]>, import('zod').ZodTypeDef, unknown>>
-      : import('zod').ZodType<ReplacePrismaJsonObject<T[K]>, import('zod').ZodTypeDef, unknown>
+      ? import('zod/v4').ZodOptional<import('zod/v4').ZodType<ReplacePrismaJsonObject<T[K]>, unknown>>
+      : import('zod/v4').ZodType<ReplacePrismaJsonObject<T[K]>, unknown>
 }

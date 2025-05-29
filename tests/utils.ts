@@ -1,10 +1,11 @@
 // credit to @navtoj for getting the keys from a zod object
 // https://github.com/colinhacks/zod/discussions/2134#discussioncomment-5194111
 
-import { z } from "zod";
+import { z } from "zod/v4";
+import type { $ZodType } from "zod/v4/core";
 
 // get zod object keys recursively
-export function zodKeys<T extends z.ZodTypeAny>(schema: T): string[] {
+export function zodKeys<T extends $ZodType<unknown, unknown>>(schema: T): string[] {
 	// make sure schema is not null or undefined
 	if (schema === null || schema === undefined) return [];
 	// check if schema is nullable or optional

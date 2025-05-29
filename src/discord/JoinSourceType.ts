@@ -1,5 +1,5 @@
 import type { APIGuildMember } from "discord.js";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 export enum JoinSourceType {
 
@@ -143,7 +143,7 @@ export const membersElasticsearchEndpointResponseSchema = z.object({
     members: z.array(z.object({
         member: z.any() as z.ZodType<APIGuildMember>,
         source_invite_code: z.string().nullable(),
-        join_source_type: z.nativeEnum(JoinSourceType),
+        join_source_type: z.enum(JoinSourceType),
         inviter_id: z.string().nullable().refine((value) => {
             if (value === null) return true;
             try { BigInt(value); return true } catch { return false }

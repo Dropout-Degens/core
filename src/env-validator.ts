@@ -1,5 +1,4 @@
-import { inspect } from "util";
-import z from "zod";
+import z from "zod/v4";
 
 /**
  * This file ensures our environment variables remain standard, readable, and strictly-enforced at a high level.
@@ -279,24 +278,8 @@ export function getEnv<TRequiredKeys extends [OptionalKeysFromEnvSchema, ...Opti
         )) as unknown as z.ZodType<EnvBase & (typeof requiredKeys extends (infer T extends OptionalKeysFromEnvSchema)[] ? Required<Pick<EnvBase, T>> : never)>;
 
     const parsedEnv = moddedSchema.safeParse(process.env);
-
     if (parsedEnv.error) {
-        parsedEnv.error.errors.forEach(error => {
-            const firstKey = error.path[0] as keyof typeof envSchemaRawObject;
-            if (!firstKey) return;
-            if (!(firstKey in envSchemaRawObject)) {
-                return console.warn("Found an invalid path part while parsing ENV variable parsing errors:", firstKey);
-            }
-
-            (error as typeof error & {variable: string}).variable = firstKey;
-            (error as typeof error & {variable_description?: string}).variable_description = envSchemaRawObject[firstKey].description;
-        });
-
-        throw new Error(`Invalid ENV variables: ${inspect(parsedEnv.error.errors, {
-            depth: null,
-            breakLength: Infinity,
-            compact: false,
-        })}`);
+        throw new Error(`Invalid ENV variables: ${z.prettifyError(parsedEnv.error)}`);
     }
 
     return Object.assign({}, process.env, parsedEnv.data);
