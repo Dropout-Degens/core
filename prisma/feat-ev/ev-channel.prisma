@@ -4,6 +4,6 @@ model EVChannel {
     channelId BigInt  @id
     enabled   Boolean @default(false)
 
-    filters    Json?
+    filter    Json? @map("filters")
     pingConfig Json?
 }
