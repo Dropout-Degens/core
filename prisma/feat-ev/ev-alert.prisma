@@ -51,5 +51,8 @@ model EVAlertEvent {
     ///
     /// When the Discord bot starts up, it attempts to add all events that are not already in the spreadsheet to the spreadsheet.
     isInSpreadsheet Boolean? @default(false)
+
+    messageIds         BigInt[]
+
     @@index([isInSpreadsheet])
 }
