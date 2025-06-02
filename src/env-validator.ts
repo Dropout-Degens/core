@@ -221,6 +221,10 @@ const envSchemaRawObject = {
     GOOGLE_SPREADSHEET_EV_ALERTS_RANGE: z.string().optional().describe(
         `For the spreadsheet specified by GOOGLE_SPREADSHEET_EV_ALERTS_ID, this is the range to insert EV alerts into. Typically, you'll want a value like "'test - ALL ALERTS'!A:A"`
     ),
+    /** Discord channel to send all EV messages to. Used for debugging & testing purposes. */
+    EV_DEBUG_CHANNEL_ID: z.templateLiteral([z.bigint()]).optional().describe(
+        "Discord channel to send all EV messages to. Used for debugging & testing purposes."
+    ),
 } as const satisfies z.ZodRawShape
 
 
