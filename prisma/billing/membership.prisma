@@ -19,12 +19,12 @@ model Membership {
 
     /// RoleFlags to grant to this user
     /// @see RoleFlags
-    positiveFlags Int @map("positiveFlags")
+    positiveFlags Int @map("positive_flags")
     /// RoleFlags to remove from this user
     ///
     /// Negative flags have the final say! Use sparingly!
     /// @see RoleFlags
-    negativeFlags Int     @default(0) @map("negativeFlags")
+    negativeFlags Int     @default(0) @map("negative_flags")
 
     /// When this subscription should be considered no longer active, assuming it's not renewed before then.
     ///
