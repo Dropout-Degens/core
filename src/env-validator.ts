@@ -9,6 +9,10 @@ import z from "zod/v4";
 
 // Important note: z.object() allows for extra properties BUT strips them at runtime
 
+function commaSeparatedListOf<T>(itemSchema: z.ZodType<T, string>) {
+    return z.string().transform(value => value.split(",").map(item => item.trim())).pipe(z.array(itemSchema)).refine(arr => arr.length > 0, { message: "Comma-separated list must contain at least one item" });
+}
+
 const envSchemaRawObject = {
 
     /** The environment the app is running in. This is used to determine the behavior of the app in situations like logging, whether to enable debug features, and so on. */
@@ -17,28 +21,26 @@ const envSchemaRawObject = {
     ),
 
     /** The port the app will listen on. */
-    PORT: z.string().default("3000").transform(value => parseInt(value)).refine(value => value > 0 && value < 65536, { message: "PORT must be a valid port number" }).describe(
+    PORT: z.coerce.number().int().default(3000).describe(
         "The port the app will listen on."
     ),
 
     /** The URL of the PostgreSQL database to connect to. */
-    DATABASE_URL: z.string().refine(value => value.startsWith("postgresql://") || value.startsWith("postgres://"), {
+    DATABASE_URL: z.url().refine(value => value.startsWith("postgresql://") || value.startsWith("postgres://"), {
         message: "DATABASE_URL must be a valid PostgreSQL URL",
     }).describe(
         "The URL of the PostgreSQL database to connect to."
     ),
 
     /** The URL of the PostgreSQL database to connect to for making changes to the database schema. For local development, this is the same as DATABASE_URL. */
-    DATABASE_DIRECT_URL: z.string().refine(value => value.startsWith("postgresql://") || value.startsWith("postgres://"), {
+    DATABASE_DIRECT_URL: z.url().refine(value => value.startsWith("postgresql://") || value.startsWith("postgres://"), {
         message: "DATABASE_DIRECT_URL must be a valid PostgreSQL URL",
     }).describe(
         "The URL of the PostgreSQL database to connect to for making changes to the database schema. For local development, this is the same as DATABASE_URL."
     ),
 
     /** The URL of the Supabase instance to connect to. */
-    SUPABASE_URL: z.string().refine(value => URL.canParse(value), {
-        message: "SUPABASE_URL must be a valid URL",
-    }).describe(
+    SUPABASE_URL: z.url().describe(
         "The URL of the Supabase instance to connect to."
     ),
 
@@ -78,9 +80,7 @@ const envSchemaRawObject = {
     ),
 
     /** The snowflake ID of the Discord application, used primarily for OAuth. */
-    DISCORD_CLIENT_ID: z.string().refine(value => {try {BigInt(value); return true;} catch {return false;}}, {
-        message: "DISCORD_CLIENT_ID must be a Discord snowflake",
-    }).describe(
+    DISCORD_CLIENT_ID: z.templateLiteral([z.bigint()]).describe(
         "The snowflake ID of the Discord application, used primarily for OAuth."
     ),
 
@@ -95,23 +95,17 @@ const envSchemaRawObject = {
     ),
 
     /** The URL of the Discord bot's web server. For local development, you do not need to run these projects in parallel. */
-    BOT_URL: z.string().refine(value => URL.canParse(value), {
-        message: "BOT_URL must be a valid URL",
-    }).describe(
+    BOT_URL: z.url().describe(
         "The URL of the Discord bot's web server. For local development, you do not need to run these projects in parallel."
     ),
 
     /** The URL of the Next.js site. For local development, you do not need to run these projects in parallel. */
-    NEXTAUTH_URL: z.string().refine(value => URL.canParse(value), {
-        message: "NEXTAUTH_URL must be a valid URL",
-    }).describe(
+    NEXTAUTH_URL: z.url().describe(
         "The URL of the Next.js site. For local development, you do not need to run these projects in parallel."
     ),
 
     /** The URL of the signup page of the Next.js site. For local development, you do not need to run these projects in parallel. */
-    SIGNUP_URL: z.string().refine(value => URL.canParse(value), {
-        message: "SIGNUP_URL must be a valid URL",
-    }).optional().describe(
+    SIGNUP_URL: z.url().optional().describe(
         "The URL of the signup page of the Next.js site. For local development, you do not need to run these projects in parallel."
     ),
 
@@ -121,42 +115,32 @@ const envSchemaRawObject = {
     ),
 
     /** The snowflake IDs of the Discord server(s) the bot considers \ */
-    DROPOUT_DEGENS_SERVER_IDS: z.string().transform(value => value.split(",").map(id => id.trim())).refine((arr): arr is [`${bigint}`, ...`${bigint}`[]] => arr.length > 0 && arr.every(id => { try {BigInt(id); return true;} catch {return false;}}), {
-        message: "DROPOUT_DEGENS_SERVER_IDS must be a comma-separated list of Discord snowflakes",
-    }).optional().describe(
+    DROPOUT_DEGENS_SERVER_IDS: commaSeparatedListOf(z.templateLiteral([z.bigint()])).optional().describe(
         "The snowflake IDs of the Discord server(s) the bot considers \"our servers\". Used to expose certain features to only those servers."
     ),
 
     /** The snowflake IDs of the Discord channel(s) the bot will send /weekly-reward prize announcements to. */
-    DROPOUT_DEGENS_REWARDS_FEED_CHANNELS: z.string().transform(value => value.split(",").map(id => id.trim())).refine(value => value.every(id => { try {BigInt(id); return true;} catch {return false;}}), {
-        message: "DROPOUT_DEGENS_REWARDS_FEED_CHANNELS must be a comma-separated list of Discord snowflakes",
-    }).refine((arr): arr is [string, ...string[]] => arr.length > 0, { message: "DROPOUT_DEGENS_REWARDS_FEED_CHANNELS, when defined, must contain at least one snowflake value" }).optional().describe(
+    DROPOUT_DEGENS_REWARDS_FEED_CHANNELS: commaSeparatedListOf(z.templateLiteral([z.bigint()])).optional().describe(
         "The snowflake IDs of the Discord channel(s) the bot will send /weekly-reward prize announcements to."
     ),
 
     /** The snowflake IDs of the Discord channel(s) the bot will send audit log messages to. */
-    DISCORD_AUDIT_LOG_CHANNELS: z.string().transform(value => value.split(",").map(id => id.trim())).refine(value => value.every(id => { try {BigInt(id); return true;} catch {return false;}}), {
-        message: "DISCORD_AUDIT_LOG_CHANNELS must be a comma-separated list of Discord snowflakes",
-    }).refine((arr): arr is [string, ...string[]] => arr.length > 0, { message: "DISCORD_AUDIT_LOG_CHANNELS, when defined, must contain at least one snowflake value" }).optional().describe(
+    DISCORD_AUDIT_LOG_CHANNELS: commaSeparatedListOf(z.templateLiteral([z.bigint()])).optional().describe(
         "The snowflake IDs of the Discord channel(s) the bot will send audit log messages to."
     ),
 
     /** The snowflake IDs of the Discord channel(s) where the bot will reward Karma to anyone who adds a reaction to a message. */
-    DROPOUT_DEGENS_KARMA_REACTION_CHANNELS: z.string().transform(value => value.split(",").map(id => id.trim())).refine(value => value.every(id => { try {BigInt(id); return true;} catch {return false;}}), {
-        message: "DROPOUT_DEGENS_KARMA_REACTION_CHANNELS must be a comma-separated list of Discord snowflakes",
-    }).refine((arr): arr is [string, ...string[]] => arr.length > 0, { message: "DROPOUT_DEGENS_KARMA_REACTION_CHANNELS, when defined, must contain at least one snowflake value" }).optional().describe(
+    DROPOUT_DEGENS_KARMA_REACTION_CHANNELS: commaSeparatedListOf(z.templateLiteral([z.bigint()])).optional().describe(
         "The snowflake IDs of the Discord channel(s) where the bot will reward Karma to anyone who adds a reaction to a message."
     ),
 
     /** The snowflake IDs of the Discord channel(s) the bot will send premium announcements to, such as when a new user subscribes. */
-    PREMIUM_ANNOUNCEMENT_CHANNELS: z.string().transform(value => value.split(",").map(id => id.trim())).refine(value => value.every(id => { try {BigInt(id); return true;} catch {return false;}}), {
-        message: "PREMIUM_ANNOUNCEMENT_CHANNELS must be a comma-separated list of Discord snowflakes",
-    }).refine((arr): arr is [string, ...string[]] => arr.length > 0, { message: "PREMIUM_ANNOUNCEMENT_CHANNELS, when defined, must contain at least one snowflake value" }).optional().describe(
+    PREMIUM_ANNOUNCEMENT_CHANNELS: commaSeparatedListOf(z.templateLiteral([z.bigint()])).optional().describe(
         "The snowflake IDs of the Discord channel(s) the bot will send premium announcements to, such as when a new user subscribes."
     ),
 
     /** A link to the Discord channel which contains user-facing information about the Karma system. */
-    KARMA_CHANNEL_LINK: z.string().refine(value => URL.canParse(value) && /https:\/\/discord\.com\/channels\/\d+\/\d+/.test(value), {
+    KARMA_CHANNEL_LINK: z.url().refine(value => /https:\/\/discord\.com\/channels\/\d+\/\d+/.test(value), {
         message: "KARMA_CHANNEL_LINK must be a valid Discord channel link (e.g. https://discord.com/channels/1088175259565432883/1175998815669592094)",
     }).optional().describe(
         "A link to the Discord channel which contains user-facing information about the Karma system."
@@ -235,7 +219,7 @@ const envSchemaRawObject = {
     ),
     /** For the spreadsheet specified by GOOGLE_SPREADSHEET_EV_ALERTS_ID, this is the range to insert EV alerts into. Typically, you'll want a value like "'test - ALL ALERTS'!A:A" */
     GOOGLE_SPREADSHEET_EV_ALERTS_RANGE: z.string().optional().describe(
-        `For the spreadsheet specified by GOOGLE_SPREADSHEET_EV_ALERTS_ID, this is the range to insert EV alerts into. Typically, you\'ll want a value like "'test - ALL ALERTS'!A:A"`
+        `For the spreadsheet specified by GOOGLE_SPREADSHEET_EV_ALERTS_ID, this is the range to insert EV alerts into. Typically, you'll want a value like "'test - ALL ALERTS'!A:A"`
     ),
 } as const satisfies z.ZodRawShape
 
