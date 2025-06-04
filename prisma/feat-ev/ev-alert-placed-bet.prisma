@@ -16,6 +16,7 @@ model EVAlertPlacedBet {
     reportedStatus EVAlertPlacedBetStatus @default(Pending)
     unitsWagered   Decimal @db.Decimal(12, 4)
     customNote     String? @db.Text
+    reportedNumericData Decimal? @db.Decimal(10, 3)
 
     /// The ID of the message representing this placed bet, if one exists. If this is set, channelId must also be set.
     /// This is used to we can generate a link to the message in Discord.
