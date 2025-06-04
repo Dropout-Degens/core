@@ -67,11 +67,18 @@ model User {
     ///
     /// This value can be used to determine if we need to fetch/re-fetch the user's join method from Discord.
     latestDiscordJoinUpdated    DateTime? @db.Timestamp(0)
+
+    placedEVBets         EVAlertPlacedBet[]
+    /// ID of the thread to post any bets the user has placed into
+    ///
+    /// If null, the user definitely needs a new thread.
+    /// If not null, the user may still need a new thread if the thread is not valid (e.g. deleted, archived, etc.)
+    placedEVBetsThreadId BigInt?
 }
 
 enum BETTING_STRATEGY {
     @@schema("private")
-    
+
     UNSET
 
     PASSIVE

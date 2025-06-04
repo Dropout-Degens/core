@@ -1,0 +1,45 @@
+model EVAlertPlacedBet {
+    @@schema("private")
+
+    /// The ID of the event this entry is for
+    eventId BigInt
+    event EVAlertEvent @relation(fields: [eventId], references: [id])
+
+    /// The user who submitted this entry
+    userSnowflake BigInt
+    user User @relation(fields: [userSnowflake], references: [snowflake])
+
+    @@id([eventId, userSnowflake])
+    @@index([eventId])
+    @@index([userSnowflake])
+
+    reportedStatus EVAlertPlacedBetStatus @default(Pending)
+    unitsWagered   Decimal @db.Decimal(12, 4)
+    customNote     String? @db.Text
+
+    /// The ID of the message representing this placed bet, if one exists. If this is set, channelId must also be set.
+    /// This is used to we can generate a link to the message in Discord.
+    messageId BigInt?
+    /// The ID of the channel the message representing this placed bet was sent in, if one exists. If this is set, messageId must also be set.
+    /// This is used to we can generate a link to the message in Discord.
+    channelId BigInt?
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+enum EVAlertPlacedBetStatus {
+    @@schema("private")
+
+    /// The user reported placing the bet. Nothing has happened yet
+    Pending
+
+    /// The user reported losing the bet
+    Lost
+
+    /// The user reported winning the bet
+    Won
+
+    /// The user reported that the bet was canceled in some way
+    Canceled
+}
