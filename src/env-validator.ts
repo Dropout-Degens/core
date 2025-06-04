@@ -225,6 +225,10 @@ const envSchemaRawObject = {
     EV_DEBUG_CHANNEL_ID: z.templateLiteral([z.bigint()]).optional().describe(
         "Discord channel to send all EV messages to. Used for debugging & testing purposes."
     ),
+    /** Discord channel located in the first item of DROPOUT_DEGENS_SERVER_IDS where Placed EV Bets threads will be created */
+    PLACED_EV_BETS_THREAD_CHANNEL_ID: z.templateLiteral([z.bigint()]).optional().describe(
+        "Discord channel in the first item of DROPOUT_DEGENS_SERVER_IDS where Placed EV Bets threads will be created"
+    ),
 } as const satisfies z.ZodRawShape
 
 
