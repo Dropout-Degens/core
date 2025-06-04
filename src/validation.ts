@@ -51,4 +51,7 @@ export const validateBankedCouponList = z.array(validateBankedCoupon);
 
 export const validatePlanPlanFreeDays = z.partialRecord(z.enum(DiscountSource), z.number().int().min(0));
 
-export const validateFreeDays = z.partialRecord(validatePurchasableSubscriptionType, validatePlanPlanFreeDays)
+export const validateFreeDays = z.union([
+    z.null().transform(() => ({}) as FreeDays),
+    z.partialRecord(validatePurchasableSubscriptionType, validatePlanPlanFreeDays)
+]);
