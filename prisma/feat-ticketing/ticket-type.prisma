@@ -1,0 +1,22 @@
+model TicketType {
+    @@schema("private")
+
+    id Int @id @default(autoincrement())
+    @@index([id(sort: Asc)])
+
+    name String @unique @db.VarChar(100)
+
+    instructionsToUser String @db.Text @default("Someone will be with you shortly. In the meantime, please provide any information that might help us assist you with your issue. Please provide as much context as you can, and screenshots usually help!")
+    maxPerUser Int @default(3) @db.SmallInt
+
+    /// If true, users can create tickets of this type on their own.
+    /// If false, only admins and automation can create tickets of this type.
+    userCanCreate Boolean
+
+    /// The ID of the Discord channel, inside guildId's guild, where ticket threads will be created
+    chanelId BigInt
+    /// The ID of the Discord guild that contains chanelId's channel, where ticket threads will be created
+    guildId BigInt
+
+    ticketsOfType Ticket[]
+}
