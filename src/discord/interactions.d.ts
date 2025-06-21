@@ -34,9 +34,11 @@ type ExtendedChatInputOptionsData<TType extends (Interactable & {options?: reado
         : never
     ))[];
 }
+
+type ValidGuild = `${bigint}` | 'home'
 interface InteractionDefinitionGuildDeclaration {
     /** The guild(s) that the interaction should be registered in. If omitted, the interaction will be registered globally. */
-    guilds?: Snowflake[] | Snowflake
+    guilds?: ValidGuild[] | ValidGuild
 }
 
 
