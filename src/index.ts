@@ -5,6 +5,7 @@ export * from './errors'
 export * from './prices';
 export * from './stringify';
 export * from './supabase';
+export * from './UnreachableError';
 export * from './util';
 export * from './validation';
 
