@@ -74,6 +74,12 @@ model User {
     /// If null, the user definitely needs a new thread.
     /// If not null, the user may still need a new thread if the thread is not valid (e.g. deleted, archived, etc.)
     placedEVBetsThreadId BigInt?
+
+
+    ticketsStarted Ticket[] @relation("TicketStartedBy")
+    ticketsStartedFor Ticket[] @relation("TicketStartedFor")
+    ticketsInvolvedIn Ticket[] @relation("TicketInvolvedUsers")
+    ticketsAssignedTo Ticket[] @relation("TicketStaffAssignee")
 }
 
 enum BETTING_STRATEGY {

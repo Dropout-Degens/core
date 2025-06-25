@@ -1,0 +1,92 @@
+model Ticket {
+    @@schema("private")
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    threadId BigInt @id
+    /// DO NOT USE THIS FOR ID PURPOSES except for user-facing purposes.
+    /// This is NOT designed to be the primary key for this model.
+    /// Use threadId instead, if practical to do so.
+    humanId  Int @unique @default(autoincrement())
+
+    /// Title of the ticket, as displayed to the user. This can be edited by both the user and staff.
+    ///
+    /// KEEP MAX LENGTH UP TO DATE WITH maxLength in Discord Bot's getEditTitleModalData() in src/ticketing/listeners.ts
+    userTitle String? @db.VarChar(60) // see note above about max length
+
+    /// ID of the user-facing control message for the ticket. This message is pinned.
+    userControlMessageId BigInt?
+
+    type   TicketType @relation(fields: [typeId], references: [id], onDelete: Cascade)
+    typeId Int
+    @@index([typeId])
+
+    staffAssignee   User? @relation(name: "TicketStaffAssignee", fields: [staffAssigneeId], references: [snowflake], onDelete: SetNull)
+    staffAssigneeId BigInt?
+    @@index([staffAssigneeId])
+
+    startedFor     User? @relation(name: "TicketStartedFor", fields: [startedForId], references: [snowflake], onDelete: SetNull)
+    startedForId   BigInt?
+    pingStartedFor Boolean
+
+    /// The user who started the ticket, which may be different from the user the ticket is started for.
+    /// * If this ticket was created by a staff member, this will be the staff member's user ID.
+    /// * If this ticket was created by a user, this will be the user's user ID.
+    /// * If this ticket was created by automation, this will either be null OR the bot's user ID, depending on the automation (for example, a welcome ticket will use the bot's ID, but a subscription ending ticket will use null)
+    startedBy        User? @relation(name: "TicketStartedBy", fields: [startedById], references: [snowflake], onDelete: SetNull)
+    startedById      BigInt?
+    isStartedByStaff Boolean
+
+    involvedUsers User[] @relation("TicketInvolvedUsers")
+
+    status TicketStatus @default(OPEN)
+    statusLastChanged DateTime
+    @@index([status(sort: Desc)])
+
+    /// Staff-accessible notes about the ticket, hidden from the user.
+    staffNotes String? @db.Text
+
+    tags TicketTag[] @relation("TicketTags")
+
+    transcript TicketTranscript?
+}
+
+enum TicketStatus {
+    @@schema("private")
+
+    OPEN
+    CLOSED
+    DELETED
+}
+
+/// A tag, applied by staff, to a ticket. Used to categorize tickets for easier searching and filtering.
+model TicketTag {
+    @@schema("private")
+
+    id Int @id @default(autoincrement())
+
+    name String @unique @db.VarChar(100)
+
+    /// The ID of the Discord guild that contains the channel where ticket threads will be created
+    guildId BigInt
+    /// The ID of the Discord channel, inside guildId's guild, where ticket threads will be created
+    channelId BigInt
+
+    tickets Ticket[] @relation("TicketTags")
+}
+
+
+/// A table for holding a massive JSON object representing
+///     each message (and its sender) in the ticket thread.
+/// Created on deletion of the ticket.
+model TicketTranscript {
+    @@schema("private")
+
+    ticketThreadId BigInt @id
+    ticket   Ticket @relation(fields: [ticketThreadId], references: [threadId], onDelete: Cascade)
+
+    createdAt DateTime @default(now())
+
+    messages Json[]
+}
