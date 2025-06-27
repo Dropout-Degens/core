@@ -33,7 +33,7 @@ model Ticket {
     /// The user who started the ticket, which may be different from the user the ticket is started for.
     /// * If this ticket was created by a staff member, this will be the staff member's user ID.
     /// * If this ticket was created by a user, this will be the user's user ID.
-    /// * If this ticket was created by automation, this will either be null OR the bot's user ID, depending on the automation (for example, a welcome ticket will use the bot's ID, but a subscription ending ticket will use null)
+    /// * If this ticket was created by automation, this value should be null. For example, the welcome tickets and subscription expired tickets are created by automation.
     startedBy        User? @relation(name: "TicketStartedBy", fields: [startedById], references: [snowflake], onDelete: SetNull)
     startedById      BigInt?
     isStartedByStaff Boolean
