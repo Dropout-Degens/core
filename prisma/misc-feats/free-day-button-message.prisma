@@ -1,0 +1,35 @@
+model ClaimAllAccessButtonMessage {
+    @@schema("private")
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    messageId BigInt @id
+    channelId BigInt
+    guildId BigInt
+
+    freeDays Int @db.SmallInt
+
+    offerExpiresAt DateTime?
+    @@index([offerExpiresAt])
+    hasBeenMarkedExpired Boolean @default(false)
+    @@index([hasBeenMarkedExpired])
+
+    canExistingSubscribersClaim Boolean
+
+    claimEntries ClaimAllAccessButtonClaim[]
+}
+
+model ClaimAllAccessButtonClaim {
+    @@schema("private")
+
+    messageId BigInt @id
+    message   ClaimAllAccessButtonMessage @relation(fields: [messageId], references: [messageId])
+
+    userId BigInt
+    user   User @relation(fields: [userId], references: [snowflake])
+
+    @@unique([userId, messageId])
+
+    claimedAt DateTime @default(now())
+}

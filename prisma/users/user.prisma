@@ -80,6 +80,8 @@ model User {
     ticketsStartedFor Ticket[] @relation("TicketStartedFor")
     ticketsInvolvedIn Ticket[] @relation("TicketInvolvedUsers")
     ticketsAssignedTo Ticket[] @relation("TicketStaffAssignee")
+
+    claimAllAccessButtonClaims ClaimAllAccessButtonClaim[]
 }
 
 enum BETTING_STRATEGY {
