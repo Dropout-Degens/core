@@ -13,6 +13,10 @@ model TicketType {
     /// If false, only admins and automation can create tickets of this type.
     userCanCreate Boolean
 
+    /// If set to true, tickets created from this type will automatically include a reference to the channel the tickets are created in.
+    /// This is especially useful for types like the Server Welcome ticket, since additional info can be found in the root channel.
+    doRootChannelReferenceInFirstMessage Boolean @default(false)
+
     /// The ID of the Discord channel, inside guildId's guild, where ticket threads will be created
     chanelId BigInt
     /// The ID of the Discord guild that contains chanelId's channel, where ticket threads will be created
