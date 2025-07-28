@@ -1,0 +1,105 @@
+model Jurisdiction {
+	@@schema("private")
+
+	id String @db.Uuid @id @default(dbgenerated("gen_random_uuid()"))
+
+	/// Name of the jurisdiction
+	name String
+	@@index([name(sort: Asc)])
+
+	/// The country code for the jurisdiction, e.g., "US" for United States
+	countryCode String
+
+	/// The region or state within the jurisdiction, if applicable
+	/// For example, "CA" for California, "TX" for Texas, etc.
+	regionCode String?
+
+	@@unique([countryCode(sort: Asc), regionCode(sort: Asc)])
+
+	parentJurisdictionId String? @db.Uuid
+	@@index([parentJurisdictionId])
+	parentJurisdiction Jurisdiction? @relation("JurisdictionHierarchy", fields: [parentJurisdictionId], references: [id])
+	childJurisdictions Jurisdiction[] @relation("JurisdictionHierarchy")
+
+	validPartnerPromos PartnerPromo[] @relation("PartnerPromoValidJurisdictions")
+	excludedPartnerPromos PartnerPromo[] @relation("PartnerPromoExcludedJurisdictions")
+
+	users User[] @relation("UsersInJurisdiction")
+}
+
+/*
+
+INSERT INTO "private"."Jurisdiction" (id,name, "countryCode", "regionCode") VALUES
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','United States', 'US', NULL),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Canada', 'CA', NULL)
+;
+
+INSERT INTO "private"."Jurisdiction" ("parentJurisdictionId",name, "countryCode", "regionCode") VALUES
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Alaska', 'US', 'AK'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Alabama', 'US', 'AL'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Arizona', 'US', 'AZ'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Arkansas', 'US', 'AR'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','California', 'US', 'CA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Colorado', 'US', 'CO'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Connecticut', 'US', 'CT'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Delaware', 'US', 'DE'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Florida', 'US', 'FL'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Georgia', 'US', 'GA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Hawaii', 'US', 'HI'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Idaho', 'US', 'ID'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Illinois', 'US', 'IL'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Indiana', 'US', 'IN'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Iowa', 'US', 'IA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Kansas', 'US', 'KS'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Kentucky', 'US', 'KY'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Louisiana', 'US', 'LA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Maine', 'US', 'ME'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Maryland', 'US', 'MD'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Massachusetts', 'US', 'MA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Michigan', 'US', 'MI'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Minnesota', 'US', 'MN'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Mississippi', 'US', 'MS'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Missouri', 'US', 'MO'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Montana', 'US', 'MT'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Nebraska', 'US', 'NE'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Nevada', 'US', 'NV'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','New Hampshire', 'US', 'NH'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','New Jersey', 'US', 'NJ'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','New Mexico', 'US', 'NM'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','New York', 'US', 'NY'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','North Carolina', 'US', 'NC'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','North Dakota', 'US', 'ND'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Ohio', 'US', 'OH'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Oklahoma', 'US', 'OK'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Oregon', 'US', 'OR'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Pennsylvania', 'US', 'PA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Rhode Island', 'US', 'RI'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','South Carolina', 'US', 'SC'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','South Dakota', 'US', 'SD'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Tennessee', 'US', 'TN'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Texas', 'US', 'TX'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Utah', 'US', 'UT'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Vermont', 'US', 'VT'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Virginia', 'US', 'VA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Washington', 'US', 'WA'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','West Virginia', 'US', 'WV'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Wisconsin', 'US', 'WI'),
+('4a8295b1-238d-4ae9-97cc-60d7ebdd9df8','Wyoming', 'US', 'WY'),
+
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Alberta', 'CA', 'AB'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','British Columbia', 'CA', 'BC'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Manitoba', 'CA', 'MB'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','New Brunswick', 'CA', 'NB'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Newfoundland and Labrador', 'CA', 'NL'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Northwest Territories', 'CA', 'NT'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Nova Scotia', 'CA', 'NS'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Nunavut', 'CA', 'NU'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Ontario', 'CA', 'ON'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Prince Edward Island', 'CA', 'PE'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Quebec', 'CA', 'QC'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Saskatchewan', 'CA', 'SK'),
+('eb8b9814-b401-449f-a3a8-7f6978c94e28','Yukon', 'CA', 'YT')
+
+;
+
+*/

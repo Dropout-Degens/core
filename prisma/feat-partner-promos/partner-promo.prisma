@@ -1,0 +1,43 @@
+model PartnerPromo {
+    @@schema("private")
+
+    id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+
+    /// Name to display for this promotion
+    displayName String
+
+    /// Markdown-formatted text to display detailing this promotion
+    ///
+    /// - If a promo code is included, this should list the code (using bold code formatting)
+    /// - This should list any caveats or requirements for the promotion
+    /// - Dollar amounts may be included
+    ///
+    /// ### Example:
+    ///
+    /// ```markdown
+    /// Sign up using code **`DROPOUTS`** for a 50% deposit match up to **$1,000**!
+    /// ```
+    detailsMD String
+
+    // Image URL to be displayed in the UI for this promotion
+    ///
+    /// Visually displayed at the bottom of the promotion card,
+    /// even after the claimability data and claim button
+    detailsImageUrl String?
+
+    /// Alt text for the details image
+    detailsImageAlt String?
+
+    /// Link to be displayed in the UI for this promotion
+    ///
+    /// This link should ideally not be shown in plaintext, but rather as a button or link
+    link String
+
+    /// Minimum age required to actually claim the promotion (GTE, so an 18-year-old can claim a promo with a minimum age of 18)
+    minimumAgeGTE Int? @db.SmallInt
+
+    validJurisdictions Jurisdiction[] @relation("PartnerPromoValidJurisdictions")
+    excludedJurisdictions Jurisdiction[] @relation("PartnerPromoExcludedJurisdictions")
+
+    claimedByUsers User[] @relation("PartnerPromoClaimedByUsers")
+}

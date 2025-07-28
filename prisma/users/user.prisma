@@ -82,6 +82,16 @@ model User {
     ticketsAssignedTo Ticket[] @relation("TicketStaffAssignee")
 
     claimAllAccessButtonClaims ClaimAllAccessButtonClaim[]
+
+
+    jurisdictionId String? @db.Uuid
+    jurisdiction Jurisdiction? @relation("UsersInJurisdiction", fields: [jurisdictionId], references: [id])
+
+
+    dateOfBirth DateTime? @db.Date
+
+
+    claimedPartnerPromos PartnerPromo[] @relation("PartnerPromoClaimedByUsers")
 }
 
 enum BETTING_STRATEGY {
