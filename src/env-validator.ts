@@ -229,6 +229,10 @@ const envSchemaRawObject = {
     PLACED_EV_BETS_THREAD_CHANNEL_ID: z.templateLiteral([z.bigint()]).optional().describe(
         "Discord channel in the first item of DROPOUT_DEGENS_SERVER_IDS where Placed EV Bets threads will be created"
     ),
+
+    DROPOUT_DEGENS_WELCOME_TICKET_INVITE_CODES: commaSeparatedListOf(z.string()).transform(value => new Set(value)).optional().describe(
+        "A set of invite codes that can be used to create welcome tickets. If a user did not join the server using one of these invite codes, a welcome ticket will not be created for them. This makes welcome tickets more manageable."
+    ),
 } as const satisfies z.ZodRawShape
 
 
