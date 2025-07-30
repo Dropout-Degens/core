@@ -1,0 +1,20 @@
+//enum DISCORD_INVITE_IDENTIFIER {
+//	@@schema("private")
+//	UNKNOWN
+//	VANITY_URL
+//	HIVE_INDEX
+//}
+//
+//model DiscordInviteCode {
+//	@@schema("private")
+//
+//	inviteCode String @id
+//
+//	createdAt DateTime
+//	expiresAt DateTime?
+//	createdByDiscordId BigInt?
+//	@@index([createdByDiscordId])
+//
+//	identifier DISCORD_INVITE_IDENTIFIER
+//	@@index([identifier])
+//}
