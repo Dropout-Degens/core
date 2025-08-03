@@ -88,10 +88,13 @@ model User {
     jurisdiction Jurisdiction? @relation("UsersInJurisdiction", fields: [jurisdictionId], references: [id])
 
 
-    dateOfBirth DateTime? @db.Date
+    /// The youngest the user could possibly be, based on the age range provided.
+    minAge Int? @db.SmallInt
+    /// The oldest the user could possibly be, based on the age range provided.
+    /// This field exists in case our age ranges change in the future so that we do not lose data when that happens.
+    maxAge Int? @db.SmallInt
 
-
-    claimedPartnerPromos PartnerPromo[] @relation("PartnerPromoClaimedByUsers")
+    partnerPromoClaims PartnerPromoClaim[]
 }
 
 enum BETTING_STRATEGY {

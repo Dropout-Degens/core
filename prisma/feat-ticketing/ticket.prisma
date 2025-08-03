@@ -50,6 +50,8 @@ model Ticket {
     tags TicketTag[] @relation("TicketTags")
 
     transcript TicketTranscript?
+
+    associatedPartnerPromoClaim PartnerPromoClaim? @relation("PartnerPromoClaimProofTicket")
 }
 
 enum TicketStatus {

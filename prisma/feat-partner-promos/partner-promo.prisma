@@ -3,6 +3,9 @@ model PartnerPromo {
 
     id String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
 
+    /// Whether this promotion is currently active
+    isActive Boolean @default(true)
+
     /// Name to display for this promotion
     displayName String
 
@@ -19,14 +22,16 @@ model PartnerPromo {
     /// ```
     detailsMD String
 
-    // Image URL to be displayed in the UI for this promotion
+    /// Image file names to be displayed in the UI for this promotion
+    ///
+    /// All paths are relative to https://img.dropoutdegens.com/partner-promos/
     ///
     /// Visually displayed at the bottom of the promotion card,
     /// even after the claimability data and claim button
-    detailsImageUrl String?
+    detailsImageNames String[]
 
-    /// Alt text for the details image
-    detailsImageAlt String?
+    /// Index-matched alt text for the details image
+    detailsImageAlts String[]
 
     /// Link to be displayed in the UI for this promotion
     ///
@@ -39,5 +44,5 @@ model PartnerPromo {
     validJurisdictions Jurisdiction[] @relation("PartnerPromoValidJurisdictions")
     excludedJurisdictions Jurisdiction[] @relation("PartnerPromoExcludedJurisdictions")
 
-    claimedByUsers User[] @relation("PartnerPromoClaimedByUsers")
+    claims PartnerPromoClaim[] @relation("PartnerPromoClaimedByUsers")
 }

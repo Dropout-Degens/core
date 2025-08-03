@@ -1,0 +1,26 @@
+model PartnerPromoClaim {
+    @@schema("private")
+
+    /// The user that claimed this promo
+    userId BigInt @db.BigInt
+    user User @relation(fields: [userId], references: [snowflake], onDelete: Cascade)
+
+    /// The partner promo that was claimed
+    promoId String @db.Uuid
+    promo PartnerPromo @relation(fields: [promoId], references: [id], name: "PartnerPromoClaimedByUsers", onDelete: Restrict)
+
+	@@id([userId, promoId])
+
+    /// When the promo was claimed
+    claimedAt DateTime @default(now()) @db.Timestamp(0)
+
+    /// ID of the ticket created for the user so they can prove that they have used the promo
+    proofTicketThreadId BigInt? @db.BigInt @unique
+    // Ticket created for the user to prove they have used the promo
+    proofTicket Ticket? @relation(fields: [proofTicketThreadId], references: [threadId], onDelete: SetNull, name: "PartnerPromoClaimProofTicket")
+
+    /// Whether the user has proven they have used the promo (e.g. by providing a screenshot)
+    isProved Boolean @default(false)
+    /// Timestamp of when staff accepted the proof
+    proofAcceptedAt DateTime? @db.Timestamp(0)
+}

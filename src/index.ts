@@ -10,6 +10,7 @@ export * from './util';
 export * from './validation';
 
 
+export * from './db-utils';
 export * from './discord';
 export * from './memberships';
 export * from './prisma';

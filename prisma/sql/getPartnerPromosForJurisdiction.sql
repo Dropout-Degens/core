@@ -1,9 +1,10 @@
 -- @param {String} $1:jurisdictionId The ID of the jurisdiction to fetch partner promos for
--- @param {Int} $2:userAge? The user's age to check against minimum age requirements (optional, pass NULL to ignore)
--- @param {Int} $3:take The maximum number of records to return
--- @param {Int} $4:skip The number of records to skip
--- @param {BigInt} $5:userId The ID of the user making the request (optional, pass NULL if not needed)
--- @param {Boolean} $6:includeClaimed? Whether to include promos claimed by the user (will include both if null)
+-- @param {Int} $2:minAge? The user's age to check against minimum age requirements (optional, pass NULL to ignore)
+-- @param {Int} $3:maxAge? The user's age to check against maximum age requirements (optional, pass NULL to ignore)
+-- @param {Int} $4:take The maximum number of records to return
+-- @param {Int} $5:skip The number of records to skip
+-- @param {BigInt} $6:userId The ID of the user making the request (optional, pass NULL if not needed)
+-- @param {Boolean} $7:includeClaimed? Whether to include promos claimed by the user (will include both if null)
 
 WITH RECURSIVE jurisdiction_hierarchy AS (
     -- Get the target jurisdiction and all its parents
@@ -63,7 +64,20 @@ promo_validity AS (
     SELECT DISTINCT ON (promo_id)
         pp.id as promo_id,
 
-        ($2::INT IS NULL OR pp."minimumAgeGTE" IS NULL OR $2::INT >= pp."minimumAgeGTE") as meets_age_requirement,
+
+        -- Three possible statuses for age requirement: definitely, maybe, or not met
+        -- 1. Definitely meets age requirement ($2:minAge is GTE the promo's minimumAgeGTE)
+        --    - meets_age_requirement_definitely = true ($2:minAge GTE the promo's minimumAgeGTE)
+        --    - meets_age_requirement_maybe = true ($3:maxAge, which is always GTE $2:minAge, is also GTE the promo's minimumAgeGTE)
+        -- 2. Does not meet age requirement ($3:maxAge is LT the promo's minimumAgeGTE)
+        --    - meets_age_requirement_definitely = false ($2:minAge, which is always LTE $3:maxAge, is LT the promo's minimumAgeGTE)
+        --    - meets_age_requirement_maybe = false ($3:maxAge LT the promo's minimumAgeGTE)
+        -- 3. Maybe meets age requirement ($3:maxAge is GTE the promo's minimumAgeGTE but the $2:minAge is LT the promo's minimumAgeGTE)
+        --    - meets_age_requirement_definitely = false ($2:minAge LT the promo's minimumAgeGTE)
+        --    - meets_age_requirement_maybe = true ($3:maxAge GTE the promo's minimumAgeGTE)
+
+        (pp."minimumAgeGTE" IS NULL OR ($2::INT IS NOT NULL AND $2::INT >= pp."minimumAgeGTE")) as meets_age_requirement_definitely,
+        (pp."minimumAgeGTE" IS NULL OR $3::INT IS NULL OR $3::INT >= pp."minimumAgeGTE") as meets_age_requirement_maybe,
 
         (
             SELECT jh.id
@@ -86,8 +100,8 @@ promo_validity AS (
         (
             EXISTS (
                 SELECT 1
-                FROM "private"."_PartnerPromoClaimedByUsers"
-                WHERE "A" = pp.id AND "B" = $5::BIGINT
+                FROM "private"."PartnerPromoClaim"
+                WHERE "promoId" = pp.id AND "userId" = $6::BIGINT
             )
         ) as is_claimed
 
@@ -102,8 +116,9 @@ SELECT
     pp."minimumAgeGTE",
     -- Validity checks
     pv.is_claimed as "isClaimed",
-    (pv.included_by_id IS NOT NULL AND pv.excluded_by_id IS NULL AND pv.meets_age_requirement) as "canClaim",
-    pv.meets_age_requirement as "meetsAgeRequirement",
+    (pv.included_by_id IS NOT NULL AND pv.excluded_by_id IS NULL AND pv.meets_age_requirement_maybe) as "canClaim",
+    pv.meets_age_requirement_definitely as "meetsAgeRequirementDefinitely",
+    pv.meets_age_requirement_maybe as "meetsAgeRequirementMaybe",
     -- Name tree for the jurisdiction hierarchy
     jr."nameTree" as "jurisdictionNameTree",
     -- Total number of records
@@ -115,13 +130,14 @@ LEFT JOIN promo_validity pv ON pp.id = pv.promo_id
 LEFT JOIN jurisdiction_hierarchy jr ON jr."parentJurisdictionId" IS NULL
 
 WHERE
-    ($6::Boolean IS NULL OR (pv.is_claimed = $6::Boolean))
+    ($7::Boolean IS NULL OR (pv.is_claimed = $7::Boolean)) AND (pp."isActive" = true OR pv.is_claimed = true)
 
 ORDER BY
-    (pv.included_by_id IS NOT NULL AND pv.excluded_by_id IS NULL AND pv.meets_age_requirement) DESC,  -- Valid promos first
-    pv.meets_age_requirement DESC,
+    (pv.included_by_id IS NOT NULL AND pv.excluded_by_id IS NULL AND pv.meets_age_requirement_maybe) DESC,  -- Valid promos first
+    pv.meets_age_requirement_definitely DESC,
+    pv.meets_age_requirement_maybe DESC,
     (pv.included_by_id IS NOT NULL) DESC,
     (pv.excluded_by_id IS NOT NULL) ASC,
     pp."displayName" ASC
 
-LIMIT $3 OFFSET $4;
+LIMIT $4 OFFSET $5;
