@@ -19,8 +19,8 @@
   },
   "peerDependencies": {
     "@discordjs/rest": "^2.4.2",
-    "@prisma/client": "^6.12.0",
-    "prisma": "^6.12.0",
+    "@prisma/client": "^6.13.0",
+    "prisma": "^6.13.0",
     "@supabase/supabase-js": "^2.45.4",
     "@whop-sdk/core": "~0.0.4",
     "discord-api-types": "*",

@@ -1,6 +1,6 @@
 generator client {
     provider        = "prisma-client-js"
-    previewFeatures = ["multiSchema", "relationJoins", "typedSql"]
+    previewFeatures = ["relationJoins", "typedSql"]
 }
 
 datasource db {
