@@ -23,13 +23,15 @@ model ClaimAllAccessButtonMessage {
 model ClaimAllAccessButtonClaim {
     @@schema("private")
 
-    messageId BigInt @id
+    messageId BigInt
     message   ClaimAllAccessButtonMessage @relation(fields: [messageId], references: [messageId])
+    @@index([messageId])
 
     userId BigInt
     user   User @relation(fields: [userId], references: [snowflake])
+    @@index([userId])
 
-    @@unique([userId, messageId])
+    @@id([userId, messageId])
 
     claimedAt DateTime @default(now())
 }
