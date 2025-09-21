@@ -35,7 +35,7 @@ export async function addSubscriptionTime(input: AddSubscriptionTimeInput, could
 			: await stripe.customers.search({ query: `metadata["discord-id"]:"${input.userId}"`, limit: 1 });
 
 		const existingCustomer = existingCustomerResponse.data[0];
-		if (!existingCustomer.deleted && existingCustomer) input.customer = existingCustomer;
+		if (existingCustomer && !existingCustomer.deleted) input.customer = existingCustomer;
 	}
 
 	if (couldBeSubscribed && input.customer && !input.subscriptionToUpdate) {
