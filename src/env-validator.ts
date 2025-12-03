@@ -236,7 +236,7 @@ const envSchemaRawObject = {
     ),
 
     /** Public API key for PostHog analytics. */
-    POSTHOG_PUBLIC_API_KEY: z.string().describe(
+    POSTHOG_PUBLIC_API_KEY: z.string().optional().describe(
         "Public API key for PostHog analytics."
     ),
 } as const satisfies z.ZodRawShape
