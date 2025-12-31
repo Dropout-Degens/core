@@ -98,6 +98,9 @@ model User {
     maxAge Int? @db.SmallInt
 
     partnerPromoClaims PartnerPromoClaim[]
+
+
+    isBanned Boolean @default(false)
 }
 
 enum BETTING_STRATEGY {
