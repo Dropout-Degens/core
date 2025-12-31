@@ -97,7 +97,14 @@ async function applyAllAccessToExistingSubscriber(input: AddSubscriptionTimeInpu
 	console.log(`Extending subscription for user ${input.userId} (${input.additionalDays} free days.`, input);
 	if (input.disallowExistingSubscriber) throw new Error(`Tried to extend an existing subscription for user ${input.userId}, but existing subscribers are not allowed.`);
 
-	const newTrialEnd = input.subscriptionToUpdate.trial_end ? new Date(input.subscriptionToUpdate.trial_end * 1000) : new Date();
+	let newTrialEnd: Date;
+	if (!input.subscriptionToUpdate.trial_end) newTrialEnd = new Date();
+	else {
+		// Handle case where the existing trial_end is in the past (because I guess Stripe doesn't clear it?)
+		if (input.subscriptionToUpdate.trial_end < Math.floor(Date.now() / 1000)) newTrialEnd = new Date();
+		else newTrialEnd = new Date(input.subscriptionToUpdate.trial_end * 1000);
+	}
+
 	newTrialEnd.setDate(newTrialEnd.getDate() + input.additionalDays);
 
 	const newTrialEndUnixSeconds = Math.floor(newTrialEnd.getTime() / 1000);
