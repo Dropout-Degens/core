@@ -80,6 +80,7 @@ async function applyAllAccessToNewSubscriber(input: AddSubscriptionTimeInput): P
 				},
 			},
 		}],
+		cancel_at: 'max_period_end',
 		metadata: {
 			'snowflake': input.userId.toString(),
 			'discord-id': input.userId.toString(),
@@ -111,6 +112,7 @@ async function applyAllAccessToExistingSubscriber(input: AddSubscriptionTimeInpu
 
 	const updatedSubscription = await stripe.subscriptions.update(input.subscriptionToUpdate.id, {
 		trial_end: newTrialEndUnixSeconds,
+		cancel_at: 'max_period_end',
 		proration_behavior: 'none',
 	});
 
