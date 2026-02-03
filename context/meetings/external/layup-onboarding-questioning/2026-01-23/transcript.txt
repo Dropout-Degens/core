@@ -1,0 +1,75 @@
+There is some in there as well.
+
+Okay, and it's got the transcript? Yep.
+
+And I'm also, I got one for this as well.
+
+Okay. Well, I mean... Do you need anything more than that transcript from me?
+
+Um... I guess, let me just, I'm looking through it right now, um, but I guess not too I think it's a little short, but I guess I'm looking through the questions in my notes as well. I guess if we could do a quick recap of those. And then... Yeah.
+
+Yeah, okay, so what I remember was, I basically gave you a series of more or less product and problem ideas to test. And if I remember those, they were... Access. Like, how do you manage your taxes? Another one was around tracking. of your spending and stuff. that one was around having a separate bank account to separate your finances. Another one was around unit systems and bankroll.
+
+And then It might have AI notes somewhere right there, the other kind of... I'm trying to think of what else has brought up. Oh, how do you realize your wins? Like how do you take profits? Another one was around hedging.
+
+So all of those are related to product ideas we can build, but they're also related to bedding hygiene. And...
+
+I don't know if I gave you very specific, like, ask this question, but the idea would be to ask about their behaviors.
+
+Like, do you do this? And how? And then, like, if I was thinking about how a form could be, it could be like...
+
+Hey, fill out this form and we'll give you expert advice on how you can optimize your betting profitability strategies, your betting strategies. And it would be like... 'Cause in the mom test you'd go like, when was the last time you hedged a bet?
+
+And if it goes never, then OK. Do you have...
+
+a separate bank account for tracking your sports betting.
+
+Yes, no. You know what I mean? Ideally, you're asking for the last instance. Is that clear there?
+
+Yes, that is clear. And then I actually have a question about hedging like I guess because Hmm. I guess because there's two ways of hedging in my mind. There's the hedging emotionally. like the aspect of doing something good because you lost money or doing something good with your money and then the aspect of hedging your bets. I guess how would you frame those both separately?
+
+I guess I wouldn't because they bow for a lesser version.
+
+So you wouldn't, would you, so you'd only ask like, because I guess like thinking about it most better is probably, or I guess that is a good question, but... I'm just thinking about the framing for that because it would be either more indicative of emotionally or betting-wise.
+
+So let's just kind of ignore our product as it is today, but... one kind of theory or related, what is the value of let's say saving every time you made a bet? It would be an emotional hedge. against whatever happens. And kind of the same thing for what is the value of eventually hedging. I mean, you're locking in profits, but you're also, it's like an emotional decision versus a...
+
+A practical one, right? I think you make less expected value when you hedge generally over time. I think you make less expected value when you hedge generally over time. Yeah, that is also true. So it doesn't, yeah, yeah. Is that useful? Yep.
+
+the safer bet thing actually is going to work, right? But it's like... What type of person wants to hedge? Like if somebody said the last time I hedged was, yesterday. they might be somebody who cares a lot about this stuff. You know what I mean? And they're very... Playing with the emotions. Yeah, that makes sense. It might not be. I'm not really saying that, you know.
+
+And I guess like... Question wise for profiling them like I guess for Would we want to, like, would you want to ask emotional questions? So like, um, The fact that like how do you feel emotionally when you lose a bet or like what do you do after you lose a bet?
+
+I mean, those could be good questions, but let me flip it back to you. Let's think about Dropout DJs. And you're trying to become the place for education and like help for sports betting, right? Yep. Ask yourself what questions you would ask And just imagine it's like,Yeah, what questions would you ask? But I think the best way to do it is ask about what they actually do, is still have to mom test, 'cause that's true about like where they are, you'll actually find the real problems.
+
+So You could ask that. I mean, it's up to you for whatever you want to do on that regard.
+
+I guess like the more the way I'm coming from that is I'm like the questions that I'm considering asking are a lot more like strategy and like what would the concepts be? And then but I guess like the things that helped me relate it back to like the questions that are advantageous here are like the concepts of do you use a separate bank account? Because I can easily just make that. Is it important to separate your betting finances?
+
+kind of framing for a better which gives us that emotional like insight for that so I guess like That's kind of iftik. The more product. Yeah, the more product, it's easier to kind of think of the product word towards the question.
+
+Yeah, I hear you. But don't forget that the point... is to ask about their lives, not about our product. I gave you questions about their lives or like I mentioned parts of our product because or we could be just because we know that some people do this. And it's just, and a lot of the things are just like... strategies people try to take. And Um, I don't, at least for what I want to hear from whatever you come up with, it's not really like, Would they use our product?
+
+It's like, how big of a pain are these in their lives? And I think probably the conversation, like the opening thread, you would want to have for your own Discord, like as a CTA at the bottom. It's like, cool, okay, well... I'm going to open up a thread. We'll open up a thread and talk to you about it and see if there's anything we can help give you advice on that you need out of all these. Or we'll make you a profile of what we think you should do.
+
+You know what I mean? I don't know if that's overkill for you, but I just feel like that's pretty high value and I could help you if I could make an AI and stuff that would do it for you as well and things like that.
+
+No, that's very helpful as well. Because, yeah, and also you mentioned this, because I was originally thinking just because getting a standard operating procedure document together and just putting the questions for the staff to ask. Yeah, I also just coded up, I just coded up like a part of the Java DGENs bot the other day with Cloud. So waiting for it to hopefully pass my developers like, Good. Make sure he says it's okay and everything.
+
+But assuming that goes well, I could easily just add things to our existing bot for those questions. And that would be a really easy way to just pop it into the beds we're already planning on creating.
+
+Yeah. Just the right framing. This is going to be useful for you and for us, right? For Dropouts and for us. Yeah. If you're if what you're saying you're trying to build out as like your functionality of your discord is this kind of education learning how to become profitable all that type of stuff blah blah blah blah blah If you can just mom test the shit out of that for yourself. the insights of what to do with that information are going to be slightly different, but one way or another, they're extremely useful.
+
+Mm-hmm. Like they're very, very useful because at the same time, it's like, You might want to be the community for that. We might want to be the automation for that community. You know what I mean?
+
+Yeah. That makes sense.
+
+Good one. All right, I know I didn't give you exactly the question to answer, but I think you should try using the cloud skill I created called the Mom Test skill and ask questions there. It will help you.
+
+I will. And thank you. This was really helpful context-wise as well.
+
+Yeah, use the skill. Use the skill. It will help. It's got more knowledge than I do.
+
+Sounds good. I will. Thank you very much. Always.
+
+Bye-bye. Have a good one. Have a great weekend. Bye-bye. Have a good one. Have a great weekend. Safe flight. Bye-bye. Bye-bye.

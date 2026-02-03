@@ -1,0 +1,55 @@
+Transcript. As of right now. the current ideas that that Owen Monaghan has about Things to test with bettors. Related to layup. is, are these. Profit taking. Strategies. How do they keep their wins? realize them. Rationale. helps us understand If people are And I'm voice recording it too. I know it's lazy of me. If people are taking profits generally, Bonus points and interest if somebody actively is taking profits, wants to take profits, but is failing to do it.
+
+but has looked for or tried to do it consistently. That's the real kind of like, fuck, I pissed it away. I had a big win. I should have just taken some of it out or I should have done something differently. Um? That's one. Another area is Hedging. This is testing. same concept, BetSafe wins. Do you do anything like that to reduce your risk? loss mitigation, All of that. Next one is, Tracking. Generally?
+
+Um Tracking. Um... Do you want to... Yeah. How do you know how much money you're spending? Do you care? I don't really know exactly. And then talk to me a time that it burned you. People are like, you would know better than me, Dax, but like the spreadsheet thing, like what's the rationale behind it? This is a good sell for that, you know what I mean? Like... People are like, you would know better than me, Dax, but like the spreadsheet thing, like what's the rationale behind it? This is a good sell for that, you know what I mean? Like... We might build something like that as well here, or even actually had an idea
+
+tracking things they've Do they track if the drug is accurate? Did it fail? Mom tested it. I'm not going deep enough in these. We're looking for the pain points or like if it caused some issues, right? Other products. that I want to test. Um, How do you... Like... manage your I guess you're sports betting money, do you keep it in a separate checking account so you can understand how much money you're spending?
+
+Bye. That's leading. That's all that type of stuff. But it's...
+
+It's in there. It's all in the same. And, you know, a theory we have about a product. Go ahead. Oh, no, sorry.
+
+I was just thinking on strategy. Sorry. Yeah.
+
+So the theory of a product... is that a lot of people do bank accounts and a lot of it's just so either budgeting tracking either way Obviously, let's just do that for people if we have, it just makes sense as like a product to go into. Next one up. And this is a really easy way to, if you're too lazy to do anything else. It's like, if you're like, it could even just be that it's like, if you're really lazy, you should just open a bank account.
+
+It'll just tell you, X and Y. Um Then on top of that, like, Another thing that I want to test is like, if somebody is profitable, or at least they claim they're profitable. It's like... filing taxes. The crazy thing isOkay, let me go with something. Yeah, somebody's profitable. Like how are you thinking about your taxes? How are you doing it? Are you aware of, by the way, you're not supposed to like say, are you aware of it?
+
+Like for the mom test, you could add that in and slide in other stuff to like get information for you guys. But I did some more research into Schedule C stuff. I'm definitely not at the end. There's a lot more to learn here, but... Crazy man. I think, and I need to double check, you know how there's that 10% of your winnings you pay tax on? If you bet $100, lose $100 under the new tax bill, you still have to pay tax on $10 because the losses is only 90%.
+
+You have to win 110%. to Offset of the system, so to speak. I don't know if you schedule C file and you're profitable, it removes that too. Which is like... Praise God. You know what I mean? Yeah. And one of the requirements is having a bank account with fully tracked and itemized expenses and then having a system for managing your betting. And what's a system? It could just be literally, oh, unit sizes.
+
+That's the other one. I know we might have said it earlier, but unit sizes should be part of this too. Um, And then if I was A/B testing and you were just quickly iterating, What's the hit for betting system for profit strategies? Like being more profitable strategies. Like what's the language that resonates with people? Um.
+
+Um I just like just informed,All right. I was like, What was the original... Question.
+
+No, I was just saying... When you're thinking about the message you send or the text, you should A/B test the language. Because what I've found again yesterday, even people talking to you later in the day, Poro. he was Googling how to make more money, how to be more profitable. And that's how he got Odds Jam, this, that, whatever. Um. So that might be the language for that type of survey. And even for your Discord as an experiment across the board, it's like you should maybe try swap into profitable language and talking about the lift it's giving or not living.
+
+Yes. I don't know if that's what you already do. I haven't looked at your Discord in forever.
+
+I don't know. Yeah, we're a little behind. We're still like, I would say switching over to getting everything to be the educated, like the updated to be the education first. Yeah. 'Cause, yeah.
+
+I can see obvious next steps of what would make sense to do for... how you could turn that like, hey, People say, oh shit, I don't really give a fuck about opening a separate bank account. I'm not betting enough. Fine, whatever. But some people say... Oh shit, yeah, that actually makes so much sense. I should get one of those. That's a perfect recommendation time. We don't have the bank account yet, but it's like...
+
+get in the way, let's relay up even. That's the type of thing where it's a conversion of all of it.
+
+Yeah, and then also like, just because we have, like thinking of the like, oh, you use this betting strategy or like you arbitrage, oh, maybe you could use OddsJam as a tool to be useful. But like also just-That's a good one to add. We can ask them like what partner, like given our partners and resources that we have, like, is there something that you wish you had for your betting? And I think that could be good.
+
+Good, like, pain point finder.
+
+Yeah, it could be, yeah, for sure. For sure. And then, of course, with all this, you just want to iterate on it over and over again. And then for us, just report back what you're learning and... if there's something that becomes really clear, that's where we throw some code behind it. For example, coming up with an AI version of that that any Discord can implement. And it's got a few product placements within it as well that are good for us.
+
+So fuck it, I don't care. Ciao. Even if it's the, even if the, The Discord owner gets all the referral bonuses if anyone uses on their Discord. Who cares, right? Um, But, um... But yeah. Yeah, actually, it would be really good for you to recommend new tools. That's actually a really good idea for yourself to make some money too. Um, And you could be cheeky enough to... Yeah, that's good, that's really good.
+
+I think there's something interesting, I know it's super informal, Think about it, put it together, put a plan, do the actions, build whatever you think makes sense for you guys first and show us because I mean, it's your domain, but I just would love to know about it. It would be so useful. Um. What do you think?
+
+Yeah, I mean the building part is in progress so we're like we're building that just the welcome thread so anybody who joins will get a ticket and then anybody who subscribes will get a ticket. We're building that but just the doc like or not the document but like the actual content aspect of these are the questions we should ask them and in the channels like definitely I'm gonna start getting that together.
+
+How many people do you have signing up per week?
+
+Like verified people, probably anywhere from 20 to 25.
+
+That's good. That's a few a day. That's a good sample size to get any responses and you start learning stuff like so fast. Yeah. Yeah. mutually beneficial trade right there. If you could also like, even on the spreadsheet stuff, if you could just like find out why people don't use it anymore. Like I know a lot of people have given up on it. Like, What's hard about it? Did people even want to really use it in the first place or did you guys kind of force it on them like you should try this and they're like, meh.
+
+Whatever. Like were they ever motivated? Like if you can mom test your spreadsheet, that would be unbelievable as well. Yep. I mean, yeah, I guess like for the spreadsheet, I don't really know how many of our like users use them, but it was definitely something that Um, I should--
