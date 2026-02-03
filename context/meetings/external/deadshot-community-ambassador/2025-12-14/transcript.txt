@@ -1,0 +1,345 @@
+Before I start off by going into just stuff about where we're at with Jabo DJens, do you have any questions or anything?
+
+Not really. I mean, the whole... like basically Like, I don't know how to... Kind of like the whole idea of it basically to just get people signing up under your code. Like, makes sense to me. It's kind of like getting it online. Kind of the same thing for poker. Just getting people underneath you and if they, I'm assuming it's if they bet a lot, the more you make.
+
+So actually we don't really have any partnerships that are how much they bet. It's more of just initially getting them to sign up. Oh, okay.
+
+Yeah, so it's not even them having a recurring betting app or them using the app on a recurring basis. It's them using the app and making a one-time deposit using our code. So it's actually even easier. Cool. Yeah, no, that's sick. That's even better.
+
+So yeah, that's kind of like the second thing I'll get into is our partnerships. But I guess like the first thing I'll do is I'll just set the stage with where we are. So when it comes to like discords and other services in the sports betting industry, They're all kind of about the same thing when it comes to the end goal they're trying to give to the users. And so that goal really is to just give the users profitable picks, bets that win, and that's what their people usually just pay for.
+
+And so we want to kind of... I think this space has gotten, like, oversaturated in that kind of... just like distinguishing of Discord servers. And so I wanna differentiate ourselves. And so the way we're kind of doing that is through education. And so we wanna make sure we are providing education first. So it's like not only about how do you, We're not like only giving them profitable bets, but we're also teaching them the strategies and then also the betting tips and the just like responsible gambling habits that come behind those strategies.
+
+So it's just more... We want to we want to take it to just more education centered direction. So we've got a couple of tools that we're building out To do that on our community side So we're kind of developmentally blocked from some of the things that we want to do in the future when it comes to like our social media marketing and this like just marketing in general. So we want to basically get into a good space in this, finish our pivot, and then solidify our conversion methods, and then begin our marketing.
+
+So for us to finish our pivot, it's about going to take until the end of the month. We should be ready by next year to get everything done, just information-wise. But Basically, once that's in place, it allows us to just focus on our conversions. So we're building a couple of tools right now to help do that. So one thing that we're building out is welcome tickets. So everybody who joins the server will have an individual ticket.
+
+created for them and we're going to start training our staff to actually just message in these tickets for every individual onboarded member to just start to increase conversions. And then the next thing we're going to be doing is we have or we are building out a partner promo bot, which essentially the users or the members just enter their demographics their age and then their state and it pulls up all of our partnerships that are available to them so this will help to increase our conversions through our code and then also just since we have so many partnerships it'll allow our members to just say oh since I live in New York these are the only things that are available to me and yeah Yeah, so they can just see what's available to them.
+
+And so right now our LTV from our partnerships is about $1250, but that should increase to about, it should be over $2000 easily by February, so in about two months. Gotcha.
+
+Is there a reason for that increase?
+
+be good commission as well. Got you. Um... And just to give you a little bit of a hint, Just also as part of this pivot, I want to mention is we're focusing on our tools less than our analysts as a part of our PIX process. So with our tools, so we have 20 plus partnerships and about like five to 10 of them are, I think it's about eight are... Just like apps like odds jam daily grind fantasy outlier props cache and Optimal, I mean a couple more but basically we get integrations with these tools directly into our discord And so this allows us to basically not only give our members a snippet of the tool But we can frame it so that we just We can frame it so that we give them the usage of the tools as not only part of that education.
+
+So smarter bettors are not only using smarter tools to have more success, but it also gives us the conversion possibility because as they just are having a snippet of the tool, they can convert with our code and get a cheaper and just also give us the conversion by using the real platform themselves.
+
+That's sick. That sounds like it would work a lot better than trying to get people to go straight through the app. off of the Discord.
+
+Yep, exactly. And so what this basically with the conversions on the partnerships, our minimum pays $50. And so previously with our and so basically with all this in place, it'll allow us to just really focus on social media marketing and. Actually, one more thing that I'll tangent off and mention before I go into the social media marketing aspect is that we do, our community engagement is kind of just not active right now.
+
+We did lose, I just made some bad decisions on who I acquired and brought into the server about a year ago. And so unfortunately, when I was growing Dropout Degens and to help us scale at a rapid pace, I was acquired. like other discords. So I would... buy out the server and bring the members in basically and hire over the owner of the server to be on our staff. And I did that with about three or four servers back in the day.
+
+And that made up a lot of our community. And unfortunately, two of them left. One of them just stopped over the summer and then one of them left with most of the community and brought them somewhere else. So our community engagement kind of like died out. So one, I'm not really focused on that. When we are in the position, basically, with our customers being able to pay us so much, I don't really care about our old customers because they weren't converting well anyway, so I'll just focus on new ones.
+
+But we just do need some small base of community engagement. So I am talking with somebody right now to possibly acquire and merge his server. obviously um but like yeah you just gotta be able to trust that that person you know yeah a lot easier said than done obviously trust me i know it's the same way in poker everyone was a slimy scumbag yeah there's like there's so many people also that like just they're so interested and they just also don't want to do anything when they get brought on and it's like oh it's yeah unfortunate that um But I'll be hopefully he's he's really good and he also might be able to help us out developmentally.
+
+So that'll allow us to just not only get some like initial people through our funnel, but also just the base community engagement. for the new community, basically. Yeah, that makes sense. And so with this aspect, we previously paid about 25 to 35 cents for organic sources and about $1 to 250 per acquisition through Meta. So basically, if we're paying 250 for... 100 people basically for example um that's 40 people um the minimum of our partnerships pays 50 essentially so if we convert two people then we are paid off completely so we only need to get a five percent conversion rate on a two dollar fifty and that's an expensive customer spend um but with a five percent conversion rate we would break even and so anything above that and that's also they can go through more than one partnership and just like our customer LTV is 1500 but also some some people can't get that number because of like the state restrictions and like also they might not go through all of our partnerships so I want to find really just the sweet spot of what we can expect our LTV to be from these customers I think we can get at least like it to be two to three hundred from the average person and then a couple people will definitely go through basically all of them.
+
+Yeah. So, but I want to find that sweet spot because when we, if we are paying like $2.50 and we actually figure out that, hey, we can get like a 15% conversion rate on these people, we can afford to pay either so much more or we can just put so much more money in at that rate. And so that's kind of our goal to scale. And so when it comes to that, do you have any questions?
+
+Not really, I just kind of have a general question. Like, I'm like, kind of like your team, who all are you, like, you said you're working on some, like, developmental things.
+
+Is that, like, all, like, kind of outsourced, or is that, like, like, do you guys, like, is it, like, a certain group of guys that you're working on?
+
+Yeah, I'll walk you through my team real quick. So, right now, I basically have kind of just three head staff that are, um, The main guys that are around me. I've... a couple analysts that are still on staff and then additionally a developer and then a couple moderators but we do have just basically three head guys of mine that are who I count on and who are basically the just head mod, head analyst, and then the developer.
+
+So we have two developers on staff. One of them is our head developer. He's actually younger than me. He just graduated high school, but he's working full-time right now, so he isn't able to develop much. So we're kind of developmentally blocked. So I had to hire another developer who's just... I'm talking to somebody else right now who's a college student at my school. So he... He's just working on things kind of slowly, so kind of seeing how it's going to go with him.
+
+But at the same time, at this point with AI, we can just... knock things out really quickly. Yeah. But, So we have two developers basically and then when it comes to our analysts we have We have one head analyst that's been like around for two years And then I've another guy that's been around here that inconsistently for about two years That are the two base analyst staff, and then I have about two or three guys that are a little inactive right now But I'm gonna be acquiring more if Reaching out to a couple other people when I kind of get close to finishing the pivot to get our analyst staff back up and active.
+
+But like, again, I kind of just don't care until we're at the point where like a week before the pivot or a week before we're at that point where we're going to start marketing and our pivot is finished. That's when I'm going to be giving them all back. And then we have about. We have one head mod that does about everything when it comes to the operations daily. He keeps our daily pull running and then if we get bot spam he mostly handles that.
+
+And then we have like two or three others as well. When it comes to like actually operations, it's just me. Gotcha.
+
+So like, kind of general question, like I can also give you some input on how I think I could like, provide some value, but just like in general, like what are you like, If you are looking for anything specific or like if there's anything you think that like You guys need Some work on or anything like is there anything in mind or not? Not really just trying to see what we can do together.
+
+Yeah, definitely. So I guess like on the side of like what we need help with, it wouldn't be as much of like either analysts or like developmentally. I think it would just be more operationally and like community growth because I think that that would be something that you'd be especially good at in the space that you are in. that we're not quite at this part, not quite at that point necessarily, but I do think that we'd have other things like, that for example planning and operations and just like more of the Engagement.
+
+With the community, Because I'm not active anymore. So like if somebody was to come in, that would be kind of possibly the role that I would be looking for.
+
+Got you, yeah, now that's definitely something I could do and also I don't know if you've seen it before but I have a I know you're talking about more like a... social media marketing and stuff like that. I have a TikTok with like 8,500-ish followers that are all like... In that kind of – mostly in that demographic, gambling, sports betting, it's all kind of one and the same to a sense because they're all – like I got that following from poker.
+
+So if you're trying to social media market, you can definitely use that and also use that to – like my knowledge on it to build more accounts up. To like similar follower counts.
+
+Okay, yeah, that is definitely awesome. When it comes to the social media marketing, we don't have much presence on social media. So we basically be starting from scratch. So we don't like... Honestly, I don't really do much when it comes to just marketing. I've been focusing on organic with the scaling of Dropout Degens, and that's where I've been mostly good at. But when it comes to just the paid and ads, that's probably where the specialty, if you're also good at making, when it comes to making content, are you also good at making content for the account?
+
+Yeah.
+
+Yeah, no, yeah, 100%. Awesome.
+
+So yeah, that would definitely be something that we would have a need for. But also like the community engagement aspect of when people join the server from this marketing method, would you be able to like also just talk to them and like be a part of the server in that aspect? Yeah, no, 100%.
+
+Okay, awesome. If that's what you guys are looking for. It makes a lot of sense because if you're joining a community and there's not much going on, I feel like you kind of just shut off.
+
+Yeah, like if we were looking for something, we'd probably be looking for the full user journey of like helping to find the user, whether it be just social media or like through other methods. And then also just helping them integrate actually into the server and like a few messages in the welcome tickets. I can show you that in a couple of minutes, the user journey. But like actually like when they get into the server, just talking to them and helping to make that conversion.
+
+The way that payments are also going to work would be basically commission based. It would be percentage, but I want to work in and I'm going to be looking into some ways to add some bonuses for people who just like do make the commissions if that makes sense so like if you're the one that invited them and then you were the one that talked to them in the ticket then you would get like a point and the people with the most points would get just like a distribution of an additional allotted funds if that makes sense yeah no that makes sense I think it's a good idea too like gives incentive to be engaging and not just out 24 7 trying to make sales yep awesome and then so you also mentioned that you had other people that you could possibly bring on or talk to?
+
+Could you walk me through how you saw that as well?
+
+What exactly are you referring to?
+
+I guess, did you mention you had other people that you thought might be interested in you bringing on or helping out as well?
+
+Yeah, no, I have a brother too who he would be willing to either help out in the community or just also do the same thing, social media market, try to get people in and converted. He'd definitely be interested in that too.
+
+okay awesome I'll have to look at like because when it comes to just like percentage allotments I'll have to look at what we have available because basically We do have a good chunk available, but I do want to Like... If I was to make this commitment, I would want to basically allot a pretty good chunk of that to one person and give them a pretty good incentive, if that made sense.
+
+Are you talking about for, like, being in the community or something else?
+
+Like, for this role, so I guess, like, for the allotment, I would be thinking somewhere in the range of, like, probably a 5% to 10% split, and then the rest of our team members usually average about 2% to 4%.
+
+Okay, gotcha. So like you're basically looking for one person to be like... treating this like as like a like a job type and like be in there all the time to like make sure everything's run smoothly and like people are engaging and getting converted yep basically yeah Yeah, no, that's definitely something I could be into. Awesome. Because I'm not currently working like a nine to five where I need to be like, like I have a job.
+
+Me and my brothers are running a small business. We just started it up, but it's not like we're, Like nine to five in an office with a boss over my head that I can't be like on my phone like I can be doing multiple things at once because we're our own bosses so like it's not it's not like I'm not gonna be able to be like Active during the day. You know what I mean?
+
+Yep, 100% Yeah, awesome because I'm like right now I'm in school and then also I have yeah exactly School same type of thing like you're you're not you can't just be on your phone all day. Yeah, I'm with people and And then also like right now I have an internship for a fintech startup in like kind of the sports betting space right now. So likeSick. They're on Discord too, so I'm just not active in our channel as much as I would like to be.
+
+So having somebody to be that more person is definitely what I'm looking for.
+
+Got you. And when you were saying 5% to 10%, you were saying 5% to 10% of what exactly?
+
+that and so the way these percentages work is I actually just recently changed it they used to just be it would be a percentage of the just flat-out percentage but now I'm taking a 20% flat cut that goes to our bonus funds our bonus funds is basically what we used to pay for marketing just operationally keep us running but we're gonna be taking just 20% of the 20% of the total earned partnership plus subscription revenue and it goes straight to the bonus funds and then the other 80% is split 100% to the staff.
+
+So then the way it works out is that you'd theoretically be getting When I say 10%, theoretically it would be 10% of that 80, which converts to... Shoot, I can't do math. 5 fourths of...
+
+I get what you're saying. You don't need to try.
+
+Yeah, I don't know why I'm blanking right now on that math, but yeah. It's basically a 20% more, theoretically, but just like when it comes to voting power, if I want to get something like that, but we're just set up like a single member LLC right now, so we do need more legal stuff if I were to get voting power and actually like equity ownership, but that's what it goes out to. Got you. And then I guess like, do you have any more questions like of like more of the expectations Yeah, kind of.
+
+When you're saying you want to have someone just kind of in the chat, I don't know what you mean by...
+
+Obviously engaging with anyone that's talking, but I guess you're saying once you make this transition, there's going to be more people in the community to engage with and like just like make sure to keep everything going but like are you expecting the rule to like also like kind of like get people to to engage or do you think you already have those things like kind of in place to get people engaged and you're just looking for someone to like keep it going if that kind of makes sense let me um just pull up a screen share to um just show this part too um so we have this is our user journey this is a bad diagram right now but also pull up our discord on the side um but this is um basically how i envision the user journey to be um so basically all of our users they'd be acquired will be acquired at some point, whether it be just TikTok, Instagram, organic, but they'll just join the server and we get data on that point.
+
+And we basically know a little bit about their Discord information, but most specifically like where they come from. And so what we're gonna use, like where they come from, for example, if they're from Fliff, we'll just, let me also pull up this Discord. Um. So these are some of these things are still being built right now but basically Once somebody joins the Discord from a specific link like that, they will get, we will get a message in here that they get a ticket created for them.
+
+like this but we'll basically say that this person came from either Instagram so we'll say that we know this person came from Instagram so we'll eventually figure out that people from Instagram actually convert at this percent rate while people from tick-tock convert from this percent rate and focus on like those specific sources but that'll be in the very future but basically we'll know where they are from so that creates a welcome ticket for the message and they also get message sent from our bot.
+
+And then when it comes to the interactions, what they can actually do-so we have a Karma system. Let me actually pull that up first. So we have a karma system where basically people can Are you familiar with Real Sports? No. This is just basically one of, it's like an ESPN, the sports version of ESPN, but they have a just engagement system called Karma. So we just ripped this off from them. So people get Karma from like viewing games and like doing engagement stuff in their app.
+
+So we just took that for the Discord. So people get Karma for sending messages, reacting, winning polls, and then wagering. So basically just anything they do gives them Karma. wager it just create a random poll real quick But like... you can wager money on this. For example, you pick whatever and you can wager your karma. So this is something that we'll have as just a community engagement aspect.
+
+Yeah, that's right. But...
+
+Let me just delete this real quick. But then back to the user journey. We have, and what we are building right now is to help out with this acquisition or like conversions to our partnerships is we're building out this partner promo spot so basically it shows you which partners are available in your state I think I mentioned a little bit before but for example let me just change my jurisdiction to this must be terrible but New Jersey and let's see what's available for us But basically people just tell us what state they are and then give us their age range.
+
+They can just say if you're 18+, 19+, or 21+. So typically I'm 19+. So this gives me just Gotcha. No, it's sick. Yep, and they can actually... Some of these, they can mark them as claimed. Also, when you click into these, they'll have just our information on it. This will help us with our conversions. Then the next big thing I'll mention is our EV. So with our partnerships with Odds Jam and Daily Grind Fantasy, we get a ton of messages, EV messages.
+
+So they send us... Oops. This one's going to happen like-This one starts soon. But basically, we get emails from Odds Jam and Daily Grind Fantasy that just look something like this. They basically just tell you what to bet on, and they give you a book and the odds for the book. But we get a ton of these. We get about... three every five minutes, I think is what it actually works out to.
+
+So yeah, we get about 1500 a day of these.
+
+So right now, We are working on filters. So they tell us basically the expected value for these and also like how much to bet. So we can just start to build an algorithm off of that because through my internship, I have access to sportsdata.io, which gives us like now that we can So each one of these is a point in time, and so now we can look back at this point in time and say that one odd jammer...
+
+It's actually easier to explain with these, but basically for Daily Ground Fantasy, they have a little bit different of an algorithm. So every time they think an event is going to happen 60% of the time, they'll give it an odd hit score of, for example, 54.41%. And so now that I have access to this historical data, I can actually go look at the event and see if this one are lost. And then we can do that with a ton of events.
+
+And now we can say, oh, when they actually think it's going to hit at 60% of the time, they were right 80% of the time and filter out those future notifications. So that's what we're working on right now.
+
+Got you. That's sick. Is this like this Disney.
+
+I don't know, I guess these messages about these like certain picks are these like available for free and You guys are server?
+
+So they'll be part of the paid, just in the premium.
+
+Yeah, I was going to say, that seems like it would be something that...
+
+like if you would want under like a kind of like a paywall yeah right now it's just hidden for everybody because we like we had some filters live but they were just sending out too many messages they were sending out like 50 pics a day yeah but i'm trying to get it to a point where it gets about eight pics a day and then um like i'll show you what the hockey ev used to look like way back when we were tracking this um but Like, yeah, here we go.
+
+like This one, this one. I should have tracked more of these but like... Like... We were getting them, so most of them are actually coming out to be winners. I wish I was tracking more of them, but... I know we were doing really good in this channel for a while, but they were saying like basically one to three per day. Gotcha. But yeah, so once we get the filters live for this, this will be part of what will help us switch to $50 per month as just the subscription price.
+
+We won't have to rely on our analysts as much, and this will be just kind of one of the core features.
+
+And then also with the education integration aspect, we have Outlier.
+
+So we get just the Outlier insights, which are a pretty solid tool a free deal or not free but um just a daily thing that we get in the discord um so it's kind of on the education aspect of oh here's some research for you to actually look at um when you take your picks um and then also just the aspect of hey if you do like this um resource then just get started using our link um and that's where we kind of tailored these um so we'll we'll be doing the same thing with is every single one of these, we have it for basically all of these apps.
+
+So every single one of these apps we will have a referral code for. And every single one of these messages will have our referral code in it. So just any time if they don't have this app and they want to take it, hopefully they'll be using our code for it. That's the goal with that as well and then one more thing they can do with this is they can actually like say they placed this bet and And then I could just say like I placed it for one unit and then I could say it's gonna win.
+
+but like Once I place that bet, or market has placed, it comes into my own little channel where I can actually go and actually say, oh, this bet did win. That's sick. Yeah, and it... It has you, you actually do have a little bit of stats as well.
+
+So, let's do that. Yeah, that's dope. There's so many features. I feel like $50 a month is definitely...
+
+like reasonable to be on this like no expand yeah our goal will to be basically to get people to So when people join, I wish I had the message i tried to show this to somebody yesterday um but i wish that uh but basically they get sent a welcome message um that links them it should link them to this channel as well but we want them to in this channel um claim the free access um and people who claim this access um we basically need to convert them to a paid subscription um so the way we do that is we have to get them to um just sign up through one of our partnerships And then we Can or I mean we just get them to sign up through our partnerships so that they don't have to pay so we can just This doesn't collect any of their billing information at all.
+
+It just gives them the access. So we can keep them going on this as long as they want because that means that they'll just be hitting our partnerships and then eventually we'll hopefully recover them onto the paid. And so also when people end their trial, it's still in, we're still working on developing it right now, but we're going to just create a little message Ticket just how we have the welcome tickets for everybody who joins the server We're gonna have a ticket for everybody who's sub expires And so some we're gonna have to make sure we stay on top of those to go and into those members and say hey Why do you your sub expired?
+
+Did you want to sign up for any of our partners to just get seven extra free days of the subscription to continue in the community? Yeah, and then should like this should be a pretty good funnel for just like getting people back on to Yeah, 100%. The last thing we have.
+
+is just like Education wise, we have like a unit size calculator. So one thing that will cut out.
+
+One thing that we'll be focusing on is bankroll management as an education standpoint. We want people to use a unit size because we send out all of our picks in a unit size because it's just important to think of your bets that way because it helps people who are betting like 10 cents. Just think of it less as I'm betting 10 cents and it doesn't matter. But if you think about it in units, then it just makes you manage your money.
+
+Yeah, 100%. We have this tool that helps people just calculate their unit size. So they just put in their bankroll and then Like I have $500 in this app and then they can change like their betting style like normal and it just tells them how much they should bet on one unit. So just a good little tool for that. And so also likeYeah, okay. As all of these points come in, so for example, when people use the partner promo bot, we get their state information, which allows us to serve like just very targeted email marketing to them, which we don't have this really road mapped yet, but this is in the future vision that basically once people just interact with anything, we're going to start emailing them that, hey, your bankroll, your unit size is this.
+
+That's smart. good, just make sure you stick to units. And also, like, when they sign up for the partner promo bot, like, hey, well, now we know you're in New Jersey. Thanks for signing up for Dabble. Or here's a list of apps you should check out in New Jersey. Like, and that's the kind of things we're going to be steering towards for conversions.
+
+Yeah, 100%. With the whole educational side of it, I don't know if you want to add more because you guys already do have a ton. I'm in a stocks and crypto kind of community. And what they do and what one of their big selling points are is a weekly newsletter. So whether for this, either if it's about more educational and bankroll management and unit sizes and all of that, or even about upcoming picks on the week or something like that.
+
+emails to anyone who engaged in the discord like would be huge with a weekly newsletter Yeah, that's not something that I necessarily had, but it is something, now that you mention it, I definitely will be putting on our, like, because if we're doing email marketing at some point, we definitely should have, like, a little recap of what's going on that week or, like, who on our analyst team. It'll need a lot more coordination, I think, but, like, that's definitely something that we should.
+
+And when it comes to the education stuff.
+
+100%, I didn't even think of that.
+
+I didn't even think of that though. There's like a recap. Like if you want to do like even like a recap on like some of your, like the last week's bets, like what your like overall unit size up down was like, that could be a good thing for like marketing in there too.
+
+Yeah. There's a lot of, yeah, there's a lot of stuff that we could be doing in that, in that point. And then like also with, oh shoot, I kind of forgot where I was, but like when they are like, we'll just be able to tailor so much of that to like what they actually do and interact with. So like, we'll be able to just personalize the journey and like focusing on the education aspect will just like allow us to like not only just facilitate better conversions but like also just like differentiate in all the things we do when it comes to like marketing and then also just positioning and 100 and also there's like we we definitely do have a lot of resources right now um like we do have like this channel is definitely a lot right now but we have a ton of partnerships like we have bet tracking partnerships um betting tools getting funded um and then sports saving this is actually we're going to create a channel or responsible gambling channel um and layup this is the company i'm an intern with right now um but they're basically a sports saving app so you um deposit your savings and in there and you just get a chance to um win a percent of your savings every day um on sports picks it's actually pretty fun um like they basically just give you two random players every day and you just if they hit you get a chance to win your savings and if it doesn't you just don't win anything But we're going to use that also as part of our responsible gambling.
+
+So we'll have a pretty good responsible gambling section. So we'll have the the kind of positioning of like, hey, like sports betting or like sports is not all about betting. There are other resources that we have, for example, sports saving if you are interested in sports, but not necessarily are wanting to risk your own money and that kind of thing.
+
+Yeah, 100%.
+
+But that's basically, I think that covers about everything when it comes to our current positioning and then our vision and next steps.
+
+Yeah, no, I like that. I like the vision, man. And everything that you guys are building and already have built out, it looks great.
+
+Thank you. We've still got like a couple of things that were like all these channels need as part of the pivot all of these resources are still need to be built out and we have a couple more like the EV needs to be released as part of the pivot and then we'll get these channels back active again but we're mostly in a good spot. We just need like a bit more of like downtime work and then like we'll be in that position to just go balls to the wall.
+
+100%. I saw that you guys do have, like, I think, like, almost 8,000 members already in there. Is there any, like, kind of plan or objective to try to get any of those guys back and, like, maybe, like... I don't know exactly how. I haven't been super in Discord service. I haven't ran one, so I don't know how exactly it works with being able to go through your old members' messages.
+
+Yeah, that's something...
+
+But just anything like that, I'm trying to get them back.
+
+It's kind of tricky, but we are planning on a re-engagement campaign because we do have some of their emails, but we've also emailed them before and I didn't necessarily get that much click-through. in the back and then we've also tried to like do mass dms on discord and we got we got our whole bot shut offline for that uh so we can't like dm the members um but um when it comes to like our server growth um i would say that like They come from a demographic that if they come back, that would be great.
+
+But I don't think that they necessarily will. We'll have a campaign going. But it's basically like a lot of those people who joined were people who were looking for information on Fliff. So they just wanted to see if Fliff was a real thing. Because we acquired the – let me pull this up as well. But when you Google Fliff Discord, we acquired the server. So basically a lot of people would search for official FLF discord to like one FLF was less established to kind of like see like what is FLF exactly.
+
+And so it would just be... This and that's all that we used it as a feeder channel.
+
+So it just brings people here but basically like when it comes to those people I would love to get as many of them back because they're just our perfect demographic but we were we've been having a hard time and then with out of the 8,000 members I believe about half of them can be currently pruned maybe a little more than half as in have not been active in the discord in the last 30 days I've had a little bit of a bot spam issue.
+
+It's actually so annoying. We're going to have to do something with our invite links. But basically, we get raided by just bots through our links. So and it's actually terrible um let me actually see if I have any of these open and um no but basically people could um we had the dropout degens tag and it just led to a bunch of bots and figure count um and so they basically just any invite link we post they just spam people through it um and so it just kills us um on the bots so like we have to like um either do something to have our invite links like change and update to reset every day um or they have or we have like better filters for these members and like actually just mark the links as dead links but It's something that we'll have be more taken care of as part of the pivot But we do get a lot of hot spam.
+
+Yeah, no, I'm just trying to like, kind of brainstorm because like obviously And many come up dead, but they are like... Like you said, like the perfect demographic. So like, you know, And somehow or another message 200 of them. And if you get two or three, like, especially even if you can get them like back and forth, even if not just like back in and paying for a subscription or something like It's like a good...
+
+Good luck.
+
+Yeah, I'm definitely going to do the guerrilla method of, like, just messaging as many people that, like, I know, like, subscribed or were active or in the past, but, like, I've been, like, just the mass producing methods are just, like, they're impossible currently through discords, which sucks, so we have to do some, like, just... Like, really painstaking methods and the problem is like after like 20 messages they'll flag your account and make you do like caption for everyone you said so that it just takes so much longer It's fucking bots made just like going out and trying to message people and get sales.
+
+So it's so hard.
+
+Yeah.
+
+But it really is the best way. When I was first getting players for poker from my TikTok, the best method was just anyone who commented or liked a video about poker just hit their DM. And it would convert so well. I'd throw out like 1,000 or 2,000 DMs, but it'd convert 100, 200 people in seconds. It print money.
+
+Yeah, especially. Yeah, they're just it's very lucrative I've been trying to this was a space that I've tried to be get into but I've kind of just failed But like this is just like real sports all the people on this app are just like 13 to 20 That just like and they've got a shit ton of viewers for every single one of these games So I was just trying to figure out how to find like look into this.
+
+Yeah, like this is a random ass game They got like 200,000 viewers. Oh, they got 350 for this one. That's crazy.
+
+like But they actually don't, I know the owner of this platform, but they don't monetize this at all, which is like crazy. That's... Mm. Like, I've been trying to get in there.
+
+I feel like this is just, like, last one with that milk, right? Yeah.
+
+I thought it was a gold mine, but I was having a very hard time converting. I think you might have a really good time messaging. Like, this would be the fucking messaging, like, heaven. Like... But I was trying to get into a group and get the group owner to Yeah. But this is another good feeding ground when it comes to messaging.
+
+Yeah. I got to look into this. I've never heard of this, but this is crazy to me that there's so many people watching these NFL games that aren't even big games.
+
+Yeah. There yeah, there's I mean even though NBA games get about 100k so yeah, it's crazy and Yeah, but I guess like do you have any more like or any follow-up questions for where we got to from here?
+
+Not really, man. I like the idea. I like the vision. Like, I'm... I'm honestly a bit shocked. I thought it was a lot less... I don't know. I just didn't expect you to have so much really going with it. It's sick, man.
+
+Thank you. Yeah, we've definitely just got so much. But I've also had the problem of, since it's just me basically running most of this, the two head staff guys don't really do that much when it comes to... They just post and then kick out bots. They just do that. And they're good for what they do. I've been in just a sustaining mode, need an extra set of hands when it comes to getting ready for like the growth mode Yeah, 100%, man.
+
+So I guess like I don't really have like or I guess I have a couple like documents together for like job descriptions, but I guess like I wanted to hear more from you on what you think you would be best off envisioning your role being here.
+
+Yeah, I mean, when I first... Like kind of like sales, getting guys converted. Bye. From you too. If you need more role with hands-on and in the server. What I was talking about with DMs too, just even when people are on the server and start doing anything, just getting a DM from an admin or something to know that there's actual people there that you can talk to and you're not just going to be alone in a server.
+
+You know what I mean? I just feel like the personal interaction instead of just going through a Discord, it helps to convert a ton. Thank you.
+
+Yeah, exactly. And I guess like when it comes to just like also not only the sales part but the engagement part is like kind of almost just more important because like building the community and getting those people to stay over time once they come in from whatever source will be. Like because I took a course or not a course here but I went to a seminar here and it's about like just solution selling.
+
+So we're like selling a solution but we want to just build the relationship so that they can kind of see the benefits of the solution themselves so that they continue to stay with us and continue just using the solutions that we are able to offer them.
+
+Yeah, 100%. And even like focusing on the engagement aspect of it, like that even like helps the sales aspect of it. Because if someone just joins a server and it's like popping, people are talking like they can get into it easily. That helps the sales infinitely.
+
+Exactly. So I guess like where do you want to go from here?
+
+Yeah, I mean, I'm down to like look into, I know you said you have some documents of like you were looking at like kind of like job descriptions, but I'm down for what you said is taking more like a hands-on role and like being in the server as well as obviously I can still do the social media marketing and try to drive sales as well.
+
+Cool, yeah, and I guess like it would be I'll kind of be just like more open to just like... kind of like keeping the guidelines pretty loose and working through it as we like kind of get there if that makes sense Yeah, no, 100%.
+
+Awesome.
+
+And when it comes to... And then just... Um... Let's see. Um... Other people? So when it comes to your brother, how much commitment would you be pledging from him? Should I have a discussion with him as well, or would it be more of a...
+
+kind of huge are you just piggybacking what you'd be doing if that makes sense um yeah i'm not really exactly sure i'd have to i'd have to talk to him obviously given some more details you just shared with me today um so i'm i'm not really sure right now i would say especially at first especially if we're just kind of like gauging to see see how it goes like kind of playing it by ear as you like kind of make this pivot um obviously like we could also play that by ear and kind of just like see what he thinks see see how much you'd want to take a role in it and like even see what more you're looking for after you do do the pivot if you need more hands on whatever basically Yep, that makes sense.
+
+And I guess like when it comes to next steps from me and the things that I'm getting together, like what information do you think you'll need? What further information do you think you'll need?
+
+Um I'm not really sure, to be honest. I mean, when you said you had, like, documents together, like, job descriptions or anything else, like, what else were you talking about there?
+
+I have, like... I have – so for my analysts and moderators, I have job descriptions for them. And then I had, like, a semi-job description for a community engagement head. So, like, I think you'd partially be pulling some of the things from the community. community engagement head, I think it would I would need to make some updates to the document though.
+
+Yeah, no problem. I also kind of have a question. I don't know, like... Kind of just like, I know you said it's kind of been up and down.
+
+You've been focusing more on other things and now you're in a pivot.
+
+But do you still have active customers or an active... I guess revenue at the moment.
+
+Not more than like $1,000 per month. We're just like super slow in that aspect. Like when I... Like I... In a revenue place, like, we can easily scale back to about, like... 2,000 per month, like, easily get to that point. But I think, well, the goal, like, with just, like, before we finish the pivot, I think we could get back to that point. But, like, after the pivot, I believe we'd have no issue getting to, like, that 5,000 to 10,000 mark and probably above that in MRR.
+
+But right now, just kind of slow because, one, there's not – I'm not putting too much effort into it or don't have that much time into it. And then the team isn't fully on board with everything right now. Gotcha.
+
+Yeah. No, but I can definitely see it. Like, with everything, all the tools you guys have and, like, honestly, like, how I feel like sports especially is, like, a – Pretty, I mean, obviously with football season wrapping up, it's not the greatest, but I feel like especially when you call out sports, social media marketing has been pretty huge this year, I feel like.
+
+Yeah, definitely. The space has been really massive and it's just exploding right now.
+
+Yeah, 100%. And I feel like you can capture a decent share of that too. Bump numbers even up past what you were saying.
+
+Awesome. And then, so I guess like when it comes to... The payment if we wanted to just talk a little bit about where like I didn't vision like you standing with that like Um... I think I'd be... I think we'd be... Um. Um... Like, I think... So to start, it would just begin in the period of just January, whatever we do, just to, one, give us time to finish the pivot and then not have to worry so much about this current, how to deal with this current monthly situation.
+
+So for example, like if we brought you on like tomorrow and then you were doing stuff like theoretically December would not count. We would just wait until January.
+
+Yeah, no, I think it'd make more sense to kind of just, for the next two weeks, just kind of like get a feel of it. Like obviously get on more calls, just like kind of, hear more about what's going on, get acquainted with the server, and then start in January.
+
+Awesome, yep. But I guess for that point, I think... Um... I want to start you I believe around 7% of our monthly subscription and revenue.
+
+Gotcha.
+
+I'd be open to just increasing that. I'd have a cap on the higher side of that up to 10%, but I don't want to just go to the extremes of the cap until we've had like...
+
+Yeah, no, of course. Just being...
+
+Yeah. But that's... I think that would be a fair starting point. And then the way that works out to is... that is eight point seven five percent of I need to double check the math, but let me... Hold on. Give me two seconds to look at these numbers because they're getting jumbled. But 7% is the number and I just need to make sure if that is, I want that number to be, Okay, perfect. Yeah, so we'll start you at 7%.
+
+and then with an upper cap of at 10% and then we'll get to that point and talk after just like a month or two and then Um. Does that all sound good on that?
+
+Yeah, no, that sounds good. And it's 7% of the 80%, right? Because 20% to like kind of like expenses, marketing.
+
+Yeah, exactly. Gotcha. And then... Yeah, no, sounds good. And then for the things that I'll get together for you, I'll just get a summary of just what we talked about today and then how I envision kind of that role. And then I'll get a job description document just kind of pieced together from that. And I'll send that over to you. And then do you think – Um, are you in the server right now?
+
+Yeah, yeah, I am.
+
+I'll give you I'll just give you a role to get you access to everything so that you can just start to take a look around Gotcha And then if you need anything else when it comes to just stuff from like on the Discord side, let me know and then I can get you either the information or that access set up. Okay.
+
+Sounds good.
+
+Also something we didn't really talk about, but I'm also about to go run and eat dinner, so we can either talk about it another day or I'll text you after.
+
+But is there a separate role for like...
+
+if you make a sale, say like, you're like, I mean, yeah, I kind of don't have a gauge on that. If you bring someone into the server outside of... kind of like on your own basically and like they go through a either one of the Bye. partnerships, depending on what, is there like a commission based on that or is it kind of just everything's totaled up and then everyone gets their percentage of the total?
+
+Okay, so I'll screen share just one quick thing for this.
+
+The way, this isn't like live, but the way I do see this is that basically, for example anytime somebody said converts they would just need to send the screenshot and then you yourself would copy that screenshot and then just send the partner name in this channel and then what that allows us to do is at the end of the month I can just check it off and I'll be able to write a script that can just parse this and pull all the information so then it'll just tell us that hey deadshot got two attributions to for example For example a 5% bonus that I would take from that and basically I don't know if it would be a lottery or like an even split so if I had two and you had two points or two commissions we would split the 5% 50-50 but basically this would be open to all the staff and I still have to figure out how it would work if that makes sense.
+
+Fair commissions. Gotcha. Bye. Gotcha. Yep, but... So that'll basically handle the commission. So it'll be on top of whatever you would make from yours, your percentage.
+
+And it'd be, you said a 5% commission, I think?
+
+So it would be, I think it would be just like how you would get, like how you're getting a 7% split. It would be just like there would be a 5% split of that pool. And so everybody who made a successful commission would get a share of that split representative. Gotcha, makes sense. The number of commissions, yeah.
+
+That sounds good.
+
+Awesome. Any last questions or anything before you have to run?
+
+No, not really. I'm going to think everything over, check everything out. If I see anything in the server, I'll obviously shoot over a message. But it's good to get this going, man. It seems like you got your shit together and – and blow this shit up.
+
+Awesome. Yeah, sounds amazing, man. All right, I'll let you go, but enjoy your dinner and have a good night, man.
+
+Yeah, you too, man.
+
+All right. We'll talk soon. Yes, sir. All right. Bye-bye. Catch you.

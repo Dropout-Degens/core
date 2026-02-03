@@ -1,0 +1,507 @@
+Okay, so first off, just looking at SuperBass, I need to go back to... So everything is in private. Yes. When people use the Partner Promo Bot and say, Hey, I'm in X jurisdiction. It shows up in Where?
+
+That's in their user table. If you check over in users, it's stored on them. Jurisdiction ID is the... When they claim a partner promo claim, it shows up in partner promo claims. Okay, so what about votes? Or polls? Is that... Poll votes. It's the same old thing.
+
+Ah, I keep forgetting what...
+
+I keep forgetting what they call when you have, um, this is like a joint primary key or something like that. You have two columns that make up the primary key. Compound key. There we go. The row is identified by the fact that it has a poll ID and a user ID. Each row has a poll ID and a user ID. You want to find the row, give it the poll ID and the user ID. Nothing too complicated.
+
+We've got a bajillion of these little conjoining tables that have a little extra data attached to them. This whole thing that happens. So where would these things be in the user database? So first, a person joins the server. So what happens? A person joins the server, immediately a...
+
+User's record is created for them. Do we have a created record? Which has... Have a what? Like, what time it's created for that? I don't believe we do. Oh, that's rough. But, uh, we have last- you do get- latest discord join updated. That's when we last updated.
+
+We may want to start at tracking, the reason that column exists is so that we can go back and fix errors when they occur. Like, let's say, we haven't, whoopsie, we haven't been, I don't know, tracking when users...
+
+When users join we might want to go back and fix that Things like that, you know Yeah, so I guess it's not a big deal if we don't have like The date, um, that... Now we do have, um, if they have a welcome ticket, we have that time, that date. Mm, okay, that's helpful as well.
+
+If they have a welcome ticket. Just a created app for when the user is created initially, um Like when the row and the table is created be so yes, that's Yeah, I like to add that.
+
+This is a voice memo. It has been edited to include proper punctuation.
+
+Time stampsy. Geez. Alright, what's the function we get in current date?
+
+But knowing when the user created that or that table is created. Times 10 function. Gee, how useful. It's perfect.
+
+You can create that table by the way, or that row. It doesn't let you. Give me a second. No, I just have to... Make sure I'm doing the right thing. Take your time. Oh, it doesn't, it doesn't like, doesn't like my syntax. Still doesn't like my syntax.
+
+Oh, it needs to be in parentheses, that's why.
+
+Woohoo!
+
+Yippee. Hope that doesn't break things. Shouldn't break things, but I hope it doesn't. Fingers crossed. Oh wait, yep, nope, uh, it worked. And I did a whoopsie. Because everybody's created at... is now. I don't have any let me just go make sure that everybody's we can just set the creator as their last discord.
+
+The last discord update will update, right? Because they've already had a user?
+
+It will only set created at when it's created. Crazy, I know. Perfect. That'll include like if they log into our website but don't join our server and things like that as well. So it's not a perfect metric? Throw a ticket in Notion and be like, hey, we should track when a user joins.
+
+Because if we get their credit at and they like they create it out through the website then we'd get their join data from like when they join the discord.
+
+Of latest discord we have we have to get we have to get that The latest discord join updated Is not what you think it is. Oh, oh shoot. What is it? That's so that's for um, basically back end tracking purposes For us to fix errors when things go wrong. So you know how we have the Discord invite tracking thing?
+
+The way that that's done is we have to ask discord for it specifically we have to go out of our way and be like hey discord have they joined okay the thing is this is completely not documented i had to reverse engineer this out of discord okay Because of that, this could break at any moment. If and when this breaks, we need to be able to go in and fix historical data.
+
+Maybe Discord breaks the API route on their end. Maybe they change the numbers of how things are working. In some way or another, our data is inaccurate. We need to be able to specify a time range where the bot could just go in and fix that when we fix the error on our end. That's what that's for. It is not for anything else.
+
+To use it for anything else is completely flawed. It is not for anything else. Unfortunate. Okay. So we technically don't have one of any of these people.
+
+Yes, Discord gives us that information. That's why I'm like, it should be bloody simple to get it out. Especially since we're already asking Discord. I can make this a task to add to our database then? Yes. Okay. Throw a ticket in Notion, be like, add that inside the latest Discord join thing because we already have that data.
+
+Not only do we already have that data, we already have a column built in to be like, hey, we should fix all of the historical data because we have new stuff to pull from the historical data. . . . . . . new data added to it, new join data added. All we have to do is update the hard-coded date and throw in some extra data in the table.
+
+Nothing complicated. Perfect.
+
+So I guess, should I continue with the user interaction?
+
+Yeah, go for it. Now we have that created up, so now we know when they join the server. When a welcome ticket is created for a specific user, Let me just start with the welcome message. The welcome message, since that's sent to a bunch of users, or every user, is there a record of who it's sent to?
+
+Where is that? Let me go check that. I know it's on the user tables somewhere. I don't know what it's called.
+
+If it had like a welcome message sent at would be perfect, but I know it's oh, it's not gonna have a timestamp It's not gonna have a timestamp It might just be joined to Discord.
+
+Yeah, has joined discord means they got sent a message. So that's part of it. Technically, I believe they can have that. Flag set if They hadn't gotten one I believe it's possible It's just intended to be a tracker of whether or not they joined the discord
+
+It's just always anyone who joins a Discord also gets a welcome message. So they're handled in the same block of code. Because that same block of code handles when somebody joins the server. That makes sense. Yep. Okay. Nothing more to it. That's just a tracker of whether or not they joined Discord. Cool. So we're back to the same ol' we need a date when they joined the Discord server. No, but that's okay.
+
+I can just get the flow of, or like now I start to know the flow of, okay now I can just know that they got a welcome ticket because... Or welcome message, because it's checked. Has joined Discord tells you that... Has joined Discord was introduced at the same time that welcome messages were introduced, and we have kept welcome messages consistent ever since introducing that flag.
+
+Should be in ticket. In ticket? Yep. And Ticket. Ticket's got a lot of data in it. So it's got the ID of the Discord thread it's got created at and updated at. I started adding those on all the new tables. It's got a human ID, which is just meant for humans. Crazy, I know. It's not an ID that's used anywhere else for any other purpose.
+
+It is only for humans. Human ID. It's an ID meant for humans. Because humans have fleshy brains. And they don't want to operate based off of Discord snowflakes. So, like, that's the ID for the ticket number? Yeah, that's the ticket number you get. Okay. It has a user title, the user control message ID, so that's the message ID of the first message at the top.
+
+It's got the ticket type ID. That'll tell you, like, if it's... Check the ticket type table. That's got all the ticket types.
+
+Superbase has a nice little arrow on, if you hover over one of the type IDs, it'll tell you where you're looking. Oh, beautiful, it'll even pop up a little tooltip. Click one of those arrows in the type ID. It's great.
+
+Wait, where is this type ID? So, if you go back to the ticket table, find the type ID column.
+
+Yeah, it's that one. Click one of those little arrows. Well, click one of... So, in one of the cells, click one of the arrows.
+
+It'll tell you what record it's pointing at. So you don't even have to go over there to see what ticket type it is. Ticket types are supposed to be just generically. You can create a new one. This is supposed to be like... Eventually the plan is to have a CMS where you can just go in and...
+
+Enter new things without having to worry about fiddling with a database to doing SQL or anything like that. Just have a web portal to do it all. That's the goal. Eventually. Awesome.
+
+So ticket types will be one of those things that should go in something like that.
+
+That should be in an admin dashboard. Yep, that makes sense. It's got a staff assignee ID, which I don't think is actually used.
+
+This is started for ID, which is the user that the ticket was started for. So in a welcome ticket, this should be the person that's welcomed. Or the person that has an issue if they open a ticket.
+
+Yep.
+
+And started by ID is the person who actually like entered the command to create the ticket.
+
+If it was the bot that did that, that it was created automatically, it'll just be null. So if it's null, it's an automatic ticket. If it's user's ID, some user created it.
+
+Also, it's started by staff, so if we use the slash command to do it for a user, that'll be in the started by staff. And then there's good ol' status.
+
+If it's deleted, there will be a transcript, by the way, captured in the ticket transcript table.
+
+I actually haven't looked at a ticket transcript. Let me look at that right now.
+
+It's just a big data dump of literally every message, all the data from the Discord API about every message in the ticket thread. It's all of it. It's a full transcript.
+
+It's saved anytime a ticket is deleted.
+
+There's no option to delete with a transcript. It's always saved if you delete it.
+
+That's for auditing, transparent, like for our ability to go in and be like, hey, did we do this kind of thing? Yeah, that's smart. Let me see. Um, okay, that's awesome. Um, one thing that I forgot about, going back to like the, the floor. One thing that I forgot about is when users join we also know where they join from. So that gets attributed to their user join ID or their join link which is in the users table.
+
+The latest join method tells you how they joined. Latest Discord join invite code tells you what invite code they used. Latest Discord join inviter username. It has the username of the user who invited them. Crazy, I know.
+
+That data exists. Theoretically, do we have if the user is banned from the Discord? Banned from the Discord? No. Okay. Is that easy to add? Or like, we would need to get that. Well, I think it's accessible, right? It should be. Honestly. Hmm. Does Postgres support creating custom sources? I'm curious. Not post hog. Sorry, all these things beginning with post. I don't think they do. Like not really. Do they?
+
+Like, how custom is custom? Like, what does custom mean? Querying an API once? Um... Nah, I don't think they do. But, like, couldn't you, like, build something that would query the API for you? Yeah, but that takes work.
+
+And that takes a lot of time that I don't have. Oh, I gotta connect this to my GitHub?
+
+I don't know what use that's actually going to be for you. Would that give the table? Oh, it's also on the roadmap. It's not even active. It's not active. Yes, I don't think it's going to get you anything. I think that's more for like... For companies that do open source if you want to like track people who are making issues and stuff like that get a better idea of like What kinds of people are making?
+
+Your github issues. Okay. Yeah. So that's not useful. That's not going to be useful for us though. Okay. Um
+
+So we know who this person is now. So we have who invited them, where they're from, etc. That they've got the welcome message. That they've gotten a welcome ticket It possible And then what's the next piece of data we get?
+
+We can track how much karma they get.
+
+We can see when their weekly reward was last claimed.
+
+Honestly, for a lot of this sort of thing, a lot of this will be, a lot of what you want will be, we end up piping data into PostHog directly. Rather than trying to store it in a database. Yeah, it'll have to be of you, right? Say it again? It'll have to be like, of you.
+
+I'll have to create a view in Suboobase. That's not what I mean. Oh, then. So we have the ability to send data directly to Postdoc. without having to go through our database first. We can pipe our own events in there and then you get to do whatever you want with that data just as if it were any other data in post-hoc.
+
+Oh, okay. That's what it's meant- that's what it's- that's what it was originally designed with. Data pipelines... Or an add-on.
+
+PostHog is built for, like, web analytics and stuff. It is built on the foundation of ingesting new data. I was like under the impression like because more of like an app like of interactions within an app and you're talking that um I can make it send an event anytime we get any information whatsoever from Discord. And we get a lot of information from Discord. Yeah, that could be a lot of things.
+
+We get a lot of information from Discord.
+
+And I can make us get more, too.
+
+Unless we need it in our database, I would say to make it an event. Because events make...
+
+PostHog is built for handling events in a way that makes sense. Our database would require us to build out, like, whole new tables and will require us to build out like schemas for how all this stuff works, to model all these things, to make assumptions so it's not taking up a bajillion gigabytes of storage.
+
+Postdoc is just built to be able to handle this out of the gate.
+
+I would just go the post hoc route for anything that we don't need in our database. Because realistically, if you're going to be doing an analytics query, you're not going to be doing it with SQL. You're going to be doing it in post hoc.
+
+Plus, all of our data is in post-hog anyway. That makes a lot of sense.
+
+So, I guess like...
+
+Thinking about what events, I mean I have a few in mind, but just what do you think would be good events that we would use post-hoc tracking for?
+
+Honestly, anything that Discord sends us is worth throwing in there just so that we have the data so that if we come up with a use for it later We can pull from months and months of existing data. Yeah, I also like agree with that rope. But I also think I have to look at the pricing for post-hoc. I don't know how expensive it's going to get.
+
+Go give it a look their pricing is ridiculously good. Yeah, well, it's like point. It's like point 1.19 fractions of a cent
+
+per event or something. And check how big the free tier is. It's very big. It is very big. It is the vast majority of their customers never leave the free tier big. Okay. Cool. So we could do like a million tracking events and we wouldn't... Well, I think there are things like ten million. Yeah.
+
+Yeah. They have a big, big freeze here.
+
+Okay, awesome. So...
+
+When you say everything, what does that mean to you? Okay, our first million events are free.
+
+Mean like so the way that discord and discord bots were When it says a million events is that? like a million separate events generating information or a million table rows in a database.
+
+So that's...
+
+All right, so analytics software, the way that it works is you've got basically one big table called your events table.
+
+And it's got, it doesn't really have set columns other than like a name for the event type. And that's it. That's like the only column that exists. Everything else, throw in a second column, JSON data. Do whatever you want with it.
+
+That's pretty much how web analytics works, and really any kind of analytics. We'll be shooting a bunch of those over. So that's just a million things that happen that we track in post-hoc.
+
+Do we have anybody know like how many messages get sent to our discord server? Yeah. We do.
+
+You can look at the, um... Actually, I can... Okay, here. Let me actually do a fancy-fancy. I built a Discord bot. So... Oh, bro whipped out his clod code.
+
+Let me open it up.
+
+I run it locally, and I have no idea how it works. Claude does it all, so you're about to get a really good insight into how the blind leading the blind looks. Oh boy.
+
+If you want, I can open the readme for you.
+
+Um, okay, so what I want Claude to do, um, I forget what we were doing. Why is this blanking out for me? Trying to get how many messages get sent. Wait, I should have an idea of that because karma.
+
+Let her go. It'll be a race who gets there first. Alrighty.
+
+console.cloud.google.com good ol' good ol' google cloud console hey google, stop trying to sell me things Let me do the thing I want to do.
+
+Woohoo! Cog console. Now I need to hit...
+
+The logs place, wherever the logs are logging. That's a pretty good place. It's called logging, huh? Hmm. It's almost like the logs are in logging. I wonder why the logs are in logging. All right, first thing I need to do is I need to search for karma.
+
+That'll give me a good idea of what I need to search for beyond that.
+
+Cool. User XYZ sent a message adding their karma.
+
+All right, and we need to know over the last month? Yep. Uh oh, you're gonna be caught.
+
+Oh, Google's counting!
+
+Oh, it's still going. Uh oh, Claude's counting too. Scanning. 55,751 messages. Most of them sent by the dropout djensbot. Yeah, I was gonna say most of those are gonna be hilarious.
+
+The vast majority of 99% 99% 9% of those are that's beautiful. Can I exclude? The dropout degen's bot.
+
+I can. And this is why we have querying engines. Oh, I need to exclude the outliers bot too.
+
+This number's about to get measly real fast. How many does the outlier do? Is that like 5,000? A lot.
+
+It did a couple thousand. All right, just excluding the DropoutDgens bot and the Outliers bot, it was 2,079.
+
+Why is it still counting?
+
+Well, I just sent a message, so you just missed that one.
+
+I mean, do you want me to rerun the query? Because I bet it's going to go up by one.
+
+Oh, I need to extend my query to go forward into the future. Are we going to go up by... Yep, went up by one. There we go. If I delete it, will it still be up by 1 or no?
+
+It will still be up by 1 because we're only logging when messages were sent. What I'm using is I'm just using the Discord bot, you know, has to keep track of when people send messages so it can add karma to people. And it sends a log event any time that happens. So, well, I guess like.
+
+So, thinking about event alerts we would get, excluding, because we wouldn't need the EV because we would just get EVs received at. for anything related to EV and that gives us enough EV information. Right, so we would really only need a loop. Klaat's wasting your tokens.
+
+Oh well, um, but...
+
+Um, yeah, it probably, I bet it like went into every single channel and started counting like...
+
+Well, it would have to count in the channels. Honestly, that's a really difficult problem to solve retroactively. Fetch messages in batches of 100 and count only. Oh. Huh. Yep. It's like that's so. Oh. So it's saying theoretically you could have done that.
+
+Theoretically, yes, but we already have the data inside a very queryable place. It's just not a very accessible-to-you place. Yeah, but anyways, but my cloud bot does, it does a little bit. My, my, so we, we, we get 2000 messages a month. That's nothing. A couple of those are from TicketTool, too. Let's see if I just knock TicketTool out of there. Okay, let's give her to TicketTool. I'm curious how many that...
+
+Decreases a bye. Oh wow that was a good 28 messages.
+
+I also notice you're a very recurring character in this list.
+
+I try to be. I should be at least.
+
+I guess like thinking about the events so How would it be sent would it be literally just like anything that happens in the discord? It gets sent or would it be? I have to set it up for x, y, z to happen.
+
+So this would be me writing code to make the bot tell PostHog when something happens in the Discord. Discord tells us and then we pass the message along to PostHog.
+
+So, we would need to, so theoretically we could say, every message I want that to be an event, and then every reaction I want that to be an event. Yup. What else do you have in mind for that?
+
+I'm just going to go ahead and look through all of the various options that Discord gives us because Discord's got a lot of those.
+
+Let me share my screen if you're so interested.
+
+I can't hear you. Oh wait.
+
+Do I have a post-hoc client built out?
+
+I don't think I do.
+
+I don't have a post-hoc client built out. I'm going to have to build one of those, aren't I? I think so.
+
+Okay, so I'm just like thinking what else like um every time somebody uses a bot like But I guess anytime they send us a command that should definitely go in Anytime they click a button, that should go in.
+
+Well, do we know when they click a link? No. What?
+
+Correct. We do not know that. That's crazy. We don't know that? Nope. Discord knows that they got like- No they don't. No they don't. No, they don't. They don't know that. Discord doesn't know either. They COULD know, but no they don't. When they pop up the message saying, like, oh, this is to a scary site, are you sure you want to...
+
+Discord themselves never sees that. That's all code running on the person's computer. Discord never sees that.
+
+That would be really cool to know because I could be like, oh my I would know what links are being clicked. That'd be great Yep That's why you gotta like That's why all the people that give you links give you like affiliate codes and stuff. It's so that they know what links are being clicked. They have all that data. All the people that are actually like...
+
+Thank you.
+
+Product analytics. Installation. Nope, I need Node.js. Post-hoc node.
+
+Oh, yippee, it's gonna be another one of those things that needs shut down at the end.
+
+I'm not even going to set up a postdoc client inside of the core library, honestly.
+
+You won't. Oh and like this will all be... I'll show you all that later once we actually have stuff in there because it's not going to be able to... You're not going to be able to see anything. Like, PostHog literally shows you a different UI until there's stuff in there. They show you a whole, hey, please give us some events.
+
+Kind of thing. Hey, please set your stuff up and we that's not helpful to us Say it again We're working on it. We're working on it. We're working on it.
+
+I'm gonna start combing through the big ol' list of events that Discord gives us all. Oh boy. Alrighty.
+
+I'm actually gonna see if I can copy this big ol' list, because they probably ha- yeah, they do, I can- mm-hmm. Mm-hmm. Oh boy subscription. Give me all that. Oh no. Oh message update. We have one message are updated. Oh.
+
+Oh, we have so much. We have so much. Now, we don't actually get all of these. Sometimes we have to... Register for extra work permissions and stuff like that. It depends. Some of these we won't get.
+
+So one thing I forgot to mention or like it kind of unrelated but one thing that I was thinking is I'd like to add like our partner promos to the like our not our partner promos I want to add our partner claims to the database. I want to do it through a bot.
+
+Um, excuse me, um...
+
+Redemptions our partners had per month.
+
+Based on what we have? No, based on what I do, and it would be something that I would have to update month by month.
+
+Create you a schema. Throw that in there. Okay. I could do that. Create you a schema like... Make like a... It's like a manual schema in there.
+
+I'll make a schema called manual. Throw a table in there, do it. Have fun. Well, would I want to keep that in the private or no? No. Why? Anything inside of private and anything inside of public is exclusively for use with management through automated means.
+
+Going to be honest, that created at table is probably going to disappear unless I go and add that into code at some point. Because next time I go and update the database... It's gonna be like, hey, where'd this column come from? Why is this here? Oh, there might be some edits that I've made that will be... that you can overwrite. Oh, yeah. Yeah, don't do that.
+
+The database is designed to be used by code, not by humans. That's why I threw a new manual schema in there, because it's for code. So if I wanted to like actually do something and update it because like I need something I should just create a view then What do you mean by a view?
+
+You can create, uh, views. Let me see. What does that mean? Um, like, I don't know. A view. You just view something.
+
+I'm confused.
+
+Uh, I made this one. This was... this is just like, something weird that I put together.
+
+Please do not do those inside of the private schema. Not in the private, but if I wanted to reference it inside of, like in manual, I could do that. You can do it inside a manual. Create your new schema for those sorts of things. Like for filter data or something like that. Oopsies. I will do that.
+
+That stuff can and will disappear without a moment's notice. Okay, then, yeah, you can disappear that then.
+
+Those are for private and public, or for automation and automation only. I hope it makes sense.
+
+Okay, I guess where were we with where were we at?
+
+Um, I was working on actually throwing events into post-hoc. Alright, channel create, channel delete, don't need those. Channel pins update, don't need that. Channel update, no. Debug warn, no, no. A lot of these are just for synchronizing data and we don't need any of that. Build audit log entry create, don't really need that.
+
+There we go. Add and remove. Those are pretty important. Guild available? No. Unavailable? No.
+
+What is membration?
+
+Probably member join. Let me go check. Is that what I... yeah, that's when someone joins.
+
+Invites create. Oh, yeah. Oh, yeah, we'll keep those Message create, message delete. Undo, undo. Poll votes. I'll keep those around. Undo your homework. You deleted. Thanks for watching!
+
+Invite created and deleted you don't we don't need that in post log. We don't need that for That's just like when when somebody creates an invite link, okay Oh yeah. I guess, yeah, do we not want that? I don't think it'll be that much. I guess. I guess. For referrals, like if we see, like word of mouth.
+
+Well, it's when somebody creates the invite, like, not when someone uses it. When someone uses it, we already, we know that. Yeah, yeah, I know, I know. Because we don't have this data, right? Because we... Because theoretically, if somebody created like three of them, but only would never use them, we would have that now. True. Very true. We'll keep that for now. It exists.
+
+Message create, delete. We don't use polls. Nope, but I'll keep those in there just in case. You never know. Like let's say if a member creates a poll. I don't even think we have those perms enabled but... Presence update, no. Message update, no. Ready, no. Validated, no.
+
+Thread creates will keep those around. Yes, those keep. Threadless to sync. The hell is that?
+
+I feel like none of these are new. Interaction, create, yes. That's, someone uses a command. Oh, perfect. Someone uses a command, pushes a button, that sort of thing. Cool. Shard. Don't even know what those are. Stage. So sharding is when you break your Discord bot up across multiple web servers that are all
+
+Basically multiple computers so that your discord bot like let's say you're doing say Carl bot Carl bots pretty darn big right? Yeah, let me tell you something. That's not running on one beefy computer. That's running on a hundred or so Sharding is the way that you make it run across a hundred or so. That makes sense. Don't use stages. Sticker update create.
+
+We don't need sticker crud, don't need subscription crud. Scheduled event crud, don't need. Soundboard sounds, don't need. Cool, this is everything we need.
+
+See, it's not that hard to run through the list. Oh yeah, that wasn't too bad.
+
+The band.
+
+Remember.
+
+This guy's just, like, ripped my design and is selling it. We are going to sue you. The pro said, I stole your hats. Here's your cut. Dude, fuck you. We are going to sue you. I'm real.
+
+Better out than in, Shrek. I love a puss in boots. Puss in boots.
+
+That's cute.
+
+Well, I, Mrs. Holmes, very welcome to respond to my...
+
+...run through the different interactions that are saved in our database. Because now we have the user journey from, like, okay, they join and we have... Everything about them, from when it comes to the welcome message, the welcome ticket, where they came from, etc. And the date. Everything else that we get would be from interactions, right?
+
+Uh, tell us their bankroll information or tell us their Awesome. So let me just like quickly like if they subscribe through stripe or something So that's one more part of the journey. Can we walk through that part of the journey and then let's walk through all the interactions? If you go through stripes, what happens?
+
+So do we know when they do our website?
+
+Sort of. I don't think anything in the auth session is table deleted. Let me see.
+
+Because, okay, so theoretically if I wanted to plot on the user time journey table when they first signed into our website, can I do that is the question.
+
+Possibly in the off sessions tables where you're going to want to look.
+
+Looking right now Yeah, that goes back to July looks like okay, so this is like every Okay, so I can just pull their first one that's easy the min. Yeah, okay cool off Sessions okay, and then they sign in through our website and then they purchase a subscription. So where does that go?
+
+That is the memberships table.
+
+What if they get each individual to get free days also in the memberships table? Cool. Continue. If any time that a user comes in with a. new subscription they stop subscribing subscribe again etc etc that goes it's a new record in the memberships table awesome and
+
+So let me just double check everything. Backend ID, WAP ID, what's the Backend ID link it to? That is the ID that other things will refer to it by. Okay, so this is just for... That's our database ID. So it gives us the membership, what kind of subscription, the ID, the manual, email, positive flags.
+
+Okay, so what do the positive flags mean?
+
+So, the way that I set up subscriptions and stuff, and roles and all that, let's set it up as what's called a bit field. Really, it's just a fancy way to represent 31 different Boolean values. Okay, yep. Just do it as a big number. That's all it really is. Makes sense. Okay, so three just means like that the yes are subscriber That is that's all access
+
+Remember when we had separate player props and sportsbook? Yes, that makes sense why that is three. Yeah, the first bit was like I think probably player props, second bit was sportsbook, first two bits on that's three. Okay, makes sense. And then, next thing is expiration of when it... Um, okay. And then... Okay, so the next thing...
+
+In this user journey flow, we would know that it expires and we would either know that they re-subscribed. Or an exit ticket was created. So you would need to know Exit Ticket Created And I know that's not Like live right now or whatever In the perfect world that we're setting this up for, that's how it'll work.
+
+I do not think that when memberships expire, they are being properly removed from members. I can investigate it, or I can have my Claude and Perplexity investigate it, but it might be something that is currently bugging. We definitely have more subscribers, or people with all access than are subscribed. So there's some sort of mismatch.
+
+But, other than the exit ticket created in this user journey flow... um the next thing we would know is just like if they're banned do we have that no we don't that would be yeah Well, technically we do from the...
+
+Post hog or yeah, we're going to yeah. That will only be for users who are banned from here on out to that won't be retroactive and I'm also gonna. I think I'm going to... Like, I wanna... Can you... Like, one uses our band. When we get that, I wanna update it in the users.
+
+I want to add a flag in the users table to say that this person is banned. Throw that in Notion. Cool. AI meeting notes, please make a note of that.
+
+And I will put that notion. Hey, I get to make sure that I have my analytics code isn't going to break anything. Let's go.
+
+Got post hog installed, yabba dabba doo. And it's going to shut down at the appropriate time.
+
+Let's get the right environment variables.
+
+This is all just like preliminary. I'm adding a bunch of events in. See what sticks. See what's useful. Yep. If you feel like you're missing something. Let me know, I'll see if I can throw something else in there. These things are seconds to add. Awesome. It's not exactly complicated to throw a new one in. Awesome.
+
+I guess, like, where will these be in post-hoc? Let's see. I'll have to show you once this goes live. Which will be, uh... Just tell me where to search and I can find it.
+
+It should come in under, um...
+
+It should come in under Product Analytics, where you'll start seeing it. Awesome. I believe. No, that's not right.
+
+Okay, under data warehouse, sources post hog.
+
+Events and per- yeah, well it won't be persons, but yeah, it'll be. Okay, yeah, I see that.
+
+Yeah, under events is where you'll be looking. Yep, um, banned, and, um...
+
+It will also be a flag on users, but that flag won't give us time-based, which I don't think I'll need. We could always throw a timestamp on there, that won't be a problem. No, we'll have the timebase from the join, so it'll be okay. Or from the post-hoc.
+
+I don't think you realize how ridiculously simple it is to just throw that in there. I know, I know. But then we should theoretically add dates for everything else. I mean, not necessarily. Not necessarily. Okay, there we go. You have to realize, when we're throwing in a new thing, throwing in the data is free. Yeah, that is true. It's retroactively changing things that takes extra effort.
+
+Um, okay.
+
+So, when it comes to the interactions, there are... What data do we get from them? Okay, so from... In the polls bot, we get votes in the poll, and we also get karma. Oh, karma is like this whole separate thing. I need to do all of the karma stuff actually. I need to add analytics events for those, don't I? That would be helpful.
+
+Yeah, okay, so I guess, talking about karma, well, I'll just do polls real quick because that's a quick and easy one. So polls, the only data we really get from that is who votes on the poll and when and what they vote on, but what they vote on doesn't really matter.
+
+Right, that's all the data that exists. Yep, I'm gonna be honest Say about it that really just gives us like metrics of engagement and how many people are How often the majority of people are right. Like actually what about the users so not too important, but I guess like for karma For the data for karma, let me look at
+
+Where is that? Where is what? Say it again? Where is Karma? It's inside their user record. Yeah, so...
+
+Should we have like a separate because I was trying to like look at karma like.
+
+And it was getting me like, um... Yeah, this is not meant to track anything beyond what they currently have. Yep, and so, okay, so karma today from database database is for current state Analytics is for the past That's a good rule of thumb Yep, and so Okay, so When it comes to karma if I wanted to get time-based now, we have the post hog reaction events coming in
+
+Yep, I just threw in just hooked up an event for a comma karma modified That was way simpler than it should have been I'll see you throw that in there.
+
+Anything else I need to do? Oh yeah, I need to add the secrets. Need to make sure that things don't break when I try to build them. That'd be smart. And then another thing, another one of the interactions, the next interaction would be weekly rewards.
+
+So with Weekly Rewards, we really just have kind of like the same thing.
+
+How many different people like how many people are keeping up a streak? um Ooh I guess I don't think anyone's using it. Yeah, it's not that active right now. Um We need to get it more incentivized. Let me look at... so where is that data in? That's also in their user record.
+
+Is this going to be an event as well? I should make it that, shouldn't I?
+
+The only thing that I don't have set up as events already are those big menus.
+
+So that's one of those things I need. I don't think there's many more to speak of, so. Like the Partner Promo Bot? Partner Promo Bot I do have, actually. I did put it. Stuff on there for that.
+
+Okay, wait, I'm looking at the um Weekly rewards or end users for the weekly rewards. What is it called or what am I looking for? um Anything that says weekly rewards on it in the thingy. So where's the coupon from that? The coupon? Coupons. It's a table called coupons.
+
+Okay, so I get their last claimed, last, their streak, and then the last best. I'm assuming that's just the reward. Um, so that's, and the reward. Last best is probably the last best streak.
+
+Maybe I don't know. I do not know. I'm gonna say there's no data in there, so I'm not really sure But I guess I'll figure it out when I look at it, but I don't think it's really that important of a nuance But really I want to also just look at if people are using and I know the answer is no, but I also want to just be able to visualize this for the future.
+
+But if people are actually using the coupons they get from the bot, like if the bot helps with conversions is the kind of thing that I'm going to look at for that. What else do we get? We have the bank robot.
+
+The bank robot? Yeah, uh, the bedding's, uh, like, the unit size. Ah. Yep, I already have analytics in there for that. Awesome. In the user's table as well, I'm assuming. Looking for it. Yeah. in the event. Oh, what they changed it from, you'll have to piece together from multiple events, but what you're actually, um, what they changed it to and when they change it, you'll get awesome. Yeah, I'll have the most.
+
+After the bankrollbot, I know you say you already have this, but for me, the partnerpromobot, They do partner promos, they enter in like an age range. Yeah. If they select one of our age ranges, it's that. Okay. The only reason I store minimum and maximum separately is because if we ever change those age ranges in the future...
+
+I don't want their records to break. Backwards compatibility. Future backwards compatibility. Awesome. So, that gives us, so from this data we basically get, or from the partner promos data, we basically get in the users table, we know how old they are and where they are from. And that's actually really important data.
+
+What we also get from this data is...
+
+When they interact with the promo bot, we get to know which partners they claimed. data to preemptively tell us for
+
+Yeah, to preemptively tell us for what's it called like that just the end of the month calculations
+
+And then after the partner promo bot, um, like they could interact with the props cache bot, but that's like a slash command.
+
+All the slash commands, by default, all the slash commands already get an event sent in addition to any other events they might send on their own. Awesome. Anytime they use a slash command that's automatically there's an event in there no matter what slash commands we add in the future what slash command it is there's an event for that. Awesome.
+
+Oh yeah, the last thing would be the EeveeBot. Like, we would get... Ooh, ooh. Before I do the EeveeBot, uh, the CarlBot. When somebody selects roles, is that an event?
+
+Maybe. Let me go add in an extra field to the reactions thing that should help you out a little bit. The author field, author ID. Add that in, that should help you a lot. Awesome, thank you. And then with the EVBot, it's not really getting used by many people right now, but we get from that just like what sports they follow, what they're betting on data.
+
+What else do we get about that? We get mostly just what they're betting on, and that can tell us a lot. I don't think it tells a ton.
+
+Alright, perfect. And... Is there... Do we have any other bot interactions?
+
+Tickets, I guess? Yeah, that's definitely one. Yep, that's already in there.
+
+Yeah, tickets when it comes to the welcome message, exit tickets, just them creating tickets.
+
+Is there anything else our bot does?
+
+Not that I know of. If you think of something, ping me. I'll see what I can do.
+
+Awesome. Oh, I guess like No, the karma leaderboard. No, cuz that's Cuz that's just a slash command that's already done
+
+When people react, we have that. That's really one of the big important ones. Yeah, I think we have everything.
+
+Welp, sending it all live.
+
+Hope this doesn't break. Hopefully. Fingers crossed.
+
+If it doesn't, you'll have yourself a number of new analytics events coming in all at once. That will be very amazing. It'll be in the post. I don't even know how I'm going to look at that. postdoc events query select star from events
+
+It's empty, so... Really, I wonder why.
+
+yeah I'll have to figure out a way to do like better visualizations
+
+A post-hoc will like sort of help guide you through that once we actually get events in there. Yeah, I've been trying to do some but like hold on like I need Eevee. I think I need to look at the data and like...
+
+Do you want to post something? I'm trying to do. Let's see. Yeah, a bar chart. Like, I don't even know if their bar chart would extend this far. How far are you trying to get a bar chart to extend? Um, all the way from minus 500 to... zero, like, plus...
+
+I have no idea.
+
+I can't exactly... I don't think it will, but... I can't help you tell at the moment. We don't have data.
+
+From the data and events, will that be the same user ID as the Discord?
+
+Yes.
+
+Everything's based on the Discord ID. Okay.

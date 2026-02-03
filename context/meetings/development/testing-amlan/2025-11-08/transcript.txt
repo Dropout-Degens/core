@@ -1,0 +1,575 @@
+Fair enough. Awesome.
+
+Okay, so Like, when it comes to the process, how does he... Push to our GitHub. So I'll have to log in with whatever Git client he's using. and he'll push to a new branch. which is easy enough to do if you know how to do Git stuff. Simple to push to new branch. Then He'll make a pull request once he's done. He's got all of his changes ready to go. Make a pull request on GitHub. And I review it. And then once it's all reviewed and it's all good to go and we're ready to push it live.
+
+we hit the merge button at the bottom.
+
+So you will do the merging.
+
+Typically, yes. Now, if there's like a critical thing that needs fixed immediately and he knows how to do it. He'll be fine to just push to main directly. If he needs to. I generally prefer for that not to happen, but if it's like... You know. Database is down or something. It'd be nice to have somebody be able to actually push.
+
+Yep, that makes sense. But I guess we'll just kind of just keep it as standard operating procedure of... pushing to a branch and letting you take care of delivering it to Maine. Awesome. Yeah.
+
+That's the plan.
+
+Pull up your screen share as well. Um. And then... Let's see, when it comes to-any of the just language structure like if that makes sense like when he's kind of like adjusting things does he have to keep it in the same I don't know, same structure, if that makes sense. Structure of what? Like code? For example, if you have... one process of doing something with the dropout degen spot would you prefer him to continue using the same process as much as possible or if he thinks he has a better process Like to let him do that.
+
+If he thinks he has a better process, it's generally best to discuss it beforehand. Sometimes there may be something that one of us didn't consider. Don't know what that could be. That's why discussions happen. Okay, cool.
+
+So basically he's just gonna have to adjust the code to our structure. And that's also important 'cause I'm gonna give him access to Claude and his Claude is going to have to understand that as well for if he uses Claude. But just basically adjusting the code according to our structure and if there are any big, integral changes, then he should both have either his AI or him write up a spec for the changes so you can easily understand them and then to discuss them with you before actually going through the work.
+
+And it's incredibly... Do you already pretty much have to write a description of your changes for GitHub anyway? That should work fine. Awesome. It should be a good reminder to be like, hey, here's all the things.
+
+Yep, and then it gives you a chance to just have everything to look at and be like, okay, yes, this looks great. This is something that you should definitely do. Or, hmm, actually, our structure could do this way. Can you look at how to do it that way? Yeah. Awesome.
+
+If he tries to implement his own audit logging somewhere, I could note like, hey, we already have a built-in function just to send an audit log message. We already have that handled away. You can simplify that a lot. Awesome. Something simple like that.
+
+And then, OK, let me also check my Meet With Him. Um. Perfect and then I guess probably will want to walk him through something Sorts of things that you think in walking them through? I guess with the partner promo bot, 'cause that's something that's like, a little bit depreciated because the emojis would be so easy. And that's something that we can do together with him. Like for example, and that's also super easy when it comes to like the kind of changes you'd be making to the bot.
+
+And then maybe if I can real quick get a flip EV filter up, have him put up a flip EV filter.
+
+What do you mean by a FLF EV filter? Like a filter for the...
+
+One filter for FLF. just basically to show how it sent to the now public channel. Instead of the back one.
+
+Okay. And like it's, oh, it's these conditions.
+
+Got it.
+
+Yeah, because it does look like it needs to go live, doesn't it? It does.
+
+And I've been... So, the problem... Okay, so the problem that I had when I was, like, doing Fliff is I didn't have enough data. So, I literally just shut off everything.
+
+Ah.
+
+Or like I didn't have enough data to see if it was significant. So I shut off everything except for FLIF just to like, because we're only limited to three per every five minutes. So I was like, all right, well, I might as well just make sure all those three are FLIF so we can get the most FLIF ones. So we only have FLIF going right now. Um. But let me see if I can... I will do that real quick. So basically, Let's just show him how to Update it.
+
+Let me just look at the Partner Promobot real quick. And let's just spec this out real quick. Let's have them at least add Like three of the emojis like add Three emojis together and let me make sure we have them in the server. So Um. Let me just find the partner promo bot. Okay. Cool. Well, that didn't work. Mm. Okay, yeah, so let's do... I think I have flip logo. Yep, flip logo, onyx odds. logo and let's do sleeper logo Okay, cool.
+
+Let's update these three emojis. Is there anything else that like Updating the details is easy enough. I guess, let me have him add a picture too. Let me see if I have any more. pictures real quick. And then... So I guess kind of for the agenda for this, Um, Let's get him set up on everything. So first we have to get him to accept email. And while we're doing that, you can get him set up on our Stripe Superbase and Google Cloud.
+
+and I will get him set up on our Notion and Clawed. Does that sound good? Sounds good. Let me just write this down. Cloud and then... After that, I'll get him login to website, add developer. Flag plus Staff. Rawr. And that can also be a little test for us to make sure that the staff role works for a developer. And then Let's... So after that, let's talk him through how the... Projects work. and I will do that and then you will take over and do How The like code process works For example, you will be putting to your own branch and then I'll review it.
+
+I'll touch on it a little in how the projects work. But-I'll let you take care of just explaining how like the process will work for the infrastructure and publishing. And then once he understands the process, we'll just do a demo of partner-promo-bot. And then if time and I'm able to get ready EV.
+
+Makes sense. Awesome. Sounds good to me.
+
+Let me just send this in here. See you have it. Awesome. I am going to... When they found that Picture and then I'm gonna see if I can get the flip EV filter. I don't want to just like do something random, so.
+
+I'd rather have nothing then.
+
+I believe we got new onyx material. So I can do onyx in the partner promo bot. Oh, we don't even have one. Perfect.
+
+What were all the things you were getting them access to? Oh, wait. You just-OK, you posted it. Cool. Yup.
+
+I think that should be everything. Yeah, because once he has the Discord as well... should be set Perfect. Forward this. Cool. So that's the image he's gonna add to the onyx. you Supabase. Oh yes, did I? I have super base.
+
+Do you not have super base? No, he's going to need it. He's gonna need super big.
+
+Oh, you have, okay, yup.
+
+I didn't have super base. Cool. I didn't have Supabase. Cloudflare email, Cloudflare account, GitHub, Stripe, Google Cloud, didn't have Supabase.
+
+I think that's everything.
+
+I think that is, yes. We have to pull Superbase up too.
+
+I'm gonna double check that I really like that image you sent. I'm gonna have to figure out a way to turn that into something that we can just... Like... Image I send. Yeah The diagram. Ah! The images, that probably wasn't very descriptive.
+
+No, no, not particularly. But yeah, this new copy a link to that message and send it to me. I want to pull that in again. Yeah.
+
+I'm gonna DM it to you.
+
+Oh, yeah, you got it. All right, cool. Perfect.
+
+But yeah, I'm gonna like... I use diagrams.net right now. I don't like it that much. I need to find a better way.
+
+Excalibur. Is that what this is? That is what that is, yes. Interesting.
+
+Is it free? I bet it is.
+
+Yes. Oh, it's so good. Dude, Excalibur is awesome. Okay, awesome. I'll look at it.
+
+This is my favorite app ever though. This is my calendar app. This is my, like, number one app that I'll ever use. What is it? It's called routine. Um, like it's, it's actually amazing because it pulls in all my Google calendars. So I have like my school, my work.
+
+Oh, so, okay. And instantly makes it much more usable. Yup. And so like, it's got a little, it's got a little markdown things, notion style.
+
+Every event is actually like a place to put context. Yeah. and add tasks and like that task, like I can just go to my agenda real quick and show you, but like that task links to this and it's also just tagged to today. So like this, look at it, or I can open up this task and like have a place to put more notes.
+
+And what was this called?
+
+Routine? Yes, it's absolutely amazing. And it's actually free too. And then like I have all my tasks on here and then all in one workspace to orchestrate them all.
+
+Routine is the offline first AI native work operating system that connects with your entire stack. Tell me you're trying to get $8 billion Y Combinator without telling me you're trying to get $8 billion of Y Combinator. They are good.
+
+Sad startup. I will give them that. But another thing, So the habit tracking and notion that I do, like, oh, it's actually amazing in the way that actually it sucks. I wanted it to so I had to like write a whole script to do it but basically like all of the habits that I have to do that are assigned to me in here like for example post the daily play they're all Oh, we need to set permission.
+
+Does he have all the Discord access too that he needs? Yeah, I gave him the developer role. Okay, so he's got everything. Cool. Let me Is this our powerful goal guy?
+
+Yes. I believe so.
+
+That doesn't sound too confident.
+
+Like, one of he... Like, it was weird, because he said... He joined the server and like I couldn't find him. Like there was no message saying, oh, he joined the server.
+
+So I was like what? That's why you check the members section that Discord gives us.
+
+Ah. Let's see, you seen that? He joined less than a day ago. He joined this morning when I sent him the link again. Um.
+
+Two hours ago.
+
+Let me message him. Okay. call that, I guess. What's his powerful goal? Yeah I have a goal.
+
+I added him like get my nickname so that we can like person.
+
+Oh, okay Like, oh yeah, it's weird. Like I can't even like tag him. Like.
+
+You know?
+
+You try to tag him in the general dev chat. Channel.
+
+Oh, that's strange. Yeah. That's okay because I have my workarounds. Oh no, and then I held shift for too long.
+
+He said not working, okay.
+
+Not working. Always fun.
+
+I'll make a group chat Yeah. text him so he'll accept my friend request and then i'll get that good chat Perfect I'm going to ring this real quick, so I'll see you there. Perfect. Woohoo. Hello Hey, I'm love. Oh How you doing?
+
+Good, how are you, man?
+
+Can you hear me?
+
+Doing well, yes. Yeah, here you're fine.
+
+Okay, perfect.
+
+This is Zach, our head developer. Hello, hello.
+
+Hey Jack, I'm Amlan.
+
+Mom, Linda. I'm one, yeah.
+
+A-M-L-A-N Yep. Got it. Let me pull up a screen share for this just to... Get you a little more context. So as a little quick, agenda, just to loop you in. We're going to get you on into the email. So your dropout DJs online at dropout DJs dot com email. And then we'll get you set up in the back end on our stripes. Super cool. about Notion Cloud, et cetera. And then we'll have you log into our website, get you set up on our discord back end i don't know why the discord like server is actually like super funky and like...
+
+Honestly, it could be a little weird because when I was joining, for whatever reason, I was not able to join with my like... original like whatever discord I use so I just like had to create a new account so it could be that I don't know Yeah, that might be, that might have something to do with it. I guess like, also, I have no idea why, but you weren't like showing the message that you joined the server just didn't show up.
+
+And like, we're not able to tag you in any of the channels, even though like you are there. So it's, it's super weird. It's interesting.
+
+Okay.
+
+Quite strange. Yeah, I've actually never seen this before, but we'll get you set up and try to get you fixed in the Discord. And then we'll show you a bit about our project. will work on the Notion side and then how the code process will work. And Zach will walk you through that. Sounds good. And then we'll just do a quick demo of how code projects to work. We'll have you just update basically three emojis and one image in our partner promo spot.
+
+And it will just be like a little pre-work for the first project that you'll have. and we'll be able to show you through it. But let me just start by getting you into your Google email. So I believe we sent you an invite to Google Play.
+
+Send it again. Cool. Reset.
+
+Yeah, just set it again. Because I think I was looking this morning and I didn't see anything, so... Yeah.
+
+Just seeing an email from Cloudflare pop up. There you go, yeah.
+
+I just got it. Cool. Awesome. And so if you set that up, let me know what you do. And then Zach will invite you to our – he's got you with our Stripe, SuaBase, and Google Cloud. And then I'll get you set up with our Notion and Cloud. Okay. So for the Cloudflare, I'm using my personal email, right? Yeah. Okay. Don't ask me. I have Cloudflare issues.
+
+I will need whatever email address you sign up for these things with. I will need that email address so I can send invites to them.
+
+Okay, so with Cloudflare, it should be my... Let me know when you're ready.
+
+Yeah, ready whenever.
+
+Okay, it's going to be a.m. L-A-N. 24. P-R-A.
+
+DHA.
+
+n at gmail.com. All right. And then, I'll-I am going to, I'm inviting you to our notion right now, but can I have you make a Claude? a cloud.ai account with your Drop out D-Gen's email. Sure. That's just my first name at Dropout Digions, right? Yep. Okay. And it's just at dropoutdegents.com. okay And then I've invited you to our Notion workspace as well, so you should have access. And then you'll be, you'll have full edit permissions and everything on that.
+
+So you can go ahead and take a look. So it's Amlan at dropoutdegents.com. Let me just put that in the group chat as well for you. I'll try I'll do my best to put just important here Okay, is it is it like a gmail account I can log in then and check so it is Basically just a forwarding address. So it's the same It's Zach, would you be better at explaining this?
+
+I mean, it's... Okay, so it just goes... An email gets sent to that email address, and then that email address just sends it to yours again. Okay.
+
+To my personal email address. Correct. Yep.
+
+Okay, this is like that iCloud forwarding.
+
+It's just a forwarding address, basically. Just give me give me like a couple of minutes. I think one of my roommates is at the door for daddy's keys. No worries.
+
+No worries at all.
+
+Let me, when he gets back, I'll double check that he's in the GitHub and accepted that from his I believe it's... Cool email. Yeah. I'll double check. Stalking the Syracuse website, I see.
+
+I don't know what this place is.
+
+That's in New York.
+
+Cool.
+
+It's in Bumfuck, upstate.
+
+I wonder which of our projects gets the most activity.
+
+Hmm.
+
+Hehe. Hmm.
+
+Definitely not the Discord bot.
+
+Nah, couldn't be.
+
+Yeah, but basically Yeah, once we get him set up in these it'll be pretty Pretty fast. Easy.
+
+What was the other thing we wanted to have him do out of flip filter?
+
+Yeah, but let me, yeah. I have to get one first, so that might be... Hey, I can show you what I'm working with.
+
+And we can always just set up a test channel for them. Yeah.
+
+Oh yeah, I mean, I can always just make the Fluffy Eevee channel hidden and have it set in there for now, it doesn't like, even matter.
+
+You're doing stuff on AWS.
+
+Oh, yeah. I get this through my internship. Oh. Cool.
+
+See you guys at meet stuff.
+
+Oh yeah, I've got really great stuff. I've got so much data that I look at. It's bad. It's bad. Um-But yeah, basically, I don't even remember where I was looking at this. Let me actually... I'll take this under my other monitor. Let's get this. All right. But. Oh yeah, so basically what I can narrow down is when the point spread for the flip point spread bets For NCAAF. Um... Okay, I'm back.
+
+Welcome back.
+
+Thank you. Thank you. Um... So I guess I forget where we were. So I just signed into Claude. You've gotten Claude. Okay. We'll have to... I have to figure out a way to get my card into that for you. Um... without like revealing Too much Um... To be fair, with the Plot stuff? And again, like, I don't know, up to you guys, privacy-wise and stuff.
+
+we do have like cloud accounts from like and all that, you know, so you don't really need to spend on it.
+
+Yeah, we do. Um... But... I think it's okay. We'll spend on this one. It's not a big... And I'd rather just keep it so you have this little company account. You can keep your CloudSU too if you actually do use Cloud for SU stuff. Because this way if we do go over usage then we can understand and then we can probably double use the accounts. Yeah. But yeah, we'll just, I'll set you up on this. We'll keep it going for like two or three months.
+
+It won't be too expensive. And we'll, we'll evaluate if we need. But, um... I'll just send you my card info and then delete it. Just... Let me know when you're at that stage for that.
+
+Yeah, just give me a second here. Okay, so which one are we playing? The pro, right?
+
+Yep, it should be about 20 bucks a month. And do the math.
+
+17, I think. Perfect. Oh wait, 20 monthly. Okay. Yeah.
+
+Okay, yeah, I'm ready. Check your name. Private messages. And yes. on Discord.
+
+Okay. I'll just put your phone number. Yep. Do you want to say it out loud?
+
+I just pasted it for you again. Okay. It's easier.
+
+Yes, perfect that just got set up. Awesome.
+
+And then, okay, so we're done on my side. I've got my notion, I've got my quad. So, Okay, Notion. I think I got to set up Notion. Just give me a second here. Okay. Notion with the same email, right?
+
+Dropout.
+
+You'll have to probably create an account through that. Okay. And just make sure you don't do it through Google 'cause you shouldn't be able to 'cause it's not an organization account. So just use the email.
+
+The dropout, right? Yeah. Yep. Okay. You.
+
+Perfect, I'm into both. Awesome. Zach. So what do you need to get him into?
+
+Alright, well we have them on the Cloudflare email, so we can cross that out. Alright. I need a Cloudflare account. So I sent an invitation for you to join our Cloudflare account. That one's still pending. Okay, so it hasn't come yet, right? Or... You just have to accept it. It should have already come. Okay, let's see. Um. What's the images going to be? Your personal email address.
+
+No, no, like the email that it's coming from.
+
+One of Cloudflare's emails. I'm not particularly sure. Okay. I just had like a verify email come, but nothing else. Hmm. I'll just hit resend and see if that works. Yeah, just do that. Wait, we still have people paying through WAP? Yeah. Really?
+
+Yeah. Yeah, some of... Know like two of them are actually active but I don't I don't know what the hell this one... This one guy bought one of our one year... I don't even see him in our recent purchases, so I don't know.
+
+What's a jack? Where do you work out of?
+
+Say that again? Where do you work out of?
+
+Like, where do I, like, where am I? Yeah. Like, in the world? practically yeah Pennsylvania Pittsburgh. Cool.
+
+Just a little south of there already.
+
+I'm working. Doing jobs.
+
+Yeah, it's screaming. Does it usually take a bit of time or? Um...
+
+Not usually, no. Yeah, it's not coming in.
+
+Do we need to get him access to the management account? Is that important? Huh?
+
+Generally speaking. Hmm.
+
+Because I'm pretty confident in my Cloudflare setup, so... wait um i guess another confirmation do you want me to set up the Cloudflare through the dropout email or my personal email? Oh, I might have...
+
+I may have made a typo. When I was... Let's see. I think I made a typo on the email when I was putting it through.
+
+And that's a good question. Zach, is it good for him to have his personal Cloudflare account? Or would it be better for him to use a dropout Dgen's Cloudflare?
+
+For what purpose?
+
+Just for his Cloudflare account with us.
+
+For his Cloudflare account with us, it'd be better if he used his own email address, just so that if something goes wrong with our Cloudflare configuration, he can go in and fix it. Cool. So if something goes wrong and let's say his email gets disconnected from our stuff or something, if your domain goes down or something like that, he'd still be able to come in and fix the problem. Awesome. Okay.
+
+Yeah, because definitely don't want what happens to my Cloudflare where you don't have your password saved. I don't even remember when I created my account, but I request them to reset my password and they don't send me an email. The only way to reach support is opening a support ticket once you log in.
+
+So I can't do anything.
+
+I just got the email. Awesome.
+
+Okay.
+
+you okay you Take a minute.
+
+No worries.
+
+It happens. Well, no, because it didn't let me create a password when I made my account. And so now it's asking my password, but there's no option to... Do the forget password option, so.
+
+This sounds familiar. Dax had literally that exact same problem.
+
+Dude, it's like you got to log out and go all the way to the sign in page again. Oh you figured it out? Oh shit that's better than me. *laughs* I made like two new whole Cloudflare accounts and one of them didn't even work, so...
+
+um Okay. .
+
+Zach.
+
+Woohoo! Yep, I'm in.
+
+Are you Zach at ShabbaDDuns.com or Bellcube? I forget.
+
+I believe I have Bellcube. I can also throw Zach in there just for fun.
+
+Okay, you are the bellkeeper. Perfect. I need to get you back in our new mission. In some capacity.
+
+I'm both now. Perfect.
+
+Oh shit, I don't know how I just invited you. Maybe don't accept that if that was a... Cool. I was able to set up my stuff. Awesome. So we have you for...
+
+That'll be Clownflare.
+
+Oh, no. Just Cloudflare? Yeah, that's Cloudflare. Awesome.
+
+So what all can you see in the Cloudflare account? Let's see.
+
+So, um, I guess in my... homepage, I can see the Bell Cube Consortium. And then.
+
+And then I just see my email address, so I guess something personal stuff. Hmm. Okay, so Consortium of Bellcube is the one that has the dropout DJ and stuff.
+
+Yep, I see that.
+
+You do need to migrate that away at some point, but... Okay. That'll be a manual process. Well, I see that. I see ballcube.dev.
+
+All that stuff, policy card.
+
+Whatever you have on your screen, basically. Interesting.
+
+I don't think I have all that either. Really? Yeah. Well, you want me to Check.
+
+I mean, honestly, you should.
+
+Wait, so it does say that I'm not authorized to access it, but I do see the names.
+
+Interesting. If you click on dropout degents though, you should have permissions there, right?
+
+Um, Well, I'm able to get into all of them. That's the thing. Uh-oh.
+
+Thoughts at home.av.
+
+They said you didn't have permissions for them.
+
+So I do see that I don't have permissions for it. Like when I open the other stuff, I don't see...
+
+I don't see anything else pop up, but I still see the names. Interesting. Well, now looks like I don't have permission for anything. That's even weirder. I've not changed a thing. Yeah, it just said authentication error and now I've been signed out. Oh, yeah, that's a Cloudflare thing. Let's see, okay, drop out Dejan's. So permissions are hard. I don't have access to your other stuff.
+
+I just see the names, but I don't have access to them.
+
+Okay, cool. But you do have access to the dropout degen stuff though, right? I do, yeah. Okay, good. That's perfectly fine with me. As long as you have access to what you need to have access to, we're all happy. Yeah, that's perfect. I'll consider that good. And then if issues come up with that later, we'll fix those then. Yep, perfect. All right, next thing on our list, GitHub.
+
+I believe we're... Creating a camera the droplet email no I believe we invited you to the GitHub on your school. Just want to double check that you got it and then make sure that you accept it. Let me check right now. Okay, did you just send it by any chance?
+
+It was sent on November 2nd, it says. Okay. Yeah. I got it. Awesome.
+
+And members are the right thing for that, right? Exactly. Yes. Cool. And is there anything that we should go over for the GitHub or should we go talk about that?
+
+Oh, there's a lot to go over for the GitHub.
+
+Yeah. But I guess should we just come back to this later then but and just make sure that he's got like All right, once he's in, it's good for now.
+
+Yeah, once we have access, then we'll go over GitHub stuff. Cool.
+
+And I just want to double check because I don't want to take too much of your time Amnon. Yeah. But are you are you time blocked until 345 or would you have like a little bit extra to go over?
+
+Probably like 350, 355 tops. I do have to like get somewhere. So cool.
+
+Okay. We won't, we won't push it too far. Yeah. Sounds good.
+
+Just so we can keep this to getting access for today then. Yep.
+
+We can always go over GitHub stuff when we meet in person just so it's easier as well, you know?
+
+Yep. But also Zach might need to help a little more with that kind of stuff.
+
+Sure, yeah.
+
+He can join it, but it would be great if he can also meet up.
+
+It's just that even the weather's getting worse. Yeah.
+
+Welcome to Northeastern America.
+
+Yeah.
+
+Hey, it's supposed to start snowing on Monday around here, where I am. I think for us, it's Tuesday. Oh boy. Oh.
+
+I'm not excited. Actually, not really excited. I kinda...
+
+I'm in GitHub as all. Awesome.
+
+Just to confirm, you can see all of our repositories and stuff?
+
+Yeah, there's four, right? Yep.
+
+Okay, I see all of them. Can you go in and like actually like physically see the files and stuff in there and all that. I'm able to see everything. Awesome. I'll consider that crossed off for now. If there are issues later, we'll address them later. Sounds good. Oh, I closed Stripe. I need Stripe backup. Alrighty. Now's the fun time for Stripe. This one we'll use a dropout to Jen's email for. Okay.
+
+Okay. Thank you.
+
+Yeah, make sure you can access everything Okay, I have my account created.
+
+Alrighty. Invitation sent to... your Dropout Degens email for Stripe. Should get forwarded to your personal email.
+
+You guys use this for all the payment stuff? Yes.
+
+Stripe is our payment processor. Okay. So that's where, that's how we charge people money. Right. I've also sent an invitation to your Dropout DGN's email address for Supabase, which is our Basically a database provider. Okay. Awesome.
+
+Is there... And then... Okay, that's...
+
+That's everything, right? Zach?
+
+Google Cloud is the last one. to require him to create an additional Google account using his Dropout DGN's email address. which will be fun.
+
+And then for the context that we'll give him, I'll go over the project board. I'll just keep it really light, and I'll let you take up most of the time to talk about the GitHub process and the coding process. and the publishing process. And then I'll just have a one-on-one time, or me and Amlan have a one-on-one time, so I'll go over that in detail for him, and just let you know if there's anything that you need to be forwarding on.
+
+Do you recommend me to just create a separate SuperBase account or just do the continue with GitHub? Um...
+
+Continue with GitHub should be fine. Okay.
+
+Or should we have him make one with that?
+
+I'll just create a separate one.
+
+Just, you know, You should have an invite in your email address. in your email. I did, but it's making me create an account still. Yeah, that works.
+
+Yeah, I just used that. Perfect. Okay, perfect. That's done. Woohoo!
+
+And now for the fun one. So you're going to need to create a Google account using your Dropout DJs email address. Okay. Fun stuff. Indeed. Once you create one of those, I can get you in on Google Cloud. Sounds good. Dislike conception.
+
+Heh. Just like a little bit within a loop, within a loop. Yeah. When I'm creating it, do I choose the Try Google Workspace and then create it? Because it's going to... Wait, so do you want... What kind of email do you want me to make? Like the...
+
+So Google lets you create a Google account using an email address that's not created by Google. Let's see.
+
+But I have to put the at Gmail.
+
+You know. Let's see.
+
+Yep, I think I'm only able to create the ad dropout regions if I'm using their Google Workspace.
+
+We don't have a Google workspace. That might be...
+
+I myself have created one that doesn't have that. Because if you...
+
+Wait, are you having a screen share? Hold up, just give me a second. Let me see what's going on here.
+
+There's a little button when it's asking you to make an email address. bottom called use existing email.
+
+Let's see, did you choose the option where you're creating it for your work? No.
+
+Create a personal email. Okay. I don't know.
+
+Doug, there you go. I see that option now. Awesome. Okay, that's done. Awesome. Are we on? I think that's everything, right, Zach?
+
+I have to actually invite him to the Oh the cloud yeah Yeah.
+
+But I guess just to kind of maximize time while he's doing that, let me just explain the product. and I'm a little bit. So I'll pull this up on my screen. Can you see my screen share?
+
+Yep. Awesome.
+
+So this is a quick overview of our notion of is their company home. It is definitely not. So you don't have to look at this page at all right now, but this is where all of our documents will be, but really where your focus will be is in project planning section. It's the only place you really need to look. So as an overview, here's the backlog. This is where all of our projects will be. And I'm only showing this because this is where it's kind of how the projects will be structured.
+
+Okay. So I will have an overall project with context for you to just read through and understand. So the opportunity, what is actually being built, how it actually works, what are we measuring?
+
+So for example, either this one is just the number of filters that we produce, but in the future it could be something like the number of clicks or the conversion rate on clicks.
+
+But that's kind of just so we have an idea of what we're trying to build it for.
+
+And this is the potential, just like why it matters. And so this is-kind of just big overview of a project and it's built into the tasks and the tasks is where you will be mostly focusing your time and so when these projects are not in like the backlog section they'll be called in progress and so they'll show up on this active section and so for these in progress projects When the project is in progress, it's only when you'll get a task.
+
+And so, for example, I'm going to use this task of the publish new EV filters. So this one has... a little bit of pre-work that needs to be done by me. For example, I need to actually find the filters and then I need to tell you the filters and then you need to implement them.
+
+So basically these tasks, these three tasks here are me finding the filters.
+
+And once I've done those, then I'm able to assign you the task and it'll show up on the development board.
+
+So this is where you can kind of look for all of your active tasks.
+
+And it'll also show up in kind of here as well section of active tasks, but this is where the development board will be. So this is kind of how you'll pass off your work onto Zach as well. So Basically your tasks will show up in here, but right now you're blocked, but when you're unblocked and for example, I give you all the filters that you need, you'll first put it in the not started. And once you actually start working on it, you can put it in progress.
+
+And then for example, you would have to just go look at the filters, our current structure and how to implement them and then implement the filters. And right now, I believe Zach will explain this in just a second, but you're going to be pushing your work to its own branch and not to main production branch.
+
+And that'll allow Zach to just give it a quick review before he pushes it to prod.
+
+But basically, once you finish the task, so for example, you push the new filters that you want to activate to your branch, you will put it in review. And I'll just have you either, I'll leave a section up at the top, or I'll just have you comment and say, hey, Zach, this is ready. And then just linking to or Git pull or your Git action.
+
+Pull request. Yep, your pull request. And he'll take over everything from there and he'll do that.
+
+So basically... He'll talk more about the process, but that's how... notion.
+
+Um. Okay. Zach, do you want to take over with the process?
+
+And it's simple enough. So how familiar would you say you are with like, you know, pushing to a git branch and stuff like that? Super familiar.
+
+It does sometimes take just a bit of reading, but... Pretty good with it.
+
+Simple enough. So... The process will be fairly simple. It's fairly standard Git source control stuff. When you're working on a feature, you create a new branch. You can create it locally, create it on GitHub, doesn't really matter. Make sure you check that branch out, work in the branch, do stuff. Ideally, break your changes down into smaller commits, but that's not a requirement. Okay. And... Once you're ready, push whatever you need to push.
+
+Head over to GitHub, make a pull request, pull from your branch into main, And... I'll review it. We'll talk through what needs to be talked through in code review. And once it's good, we push it. Sounds good. Nothing too complicated. Okay, sounds good. Yeah.
+
+And then one quick note to add is you'll have access to kind of like a lot of AI tools. And I'm hoping and I would love for you to use Cloud a lot. And just the one thing just generally to mention is I would love or we would kind of like to keep the infrastructure and the code base structure, I guess, kind of similar.
+
+So when it comes to just like actions and interactions that our bot is doing.
+
+Try to keep it kind of standard in the way that you update it. according to how our current code base is written. And if you do think that it could be written in a better way, that is completely okay. But just if you could either use AI or however you'd like to write it up, but just make sure to write a little quick spec to give off to Zach, just so he can be like, oh, okay, this makes sense. And that makes sense is why we're doing this.
+
+Or so he can be like, oh, wait, we should actually do it this way because our bot does it this way.
+
+But just generally.
+
+Okay. You make it sound like I'm unreachable. Just ping me and we can talk.
+
+When we fix the Discord stuff, you'll be in our general dev channel. So you have that as your full resource as just to tag Zach with any questions you need and stuff like that. And then I know you do have to go soon, so we'll let you have your time back. But Zach, could I have you just record a video making those three, three emoji updates and the one image addition into the partner promo bot just so here's the video and so we can just reference it in the future I don't know if that would be particularly helpful for him.
+
+Would it not? No, it's... I mean, a lot of this is about... local environment setup and stuff like that. Because these are all like... These are simple menial tasks, generally speaking. But there are things that will make sure that we're He's able to do actual work when it comes time to do actual work.
+
+Yep, that makes sense.
+
+Environment setup and stuff like that.
+
+Then we can skip it.
+
+Yeah. I guess then we'll just be set, and I'll go over a little bit more for the notion of projects and stuff when we get to our first meeting together. And really don't worry about kind of... working on too much until we kind of just get together for our next meeting, Amlan.
+
+But you should be set to just take a look and explore until then.
+
+And I'll just give you a text with some updates and some Stuff like that.
+
+Sounds good.
+
+If you are interested in exploring around, the GitHub and its repositories are a good place to start. Okay. So, warning, the READMEs are out of date. Okay. Almost universally. Okay. Yeah, I mean, that shouldn't be an issue. I can just look around and I'll get a general sense of what's going on. Awesome. I know. I created a little diagram that just kind of maps out our services. I'll post that in this group chat.
+
+It's also in general dev. Okay. Just something easy to look at and... kind of get a grasp of how our stuff, how our infrastructure works.
+
+Okay.
+
+That sounds good. Yeah. That's all from me.
+
+Yep, and that's all from me as well. We'll let you take your time back. Thank you so much for taking the time.
+
+Yeah, absolutely.
+
+Thank you, guys. And thanks for being mindful of the time as well.
+
+No problem at all. Guys, you have a great weekend.
+
+You as well. Enjoy. Bye-bye. Adios. You as well. Enjoy. Bye-bye. Adios.

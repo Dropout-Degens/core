@@ -1,0 +1,191 @@
+So that sounds good. And the numbers, that all sounds good. I keep everything in like just basically spreadsheets. So I'd be I'd be completely open to sharing that up. And just if you needed a bank statements as well, I would be able to get this as well. OK, perfect.
+
+Yeah, probably what I think would probably be best on that. And if you send the bank the bank statements and then the spreadsheet, that should work because obviously the bank statement should just verify the contents of the spreadsheet.
+
+The only thing on that is that I just use my personal bank account. I don't have actually a separate bank account for the Dropout Degens LLC right now. That's the only caveat in that.
+
+Okay, yeah, obviously, whatever, like... I just need to drop out of TGen for me. So whatever you want to do, I don't care about any of the other ones, like if you want to remove that or whatever. But yeah, just from a basic standpoint, just to verify everything we've talked about. My second question to you as well would be, so I know we have some really awesome software that you've used in your Discord that is something that's super impressive to me.
+
+One question we had is, did you have any interest or like, have you ever thought of any B2B applications of your software?
+
+I guess it's kind of complicated because we're technically shouldn't be able to do this because in reality it is just Odds Jam EV bets and it's just their service, like literally just the emails from their service. And so the only reason that I'm really allowed to do it is because I've talked to Alex Monahan, who's the founder, and he gave me the all clear two years ago and we're still able to just proceed with that.
+
+Expanding it B to B wise, but I think it would just be, it would be difficult for the opportunity to expand without it being inside the Discord to get like that extra approval.
+
+Yeah, that's what I was wondering about because I know you had mentioned that connection to Alex and I knew like you had like some type of special agreement. So I was just wondering like what that would apply to in that context. obviously makes sense that, you know, I'm sure. Is there a duration on this contract or is it open-ended?
+
+for the OJJM. Yep. It's open-ended.
+
+Okay, okay, interesting. Okay, so from that front, That makes a lot of sense there. And from my end... I think that is pretty much it. And then I'll let Chris get into kind of, you know, we can go over kind of the, you know, the main details again, I guess. So Ari and Chris are familiar with it. And from there, if I have any other questions or if Ari has anything from there, we can pop those back up.
+
+But those are the two questions I had just kind of coming into it off the top of my head.
+
+Yeah, that sounds good. And I guess like before we went to go any further, I guess I would love to just give a little bit more context for Chris and Aria.
+
+So I guess, do you guys have any questions that would just be good for me to help explain anything that you guys might need to know? Yeah, I would love you to just give me a little bit of your background. Tell me about yourself, you know, your experience. How'd you end up here?
+
+Yeah, so I'll just give you the whole rundown on the server itself. About like two years ago, or... Almost three now. When I was 17, I joined the Fliff Discord server because Fliff was just the available app for me. And I started sending pics out in the server and eventually became an analyst or just part of the staff for their server. And about a couple months after that, we actually expanded and decided to do our own thing and use the Fliff server as our basically organic marketing link.
+
+So anytime people search the Fliff Discord, it just directs them to our new server. out of there and that's how we got established about two years ago and we've been pretty good when it comes to organic marketing and we've just used that community growth and also just leveraging our positioning with a younger FLIF user base to kind of attract the social sportsbook crowd so we get a lot of 18 plus members and we also just get a lot of 18 plus partnerships so what we do is we try to tailor the discord around that and one of the core I guess values and Aspects of the mission that we're driving towards is that we since we've got access to all these partnerships for our users We don't want to like gatekeep through premium subscriptions Our goal with the community is to just give them access to the knowledge and the tools they need to succeed And then we also will get our Commission structure based on the CPI revenue But it's just the knowledge that we are able to transfer over to our users, which is the end goal We've got the software for Odds Jam where we're trying to get the most profitable positive expected value bets and kind of teach our members around that while also helping them eventually transition onto the Odds Jam platform.
+
+Cool. No, that makes a lot of sense. That makes a lot of sense. So I'm curious, a little bit more curious about this deal with Odds Jam. You mentioned two years ago, you spoke to Alex, who is, I guess, the CEO of Odds Jam. What are the terms of this contract? Basically, you can use it for personal consumption or just that you can consume it as a rate limit? Like, what are we talking about here?
+
+So it was pretty open ended. We talked on an initial discovery call, but basically the way it works is He has given me full access to the Odds Jam subscription plan. And when that comes to the email notifications or arbitrage notifications that we wanted to use, we would have full unrestricted access and it would be up to us how we decide to use those. There's no contract per se, but I have talked to Alex on a couple of different occasions and it is an ongoing thing that he is aware of and he's also accepting of.
+
+And I guess like the main positioning for him, because he doesn't really gain much because we're eventually like, realistically, we just send his EV. But what he gains from us is the younger exposure. I guess he's just putting a best bet in our group that we've got what it takes to kind of capture that. like younger market and when it actually comes to the education and that Odds Jam will be just one of those names that will be up there and in these users just kind of perspective when they go down the line.
+
+So yeah, okay. That makes sense. So effectively, you're providing free marketing and he's providing a service that costs very little to him because it's largely, I guess, individual queries. You know what I mean? It's not like an enterprise deal. Okay. Yeah, it's useful. I mean, I'm envisioning in the future if you want to expand in any capacity as far as the requests, we're going to have to be Like a more concrete deal there.
+
+So did you, I'm curious, so like, what's your relationship with him? Is it pure, like, are you friends? Have you talked about this recently? Or is this really more of a thing that, you know, you set up a year or two, you know, verbal agreement and he hasn't, he just really hasn't questioned anything about it?
+
+We don't really keep in very like contact that much. It's like on a, three to six month basis, but I'll just generally say that Um, Like, when it comes to just kind of how we envision to use this as well is we ultimately if we want to do better with this, we need to have access to their like. Actual algorithm like I'll go back a bit and let me explain because we just collect all their data So that's what we don't been doing for the past 200 or two years and we've got about 200,000 notifications and so I have access to sports data to IO which allows me to then Basically for all these bets that they tell us I can go and find the records and find the actual score of the event and so Now and also let me just pull up a screen share because this will be a little bit if you are able to just visualize this.
+
+But essentially-Sure. Essentially what OJJAM does is for every one of these bets, They give it a score and it's actually easier to explain with one of the player prop bets. So I'll do just... price picks for example so they give it a score of an odds to hit rate so essentially with this odds to hit rate um it's very what we need to prove and what we're also doing um is we need to prove that they give the same odds to hit score um when they find the same score in their algorithm so for example when they find an event that has that they find with their algorithm with a score of around 70 one chance probability it gets assigned to one of these just specific odds to Score and so what we can do now that I have all this retrospective data and I'm currently going through it is we can go through and understand that hey when odd sham says that the odds to hit are fifty nine point five three, okay, that means they think this market is gonna hit at eighty percent and Then we would know retrospectively that okay They're actually right ninety percent of the time and so when it comes to like a contract with odd sham we would I would love that when it comes to just being able to give these values, but It's kind of just, I'd rather prove it that We have the data first to go to OddsJam, then actually just say, "Hey, can we get this information on your algorithm?" If that makes sense.
+
+So correct me if I'm wrong, like your future kind of vision here is to, you want to secure the data from elsewhere rather than continuing to develop it with odd jam i guess No, not necessarily.
+
+We want to keep our relationship with Odds Jam, but we want to develop it so that we can just eventually integrate with Odds Jam or just have an algorithm built ourselves off of Odds Jam and just hopefully keep that Odds Jam contract working.
+
+Okay, okay, okay. I get what you're saying. So data from Odds Jam for your own algorithm. Okay, I understand. Cool. I also have to ask, are you a coder? Because that might be the most coder filter I've ever seen on Discord before.
+
+I am actually, I have no technical experience. Whatsoever. I have a developer who, right here, who works for me. He's literally in high school right now, or he just graduated high school, but he built all this for me, and so we've basically been... Working on that way.
+
+Cool. Cool. Okay. So I guess I'm asking questions now. So let's see, what is your, what is your current like equity table here? Like what do we have? Do you have investor funding and you seed funding or what are you operating with right now?
+
+Um, I guess we're just bootstrapped. It's just me. Um, when it comes to the equity structure, um, We have, I guess, I'll explain how we calculate our revenue. So we take 20% just flat to commit to our operating expenses, which we call the bonus funds. So we set aside just this bonus funds, which is what we use to cover our operating expenses, and we just take a 20% net. And so that leaves us with 80% equity technically to allot.
+
+100% of that 80 to just make it a little more easy number wise. And so you get 100%. It's an 100% share of the net profit, if that makes sense. And the net profit is always determined as 20% of total revenue.
+
+That's what I was about to say. This is profit sharing. It's not necessarily an equity stake so much as it is. Profit sharing.
+
+Correct. I guess like equity technically wouldn't be the right term. And also because technically it's an independent contract contractor agreement. But since I guess like that's just the best way I would describe it.
+
+Okay, so... When you're talking about OpEx, you're referring to, I know you mentioned bonus funds, but I know Caden and I really very briefly looked at it, but Caden mentioned you had kind of a large team. So is this team being paid out there?
+
+So of these members on our team, only Basically, only two of them are... are... We have a head mod and a head analyst that are on payroll. Our head developer is currently not on payroll, on a minimal 2% payroll or 2% equity. And then our, and then I have another developer that's unpaid right now. And then... I have a head of community engagement, which is going to be about half of what Caden receives.
+
+And that's about what the equity split is. And then I am planning on doing a small revenue share with the analysts. So I'm going to take about 10% of the net profit share and split it amongst the about five analysts. So it's about two apiece. I'm probably going to take another or 2% out of that and split it among a mod giveaway. But that is just basically, that's basically it.
+
+I haven't looked at cadence terms, but so is, are cadence terms, as an equity stakeholder or is it profit sharing as an IC?
+
+Let me just pull this up. So he receives a 16% equity stake, which is also defined as a 20% of net profit stake.
+
+Okay, so it's profit sharing. Yep. Okay, okay. That's an interesting way to put that. Okay, that makes sense. Now, I know you kind of touched on this. I know I've asked a bunch of questions. Let's just touch on this one more time. So what's your long-term vision for the company? Where do you foresee this? Do you foresee selling out? Do you foresee growing this to get acquired, integrating? I know you mentioned integrating with OJJAM, but I'm just curious what's your long-term vision here?
+
+Like just holding and scaling, I guess would be my best, Long term vision. I'm only 20 right now. So when it comes to just potential scale, I haven't even hit the opportunity of the 21 plus market for like, for example, there's partnerships and such. But when it comes to like an exit strategy or kind of like positioning down the line, honestly, like. When it comes to The management of this server and also the benefits that it would bring, I don't really see myself, just also because of the I leverage my positioning of being young to attract a younger market with an auditioning with our organic marketing through some of the, for example, flip discord and our real acquisition group, which will be some of our younger, like younger audience demographic marketing and acquisition.
+
+But I really just see myself in a position to like, Be in this for a while and really gaining, hoping to kind of like acquire the 18s, the 18 plus better crowd, and then when they get to that 21 plus crowd to convert them onto the 21 plus cycle. So to have that all established and be there and still be running it myself in three years and down the line.
+
+Okay, that makes sense. Like leveraging your age in the flip discord. So... So what you mean by that is you're like chatting with people who are your peers or whatever, a year or two older.
+
+Yeah, I would say that one, leveraging the Fliff Discord positioning is, I would just say the Fliff Discord positioning, I would define that as just Fliff in general as a social sports book, attracts a large 18 plus crowd. And when it comes to people who don't know anything about sports betting, which is a lot of 18 plus year olds and also a lot of them use Discord. So a lot of the users that we see coming through the Fliff Discord, or like the flip discord server into our server are users who are interested to learn more who are young and who really just don't know much and are looking to like validate is hey is flip like a real thing and then we can take that and we were able to say hey yes flip is real foot thing they're legit and also here's like three other partners that are also legit that if you like flip you can also check out and kind of um and kind of on that So you and they're reaching out to you.
+
+Are you running ads? How are you? How are you funneling them to you?
+
+Right now? It's so it's organic, purely or mostly organic right now. And then I guess I'll touch back on what I said about my younger positioning is just I would say that I'm very largely able to just be around a younger crowd when it comes to just acquisition methods. And I think there's, I have a lot of connections when it comes to different college campuses and also just relationships around my personal, like, area when it comes to upcoming relationships for 18 plus year olds.
+
+Like and I would just say that When it comes to leveraging my positioning, just being young in the space, really just, and also, Having the knowledge to share and being young in this space is something that you can really push on. Thank you. Okay.
+
+No, that's okay. That makes sense. Yeah. No, that all makes sense. The only thing I would give you as a note, and I promise I'm not trying to be a dick here. I... I would review the terminology in that contract because I'm not a lawyer. But I don't think you can't like, I understand how you're defining the equity structure as a percentage of something else, but I'm not actually sure that's enforceable just for your own protection.
+
+Okay, I will, thank you. I will definitely, I have an advisory that took a look at this, but, um...
+
+Yeah, it reads to me like legal Zoom, but it's just a heads up. You could be, I don't think they could enforce that. But no, otherwise that all makes sense. Thank you.
+
+Yep, thank you.
+
+Chris, from your end, did you have more questions? No, no, no, that's all. Okay. I had some things that I thought of as well. And I mean, Aria, if you want to go first, if you have something up right now, but if not, I have two questions as well that kind of came up as we went there. Actually, I have three questions. So number one, one thing I would ask, since you're putting a lot of stock into your age and your connections at at this point in your career.
+
+So two things that kind of I see and that I have questions about is, so obviously age is not something you can control. And as you get older, how do you kind of look to Keep those, you know, that edge that you obviously think is very important in being able to connect with these young people because of your similar position. Obviously, that's going to... you're gonna grow out of that, I guess. And then to kind of work off of that, in terms of like, tangible like upgrades or I guess maybe not upgrades, but in terms of tangible, things like not just, hey, I'm going to leverage my age.
+
+What are kind of the goals for the company's future in that regard? Like, let's say you had, you know, unlimited money. What do you want to do? And what do you foresee this company doing that kind of, in some way, disrupts, is unique? So those two things would be, that would be my first question.
+
+So I guess to talk about like the age aspect of how do I expect that to work is one is kind of like I understand what you're saying, but what I would say to that is I want to be established in one to two years with this age group and so that they know and have the organic methods of... acquiring these users when it comes to Google searches of just knowledge when it comes to sports betting. Like how do I find profitable bets?
+
+How do I know what EV is? And then we would have just hopefully the organic means to acquire those customers. And that would help us kind of establish our positioning even as my age increases and I wouldn't be as much with the demographic. But also with kind of the positioning I'm taking is hopefully assuming this community acquisition goes well real as a member acquisition source, then they do have a generally younger crowd.
+
+And they will just be that younger crowd that would, well, they would kind of be that just drive for that younger demographic. And as long as we would be able to stay established and kind of also have that prior community base that helps us be known in the as a reputable resource, then, and I definitely think there's a lot to be done in that space. And it's not just a clearing of just, hey, oh, yeah, we can do this because I'm young and we'll get them to agree with me because I'm younger.
+
+But I think it's a lot more of a positioning of, hey, I've been doing this. I'm only 18 and I've been doing this for two years. And that's this is what I know and I can share with you. And then kind of leveraging that of, hey, I've been doing this since this age. And these are the things that I've learned along my journey. And this is how I can share this back with you. And then to kind of like touch on like that, actually establishing, with how you mentioned it would increase the potential for revenue and just the opportunities.
+
+When it comes to just like tangible upgrades, just with my age, I've had a lot of opportunities that I've just missed out on. I'll use Underdog as an example. Our CPA is like 30 bucks because it's my in-app username because they... I was on a call with them and they just literally hung up on me when they heard I was 18. So they wouldn't send me up with a partnership. But like when I'm 21, that's another avenue that will be open for me.
+
+And additionally, it could be open through you as well, Caden. But like when it comes to the 21 plus sports books, it opens up to even if I am not able to get a partnership, I could even link it to a personal account and it would work that way as just a revenue driving source. like going as the like into the future and also just an expansion when it comes to the resources that we do offer like when it comes to our partnerships and when it comes to like what we actually do with our partnerships the best way I would put it is the first like one to two years of Dropout Degens I really we scaled our community from about one to four thousand members and so in that large scale and it was large enough users We used that and leveraged it to kind of expand our partnerships.
+
+And yes, we didn't really grab the value that we could have on the conversions of those partnerships, but we used our kind of larger growing community base and younger community base to get those large base partnerships that will allow us to just keep expanding, if that makes sense. And then what would I see myself doing with like money invested? And like kind of like when it comes to just a marketing campaign as well, I guess I'll just put it and go back a little bit higher level and when When it comes to user acquisition, my goal is to know where we get every single user from through our Discord links.
+
+And that's not necessarily the hardest thing to do. It's pretty easy to write a software that would update it and just update your links. But basically, I want to know an attribute where everybody's coming from. So then we can establish a cost per acquisition ratio and kind of a CAC to LTV ratio because we can understand where these users are coming from and where they're converting push those levers to see okay let's put more money and invest I'm okay with paying five dollars per customer if it's proven that through their conversion rate they'll get maybe two or three more partners or okay let's spend only two bucks and fifty cents per customer because we know that they'll do at least one and that would be worth it enough for us but that's kind of like and when it comes to money spend and spend like I envision I'm very data driven myself I'm a data analytics student for just And I really just back all my decisions in data.
+
+And so I really just have, base it off of where are we doing the best on the conversion rate and how can we utilize our costs to get users through that. Awesome.
+
+I think, yeah, I think that makes, Quite a lot of sense. And that's what I kind of wanted you to get more into kind of, you know, the vision, what you plan on doing and that, um, That I think is great and of course very smart. And my second question before I pass the floor over to Aria would be, why don't you tell me a little bit and everybody about how this real partnership is going to work, what you think it will bring to our community, what we have access through to this and like, Overall, how many more people will be seeing what we're doing because of this partnership?
+
+Yeah, and just before you even get to it, really, I'd love to hear more about the actual contract with Real. And then you mentioned you're being data-driven. What are some projections you have, and how did you get to those projections?
+
+Yep, I'll just start with the real partnership. So first I'll just start by prefacing that it's a partnership with a group inside Ville and it's not like a partnership with actually Ville itself. I am a moderator for Ville, I do know John Antonelli and do message him, but it's not, I think it would be something that he would be completely fine with and it hasn't been floated, but it's just his kid, it's a community.
+
+So it's a contract with an actual community owner So it's using all...
+
+Could you repeat the name? I'm sorry, I couldn't hear the name.
+
+Real Sports.
+
+Oh, no, no, no, no, no, no, no. The other group.
+
+John Antonelli.
+
+Well, no, no, no. I think you mentioned another name, like the party that the partnership is with.
+
+Oh, it's with Horses Picks. It's a community group inside Real Sports.
+
+Okay, okay, gotcha, gotcha.
+
+So they've got about, I think it's 3,500 to 44,000 members, and they... I've done a lot of stuff with this group before when it comes to just either surveys, just also conversions onto some of our partnerships and just events and giveaways in the group through Dropout Degens. And we've been pretty successful when it comes to just the actual capture rate. And we're also... What we also do find is it's a younger community.
+
+Rather than getting a lot of people who answer that are kind of like 18 through 25, we find that a lot of the respondents are either like 16 through 18 or 18 through 20. We don't really see much of the higher in the mid to low 20 demographics. But what we can do with this is both kind of our strategy with this acquisition is we're going to post basically, continuously posting message and this will be to basically the goal is to move his community over to Discord so his community just sends pics.
+
+It's a pics group So they just sent pics talk sports and everything but they don't really have a home for it outside of the real application and there's a ton of channels inside the real application and his youth members already use this quarter and They don't have a really a way to monetize off of them So that's why they're also willing to bring them over here The staff that are also being onboarded is to just increase community engagement.
+
+So our goal isn't necessarily to drive subscription partnerships from this acquisition, but it's to just really try to just get this community to make their home in Drive Out DGENs because that will open up opportunities to one, expand through other real communities that we can just pay them out and acquire them. part of the community, we can put through our conversion methods and also through our premium funnel.
+
+And then also just the The demographic is a little bit different of these users that it falls into that Kind of aspect that we're really trying to hit with the educational where they might not have access to all the tools or resources and they might not really be sports betting really when it comes to a lot of the interactions they have with real. They might be mostly doing prediction markets for wager and karma.
+
+But what we can do is actually leverage our positioning when it comes to giving them knowledge and access and kind of again pushing forward that we are giving you access to these partnerships so that we can help you find or finding these profitable bets and our goal is going to be more of like hey don't don't not to sign up for this app because oh they've got a ten dollar bonus bet but more to hey sign up this for this app because they have a 10 profit boost every tuesday that will give you um just better odds and you'll get a 10 odds boost for your wager on this app and that's really the only time i would use it and i'll use flip every other time but i would just try to shop the market on this app and that's kind of the We're pushing conversions with this group.
+
+So it'll be just more community-based. And the goal is really just to, even if they... don't convert well initially, that to sustain their community and that when also when these members grow up from the 16 to 18 that we'll be able to capture on them as well. Awesome.
+
+Chris, did you have anything on that? No, no, nothing from my end. Back to you. I just wanted to pinpoint specifics on that. Thank you. Okay, awesome. Yeah, no, I see what you're going for there. And thank you for that clarification. I don't know if you... Specifically, maybe I missed over that, but yeah, now I definitely have a better understanding of how that will work. So now, Aria, do you have anything that you would like to ask at this point?
+
+Anything you want to kind of dive into? Just a small question. And you might have already mentioned it, but like of the 20% of the operating expenses, like what's kind of the breakdown of that? And like, where does it really go? Is it mostly like salaries or is there like some subscriptions to...
+
+So operating cost really is we only pay for like our website hosting We don't really have many subscription costs It's really about 100 bucks per month and then also advertising would be included in the operating clock or in the bonus funds but that would pay for so it really is just the operating cost of like keeping our Website running and the bot running and our Google Cloud. So that's like 20 to 100 bucks per month Just depending on like what we do but then It's kind of set static at 20% is that if we invest into the bonus funds through marketing and put marketing expenses in, it will be recouped partially and then it will be just rolled over because the revenue will not hit initially.
+
+Got it. Got it. Did you have anything else, Ari?
+
+No, I don't think so. Let's do it. Okay. Chris, you're all good as well before I kind of close things up here. Thank you. Okay.
+
+Nice to meet you, Chris.
+
+Christian said he's wrapping up. So, um, Obviously, Chris is out. I mean, I know the gist of it. If you have anything, Dax, that you kind of want to give us before we as a team will kind of go ahead and meet and see if we're going to go ahead and sign it, if anything needs to be changed, or if everything's good to go, basically. If there's anything else from your end, you have the floor. If not, I think we've got all of our questions answered and I appreciate you taking some time to meet with us and I'm very impressed by everything that you put in front of us here.
+
+Just one more question actually. So in terms of advertising, since I kind of do a lot on that front and I know I guess the whole point of bringing us on is to help on that side, but did you have any ideas or any strategies that you were already thinking of doing just with the needed funding?
+
+Yeah, I guess I'll touch on that a little bit. The vision I see, I guess when it comes to our marketing, we just don't have any right now. So we both kind of need the static marketing of just maybe ad copy and also kind of just posting on just like our play of the day and ladder challenge, like that kind of consistent posting. And then we also need kind of the experimental area. And this is where I kind of want most of our like marketing spend to be in.
+
+And I kind of want to experiment more around the storytelling aspect and trying to kind of like, since we have this such different positioning than the average sports betting discord, whose goal is to just, hey, buy our subscription, use our partnership, not really the knowledge aspect. But if we can really do this right and try to market the knowledge aspect, I feel that if we and I guess kind of the way I would envision it is like of a $2,000 marketing spend, I would want to spend like $500.
+
+on A/B testing, like two different storytelling methods of storytelling and it just be one video and then just if they do well and depending on if they can convert then just finding out if it would be one a good enough investment to put that next marketing spend in and kind of go from there and we'll just kind of get a better sense of and I'll kind of like touch on how the numbers will be but we'll just get a sense of how many users are coming in from which posts and then how much we're spending per post and then what we Also know through some of the back-end work that I'm trying to get done is what rate can we convert these members on and which ones are they converting on?
+
+So we'll actually get pretty detailed statistics of like, okay, so users from here are going to average about $75 in revenue. And then we can kind of just focus our marketing spend based off that. Okay, time.
+
+Awesome. Awesome. So... Anything else from you, Aurea? No, no, that's it. Thank you. So I appreciate you taking the time. We're probably going to... We have our... Team meeting today. So if there's anything concrete that we feel needs to be changed, we can probably get that over to you by tonight. And then other than that, I'll just keep you in the loop. And if everything's all good, we'll be ready to roll.
+
+Yep. Sounds good. And then I just have one last question just to just make sure that everything on the contract besides the equity that Chris pointed out was okay. I wanted to check that, just everything else on the contract looks good in the way of just alsoTo be frank, because I feel like I'm going to kind of say what you're thinking here.
+
+So I actually have not had the time to send that over to my reps yet, and I truly haven't. I literally probably, I was talking to the guys just to get everybody prepared and what was going on aboutan hour before this. And that's all I've had to look at the contract. So I do have to look at that in a little more detail. So I definitely don't have anything full. And that's what I was saying. So like today, I'll look at it with the team.
+
+I probably can't send it over to my legal rep yet, but I will... get all that done as fast as possible. Sorry, I promise I'm not trying to move slow. I just do have a bit going on. So, I will take a look at the team with that. And then if there's anything that we see already that needs to be changed, I'll tell you that immediately. And then I'll probably just shoot it over to like my legal rep and he'll take a look and he'll get back to me in like a day or so on that.
+
+Okay.
+
+Yep, that sounds good. Okay, perfect. And I'll keep you in the loop with everything that's going on with that. So appreciate your time. And we should be good. Awesome. Sounds great. Thank you so much, Caden. Nice to meet you, Aria. You too. Thank you.

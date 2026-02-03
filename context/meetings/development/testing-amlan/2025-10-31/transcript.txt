@@ -1,0 +1,211 @@
+How does the transcription work? much background the latest capture Okay, perfect. Three meeting notes. For this meeting, please create an itinerary of what we talked about and also next steps for That needs to be processed. Hello thank you Okay. you Great. okay Bye bye. no worries is there not oh you gotta go upstairs i actually didn't i did not realize that this is my first time like getting coffee I've let God talk about it.
+
+I remember when you'd gone to a documentary. Yeah. Okay. So...
+
+Let me just go back to what you mentioned about funding. Also, you can hold on to this. So what I will need out of you is if you could Follow up and email me. Actually, yeah, my email's there. I got it, yeah. Yeah, just send me an email of just following stuff. Not that, obviously, but just basically... just so I have in writing so I know that, or like, so I can like more talk to AI. That was like an actual thing.
+
+Yeah. So it's like, okay, now I know that online can do these things. This is what I can assign to this. Okay. And so this is what our structure looks like when it comes to all the different Just our backend. Okay. So I'll explain everything here. And so basically all of your projects will be involved in some sort of this script. So Um, Let's see. I didn't create this, so I don't even know the best way to explain this.
+
+But basically, we have our EV bot. And I'm also just going to show you everything that I'm talking through to help you understand. Because this will be mostly what you'll be working on projects on. And actually, before I do this, I'm going to show you this real quick. And this is how projects are going to be structured. And the way I'd like to run this is I wouldn't like to assign you more than one project at once.
+
+I'd like to assign you one project and have a queue. And the goal of these projects would just be you small and like chops like that. like it's an actual update. It's not like, hey, we want to migrate our website. That wouldn't be a project. A project would be set up the landing page of our website, like breaking it down like that. But So, and then in my backlog, I have one project that's like actually going to be in the formats.
+
+So basically how it's going to work is I'm going to explain of this. So it's going to just have all the information here. I'm gonna explain everything in this. And then from here, we're gonna assign tasks and break it down to tasks. Okay. So basically some of these tasks could be assigned to you in this project and some could be assigned to me. And so basically it'll be pretty much like It'll make sense when it's actually in the process, but we'll be working on things pretty much like...
+
+back and forth because you'll need a lot of the information that you might not necessarily have or know where to find. And it's like, I'm super happy to help just the direction. But basically for this, it'll be broken down into, there will be things that I need to find. So for this one, basically there's a data side that I need to find the data aspects. And this is what this is. So all of this is the data aspect of me.
+
+So I have to go process this data. And so once I actually get to a point where I can say, okay, these are the filters that I need. For example, Filters that could be is where's my disc? is, and this is our odds jam, but for example, we would filter on the given odds being greater than plus one third.
+
+And just like all the coding that's been done, is it to create folders in the Discord or do you have like a separate website for an app? Wait, say that again?
+
+Like do you have an app or a website that-So we have a Next.js website and then we have our TypeScript like backend like bot structure, but they're-So you've got the structures. They're integrated but separate. Okay, that's pretty good to get. So, basically... The only thing that you'll have to do is... In the end goal of... this assigned task of activating new filters. Basically this would be the only task on this project for me.
+
+And I would assign it to you when it got to that point. So I would basically say, okay, all you have to do is write code for when an alert is this, it gets sent, or when it is, the odds are greater than plus 130, then it gets sent in this channel ID here. And it's actually pretty easy to do. We've already done it once before, but it would just be about the, okay, now that I have all of these filters thatOnce I start doing it, it'll be easier.
+
+Exactly, yeah. But that's kind of how I envision it building. And it'll be pretty easy that way. It's like... I don't want to assign a project to you where you're blocked. For example, like I want you to have all the information needed to just be like, oh, okay, these are three different filters that I know.
+
+No questions need to ask.
+
+Yeah, but like, of course there are questions of like, Of course, yeah. But basically like, the end goal was like if i assigned you a project you would have all the context there okay that's at least on my side is like that you know what you have to do without necessarily asking me and that's my goal of that of the notion projects and so to go back to this for the structure so basically um I would How it works.
+
+So that's our... We have these two partners, Odd Jam and Daily Grand Fantasy. For that Discord bot that I showed you, they send us emails and we parse the emails and then they get sent as a notification in our Discord. So basically from that whole system, everything is set up from the incoming emails that get parsed to the structure of the messages that get sent. So the only thing that you would be changing in there would be smaller filters.
+
+For an example, it would be changing the channels that they send it. But like the whole point is like the poor infrastructure is there and that's not what's going to be changed in this. It'll be just mostly the key features. And so I guess this sends all that into our Discord. And so I'll explain how our website works. Let me actually open it as well because it is a... So it is all through Framer. So like none of this is actually posted on our website.
+
+Right.
+
+It's all like...
+
+Yeah, I get it. It's all Framer. But one like... For things like this, like sign in, this is where it gets redirected to our next year's. Yep. And so, When they actually come out on the back end of the screen, they're no longer on our framework website. They're on the next. No, they're on the next. We use the discord to authenticate them. So we know who they are, but we, we send them back to our next JS website.
+
+That's solid. Yeah. So, I mean, technically, well, it's not finished because we can't do anything. We have to fill out that page. But basically the whole goal is like, once we able to attribute a sign in, like for example, this could be, and maybe it's not your area of comfortability or like big, I could build a page and then you could just create the linkage of actually, okay, now that we have this, that would be there.
+
+Basically, this is how our website works. People purchase and then also purchasing does the same thing. It gets sent through email. But basically, I already have a plan, so I can't purchase again. But it lets you... If I were to go to... Actually, it doesn't let me because... But basically, it takes you to our billing page. And so in our billing page, that's what is separate. And that's actually where the Stripe integration comes in.
+
+Because we can't charge for subscriptions through... So you just pay for it. Yep. So we process all our payments with Stripe. So that's kind of where the Stripe comes in. And so that's like... It's a weird loop until we either... It's still fun. Yeah. It's like... It's a weird loop until we either make our whole website itself or either...
+
+Like, integrate the... Hang on, go to your nap.
+
+So app, honestly, no. Because an app would... And also let me explain on the business side of this. So the reason that we are allowed to do this... Let me also explain what these companies are. So they are basically... they find positive value when it comes to betting opportunities. So they have a massive algorithm that scans every single line combination, every market. So they create an algorithm that creates a prediction.
+
+So with that, they tell you what to bet. And so from that, basically each individual message that bot sends is a bet. So it's telling you, place this bet. So we are allowed to do that because, and we're actually like, this is super exclusive to us. No other company has this. Like no other community like but I have a good relationship with the founder of this company So he lets me parse the emails do whatever we want.
+
+We have a goal unrestricted access to open this is like a I think they're... They're probably... 50 million dollar company. But... And also like the reason that I don't want to do an app is because it's all their data. So like we're technically only using, we're selling their data. Yeah. Like, which is crazy. But they're fine. Yep, exactly. And so what we're also doing on top of that, which is what I touched on in the data side is we've been collecting these for about two years now.
+
+So I have about, and it's like 1500 notifications a day. Like they tell me to place 1500 bets a day. So now what I can do is I can go through that and actually understand their algorithm and say, They're telling, like, I'll explain it a little better visually. But basically, with every single one of these bets, they are telling us their algorithm score. They say this is going to hit X amount of times.
+
+And so what this can be translated into is just an algorithm, like raw probability. So basically, they say, okay, we give it this score because we think it's going to hit at 70% of the time. And so what we can do in retrospect is take that data and say, for the markets that they think they were going to hit 70% of the time, formed at 80 okay so and that's where these filters are yeah that's solid so basically, like, also why it's not going to go in an app is we also monetize.
+
+Yeah, it is a lot of work. And we also monetize through the community. So, our whole focus and, like, kind of the vision and everything behind it is to actually not just tell our members, hey, place this bet. It's also just, hey, these are the resources that you can learn or, like, get access to so that you have the knowledge to do this on yourself, by yourself. And it's, like, what we also do, is our partners and this is our main driving revenue.
+
+And so basically on this page, each customer can go through one of these partners once. And so basically, we get paid $50 to $75 or like up to $250 per customer who we acquire on the spot.
+
+Okay, that's true.
+
+So this is our really big drive. So when it comes to metrics, basically like the LTV of a customer is about $1,500 to $2,500. So like we can from each revenue without converting them on a subscription and it's also kind of I'll touch on the we don't care about subscriptions that much. But basically For every single partnership that we get them through we can get more money so One of the goals is going to be converting these, like...
+
+Well, like our goal is just to convert our members through as many of these as possible. And so that's kind of like a lot of the process around. And so like, there's kind of like kind of hitting things for...
+
+Is this also like the long-term goal then? Yes. So... Or do you want them to be like actual customers of your... So it's like...
+
+There's like two approaches. There's one being, I want you to pay for a subscription in my community, or there's one of the freemium, hey, these are all the things that you can do to get free access in my community. And I want, I mean, yes, I would obviously like you to pay, but the free access subsidizes. Okay. But this is a subsidy. So what we do also is for any of these partners that they sign up with, they get a seven day free access.
+
+Okay. So it kind of like balances out. Okay. Our goal, like the end result is that we can drive more people through. And our goal is to just improve our metrics because we're not obviously going to get everybody through all $1,500 to $2,500 value. In reality, we can only capture on like 10% to 20% of that. But our goal is just going to be what can we do to maximize that 10% to 20%? Because like when it comes to the cost of acquisition and then also like give you a little information about the space.
+
+You don't pay for anything when it comes to acquisitions, member acquisitions. We're purely organic. We've grown to 8,000 members, purely organic through positioning for Discord links. So basically what we're doing is I'm hiring somebody this week that's going to be a head of marketing and we're going to take a marketing campaign. And so what we're going to do is basically He's investing the money, so he's paying to be an employee.
+
+Yeah. Okay, that's amazing. but we'll be getting members into the server. So the goal will just be to Like... Hit them through these. I'll get spotted. Yeah, that's all. Yeah. And so like, kind of like, and then I'll go to this.
+
+And obviously all of this will make more sense once I can. Yeah.
+
+And it's, it's all like, it's all interconnected.
+
+It's like, you'll see like, it's like, honestly, that's the best way I ended up learning as well. Like I'll always do it. And then I'm like, oh yeah, it makes sense.
+
+Yeah. And so also like one of these here is for example, our partner links get put into the bot messages. So every single time one of these gets sent in the server, our partner link is also hidden in there. Okay. what we do. And that's kind of like also like what you'll be doing to maximize like when I say maximize conversions, like just realistically, there's nothing you can do. But like it's what we can do with the process.
+
+Do it like help them. Yeah. Yep. So like it used to just not even be a link here. But now that it's a link, we can actually capitalize on that partnership acquisition wherever you weren't able to before. Okay. So like that's kind of like the the ending one of those. And then Let me open.
+
+And like when it comes to like process.
+
+The way I envision it working is also like, Um, I guess you should probably at least meet once a week to sign the projects and be like, hey, this is what you can actually work on now. And then throughout the week, this is what I'm going to try to get ready for you. And if you have the time, you get there. It's all going to be like time. If you have the time.
+
+Yeah, honestly, I'm fine with that. That's great. Awesome.
+
+So I'll try to keep them pretty manageable and small. But we can just do like, we can try to meet once a week and like either work for an hour together on like, hey, you These are actually like you'll be doing a task but like I'll be just come over to my apartment We do it there's like that.
+
+That sounds great to me.
+
+Yeah, and then there they'll also be to like asynchronous aspects where I'll get you into our discord and our general dev channel, so But like I'll get you in our general tab channel so you'll have access to this He's not that active right now, but he'll be active like if you ever need anything like yeah, just real old like heading into Thanksgiving 20 days Yeah, that's pretty salt.
+
+Yeah, though, but that's awesome.
+
+Yeah, so I guess like for me also called my agenda so I'm um, So yeah I guess before I go on to just the onboarding and processes next step, do you have any questions on anything that I can make more clear?
+
+Honestly, you will have more questions when I start working full on.
+
+Yeah, but I mean, I'm solid. Awesome. Yeah. Like when it comes to the space, like the sports betting space, it's very...
+
+It's just very, we're very nuanced when it comes to our approach. It's definitely like, yeah. And like, I was like growing up in a world where we don't do enough of it. So it's good. That's good. Yeah. Yeah.
+
+And I guess like also with the space that we're trying to market is, yeah. Basically, the way I would say is there's a really big opportunity in the market. So basically, When it comes to sports betting communities like what we have there's it's basically all just advice like that's just people telling you what to bet on and it's not the knowledge transfer So what we're focusing on is really the systems to actually allow like citrus to go.
+
+Yeah, though like with Because like with that knowledge transfer it out allows us to actually like when it comes to this marketing it allows to differentiate and not just be like hey tell the sports betting pick, hey, this is the data and this is why. Here's our knowledge. And that's kind of like Also, just the... like ethic behind what you're making. That's awesome. Awesome. And so, Or... processes, we'll need to set a time for like once a week.
+
+Let me just take out my calendar. This is... It's from . Basically, I meet with and I this can be a lot different because I'm gonna have I'm also gonna have to add our head of marketing and our head of community engagement in our meetings Well, not not necessarily our meetings, but like I'll also have those in parallel So they'll be just like there might be and good notion is another thing I'm definitely like like I've always wanted to learn it's been like two years and I'm like I really like I do a mental calendar, but this is I hated notion But is that also doing the voice recording notion is recording that this is this routine.
+
+This is my calendar app but like I Actually, I hated No Shade because it was just like there's so much...
+
+It is complicated to get started with.
+
+But once you're like, like, for my, I'll even show you like my startup, or the startup I worked for, our notion is actually insane. Like the amount of like the amount of stuff that can be in a notion is like, incredible. Like we have We have so much stuff. We have our PRDs. Each of these are just like... I don't even open this because there's so much. There's thousands of pages. Yeah, there's thousands of pages and it's like...
+
+I could get lost in our notion for years. It's bad. But as an employee, it's so helpful. I've been trying to set it up. That's good, yeah. But okay, so we'll, I guess like either when it comes to the meeting, we'll probably want to either figure out if we want to do just like a catch up meeting or work together meeting. And like, we don't have to say any times now, but like, this is what my general schedule looks like.
+
+Okay. In the mornings, I don't usually do stuff until... Most of my free period is here. Okay. And I don't... Dropout Degens is my priority at nights, so if it's a Friday night, this is usually what I'm doing, unless I have other clicks. So that's kind of the way I look at it.
+
+Honestly, if we can meet around this time, or even like... How free are you at two on targets?
+
+Fridays are super free. Let me pull up this week sucks. This is a bad week for me because it's very... Fridays are very...
+
+I think Fridays at 2 will be great.
+
+Would you want to do a work together session or would you rather do a sync up of what... Okay.
+
+Honestly, it could be either, depending on the date. Well, we'll just have it in the air. Yeah. Just do... Honestly, I'm free Saturdays if you want to go Saturday. That's Saturday. I don't know. The only reason I don't go Saturday is you could have something come up. But most days I'm free. Yeah, no.
+
+We can... Everything's... I'm fine with everything being tentative and moved around.
+
+Let's just leave it there on Friday at 2:00 maybe.
+
+But the important part is just having the... Something there. Something there. Like the block. I'm going to make it an hour. So just from 1:00 to 2:00 on Friday.
+
+Or 2:00 to 3:00. Yeah.
+
+I'm very bad at my calendar for some reason.
+
+Or 145 works as well. Awesome.
+
+So we'll kind of take that and we'll just build them out as we go. But we'll kind of use it as the, hey, this is what we can work on together. And also the, hey, I'll get an agenda together for actual meetings. So we can just have a process of what to go through. Be like, hey, these are the projects. Hey, this is what you might need help on and this is where to find it. And then we can work together.
+
+And then the next things that I would need is... Um, So to get you onboarded, we're going to need a couple of things. I'm gonna need to get you set up in our notion on our discord.
+
+Okay, so I'll send them to you.
+
+So either So one thing is I'm gonna get you an email account at dropoutdudents.com. Okay. So do you want anything specific or are you fine with it just being online? Just online. Okay.
+
+I will read that. That's fun.
+
+And then it needs, I need a forwarding address. I have to figure out how to set this up, but.
+
+Like my personal email address? Just like whatever, whatever one you want to. And You all right? DHA. at, you know, let's just G dot S Y R dot E. I check that email a lot. That was perfect.
+
+Actually, wait. Maybe not your series. You'll lose it. That's right.
+
+Yeah. Let's go. I'm like, my 1st, anything 24. Pradhan. Might've asked me. Is our name? H-A-N. Yeah. At G-Month. Yeah.
+
+So you'll be set up with that. Do you know how 14...
+
+Yeah, so I'll get my discord and notion with that email.
+
+Um, your discord is separate but your notion. Yes. Okay, so you discord whatever you just use like this word But then your notion all because I'll handle the payment and also I'll get you set up with quad Okay, that's one more thing So Claude Notion.
+
+And I'm using the dropout email for both.
+
+Yeah. So once I get you set up with this email, you'll have to set up a Claude account and Notion account. And then I'll attach my credit card. So I'll cover all of that. And then we'll just need to get you joined during the discussion. Perfect. So yeah, you just need to join. I'll send you the link and everything, but just join it on whatever you need.
+
+And then that's perfect. Yeah. Cool. Any questions or anything? Nope. That's good, are we all set? Okay, I'll send you this stuff And there's no payments or anything as of now. So... Oh, yeah. That's good. Thank you for having me.
+
+So, the way... I still do want to offer you the... Okay. Up to 5%. But I'm going to wait until... like basically everything would be a month and then we'll re-evaluate. Just in case like anything changes when it comes, it's like how much we can get done or like quantity. And also if we're able to get to a point where I can just say, rather than give you a 90% I'm gonna pay you X dollars per product.
+
+Yeah, that's fine. And then also just kind of like a grace period for me as well.
+
+Yeah, no, I was asking that 'cause like I told you, if I go to the international office, they might ask stuff like this. And then I'll let you know what they say. worst case scenario, they say I can't do this. I can do it on the side. It doesn't matter, you know, as long as you're finding it. Yeah. Yeah.
+
+I mean, I'm Heck, thank you. I'm The only way like the only reason I have all these contracts is because like especially being under 8 like I mean I'm 20 so I'm not 21. I'm not 21. And when it comes to like the sports betting space there is a lot of legal restrictions. Yeah, I get that. Yeah.
+
+And so it's like but I'll pick this with me and then yeah, perfectly. Awesome. Is that it? Yep, that should be it. I'll get that all set up. Appreciate it. We'll have fun with that, you know. Yeah. It's like a personal project.
+
+Yeah, it's basically like Yeah, and it's super easy and it'll just be whatever you're comfortable with and then whatever you're ready to work on.
+
+Okay, that's perfect. Yeah.
+
+And then let me, I'll have to just figure out with my developer, like, because... I have no idea what it takes to get you onboarded onto GitHub and everything. I'll work with them and then figure that out.
+
+Awesome. Thanks so much. I'm going to show for like 15 minutes. Congrats again on the win at the launch. This is awesome. Catch up and then do it. Yeah. I'm going to probably walk.
+
+I'm going to work for like 15, 21 minutes and then walk home. And also, I'm probably going to be at least on Saturday and Sunday working on this stuff because just release wise, we're looking to push everything tomorrow when it comes to a community acquisition. Yeah. Like I've got a bunch of contracts and shit to get together. Basically, he's got a community on. No, this is our community engagement head.
+
+So he's got like a community already that he's just going to bring into the Discord. So we're just going to A, monetize them and B, like have their engagement. And then for, it's kind of like just as a base for when we get this head of marketing in that he'll actually have like... like that actual audience to promote.
+
+Oh, got it. That's perfect. Thank you. Thanks for the talk. Yeah, of course.
+
+Yeah. And if you, if you do think you want to work on anything this weekend, and if you don't have access, just give me a text and I'll see what I can get you. Um.
+
+We could meet sometime Monday, Wednesday. I know I see you at the launch pad. Yeah.
+
+I mean, I'm in the launch pad anyway, so it works perfectly. We'll see you soon. Can you create a summary of the actionables and the next steps and also the documents that need to be produced? Um. Also, please get together a document for me to send over to the head developer for when He gets his additional information onboarded. And make an explicit note for how the structure of the projects will work.
+
+And also the process for reporting and.
+
+And a signing for HydraNX.

@@ -1,0 +1,965 @@
+And... I did my normal thing and automated some things without asking to do so first.
+
+And, uh... They were blown away. And now they're thinking of having me automate their entire warehouse. I mean, that sounds like a massive task, but you would be the person to do that.
+
+Over time. Given the budget and training to do all the things and And in particular, one thing that I was very upfront that I would want is I would want to have the freedom and upfront acknowledgement that before I try and automate something, I want to sit down and I want to. run it the way they currently do it first. So you don't break anything. Exactly. So that I know what's needed and so that I get it.
+
+And they're fully on board. That's awesome. That is awesome. This is a company where they have... so many people there. Especially in their engineering department who've been there a good 20 years.
+
+And none of them have been able to automate it like this yet. That's great.
+
+Well, they have different expertise. they're the ones that know how to work a metal press, know how to fold metal real darn well and know how to capitulate to the customer. Yep.
+
+And you bring out a whole new area skill set. That's awesome.
+
+in the words of one of the most high up people in the company, you bring a skill set that perfectly fills a gap that we've been trying to fill for a while. That's awesome. And I hear they pay quite well, too.
+
+Oh, yeah. You better negotiate well for that. Get yourself some good bonus incentives. Like, oh, if I automate five things, I get an extra $20,000. Give me that.
+
+I'm not really worried about bonuses so long as I get a nice salary.
+
+Oh no, but they will, you're definitely going to be a very advantageous position for your bargaining. So make sure you use that to the fullest.
+
+All I can say is I'm excited. And what's nice? they're having me back down to 40 hours a week. Like should, most people should be working. What were you at? Like 60? Which means I'm about, um, we were doing 53. When some weird stuff happened, it got down a little further. I'm down to 40. That's good though. That's good. Which means I might have a little more time to work on these sorts of things. Once I iron out all the other things I need to get done, backlog from the time when we had 53 hours a week.
+
+Oh yeah. I'm sure there's a, Yeah, there is a ton. But, um, okay, let's kind of jump into it. Um, I... Right. I I haven't updated my roadmap and routine as much as I should have, but I was just going to wait until after this call. I just wanted to first talk through the most important things, which is the... the welcome tickets, and then also other ticket automations. For example, the exit tickets.
+
+Um, so, or like the sub-expired tickets. So I guess like first thing that I want to prioritize talking about is just the welcome tickets because those were, I know we were, those were working before. Um, and I'm also updating. The invite link system. Um, So all of the invites are going to be from the Dropout Degens bot. So I can just like I was testing it out. I can make like infinity. So like they'll be really easy to just like say, hey, this is where everybody's coming from.
+
+And then I also updated it in a manual table to say this is where these links are currently posted right now. So let me it might be easier if I also just pull up a screen share. Just like-Plus one up. Um... Um, But basically I have all the invite codes in this. So right now I have these four codes that are currently live and in places. So these are where the welcome tickets need to be prioritized for these channels.
+
+But then we're eventually going to have all of these. And I guess like this is also like something that I can update I'm sure like to add channels, but I also don't think the welcome tickets is working as it should have been. So I guess like first would be the investigation and then let me know. I guess like for these things like that I can start to update would be like the... like the I guess more like just the adding codes for if it's this link then create ticket.
+
+But I guess like for the process of that and you don't have to do the investigation now but put it kind of like at the top of your plate to do the investigation. But I guess like once you finish that investigation as kind of like one of the finalizing things could you send me just like this is exactly where because I'm still like working out how to how to find everything in VS Code but like Just say, hey, this is the exact link to where to find this in the code base.
+
+That would be really helpful.
+
+I can do that. Give me a second. I can get there. I'll just have to where-There it is. There she is. Let's see, is there a quick way to... It's beautiful.
+
+And then also-I think I can just hop on my other Discord account. And we can test the joins. I could just use a random link.
+
+Bing, bada boom, there's the invite links.
+
+Awesome.
+
+The invite codes. So yeah, I'm just gonna search the logs. for anything that has those invite codes and see what happens.
+
+Yeah, I know that... Okay, so I think one of them that we set up was from one of these kids, but I think he has like 20 total, but none of them actually had a... None of them actually had a, what's it called? Like, Just to get creative for them. I don't know. If it was... I don't know. But I also have...
+
+Um, And nothing in the last 30 days. has used, has come up with any of those invite codes from what I've seen.
+
+That is probably correct. I guess like, let me... Let me just try to join on...
+
+Well, if nothing's come from those info codes in the last 30 days, we won't have seen any tickets in the last 30 days. Yeah.
+
+Which codes are they? UmBoom.
+
+I can format that real quick. The clickable links.
+
+I think it should have been... I don't know Those four.
+
+I've got them nice and formatted.
+
+GQRHRT. Is that one?
+
+I don't know. Yeah, that one's on there. QXHE at the end. Yeah.
+
+Yeah, that one... Okay, one more of the codes. I guess I can't... I swear.
+
+I have no idea when those codes were added. Check my email. Actually I can figure it out.
+
+I swear that... I thought we fixed the invite links before that period, but it's completely possible that we didn't. July and November were when we added those.
+
+July was the first two and November was the last two.
+
+July and November and then this was in yeah this was in November sometimes. So, um, I guess I didn't confirm switching my, um, alright, I'm going to try to join off this right now then. Okay. server and you said Thanks. This was a good one.
+
+There are a bunch of people who joined with that code though, apparently.
+
+Yeah... Alright, let me join real quick. Do I get a welcome ticket? I don't see a welcome ticket. Very odd.
+
+Carry on. We've got people who've joined as soon as January 1st. Oh, wait, wait. No, that's not necessarily true. Let me sort by last joined. All right. how it's getting thatFiguring that out. Search for everything talking about welcome tickets. See what that turns up. What's the username of that account that you're testing with?
+
+That is, you want the user ID of the username.
+
+I use either one.
+
+Username is just dropoutdegens, no spaces.
+
+User ID.
+
+All right. Easy idea right there.
+
+Bada bing, bada boom. Oh, well, you didn't get a ticket because you've already joined the server before.
+
+Yeah, I thought that might be a possible issue with mine.
+
+So what we can do is have you leave the server Then I'll wipe that.
+
+Yeah. All right.
+
+Where is he? Let me kick him. Check that. I just kicked him. Cool.
+
+So it has joined Discord. There we go. Set that void to false. There we go. Now try.
+
+Uh, resetting my email Oh.
+
+It appeared in audit log. No welcome ticket.
+
+Let's see what the logs say.
+
+It still says I have the bot role.
+
+And it says you didn't join with one of the welcome ticket creating invite codes. Well, that's odd. Of course I didn't. Add any... for logging information. Let's see what the database says. Oh, that's interesting. It never filled in your join information.
+
+Hmm. Is that just because, like, I've... Is it my account information issue, or is it...
+
+No, no, no, it just never filled it in. Hm. Um, hmm. I need some investigation time. Let's figure this out. Let's see what happens when I pop open ModView. Yeah, ModView says you joined by the right. That's the right code. Which means something funky is going on here. Hi. Any more debug information? That's what I need. I don't know why I didn't. put very much in here. Thank you. Thank you. More debug information into prod.
+
+The lack of there being join metadata though, that's probably what's killing us. Hmm.
+
+Is it? Like, is that something that we're just not able to get from Discord?
+
+No, it's just not filling into our database.
+
+Hmm. If it's not filling into our database, then that means the... font isn't going to get either. Okay.
+
+Also, if I make edits on my branch and then I push that, is that okay? Yeah.
+
+As long as it's on your branch, it's fine.
+
+Cool.
+
+I'm going to add all the codes that I asked you to add around.
+
+now while we're investigating this or do not do feel free it doesn't matter because you can just wait to push Right.
+
+There's our join event. .
+
+Oh, do I do a space after the comma, right?
+
+You don't have to. You should, just for it to look pretty, but you don't have to.
+
+Okay, good. I did have one.
+
+This is odd. It thought you weren't in the server after you joined the server.
+
+Well, I don't know about that one.
+
+I wonder if there's something else going on here that Discord's doing. What do you mean, could it be the user?
+
+Like just my user or is it?
+
+just in general. Like, because this user has...
+
+There shouldn't be anything special about that particular account. And even then it should be a case that we're able to handle. Because I doubt that you would be the only case. What's happening is that we get the join event, Which was, let me check when that was. Get the new, the join event. At 2 minutes and 46 seconds. And then it says you're not in the guild. Still two minutes and 46 seconds. Maybe we should wait.
+
+Maybe we should wait.
+
+Like wait 30 seconds and then create the welcome ticket?
+
+Yeah. Because it's... How did it get that? How did it do that request so quickly? That's what I need to know. It did that in less than a second.
+
+So we joined, or I joined, and it said, oh, create the welcome ticket because I joined, but it didn't have the time to get the...
+
+The data. Well, no, see, it had to have, though, because I wait for that to happen. Wait, oh, there's something else going on. That's not what I thought it was. I mean... Users not in guild...
+
+I made an oopsies and I forgot to commit it without a message and I put my message now. How do I commit it now?
+
+Um, Let me check where-what are you looking at? Oh, there's a little check mark up at the top right. Yeah.
+
+Cool, just committed those.
+
+Yeah, I don't know why VS Code puts you through that. It's really obnoxious, actually.
+
+I think I committed it.
+
+I don't know. Check the... Nothing in the git feed? Make sure you push it. It's because you still have changes to the odds email worker. It's going to be mad at you. Save.
+
+Publish as British. Okay.
+
+Yeah, publish a branch. Have fun. There we go. Bada bing, bada boom.
+
+Ha, there we go. Awesome. I love the S code now. Just kidding.
+
+What's the change there? Oh, oh, that's just doing a... Okay, I see what happened there. That's just because...
+
+New instance of something? It's...
+
+your Your computer never downloaded the fact that I merged the new filters into the Dropout Degens bot itself?
+
+Yeah.
+
+That's okay. This should pass. Honestly, it's good enough. I'll throw PR in there. Bada bing, bada boom, bada bing, bada boom.
+
+And also... Now I have to join off a different invite link.
+
+I have to figure out why it did that. How did it determine that? All the snowflakes. Data.members. What's data? So it did fetch from the... Search endpoint. Okay, so it did do that. Okay. That's all. That's real odd. How did it do that that quickly? It got there. So fast. Yeah, that was 500 milliseconds. I guess it's possible. Discord servers are running overtime. Jeez.
+
+That's actually kind of funny. that it's too fast.
+
+Yeah, so what I'm going to do... is that I'm just going to have it wait. just like Three seconds. Let Discord catch up and get the data into their Elasticsearch. before we try and smash the thing...
+
+That sounds good.
+
+Basically, we have a race condition.
+
+I have no idea what that means.
+
+That's where rather than there being like a if this, then that, else this, do that. It's a condition based on when when things actually happen. If one thing happens before another, you get different results. called a race condition because you're racing. Which one happens first? You never know. They're in a race. That makes sense. It's a race condition.
+
+So you technically want one of them to happen.
+
+We explicitly, absolutely do not want to be fetching data from Discord's Elasticsearch instance before they put the data inside that Elasticsearch instance. We need to wait for them to put the data there before we try and get it out.
+
+Yep, that makes sense. Okay, awesome.
+
+Because, of course, naturally, Discord doesn't give us this data through any other means. Why would they? Why would they give us useful analytics information?
+
+Classic Discord.
+
+Had to reverse engineer their app to figure this one out. As one does. Okay.
+
+Um, Okay, so should I test it again with a new link? Not yet.
+
+I have to actually get the... thing pushed. And I have to... get your I'm going to build off of your branch because everything passed. Yeah. Why does it not want me to do that? Come on. Oh, that's why. Okay. I refreshed the wrong repo. SMH. No, still doesn't like it. Now that I manualed it, there we go. I had to manually do it because naturally.
+
+Oh Manuel.
+
+Oh, you know what else I should do while I'm here? you I should update the... Yes, I would love that, the audit log, yeah. For the auto log? No, no, I should do that, actually. I should do that now. But... So One of the things that I implemented right off the bat alongside our Discord join update thing. There's a little field called Latest Discord Join Updated. That field exists not because we need to know that data, just for analytics purposes, we don't need that data.
+
+That's completely detached from when they join or anything like that. that field is so that If ever something goes wrong with this very finicky integration, we can have it go back and fix it. If I'm not mistaken, the system's already in place.
+
+Wait, did we add a creative? No.
+
+Oh, we need to do that. Maybe. Oh, no, we did. We did.
+
+We have an updated app, I think. Oh, yeah, we do have a created app, except for the fact that it isn't being filled.
+
+Actually, no.
+
+Maybe that's just for older records. I don't know.
+
+I need to run or I need you to run a script because if I run it, it'll get replaced. So I need you to run a script. That makes everybody's created at their last discord joined at if they don't have a created at.
+
+So like just all the old records.
+
+That's not really going to do very much. Especially not for our older records.
+
+Are those dates all the same?
+
+No, I don't think so.
+
+There's a point where they start all being the same. Because it's not really...
+
+Yeah, shoot. So we're just shit out of luck if I could have some of these guys.
+
+Yes.
+
+Oh, whatever.
+
+That's fine. Interestingly... Discord should tell us when they... Are you sure? I mean, click on somebody's profile. It tells you when they joined the server.
+
+I bet I can run a script to find that. Should I just code that?
+
+You can. Claude's not done very well at this every time you've tried previously, though.
+
+Actually, let me show you what Claude did. Did you see the... thing in the, I mean, this is something I'll bring up later, but I have a PRD edit made already as well. But I want to add like interactions to the bot. So like I just spun this up on my own little whatever app, but I just convert the I don't know if it'll actually work because my pots not on yet It won't actually work right now but basically like It'll you just put in odds and then it tells you the American decimal and the probability of it so like super simple and then I'd also want to store the records of like this was what was converted But then database.
+
+Yeah.
+
+If you set Claude loose on our code base, it can probably figure that out.
+
+Yeah, I know, but I didn't want to... Yeah, I need to set it up to actually do that. So my thing is, for the best way to get something like this into the database, would it be to...
+
+Claude can figure that out. Yeah, you want me to just go for it and push another branch?
+
+Okay. Yeah. Let Claude loose. See what it does. Cool. Give it some, make it, make sure you test it. Yeah. Yeah. Let, let Claude loose. Okay, cool.
+
+Yeah. Cause I, I really am just like super afraid of breaking anything. Um, and also like, I know pushing its own branches, like it's, safer that way um but like i'm just it's it's not safer it's just safe yeah but i'm also just scared of letting claude and i'll let loose but i'm gonna like i love giving it like the so long as it doesn't push to main you're okay like and the thing is like i'm scared because i review it anyway saying anyways like half the time i'm just like press one okay that's good enough but like i i give it like the github and i say okay look at this and tell me where i would find this um kind of thing But like, I've just started, I did set up like a live connection at Layup and I love it.
+
+Like I can literally ask Claude anything and it writes the live query and just tells me. So like, yeah, I'm definitely going to set up Claude and let it loose, but I just wanted to make sure that was good for that.
+
+I mean, like you can open up the code base on your computer locally and Open up Claude code in that folder and tell it, hey, do this. And it should just do it. That's all I'm saying.
+
+Yeah, I guess all I have to do is make it on this and say, hey, put it on this. Hey. Yeah. Which is probably I'll plan on doing that because I have like two more of these I wanted to create so I guess like I'll just make them and then push them to a branch and then you can make sure that they kind of like Run right and then I guess I'll also give you a PRD and I'll just put my specs like for this I want uh record in the database like i want to be able to say i guess like i'm sure claude would do that um but i i mean i'll put it in my prd so that both you and claude know that what i want and then you can just be like it's a prd uh pre-read document or like product requirement document um So it's just like this is what I want it to be so just as the overview user flow This is what it should look like and this would actually needs in the code base kind of like thing And I have no idea how I did this work So I just like claw had Claude put it together for me as it was kind of creating it from what I was talking about it with so But yeah, I guess like the next thing is should I test the welcome tickets by the way?
+
+Not yet. I still need... I'm still... Conscience.
+
+Okay, I Guess like the next thing is another kind of tickets thing so I'll just let you kind of work away on the welcome tickets until you had a place where you're ready to Either test or go on and talk about the next spot. Put it in there.
+
+Do know it can't. Because of course it can't. As soon as I do that, it's fine. Because of course it is. Thank you. .
+
+Thank you. We need to set up a cloud MD file in ourEight two.
+
+Um... Seems odd.
+
+Well, not necessarily. We should set up a ClaudeMD file in our... repository to tell Claude, "Hey, when you're looking at it, this is what you should do." Yeah. Because it'll always read the Claude MD files first.
+
+Yeah.
+
+Or it may be better just to set up a generic agents.md, but yeah. I believe Cod code supports that too. Yeah, I guess like...
+
+I need to make a fucking I can do that in GitHub. I was looking locally. Okay, cool. I'll just make It would be an hour. I don't even know. Dropout degens, repositories. Where would I put this?
+
+Where would you put what? Where are you looking?
+
+Like, if I wanted to put a quad MD file, like, which repository should I put it in?
+
+Inside the... Well, if you're doing a CloudMD file for the Discord bot repository, then you would do it in the Discord bot repository.
+
+Okay, so in each one, it each gets a separate... Yeah. Okay, cool. Thank you.
+
+See, it may be better if I have GitHub Copilot go through and do that using Claude. Just so it can... I'm not Figure out so that I can sit down and have it know what needs to be done.
+
+Don't worry about doing that now, but I'll give you, I'll make that a to-do for you.
+
+Let's just have... What I like to do is I like to have... Claude Dewitt. like have a model like that do it And then... I'll review it. Generally, it gets you pretty good results doing it that way.
+
+Alright, alright. Yeah. I didn't realize you were born on the Cloud Wave now. Thought you were anti-AI, so...
+
+It has improved to get toward the state of usefulness. My problem with it has always been that it was not useful. It has started to become actually genuinely useful. And so I use it for the parts that it's genuinely actually useful for. Always been my problem with it. My problem is starting to finally be solved. I know, charge your PTs. Actually, on par right now. No, I'd be for that right now.
+
+Like, it gives me, like, I need to just retrain it.
+
+5.2 and, um, Claude 4.5 Opus are, like, neck and neck.
+
+I mean, I just don't like the way Chad JVD speaks.
+
+It's real.
+
+Well, that's why you gotta give it a better system prompt.
+
+I need to... I don't have one right now.
+
+See, I have it to where it will argue with me. Okay, that's good.
+
+I like yell at mine because it's being annoying. And it's like, well, you could actually do this. It's like, well, that's not even a real thing, you fucking stupid idiot.
+
+Well, yeah, welcome to AI. Yeah. They do that. That's how this works.
+
+But it's really good for my sequel queries.
+
+I will say that. It is very good.
+
+Oh, oh, oh. They're incredible for us. They're so good for it. Like...
+
+But I took my IST 359, which is a database management class, like, that was sophomore semester, too, so, like, a year ago. Like, I was actually, like, struggling, like, TrackDVD was not the best for, like, telling me how to join my tables and, like, all that shit, and then, like, over the summer, I got... literally sent like for layups like our user query was like some big ass like 600 line SQL query and I was like, alright, what the fuck am I looking at?
+
+So like literally just AI has done all my SQL and I would say I'm pretty proficient in SQL now if I am able to use AI and even without it I'm pretty proficient. So I love I love AI and SQL. um Thank you. Thank you. Thank you. Thank you. Thank you.
+
+Umm...
+
+What the hell? . What should I get? What permissions should I give my cloud?
+
+What are you looking at? Access token.
+
+Yeah, I'm creating an access token.
+
+The docs should tell you what it needs.
+
+Ah, contents. Issues Thank you. Thank you.
+
+Bing, bada boom, it's off. Awesome for the Making the cloud.md and agents.md. Awesome. It's just going to go look at everything.
+
+Yep, no problem.
+
+I'm sure that's gonna take a while.
+
+Oh, yeah, it's probably still going to be going in 10 minutes. Thank you.
+
+I'm gonna pull up my fucking work laptop to see how my MCP is set up there I think we have like Seven connections.
+
+Cloud code is still using MCPEs. Like heavily. That's crazy. Most of the industry has moved off of those by now. Really? You got to realize the AI agents landscape changes every few weeks. They enter more standards and more standards. and more. Oh, another one just got proposed. you. . Oh my goodness, it made that way too quickly. Oh my goodness, that's a huge document though. So maybe it's right, I don't know.
+
+I forget how long our CloudMD is, but it's definitely really long.
+
+Oh, I'm sure. All right.
+
+Package no longer Ported fucking... me. Oh man, I don't know why this is like actually... struggling to set up this MCP connection Thank you. Thank you. Okay. Yes. Amen. oh. .
+
+And I'm moving the the fix over to prod. Merge the pull request.
+
+Awesome, and that was for the...
+
+That's for your invite codes and for adding the wait and debug logging.
+
+Awesome. So I'm going to try it again, right?
+
+Not yet. It's going to build. Got to build and deploy. I'm not trying to get yet. . .
+
+Thank you. What the fuck? Thank you. Thank you. Thank you. .
+
+Bruh, this is actually like stupid.
+
+Sometimes they get stuck like that. When that happens, you need to find a way to fish him out of it.
+
+Yeah, I just added it as a system variable which I'm pretty sure I've never seen you do for any of this stuff soWhat did you add as an environment variable?
+
+What did you add?
+
+Hey, GitHub personal access.
+
+That's actually a good way to do it.
+
+Oh, okay. Well...
+
+We're troubleshooting. New item Type directory force path. God. All right, go ahead.
+
+Dude, this thing's burning so many tokens. Oh my gosh.
+
+Let's see. Let's see where we're at.
+
+It's just boiling tokens right now. You or me? Ew.
+
+See, I'm not charged by the token.
+
+I'm charged by the request. And it's free.
+
+You only use like cloud code?
+
+I'm going through GitHub Copilot and accessing Claude that way. I get 300 requests, like literally 300. I send it a messages per month. Well, actually, well, with Opus 4.5, I guess. 100 because they're charged at three times rate because opus is bloody expensive yeah But, uh... Yeah. I don't have to worry about how many tokens I consume. Sorry. It's a lot.
+
+It's a lot. Oh, I'm sure you do a lot of tokens. But like, my...
+
+I give it massive prompts. Okay, so it's just doubled the size of the CloudMD file. That's fine. Let me give this one a review now. Up sequence, singleton pattern, broker pattern. directories. Let's see what all it's added this time. What has it figured out? Oh, it started talking about the web server and... Data synchronization stuff. That's good. That's good. That's good. interactions, special messages directory.
+
+Ozzy Millworker. All the little abstractions. Database access through Prisma, SuperBase real-time. Ooh. How interactions are loaded. Ooh. Creating a new slash command. Guild specific commands. Perfect. Debug commands. Global error handling. Direction error handling. Perfection. Environment validation. Oh, there we go. What's that?
+
+Oh, so you just have my token saved? Nice, Claude. Thank you. Bear.
+
+Oh, it's connected. Oh shit. Bum-bing-ba-boom. Oh shit.
+
+Fees are working. .
+
+Cool. Can clean that up. I'm going to give it our super base because then it can have our database data. and then Can I give it our Figma?
+
+Oh yeah, the framework website.
+
+We need to get that back online.
+
+Oh.
+
+Oh, is it not online?
+
+No. Oh.
+
+Wait Did it build? I don't want to get too like, we're going to get too side.
+
+Oh, yes, it did.
+
+Yes, it did. Cool. Let me, let's take a pause.
+
+Let me test this and make sure invite links work. Um.
+
+I thought I changed it so that it would work.
+
+I feel like my test account has just so much It's just a bad account. I don't know if I actually just joined it right now.
+
+Oh, I didn't set the thing. I set the thing first.
+
+Let me, uh, I'm gonna kick myself and then, uh...
+
+Kick it out and wait for me to give you the okay. Yep. Have you kicked it?
+
+Yep. He's out.
+
+All right. So that's set. sure i'm gonna wipe the row see if that i'm just gonna do that go for Kill the roe. Oh, it doesn't like me. Because it's being referenced by a foreign table, which doesn't have the right thing set. There we go. Set null, setU null. setU null, Set you now. Beautiful. All right. Join.
+
+joining let me go to me let me get my profile this week I'm an ex as dropout DJ Let me customize my experience. I'm finished. And then I wait 30 seconds for a server welcome ticket. 30?
+
+30. Hub. Two. It was too...
+
+It was two seconds? Two seconds.
+
+I don't know where 30 came from. Indeed. Abbott about where there's your refresh button. It did up the data is in the database now. So it worked. Why it didn't welcome you, I don't know.
+
+I also didn't get a message.
+
+You didn't get a welcome message.
+
+Yeah. I got one earlier. As well.
+
+That's extra interesting. So it's doing... It's still working then, I think. Unless an error happened?
+
+Yeah, I think it might be, like, my...
+
+No, 'cause I just wiped everything related to your account. So it's not the account. Has nothing to do with the account. Where are the queries again? Where'd that go? There it is. It's five minutes, everything related to that account. Welcoming user. I see a shockingly few number. Oh. Things.
+
+That's not good.
+
+There's not enough logs. That's not good at all. There should be more in the logs from this. Oh, that's, oh, I know why. Because the bot's still churning through all of the existing ones.
+
+Wait, what does that mean?
+
+So it has to go through and update everybody's join methods. because of the bug. So it's still churning through all those. That's what's going on.
+
+We gotta wait. More than two seconds. Yeah. So then it should work on our test after whatever it's doing right now is done. Should.
+
+Asterisks. Lots of asterisks. All the asterisks. both hands I'm watching EV alerts come in in real time. Yeah, it's still updating people. It's just gonna keep going. No problem. Going and going. Meanwhile, I get to review, uh... CloudMD file. Awesome. Guidelines for agents. What's this new section? What is it? There's a section in here that it wrote called Guidelines for Agents. This is interesting.
+
+OAuth application approval. What's this from? Oh, oh. I'm like, who's approving me for an OAuth application? I didn't apply for any OAuth. No, what happened... is an application was approved over OAuth added to our Supabase account. And G, you'll never figure out what this application was and who authorized it. Hmm.
+
+Me. Indeed. Oh, yeah.
+
+It was cloud code for Supabase. Oh, that was like two seconds ago. Uh-huh. That's why I got the email just now. Yep, that was definitely me. I'm like, hmm, you'll never guess what that was.
+
+That was me.
+
+I think I got that email too.
+
+Let me see what it says.
+
+Oh, almost certainly.
+
+That's funny that you got it. Wait, because you're an organization head?
+
+Something like that.
+
+I'm a big boy. Oh, yeah. Oh, yeah. Okay. Okay.
+
+um Thank you. .
+
+Oh boy Matt. Half of my limit and I've... Oh shit. 66% of my limit. Thank you. Thank you. Thank you.
+
+Another 200 lines added to the agents.md file. How many? Another 200.
+
+Oh, I thought you said 2,000. I was about to say.
+
+Oh my gosh, I'm gonna spend all my tokens reading the file.
+
+So here's the thing. is still down into a file like this will over time save you a lot of tokens. Yeah. For one very simple reason. If you don't have it distilled into a file like this, Claude will go out and it will explore on its own, and it will have to deduce what everything is, all the things that are going on, and it may get it wrong.
+
+And it will read everything, which makes... Oh, yes.
+
+More tokens.
+
+So yeah.
+
+More tokens, but better code. Oh yeah. Fuck 92% of my limit absolutely adding MCPs because it's stuck and you haven't gotten it out Wait, new invite endpoints? What's this? What am I looking at? Hold on. They added new, new, new stuff. Discord? Or who? For invites. As of the 13th. We've added new endpoints and functionality, allowing invites to grant roles and/or be accepted by specific users. These are perfect for communities that want to manage access more granularly or reward members with special roles when they join a server.
+
+Use this from a game to give players a role related to their character or from your live stream to note which community members actively support you. and anything else you can think of. People already in your community will still get the role if they accept the invite. Currently, specific Currently specifying the user is able to accept an invite is only available through the API, but granting roles through an invite works through the client and API.
+
+I'm looking at this right now, this is sick. Well, not really. I mean, like, it kind of, like, just... I don't know.
+
+Hold on, hold on, hold on. I got some for you. a role that does nothing That says joined from Fliff. Join from layup. Join from the hive index.
+
+But I guess like...
+
+what they would be able to see that role so like what would that do people would be able to see that role it's not about people it's about us oh yeah that's why i set up the manual table though Uh-huh, because we already built out a... better solution for this because Discord didn't give us said solution. And they're still not giving us said solution.
+
+One more, we're going to turn that off. So they have to verify. And then two, like, I guess, like, if we did turn that off, then, like... Hey. We could just give him the roll through this, but I don't even know if we'd do that. I know. Might be useless. Unless like... We give them like notifier rolls. Yeah.
+
+Even then, that's real weird to give him out the gay.
+
+Because they're supposed to customize it themselves. So yeah, like... The only use I see is like with the rookie role, which would be make sure they have access to see things, but we want to verify things first, so... Not necessarily. Oh, Discord. Useful, but... Not right now. Yeah.
+
+Ooh, what did it just add? Ah, it added unreachable error, my favorite. What does that mean? So... When I build out When I build a system that's like, oh, hey, there are like eight different options there could be. I have this nice little utility called unreachable error. that will stop the code from compiling if it isn't actually unreachable. If it's possible to reach the unreachable error code, then your code won't compile.
+
+it has to actually be unreachable for your code to compile. It's a beautiful little utility that I use everywhere. The goal is simply make sure you handle everything. Yeah. Make sure the compiler's like, Did you handle this? Did you make sure that this is also handled? Because what if you get that? What if you get that value? What if Stripe does send you a webhook event for invoice... created with prejudice what if they do send you that you gotta make sure you handle that case yeah It's that.
+
+That makes sense.
+
+Checks over your shoulder. Make sure you don't miss something.
+
+That makes sense Well, I now have all of our...
+
+I have 1, 2, 3, 4, 5... Yeah, but like I think they use so much. Uh... Is this bad? Do you think?
+
+I don't know if I have enough tokens.
+
+If it's given you that many, wait, let me keep looking. Oh my goodness. Hi, post hog. He's dumping so many in there.
+
+Why did I don't even I we're like oh my gosh, I could just like turn them all off. That's fine Disable power Probably, yeah. That's so funny, though. Well, it doesn't even matter because I'm at like 99%.
+
+Oh my goodness.
+
+No, but I would, dude. ate up all of your usage just connecting to some mcp servers Oh, yeah.
+
+Ah, wait.
+
+It resets at 2:00 PM. Oh my goodness, you're literally about to just funnel them more money.
+
+No.
+
+They used to have um... Oh, here we go. Client account Subscription. All right. I think I might have Uh, what? Uh, I-I-I-II forgot. We don't pay for online anymore. Alright. Alright, another one. I have another Slash rate. Limit Options. My plan. Select login method. with Let's go back to my school account. Oh, we're signing in. This is so dumb. I can email.
+
+All right, another 500 lines. We're up to 1,730 lines. But one thing I've found is very helpful when you just want the thing to go through and look at everything is quite literally tell it, hey, go back, make sure you looked at everything. and then it'll be like okay cool I looked at a bunch of stuff And then no, no, it still misses a bunch. It's then you tell it again, go back and look at everything.
+
+Then you tell it again, go back and look at everything. And eventually it starts finding very few things. You'd be like, okay, you looked at everything. You're fine. I end up doing this for four or five times. Go back and look at everything. Make sure you looked at everything. Do another review. Do a full pass. Make sure you got everything. Over and over and over again. Until it eventually gets everything.
+
+It's still updating those... User joins. Really? It's still updating them.
+
+Bro, this website doesn't open. Like Here we go I'm emailing my school right now Cloud Premium Suite. Cloud setup. Hello. . . I'm emailing the help desk to see if they'll Yeah, better subscription for Claude.
+
+Did your school pay for your clod?
+
+Uh, no, they gave us like an enterprise plan, so we get like, justClaude. Like... Claw.ai, but we don't get clawed code, so it's like useless So Like that. I have unlimited Claude usage. Like, but I don't give a fuck about Claude. Well, I get the free plan, but... But it's like... I just want I just want cloud code Maybe I should have kept Alman's fucking subscription going on for another month. Honestly, like I could just pay another 20 bucks.
+
+It's like not even anything. for so much usage. Or I could just wait like two hours.
+
+Let's see.
+
+Added another 10 sections. Let's see what we're at now. 2,400 lines.
+
+Eh, not bad.
+
+It added another 700 lines.
+
+Okay, maybe a little bad, but it'll do. It's so sunny right now in my kitchen. Hold on. Taking a break to water my plants real quick.
+
+It found all new stuff that it hadn't talked about before. That's crazy. Sure enough.
+
+Add everything.
+
+Oh, I added everything. Well, not quite everything.
+
+And I'm going to have it do it again.
+
+One more time. Yep.
+
+Same prompt as the last one. Let's see what she finds.
+
+What do you use to create your prompts? Because I know they're probably large. So do you use like...
+
+Do you want to see the prompt I just sent? Yeah.
+
+Let's see this.
+
+I typed them raw. That's literally the one I just sent.
+
+I thought it'd be...
+
+document any now my original oh yeah my original prompt Oh yeah.
+
+Click information on what is fun and where it works. Yep, yep, yep, yep. Yep. Great, great prompt. It's given me great results. Awesome.
+
+That is awesome.
+
+Okay, so I guess, has the bot been, Are we able to test me again? Um... I mean, honestly...
+
+It should just send the ticket when it's ready. Because it's not said one way or the other in the logs whether... It thinks you qualify or not. I think it's still waiting. I think it's still waiting for that to come through. Oh boy, oh boy, oh boy. Okay, that's fine then. Oh, man, it's reading so much code. I'm just decimating GitHub's tokens here. And it's okay because I'm not paying for a dime of them.
+
+That's amazing. I think I don't use Copilot ever, but I definitely should. Well... Oh, yeah, you can qualify for GitHub for students. Yep, and I have Gemini for students, but I don't ever use it.
+
+Bada bing, bada boom. Get yourself in here.
+
+You can get 100 messages sent to... Claude 4.5 Opus. for free. And it just chugs. It just goes. It runs. I really love how Claude just like, When it runs into a problem, it doesn't say, oh, this is the problem. It just goes and is like, I can fix this problem. I mean, that's exactly what it's supposed to do. It's the whole point of it. So I love Claude. That's the whole point of coding agents. I need to, do you use cursor at all?
+
+I've heard it's a lot better than Claude.
+
+I've heard it's I'll probably use it as a little bit of clot under the hood. Oh, yeah. No, I... Touch cursor.
+
+It's not mine because I don't get cursor for free. That is true. I'd have to pay for it. I like the UI that I get my little markdown documents in.
+
+My HTML All right, another 400 lines. They're getting a little smaller. My goodness, though, it added another 11 sections.
+
+So it added the partner promo system, unit size calculator. the EV stream menu system that we have. the admin user menu, It's still going. It's still got new stuff in here. Mm. Because our code base is massive. And very fragmented, because it's been maintained over the course of like three years. Bye. A bunch of... different disjointed systems being added every time.
+
+It is a great...
+
+Ooh, this new Cloudflare dashboard looks pretty. Right? Ooh, I haven't actually looked at Cloudflare in a while. Fuck Cloudflare.
+
+Have to be on like some... Bum ass email for that. It's like my dex, I drop OT gens for that. I mean, look at that dashboard, though. That's a pretty dashboard. I'm throwing something into my heaven right now.
+
+Oh shit Oh wow.
+
+Oh yeah. Is that it? Is that all the... That's just like, that's a pretty... Is that it?
+
+That's not just us. That's me as well. Is that a lot?
+
+Um, you can't really measure that. I guess, well, it's only up 119%, so I guess it's not that many. That's because I've been getting a lot more HTTP requests. Like a lot more.
+
+The bot contributes, I'm sure, 2,000 and then whatever else it hits a day. Let me check.
+
+Let me check around. Let me see. Um... In the last 24 hours, All of the Dropout D-Gen systems have gotten 12.5 thousand requests. In the last 24 hours, my stuff has gotten 650,000 requests. So what are you doing in your spare time? I have this beautiful project called the Papyrus Index that search engines have finally started to index after I don't know, six months of me begging them to add it. Oh, that's fire.
+
+They finally all started crawling.
+
+So I'm getting a lot of requests. That's good. Good exposure.
+
+Yeah, I'm finally on Google. I've been trying for a jillion years. Didn't take that long.
+
+uh... okay so QuickTank. engine for the bot that I'm gonna build, um, I just want to ask if these are So I want it to be more of like this calculator to be a command. Um. that pulls up Like every time And I want it to be like a hidden message. So I guess like kind of how the EV bot goes or the claim all access button goes. Uh... I guess like... Yeah, kinda like the Claymore All Access, but it's for one person.
+
+Is that possible? What do you mean? Like, what do you mean it's for one person? Hold on. Like, I want it to be a hidden message.
+
+Like, you know how the bot sends...
+
+One of those beautiful ephemeral messages where they disappear after a little bit and they're only there for a short amount of time and they're only for one person? Exactly. Yeah. Yeah. You do those all the time. When they do, like, slash parlay calculator... It can pull.
+
+call How do you spell that?
+
+Huh? Like, what was the command? How do you... The... The femoral or what? Ah. E-P-H-E-M-E-R-A-L.
+
+Ephemeral. It's related to ghosts, officially. Got it. Okay. Cool.
+
+So when they do that command, it can pull that up just for them. And then would it be possible for a message that is just for them to be published? I guess kind of like the... EV or the... The Giveaway bot like that message can theoretically be published Like, they can just post it to the whole channel if they so choose. Yeah. Yeah. Easy to do. And then. Can be postable And then I guess like the next thing I would ask is Like...
+
+For them to be able to do it multiple times, is that a bad thing or is that fine?
+
+Like they can just keep it. I guess like the original message they send or the original bot command they could send, it'll stay there no matter how many like. times they run it, right? Thank you. If it's ephemeral, it will disappear afterWow.
+
+Don't know. Whenever Discord decides to make it disappear. Okay. And they can only see it on one device, and it could disappear when you reload Discord. It could disappear when you leave the channel. You never know.
+
+Yeah, because I don't want them to be like a lot of these. So that's perfect. And then I guess like the last thing I would say is like... Um... Constraints? Should I make sure that I write those in, like to say that the odds need to be like this type of number? Yes. Okay.
+
+Anything that you, Anything that you want to happen, you need to be very explicit about. You need to be very, very, very clear. Are there multiple? I guess, are they enforceable? Like... Can...
+
+You say it has to be a letter, or I guess like a number that either begins with a negative or I guess, yeah. Yeah. And then decimal. has to be between these ranges and then probability. Okay, yeah. I guess like for percentages... Just add it in another 1,000 lines. I thought you said you got everything.
+
+If only.
+
+Um, and I, wait, what was I saying? For the, um, oh yeah, for, oh yeah, so for probability, should I restrict them to make sure it's like in decimal, or should I say it could be like 55.55, or should I say it has to be point? 0.5555 Or should I write it to accept it no matter what? Like if the user inputs something. Tell it to... Ah.
+
+I've done some... integer parsing before. Let me check around. Because you could just say it has to be either between 0 and 1 or like...
+
+Alright, I guess like 0 and .9999 and um... Should collect numeric data for.
+
+Collect numeric data, how did I do that?
+
+Okay. Have it look at how we collect data for the EV alerts. In particular, let me get you a function name to look at. Have it look... I'm going to write this so that it's not just a random message and thing. Awesome. And then, yeah, I don't think, yeah, 'cause I forget what were the other two. They're my journal.
+
+They were My routine's broken. She doesn't want to load. Nice. There we go. Have Claude look at this function to grab numeric data from a modal pop-up. There we go.
+
+Thank you. Oh yeah, and then I guess like...
+
+Yeah, this will be easy enough. I'm gonna do... So there's three that I was thinking of. One is the odds converter. So if they want to figure out what is this... My thoughts are, hey, as a better... I want to figure out what the implied probability of this minus 120 bet is. Oh yeah, it's 54.55. And this is the decimal odds that you can convert to. And then I also want to do a... a parlay calculator, just so like, Here's my parlay, like what should I be getting from this?
+
+And then or like if I put these bets together for example what would the parlay odds be just like a calculator for that and then the last thing I'm going to do is a hedge arbitrator calculator so like just find the exact middle of a bet so like if you have a hundred on a plus 120 you should put x on a plus 140 to make x no matter what kind of thing. So... Those are the three. I guess my thoughts are them, is I want them to all follow that kind of just this formatting of like, They come up as that ghost command where it's only for the one user and then they have the ability to post it all.
+
+So I guess like if that all sounds good, I'm just going to plan on making them and then I'll spec out the PRD documents. For example, I'll send this one in its current state right now. Actually, I'm going to lose that. But like. uh Discord bot. But I'll just send you all the PRDs. And I guess like if you could just make sure that they make sense. And then just walk me through. Not walk me through. But like just ensure that the logic matches.
+
+Like the matches what I say in the PRD. Um. That can be done.
+
+Cool. That can be done.
+
+Yeah. And that'll just be like, I guess, a more foolproof safety way for me to actually add these because I'll be testing them with the DDAI bot and I'll build it all there or the Yoda AI. And then I'll talk to Claude about getting it into our database. But before I do that, I'll just have it create a PRD and I'll Then you're now. And that'll be, I think that should be good enough system for that. Well, I've got...
+
+I got something working. Um... There's a problem.
+
+For which one? The Framer website.
+
+is still trying to take over The...
+
+You need to unlink Dropoutdegens.com, but keep www.dropoutdegens.com.
+
+Okay, so I'm on my framer account, site settings, domains. So I need to link it. Domain should be lit, hold on. It's not linked at all right now. It's not linked at all. Really?
+
+Yep. Because it's telling me otherwise. Let me check back in Cloudflare, see what all is going on there. I accidentally just liked it. I pressed X. It's fine. needs to be set up.
+
+Should I just press auto connect on that? Automatically set the right. No. No.
+
+I'll let you investigate and let me know. No, that's a Google server. It's interesting. You Thank you. Thank you.
+
+Thank you. Thank you.
+
+Coming back.
+
+I don't see how to...
+
+The framer's doing some funky, that's all I know.
+
+Trayvor's sending us through a loop. of trying to send us, send people back to the Um The one without the WWW? It's trying to send people there. Mm-hmm. . . 4,800 lines is what we're at. . Okay. . Well, I think it has everything. Awesome. So that one's straight to main to... . Fuck. Thank you. Thank you. . Thank you. .
+
+yes that's that's an idea won't give me uh... they don't give you this Any cloud code with your student account? Stupid. You have to pay for it. Um. The next thing Thank you. allow only one more hour into my clutters Cod is done. Okay, so I guess like Let me-my-my--Founders. crashing so I don't have it open but Um I guess next thing I would want to touch on is the tickets. I have a question first. Um.
+
+So With the way the ticket messages are set up right now, I know it might not necessarily be possible. But for example, we have the premium walkthrough and then we also have the Expired sub, right? and our support channels. So, So I want to create a ticket for a new user who starts a subscription. in premium walkthrough just when they start their subscription create them a ticket. It'll be like their individualized walkthrough.
+
+We'll tell them, hey, this is how you can take advantage of the features and everything. And then we'll kind of also just have the personalized aspect of do you need anything? So we want to create premium walkthrough tickets for everybody who starts a subscription. And then we want to just create an expired sub ticket for everybody whose subscription expired.
+
+And so the question that...
+
+The expired sub tickets are just waiting on information from you to put in the database.
+
+What information do I need to put in the database for that?
+
+Stuff from the ticket type. Why do I have no space left on my file system?
+
+Yeah, that's... That would be right. I'd need to update the first.
+
+Okay, cool. But I guess like my question coming out of That. Is Like do are we able to I Create different messages for if they are a trial member versus a, um, What's it called? A trial versus a... Hey, like through Stripe subscription.
+
+Is that possible to do? Yes.
+
+Would that require slightly more, would that require me to actually go in and change code? Yes. Can be done. It is also something I could have quad investigate. but I guess like... Yeah.
+
+The biggest thing is one, I'll Update the information for the expired sub to get those But The next big thing would be the premium walkthrough is as important as the Welcome tickets to ensure that those are working So those have to be built up because I don't even...
+
+the first thing we have to do is we have to decide things like, do we, do we create one for users who were subscribed then stop subscribing and then subscribe again? Only the first one. Only the first time. And then the next question becomes, how do we detect that? And do they get one if they start a free trial or do they always get one? Most of our users seem to start a free trial and then leave within a day.
+
+Maybe starting a ticket for them would make them not leave within a day. Got questions to answer. Yeah. that are also creating a trial are bots. So might have to. Really? Yeah, some of them are like the bot accounts, I think.
+
+that we banned, they might I don't know if any of them recently, but I know that I have seen... Maybe it's a... Well, it might not necessarily be a bot account, but it's just like a person that is spamming. So, I don't know if it's the bot accounts or like somebody that was on a bot account that did it, but somebody... I remember banning somebody in premium, but... What's it called?
+
+They're just getting hacked because they're goobers. And they're signing up for a bunch of sports betting stuff. And they're not being safe. And they don't have two-factor authentication.
+
+Two-factor authentication isn't going to save you from downloading a sketchy program that then uses your user token. Interesting. That's it. Two-factor authentication stops somebody from getting into your account just because they have your password.
+
+But I'm going to be honest, two-factor authentication, if you think you're locking in, doesn't save you because you just enter in your code anyway. It makes it so a password leak doesn't really mean anything. But it's still... doesn't stop users from being idiots. Yeah, makes sense. If we want that, we need pass keys. But even passkeys still don't stop a stolen user token. Unless you think, yeah, it doesn't stop being a stolen user token.
+
+There's nothing you can do if the user downloads some sketchy program. Yeah. The only thing you can really do is stop them from logging in a second time. It can only run rampant for so long. Nothing can really stop a stolen token, though. Can you switch your token out? Or you can't without like... If you log out, then that kills the token. Problem is, you have to know that it's happening. And by the time you realize that it's happening, all the damage has been done, your account's flagged as a spammer, and you'll never see the light of day again.
+
+Yeah. And most people don't know that anyway. The more you know.
+
+So the expired sub you said just needs-what is it? Ticket type. I believe the ID needs to be negative 20.
+
+And then, yeah. Just needs to be put in the database.
+
+Oh, okay. Because right now, there is something in the database, so I just need to update that to be native 20. And also... Oh!
+
+Yeah, make that negative 20. Okay, cool. I didn't realize that was in there. Yeah, negative 20. basically for So one question about like updating things in the private database. So like if I update this, If you update the contents, that's fine. Updating the schema is the problem. Okay. Okay, okay.
+
+All right. Well, the contents get updated all the time by everything ever.
+
+Our database is constantly being written to be that from Karma or EV alerts or Anything, really. Users table gets written to very frequently. That sort of thing. I wonder what... What are our stats? Oh, they're crunching some numbers here. Wait, they have no data to show? Oh, that's why. Okay, so expired sub is active now. Beautiful.
+
+Yeah, you should start seeing those. immediately.
+
+That's all it needed. Okay, cool. It just needed to have them be the right hard-coded ID, and it's fine. Yeah, cool. I'll update the text in this. I have a message. I have a note, too.
+
+My calendar opens. Oh my gosh, routine. Why are you bugging? Um. But that, yeah, that's good. But, yeah, the next thing we'll just need, and then, should I give it, should I just create one now? That's like... Sure, make it minus 30. Yep.
+
+Anything in the negative range is for hard-coded stuff with special... It does special things. Got it. That makes sense. Okay, so I need to like...
+
+actually sir Uh, negative 30. Name is... What is this? Premium walkthrough. defaults3 user create false server That's the idea of the server.
+
+Discord calls them guilds under the hood because they were a gaming thing to start with, video games.
+
+Do root channel reference in first message. What does that mean? Do I tell the user?
+
+So, It's... Do we say, hey, be sure to check out this channel for information? Do we put that in there? So check out the channel that we created the ticket on. Only Force Ever Welcome, because that's the only one. Okay, because they'll be checking different channels. Cool.
+
+Uh-oh. Premium Walkthrough already exists? Ah. I can do that. Just discard that Let me get this. Negative 30, user can create false channel ID. Make sure that is, yeah, it's fine. Save it. Cool. Alright, premium walkthrough is done. Cool.
+
+Does nothing currently, but we'll have to wire that up at some point. Yep. So let me just...
+
+Gosh, I don't know how this still hasn't like reloaded. Alright, let me just kill it. I need to get back to my and Oh my gosh, my memory is definitely taking a hit right now. How much you got?
+
+I guess that's probably 32, just based on.
+
+I think 16 actually. Really? Yeah, I have two 16 sticks. I tried to put more in. I had more. But, um...
+
+They break my motherboard. Like, my computer does not turn on with four sticks in.
+
+Oh, that's probably because you don't put them in right.
+
+No, no, no.
+
+I've had that happen.
+
+I've personally... No, I swear they're in right. Oh, no, no, no.
+
+It's not just are they in the slots right. It's are they in the right slots.
+
+Yeah, yeah, yeah. We've done that.
+
+We've tested with the two that I have in. It's just the slot on my motherboard. If I swap these to the other slot, it doesn't work.
+
+well yeah that's how that works Memory has to be in very specific slots and very specific orders. I've had this issue while upgrading RAM on different motherboards.
+
+My dad does my PC stuff, and he knows all this stuff better than I do, so I'm pretty sure he, like...
+
+I'm, like, 99% sure it actually is a motherboard issue because, like, my motherboard is finicky. Like, if anything static touches my keyboard, yeah, it shorts my motherboard. That's not normal.
+
+And, like, sometimes, like, when... It just, like, doesn't turn on everything. Like, it takes... Like, it'll have a red light, but, like, it doesn't even mean anything because it just... takes five minutes and then goes away and starts so it's like all right that's fine Huh. Yeah, no, my computer's buried. Like... There we go.
+
+There's a cloud.md in main now that should make your... Should make Claude work a lot better. Awesome.
+
+Awesome. I'm so excited. 51 minutes or I could spend $20 for it now. Oh my gosh. So tempting. How hard fights are meant to be for 51 minutes? Um... Okay, so... where you're working on the framer website I don't really know where to go from here. I can't figure out what's causing all those redirects outside of...
+
+Framer doing weird stuff, but then stuff completely disconnected from Framer's doing the weird stuff. Weird stuff's going on.
+
+Yeah, let's take, like, five minutes to troubleshoot this.
+
+I'm going to go to... Oh, shit, I went to the wrong thing. I'm going to, like, auto-configure it and then see if it works again. Because, like, I'm just going to go back to the status that I know was working was when it was auto-configured. I don't know, but... Auto connect, okay. I'm gonna auto connect to my Cloudflare dashboard. And then before I do this, just double check not working. Yeah. I am human and I am logging in.
+
+Uh... off the Okay. and check what it wants to add.
+
+Authentication error, okay.
+
+Let me make this bigger.
+
+Hold on, hold on, wait. Hold on.
+
+See, it wants to remove-it keeps wanting to add to the dropoutdgines.com rather than the www. So now cancel that. Let me see what options they have. and maximize it. Don't give me that tiny window. Make it big. Big window. What do you want me to do? Yeah, big window. There we go. Yeah. Zoom in a little bit. All right.
+
+That's better. Okay. Um...
+
+All right, so Stay on that screen for a minute. I think I know what to do.
+
+What they're doing is they have special handling for the WWE. Guarantee it.
+
+Guarantee they have special handling for WWDOT because people enter in the WWDOT but shouldn't actually have the WWDOT. So what I'm going to do is I'm just going to enter those. No, stay on that screen. I need to see it. Actually, I'll take a screenshot of it. Make this at least smart. There you go, you're fine. I was trying to go to the www. Go about degen because that's definitely not going to work either.
+
+Oh, I've never seen this one. Never seen what? This air... Interesting. All right, I'll go back to this. You're fine now. You don't need to be on that screen.
+
+Why does it keep redirecting? That's what I need. No. It seems like something permanent redirect.
+
+Wants to add the slash, huh? And it can't have the slash. It's redirecting me to the same spot every time. This is strange. This is strange. Thank you. Thank you.
+
+you Thank you.
+
+Cloudflare's doing some funky.
+
+Is it Cloudfire or Framer?
+
+It looks like it is on Cloudflare's side. There's some real funky happening. Hmm. So why is it doing that. Thank you. The good news is the Framer homepage is working.
+
+The Framer homepages?
+
+Yeah, bad news is... Nothing on the top level domain is working. The WW dot is working though.
+
+Oh, awesome.
+
+This is a weird Cloudflare issue.
+
+And we're not even connected right now, are we?
+
+Connected to what?
+
+The DNS. Here we are. We're not auto-connected.
+
+Yeah. I have us connected the right way. Yeah. Do you want me to remove this custom domain?
+
+No, keep it there. Okay. Needs to be there. Awesome. Sorry, website is now back up.
+
+What I think, what seems to be happening Is that by me saying, oh, you don't need to have radicadonk security. right now, they're saying, oh, okay. Let's do something unrelated. Because it seems to be what's happening. It's really strange. Really strange. Uh oh.
+
+When I clicked sign in it gave me a bad...
+
+Yes, because that's going to the... It's going to the real website. Hmph. And the real website is still choking on itself. She didn't use the words right. So. Thank you. Oh Okay. Oh Yeah. . Oh Oh. Silence. Thank you. Thank you.
+
+Hey Christopher, this is Lugano Massarelli. Alright, I'm back.
+
+Um, okay. So... So after the framer hosting, I don't wanna like we've been on this for like Three and a half hours now, so I don't want to keep you much longer. But I guess just to kind of like agendize things. I really want to focus on this is my weekend project now that I've got my quad set up. I have to run later tonight so I won't be able to work on it that much tonight but I'm going to hopefully just get at least one of the three bots Oh, excuse me.
+
+That I mentioned to the-Like. built in the AI and then to the Dropout Degens bot through just the cloud. So I'll send you the PRD this weekend for an updated version of the PRD for this weekend. And then just if you could hopefully take a look and maybe get one of those pushed by Monday, that would be really good. And it also just depends on when I am actually able to get this information over to you.
+
+But I guess sometime around Monday night would be a good time to reconnect on your end to see, is this, Is this able to be pushed onto the bot? And then just like the next focus will be when you have the time to. One, to fix the framer hosting. And then the second focus is just like the premium walkthrough tickets for making the experience more personalized. And I guess like one thing that I'll secondary this is can we have a message slow?
+
+Getting sent for one people like I know we have a welcome message from the job out DJ spot But I kind of want to get this started so either we can make it so all Either I can take a first pass at this or like maybe you would do a first pass at this whatever you think but basically I want to whenever somebody starts a subscription they should get a message. Um. Okay. The one thing that I don't know quite how we'll do...
+
+Is detecting when somebody actually starts a subscription because Stripe isn't as clear about that as you'd think. Yeah, I know.
+
+That's something that I was looking at was like what the hell But yeah, so that'll definitely be probably a little bit harder for a task. kind of in the end. I did send like a development Roadmap. And I guess like most things on this still stand. Oh, and then did you off-board Frosted yet? Um. The only thing he had access to was the GitHub. If I didn't do it then, I can do it right now.
+
+Yeah, let's get him off of the GitHub just for now. Um...
+
+So the EV filters is me. They take your messaging. And...
+
+I'm on too, I'm guessing. Yeah, he's off-boarded. Oh wait, we didn't take him off the gap. Nope, looks like we didn't do either of them. Let's get them off there, yeah. Because that's definitely his personal too. Um. They're gone.
+
+Okay cool. So basically on our development plate, also the weekly rewards updates.
+
+Yeah, I would like to do that as well. That's more of the do you still remember that I need to find the context for that but I guess like just because it's on the on our roadmap as I would like to get this done this month and it does have like the build out aspect of the you need to claim 500 karma to refresh your weekly reward timing like that aspect and Okay. So I guess that's more of the... weekly rewards updates and then the website hosting is the most important and then Um...
+
+just after this I'm going to do the premium Premium walkthrough ticket when user Starts. I think website pricing. Yes.
+
+Change the price of their... Yeah, that's just there. the prices that we're offering DD for. You can do that from Stripe.
+
+Yeah. It automatically refreshes them. No, I know. But that's more of the framer when I build out the other web page that we were talking about.
+
+Yeah. because yeah that is easy we could just give people links but I do want the I do want to get it on our site around the same time And also, our roadmap keeps getting pushed back a little bit. And I don't mind it too much. Generally, Yeah, it kind of like depends with like how busy I'm with school, but I am gonna try to just try Chug along as fast as I can and just utilize all these AI tools Hmm.
+
+And I guess like... Um. I won't. Ask to set like a weekly check in, but like let's try to connect either again, either next weekend or sometime during the week, the week after. So that's the week of the week. Not the 24th, like just the last week of January. Just like try to hop on again sometime either the week I'm
