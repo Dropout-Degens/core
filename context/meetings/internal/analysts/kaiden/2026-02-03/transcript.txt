@@ -1,0 +1,1069 @@
+For a stimmy account and you have the five dollars still correct I should, yeah. I'm positive. Well, so if I don't, I still have money in there.
+
+Okay, so Let me see. Who do you think is winning tonight? Do you agree with the Pistons or the Nuggets or do you like the Pistons?
+
+That was the only game, because I ran that game through my model, and it was split. It was exactly where the spread was supposed to be, but I guess it's slightly favored by... an eighth of a point towards the Pistons. So that's why I just picked the Pistons. I don't really know. I know the Pistons don't have anybody sitting out tonight. There's no injuries. Um, But the Nuggets have Aaron Gordon, which I don't know if that's really going to influence it much, but...
+
+That's why I just leaned on the Pistons there, but it's tough. It's tough to tell with that game, to be honest.
+
+Yeah, let me see. Where's Denver? That's Colorado, so... And where's Pistons... I destroy Try to Denver's traveling.
+
+Yeah, Pistons are at home. I think they're number one in the league. The East.
+
+The problem is everybody voted on the Nuggets.
+
+I know. You said you voted on the Pistons because I voted on the Pistons. I took the Pistons. I mean, the spreads also moved down to four and a half, so there's Nuggets money as well.
+
+I mean, I mean, yeah.
+
+It is, yeah. Four and a half.
+
+We have three minutes. OK, cool. But yeah, let's just assume we're going to have enough voters on the Pistons. And can you place $5 and can you send me two screenshots? One of just like just right after you place it, take a screenshot and then just just do not crop it at all. And then the second one, can you crop it so it's just the entire bet slip? Yeah, yeah.
+
+It's at four and a half. You want me to stick it at four or do you want me to move it back up to five and a half?
+
+Just stick it at four and a half. That's a good... Little safety net.
+
+So you want me to first one not crop it, second one crop it? Yep. Hopefully I did this. All right, I'm going to send you the picture, so you let me know if that's... Over.
+
+Okay, that's fine. Okay, yeah, so basically the one, the second one, I just asked for both just in case like I wanted to crop it differently. But basically like How you send that is perfect. And let me send just this first one. After we get enough votes.
+
+Yeah, it's so tough because Jokic has been out for so, like, for the last month and a half, I think. He just came back last game. They lost to the Knicks, I think, by 10. I don't know who they played, but I know they lost by 10. Um. What's up, dude? Oh, thunder. It lost by 10 to the thunder at home. out of their way, playing the Pistons, who's first in the eastern. A conference.
+
+Wait, sorry, say that one more time. Um.
+
+Jokic is back, which he just came back last game. He's been out for about a month, so that's probably why a lot of Nuggets money is coming in. Amazing.
+
+I see. Yeah, I see he's been out since... Oh, wow. For a while.
+
+It's been out since December, I think, 29th. Um. I would assume that's why people are liking it. But I mean, they lost to Thunder at home by 10, which I mean, Thunder are good, but Detroit's number one.
+
+East right now, so Yeah, Detroit's number one right now. Wait, hold on. Let me pull up a screenshot so I can show you what I'm doing. I might like have to fucking edit the database real quick. Bye. I might have to swap somebody's vote to Pistons. Uh...
+
+But damn, you're coding right now, aren't you? Yeah.
+
+This is about to be AI's bettatoadall. Hey you type fast Thank you. I think I get like... 120 words per minute. Also have like a million tabs open.
+
+Yeah, that's how my MacBook looks. Abs. I love my Mac.
+
+But honestly Windows is superior. Let's see. You play faz Yeah, I used to play a lot with my boys from home. Oh yeah? Fun game.
+
+Yeah, no, me and my girlfriend play. Like, we used to play, like, all the time. Now we just play here and there if we get in the mood. We play with our friends, but...
+
+That game used to freak me out in high school.
+
+Oh, dude, the first time I played it, like... Like she'll walk in there just just just walk just walking up in the house and I'm sitting there like outside of the door like super scared It's like stop. I was walking and I'm like, okay.
+
+I'm scared. I'm sorry. Nah, I'd always be like standing right by the door so I could run away.
+
+Exactly. She sits in the closet and she's like, yep, that's this ghost. I'm like, how do you know? And she's right every time. That's insane.
+
+My friends used to be really good at the game and I was just like "WHAT?" Like, alright, whatever you say. I would just be like, whatever I could put down the crucifix to like save me or whatever. Yeah. Let me see. Did anybody else vote? Oh my god, nobody voted for me. That's not helpful. So I'm just gonna change I didn't want to do this but I'm going to change one of the user's views Boats in the table?
+
+To be fair, the pisses.
+
+laughs Look, he's really wet. I didn't press that.
+
+Yeah, it'll be so funny. Well, they're going to win, so... Hopefully. Let me... Oh, I probably could have done that. I don't have links. Oopsie. Yeah, I don't have a link for STEMI, but...
+
+I didn't see it in the uh... Sponsorships tab.
+
+Yeah, it'll be up in, um... Texted the guy this morning and I... I am changing poros. And now it'll say There we go. So this is one of the things that I'm going to show you basically. Basically what I want to just share for it is and I'll come back to this later but I might as well just talk to it now. So I'm here, but this is our database. This is going to be one of our public databases or our staff public databases.
+
+If it loads. Basically, what it is, is this is our partners tab. So I think we are up to 40 in here now, but every single one of these is one of our partnerships. And so they're all updated with and you can also you'll be able to view all this content. I'm gonna they're like a they're a startup. So like takes a while to do everything but They're gonna try to get it in the next update, so they're gonna add team sharing for us.
+
+So basically you'll be able to get access to these and I don't have a link for a dropout code with first thing So basically you'll be able to get access to these and I don't have a link for a dropout code with first thing
+
+This is also how you embed a link in a message.
+
+Would you put in front of it? It's probably harder to see this way, but...
+
+Um, so, you just, well, right now, these are for my bolding right now, here. Sure. Um, and so, this around... The stimmy games signifies that what's following is going to be a parenthesis, is going to be a link.
+
+This means that a link will be followed and then the link is put in this. And then I'm just bolding all of it. And then, with the link, I don't want it to send an embed to the site. So if I sent this link to you right now... It would send like a little message below, like that. I don't want that. Like I can do that. So what these do.
+
+That just makes it say, don't show the embed at the link. Gotcha. So basically, I'm going to be posting this... Either you can post this or I can post it, but it might make more sense for you to post it. Also, I don't know why my Discord is lagging. I don't know if it's lagging for you.
+
+Oh, no, no. Yeah, using code dropouts. And I need to paste...
+
+Holy, my computer is actually dying.
+
+Okay. I think it's better. Oh. Okay.
+
+Yeah, I just need to paste the...
+
+Can you still hear me? Yeah, yeah, I can hear you. I'm just watching. No, I was just like, everything is like, I clicked on Discord like 5 times.
+
+It's 7, the poll is about to end, so I'm just going to send this out. Technically, this should be in our partners, and this will be a direct link to it.
+
+Do that for now. But, one of the things, so to kind of like start things off, to give you a little bit of a recap from where we are last time. I'm really just getting a few more developmental features done, and then we're going to be just starting to either get a community acquisition or...
+
+A... what's it called? A member re-engagement campaign. Um... Okay. So basically... I don't know if I've showed you this before, I don't think I have, but I've broken down everything that we are working into into a couple of goals. I won't go over everything here, but you'll get access to this so you'll be able to actually take a look around.
+
+have access to these documents and read through them but these are the things that we're working to and so the documents just relate to kind of a breakdown of What is the goal? And so these aren't necessarily tangible things, but they're just things that we're kind of working towards. And so the two staff goals we have are,
+
+for just Q1 and Q1 is from now until March and so we're just the two staff goals are one the culture adoption which means just using the partners using the resources Trying their best to get conversions because we want to see if this really works And then we can kind of strengthen our things from there And then the second thing about that is our server retention is just really bad in general right now
+
+And so right now, as kind of the staff goal, is going to be increase the community engagement and the kind of retention. So just the activity in the channels, the chatting whenever you're possible, and just. It'll be easier as there's more members And kind of like as everything kicks off um, but I guess like the the struggle that i've gotten into is
+
+I love to get into my deep work sessions, and I'm getting a lot more... This is our github, but I'm getting a lot of our just... Context in here. So what I'm doing is because I find these meetings to be very helpful for not only the staff to kind of more understand like what we're trying to because
+
+The goal isn't only for the staff to send pics because we tried that and it didn't really work for the discord because we didn't make money and the staff weren't happy and like we churned members so um so really like just It helps me get all of the context, so I have all of this. And it's going to help me build things a lot faster and better.
+
+when we're actually building Discord features. Did I show you the three bot commands? Uh, no. These are three bot commands that we're going to do. So these are just going to be like, you're going to be able to do slash parlay calculator and it'll pull up a command for you.
+
+It will be in this format. I don't know how to code at all. It might not look like it, but I don't know how to code at all. But we have a really big code base, especially for how our EVs work. This is a pretty nifty coding invention from our team. I'm sorry for any mistakes, this is just a voice memo from our developer, but he doesn't have that much time, so this lets me build out more things, and there will be more nifty features that come into the discord, and it will be on the education aspect.
+
+How can I get you more resources?
+
+I have a couple more information to get into this and also like these need to get pushed They're locally on a local bot right now So I need to get them to the dropoutdjens bot And like I need to get my developer on a call because I'm not just gonna put the AI code into my code base right now. But like right now this is one of the old things we have which is the unit size calculator.
+
+So, these are kind of just, kind of random, but like, just if you could encourage the members to utilize both these channels and resources. This tells us their bankroll, about, and more importantly, which will be put in this channel when it's finished.
+
+Give me one second to...
+
+Give me two seconds to look at a recap of something, and then it'll give me more context.
+
+Okay, so for the documents, um, and again, they'll be in um, They will be in this um, and I think you'll get access to this. I want to say By the end of the week or early next week Um, so you'll be able to actually just start reading through more of our like like what what are we doing? Like what is what are we doing as like the founding team? And I also still have to like update some of the content
+
+But it's basically, this whole routine is going to be, or the app is called Routine, but this is going to be just context of, and operations just means something that I'm doing. When it comes to business development, when this comes out, I'm going to give you access to take a look.
+
+The best way I would say is, if you go to the documents, and it's kind of, it's a weird kind of system right now and I have to get a couple... More docs done before it gets published. In each of our documents, I have all of our goals down here. Basically, you just... I can...
+
+All of these individually, but basically this is what we're doing in each of these goals for the projects and action. And so I think it'll be a little bit weird getting used to, and I don't know how much context that you'll find useful. I think you'll find the partnership page to be useful for actually.
+
+But I'm just like, this is how it's going to look and also just how you're going to be able to see what we need. I think I talked about the... I'm pulling this up real quick on the...
+
+So I know we talked about last time you were in a group chat About getting like some members free access in the discord Yeah, yeah, you told me about that. No, not in there. Like, I would talk to them about, like, um, football was going on, like, different stuff about that, but I've never sent them, like, my model plays or what the model predicts.
+
+The first person I've ever told my model about outside of Discord was Fred, who's now in the Discord. He's in Florida, right, as well. Yeah, yeah. So he's probably somebody that you could help take advantage of our partnerships. Yeah, I tried earlier today getting him on the Onyx, and he already used Onyx, so I'm gonna...
+
+Try to push them towards... Yeah, try to push them towards that, too. Because I just saw Onyx, because I had, um... I was just like, hey, 200 free bonus bets, I mean... Oh yeah, I used that a few months ago. I'm like... Damn. He already got it. I hate when that happens. Because that's fire, though. I'm like...
+
+It is fire. Too bad you can't help us out.
+
+I'm definitely going to try to get those versions. I'm talking to... I have to organize my calendar. Gotta take that, you can take it. I'm not sure, let me see what he says.
+
+Uh, actually, yeah, I want to take this. I have to be right back. I'll call you in a few minutes. This is for the layup of the call like that.
+
+Okay, perfect. Just gotta, let me put this in a... Put this on my desk real quick.
+
+Just getting my dinner real quick. Sorry. Alright, so, okay, so I set a little bit of an agenda to, um... Finish things off. Um, you And then, so just to like walk through the agenda, I just want to... I'll talk you through the conversions and then I don't have the official doc to show you but I talked through the doc like twice so like I and I'm giving it to AI meeting notes after this so I'll have a doc that I'll send over and I think I like it's also I did mention it a little bit but basically I For the partner promo conversions, Let me actually, I'll screen share again for this.
+
+Thank you. Ignore my menu tabs.
+
+Oh, you're good. Let's see. Okay.
+
+So in relation to the partners database, Um. We also have the partner promo bot, And so this is like... If that Buble dog, he's a terrible person, or no. Not a terrible example, because he's Canadian.
+
+Not at all. I'm a terrible person. But, um... If you go here, you could change where your state is. I'll just use you as an example because you're in a great state for social and DFS, which is basically all of our partners right now.
+
+So, okay. I can't see F. So basically, Florida has everything is claimable. So this needs a little bit of updates, which is why it's only in this channel and it'll eventually be in our partners to make the page a little bit easier to navigate. But essentially, this will be something that you can director members too, to be like, Like Just like a little bit of like, them are asking, "Oh, what app is that?" And then, One, you make the initial conversion and then you can have the aspect of, these are the other apps that might be available in your state.
+
+You can look at them in a little bit easier to read format here. Gotcha.
+
+Okay. So yeah, just direct them to there.
+
+Yep, and then it helps us because we... Like we just don't have any of the data like on anything so people using this bot is gonna be great because one will learn where are our users because like I know a bunch of people are from California because like Kronos and Poruson and we did a community acquisition where they were a bunch of members from California so like we know that a bunch of more West Coast members like but really we don't have that information stored about these people anywhere.
+
+you So... Basically just want to start start getting as much of that data as possible. Because then we can learn as eventually as like, this is kind of like more of a business development thing. But as we learned, for example, Oh, people from xInviteLink are primarily from this a state demographic, then we can know that, okay, well, if they're from New York, well, my state sucks. We can't convert them on anything.
+
+But if they're all from Florida, then this is a really good acquisition source. Let's get more of this. So it'll help us narrow down our focuses.
+
+And then again. When's that coming up?
+
+Um, so it's--What are you publishing? It's kind of like a hard thing. It is like this in itself. It is fully up. It's not fully up to date. This is about six months outdated as in like the states need to be updated. But this will be by the end of the month. I'll have this updated because basically all I need to do is like I'll get Claude to do it like and I'll show you this as well. Where is it? It's on this monitor.
+
+Like right now. I Like this is from... I have all of our meetings Like all the meetings that I've ever had loaded up into here and so Like... It just helps me Like-just go through everything and be like, like for the documents is make it easy to get the documents. And then also for like, it's really helpful for our development meetings. Cause each of these just tells us like, it's mostly for AI to know things, but really it's just like...
+
+This allows me to do this without the help of my developer because that's what really is a big bottleneck for me. Four. I gotcha. So if I would say, if I said, oh yeah, I'm going to have Zach do it, your timeline would be no idea, but I think it'll be done by like a month.
+
+The only issue is I have to get...
+
+on with him to talk about my AI stuff that I'm pushing, and so it's just like, and make sure that it's good to go to prod, and so like, just the, once we get that sorted out, then we'll be in like a really good swing, but I slept through my last meeting with him by accident.
+
+Oh, Jesus.
+
+I was up, I forget what I was doing. I was doing something important, or not that, definitely not that important though, but I just slept through it. But so, and then, like, eventually, so... What people can do in this is if they click into one, you might have thrills. So I have thrills, for example. So I'm going to just say I've claimed thrills. Or for example, the claim now button. I always have that.
+
+So, I think, I'm not sure which one we're going to do the interaction on, but basically when somebody marks it as claimed, we're going to open a ticket to say, oh, you You claim to partner using our code? Here's free access. Um. And so... I think we're probably going to do it on both interactions, but basically like This is how we're going to streamline the process. And you know how I mentioned that all of your, the people who join off your invite link will be tracked.
+
+Um. Right now, if you have any conversions, I'm asking that you send them in... the partner attribution channel so we can track it. But in the future, it'll be all done through this bot. So you won't even have to track it at all. It'll be all automated.
+
+Okay, gotcha. So if I get somebody to use one of the conversions I sent in there. Yep. Tag who it is. Yep, exactly. Yeah, let's start a party in this fight.
+
+And then, um, I guess like... For example, like... Yeah, birds Fred. So all you would do is you'd have to copy his user ID. He's technically not in this channel. So to let me actually teach you this because this is a discord thing. So you just click Click on their profile. I'm sure you can do this by just tapping on them. But there should be copy user ID somewhere. and you click that and to tag users in channels that they're not in or to tag them just by ID.
+
+Let me go back to the dev channel where, oh, you're here, but actually not here. If you do that, it tags them. So you just do. And then the ID.
+
+Gotcha. You can just copy and paste the ID. Yep. Oh, I know, they did it. And so yeah, you just put it in there and then say which partner they signed up with.
+
+And then right now I'm just asking that like, you send proof, but honestly, like if they send proof in their ticket, then that is good enough because their ticket will have, like the whole thing is like in the future, we'll build out that they'll automatically get a membership claim. Like they'll get free, seven free days of all access automatically added, but the mods have to approve or verify it first.
+
+And then the commission goes to who verifies it. Okay.
+
+Yeah, I would do that. Gotcha.
+
+It'll be more of like the... If you told them to do it, you verify it, and you get the points. And then the double caveat if you invited them. So... It'll go in... Well, this is like... That whole thing is... That might be like three or four months in the future thing. That's the goal we're working towards is just like... Anytime they do a partner claim, it's one Sent to the mod team and the analysts are bull I guess I should just say staff team because I have that money people monitoring it but What I can do is I can do just yeah, I'll just tag the at staff role for when free access tickets are claimed and so like it'll kind of be like Like, well, if you're online, you'll kind of know that you referred this person and then it'll be your thing.
+
+But otherwise, it'll be on a first come, first serve basis. Okay. Gotcha. And yeah, I don't like see it being an issue of people stealing your commissions or like your conversions. And then it's like also a thing of like, if, it's something I've been always like It's pretty evident that you would have a screenshot of you being the person or like it would be you saying that so like and we can just change it in the database Yeah, I gotcha.
+
+And so the next thing this is kind of like because we're kind of talking build heavy I might not be allowed to share this with you so Please don't say much.
+
+But this is...
+
+I won't.
+
+But this is something that's going on in the play up that they're building. Okay. It's...
+
+potentially just an app where that links your sportsbook with the discord in some way Okay. It'll be I honestly I have no idea what it's like Still, this is, again, also, like, if you have any friends to talk with the layup team, it's really super appreciated, because we're just, like, talking to all sorts of bettors, like, and the one person, I don't know if they added Mons, but, today, but, but...
+
+Yeah, I'm trying to get that.
+
+Basically like...
+
+In the future, we can-Like there's a lot of things that you can do with having your discord and your Um like Betting account linked. Or like your sports book. So one, it's like, I guess like, A transparency thing that helps for us. But two, it's just like a huge community engagement aspect of like, we'll be... able to I don't know if it'll like I have no idea what we're going to do yet, but we're going to build something that's going to be, and Dropout DJs is going to be the test environment for it, but basically we're going to build something that's going to try to build engagement around your actual sportsbook betting.
+
+Okay.
+
+Oh, yeah, they sent me a link earlier for that bankroll capital thing you were showing me. They sent me a link to use it today. I was messing around with it a little bit. I don't know if that's what you were talking about exactly, but I know I've seen that on the...
+
+Yeah, yeah. The...
+
+Yeah, that's exactly what I'm talking about. So we don't know what we're doing yet, but we have so many tools, and we're trying to figure out what to do with it. Sure. So if you have any things that you think... this would be super cool if this was a feature of the dropout DJs discord like one we might be able to build it ourselves and then two like the layup team is super interested in the discord space right now like kind of because of me um and like the conversations we've had with like discord members um so if if they build a bot like dropout DJs will be the testing environment and we'll get like and like we'll get whatever we want in it like Oh, yeah.
+
+Hell yeah.
+
+So that'll be really cool. And then another thing it could be is like one thing like since the bankroll capital is just an AI chatbot, we can upload all of our analyst things in to it. Let me show you this. We have a master tracking spreadsheet. This is so old. I didn't update this in like months and months and months. Active Staff 2025.
+
+Oh shit.
+
+Ah, it's right here. But basically I had all the staff track their bets And I did a whole server recap. Oh, uh... We were up mad units, but then I stopped tracking it.
+
+Um, Got to lock that back in, man.
+
+Yeah, we do.
+
+But the only problem was... Um, what's it called? Uh... Yeah, we just stopped tracking it. But I'm going to put it all... I can use AI to get it all filled out, and I will update all of our information. But basically... I could upload all of this, all of our analyst things and a new user that joins the server can ask and say, "Hey, I'm looking for betting on NBA. Who do I tail? Oh, tail cadence model.
+
+From our spreadsheet, oh, And then it has access to, and I don't know, Um... And I'll send the information in the group chat when I finalize it for everybody because I have to talk to everybody about this first. But I'm going to give you a bet tracking spreadsheet. to do for this year and then I'll update it with all of your bets. When I give it to you, I'll update it with all the bets so far and then I'll give you an AI link that I used to get all those bets so far.
+
+And then you can kind of like go from there or do it by hand or however you want to do it. And basically, let me show you mine, but it's super easy. Um. You just... up put in the date to calendar click the day drop down league what kind of bet copy paste odds number units usually always one or whatever you do and then just win last push and then this is automatically updated so I will give you one of these and then teach you how to use it.
+
+Okay. But for example, if we gave something like that to our new users, it would be super helpful for them.
+
+Oh yeah, I have online tracks right now. I have 26 pages on a Google Doc of every single day, every single bit.
+
+Yeah, I've never seen a Google Doc that way. I feel like it must be a lot of effort.
+
+Yeah, it's probably way easier to use Excel or something. I just like to make shit difficult. I've used Google Docs for everything, so I just like messing with it.
+
+I get that. No, okay.
+
+What made you– okay, let me pull up your– I want to look at yours because, honestly, I know you sent it to me.
+
+Um... I can send you the link again if you want me to.
+
+Alright, whatever's faster, let's see.
+
+Oh yeah, I'll figure it out here.
+
+I'm definitely not faster.
+
+I don't know.
+
+Uh, oh, I saw a message.
+
+Screenshot, oh fuck. Dot the bottle.
+
+Wait, I'm panicking, bro.
+
+I'm panicking. Hold on. Oh, I got it. Aha.
+
+Oh, I just copied the link, dude. B by a second. All right, awesome.
+
+So like, Every day? I guess, yeah, you have to do this manually, right? The profit size and then the profit number?
+
+Yeah.
+
+Yeah, I do it all manually and add it up. And then it's the risk and reward is all fake. I'm not actually putting down $420,000. I know you know that.
+
+Then I have it broken down.
+
+If you look at the tabs on the side, It breaks down every day. like the record in the units. And then I have the DV info, which is for me to always follow the same posting. It's literally just every post in there. Um, overview. You can see how I make my units too in the overview. If you scroll down.
+
+Yeah, I see that. How the hell did you get these on separate pages? What the hell?
+
+Page break. But if you see the spread units, you can see-How I determine if I use half a full unit, 1.5 units or two units in the overview thing.
+
+Okay, this is actually really neat. Because I was looking at edit from the top, I was scrolling down and I didn't even see the overview and then I clicked on the overview and it's... Wow.
+
+Yeah. I just try to separate it so it's easier for me to like... get to things quicker because it's 26 pages like on the all it games and info So you just make a new page for every day. Yeah, well, it's on the all games and info. I make it in there. And then once I've finished it, like I have the February 3rd all the way down at the bottom. I haven't finished the tab or yet because the game's wrapped up what like an hour ago or so.
+
+Yeah. So, like, you'll see I passed on the Detroit, on the Nuggets and Pistons game. But... I went 2-2 today. I think I'm down. 0.64 units, so it was a negative day, but... There just wasn't a lot of action I liked.
+
+Yeah, I went 1-1 today and I think I did bad manage my units because I put 1.5 units on the Sabres game yesterday and I didn't want to put 1.5 units on their game again today. I think that's the one I cashed today and another one didn't, yeah. Oh, damn.
+
+Bad manager. I'm 5-0 on my top value plays right now. I think it's in Overview. If you go to Overview, you can see trends. Or wait, no, actually, I posted it in my Discord. My bad. um That 20, January 22nd oversight. Is the over and under record. Um... Like for point totals. Or no, it's on the overview of my bed. Oh. You'll see it on that second page at the top. It says January 22nd oversight. So it's 12-2.
+
+If you have a plus and an under, you take the favorited team's under points and then minus spread and over, you take the favor of the team's over points, and it's only lost twice. One of them was when you posted it in the Discord for the play of the day.
+
+I know. I didn't even notice it lost until like... I thought that was going to be a lock. I saw it lost a little bit after, and I was like, oh no, that's not a good start.
+
+Oh, I know.
+
+It looked so good, too.
+
+My model's been perfect with predicting underdogs. It's 5-0 predicting underdogs.
+
+Oh, wait. What underdog did you have? What was the fifth one? I missed that.
+
+If you go to model, I think it was on the 1st. Um. It was on the first. That was my best day. It was upset alert, Wizards money line.
+
+Oh, yeah, I did miss this day. Yeah.
+
+That day was... Great. Went 7-2, up 5.5 units, give or take.
+
+Yeah, I got the Knicks live, though. I was super happy about that, yeah.
+
+Yeah, my top IU plays are 5-0 as well since I started doing it on here. I've gone 5-0 with them. So it's... Those are going well, too.
+
+I used to... Wait, do you remember the flip-flops?
+
+Nobody can see this anymore, but I used to love, love sending my pics out like this. Like the...
+
+The five stars.
+
+Oh, rate them in stars? Yeah. I was thinking about giving mine stars. I'm not going to lie. And then I was like, I don't know if I should do that.
+
+Yeah, so like, I stopped doing this, but like, I kind of do it with my, I was gonna do it with my unit size, but like, and do like 0.5 units a star, and a minimum of like a two star pick, but like, I feel like, I don't know, like, I couldn't see myself putting a 2.5 unit play out there. Like, actually, I could, but... I feel like it's always the, when it's not a model, it's always the five-star ones.
+
+I guess it's always the ones that you mess up your unit size the one time that does wrong. And every other time, it's super good.
+
+That's why I made the structure. It's on the overview tab. But I follow it religiously when I do my unit size. It's right under the 20-second oversight. If you look at the spread unit margins, when the difference is 1.5 to 2.9. Not like the spread, but... What my... like what is projecting a team to be better? from the spread on. So like... Night. the Pistons were 5.5 point favorites when I made it, and they were favored to win by 6.4.
+
+So it was .9 difference, so it wasn't a half unit play. Now if it was 4.5 and I would have seen that, I would have put half a unit on it, which it would have lost, but...
+
+Um That's like how I determine my unit size.
+
+I've yet to get it to a unit. I've only gotten a 1.5, I think, once or twice. So I guess, like...
+
+So technically, you do this all by hand, right? Like, but...
+
+I do it all by hand, yeah.
+
+I feel like this data is very... Do you care about viewing the data at all? Or is that just, like... Because, like, to me, like... Doing by hand, yeah, the spreadsheet by hand, I would probably... The only reason I would put this in a spreadsheet... But, I don't know. Like... This is so... I kind of like this more than this spreadsheet for some reason. I'm trying to find reasons to put it in a spreadsheet, but like...
+
+It's just what I'm used to. I learned how to do Excel, but like, I've... I've just always used Google Docs for everything. Like, I have hundreds of Google Docs and stuff. I did... Hold on. I'm going to send you a doc that I did last year for MBA. It looks pretty similar, but it was with... The player props.
+
+Yeah, some of your ducks.
+
+I love to look at... I guess I'm just a Google Sheets and Google everything nerd. I'll show you some of my spreadsheets later. The formulas I had ChatGPT figure out are like... Amazing.
+
+Yeah, I would just like test these like this is one day I think it should work. This is only one day. I used to make a sheet. Oh fuck Bye. Gotta give you access. All right, see if it works now. I might need to resend the link, but... That was, what, March 11th? This was last year. And I picked... I would pick a player I would see... what their averages were for the season. What their averages were for back-to-backs, and then they're highlighted, like, green is more, red is less.
+
+And then verse their opponent. And whenever it's green with, like, a yellow outline, or red with a yellow outline, it's, like, extremely prominent. So, like, Miles Turner, his rebounds were, like, way higher than his... rebounds Like... On average, throughout the season. So I would target that market. I made it like super highlighted. I was being a little bit OD with it. I'm not gonna lie. And then I rated them with stars.
+
+Um, I don't know how those ended up playing out, but. Oh yeah.
+
+I was going to say, did you track this? I was trying to see if it like, did this pit three, like parlay hit?
+
+I don't know if it did. Like, I... I instead of putting it on all like putting it all on one dock like I did now I would just make a new dock every day so I just like had a bunch of docks Did you put them in the same folder or did you have them all scattered? Oh, they're all scattered, yeah. Yeah.
+
+I mean, like, even if you put them in the same folder, I don't know if that would have solved the issue.
+
+Yeah, and I mean, it was a cluster. I mean, that was what, like a year ago? I'll see if any more... I get so many random... Old football things like... This one was CFB Lookout Games. Thank you.
+
+Yeah, wow. Yeah, like...
+
+I'm sure there's probably one somewhere.
+
+This is blowing... This definitely blows my mind.
+
+I just do it, man. Because, like, perfect example, I used, and I got to tell Lon's, but I used his parlay thing today, or sorry, his AI thing today, and I tracked my February 1st when I went 7-2. I put in all of the data. So like I put in odds, unit size, and whether it won or lost. And I said, add up these units for me. I was just messing around with it, just seeing what it could do. And it was...
+
+I think it was 1.01 units off. of its edition. I triple checked it to make sure like maybe I didn't type something in twice. It's math was just wrong So I don't know if that's... Maybe. By 1.01 units.
+
+By 0.01 units. No, no, one point.
+
+Oh, a whole unit. A unit point one, so a unit, whatever.
+
+We'll call it that.
+
+yeah that could just be mad rounding on my on my part um no it It also might be that, honestly, I don't know what AI subscription we have in there, and it might be the cheapest, because we didn't think any, I don't know if we knew how many people would use it, so. I think we can also upgrade the AI in it to make sure that it calculates it better. But thank you. Yeah.
+
+Yeah, I'll go back through it. I mean, I was in school, so maybe I messed something up, but...
+
+I'm sure it's not you.
+
+But yeah, that is thank you for pointing that out. I will definitely bring that up But like I guess for when you used it what did and I'm looking at the February 1st because like so you just paste it in and everything and said if it won or lost.
+
+Yeah, I told her I said, I'm going to give you four different unit sizes. I'm going to determine it by a W or an L, win or loss. And I'm going to give you the odds per, like, and then I listed it out and it listed it back to me like it showed exactly what I typed out or exactly what I meant to type in. It told me exactly Like the odds for the unit and if it won or lost perfectly just like it wasn't a sheet.
+
+It's just it's math was wrong Okay, yeah, I guess like oh So how do you because I wasn't thinking about that at all like of how you actually calculate your units and because how do you do it because like Because I have a formula because I know that you use the AI to do it But like how would you do it if you didn't use the AI because I have a formula that does it automatically Oh, yeah, I don't I don't use AI to do my I just used it for that, like just testing it.
+
+Um, I put I act as 5,000 as my unit because that's what I've been tracking throughout my box and stuff. And so I'll do... I'll either put it in odds calculator, like... Before I started doing it through the Discord, I was just doing $5,000 on every bet or fake money on every bet. And then whatever the profit was, I subtracted that from $5,000 and then divided it by $5,000 and got a... .9091 whatever for a negative 110.
+
+Um... And Now I use an odds calculator. I put in 5,000 just like I did before. get the number that it says I made in profit divided by 5,000 and I get that number It should be, I think, for a negative 110. on a one unit play, it should be 0.9091, which I round up to 0.91. For half a unit, it's like 0.4545, which I just round to 0.45. But I don't add those extra decimals because I'm doing it in a dollar sense.
+
+I don't want to put like six decimals, even though it's more exact. Um, yeah. I just keep it down to two. But I do it through there and I just do it manually. And then I add it up. Um... Make sure I do it multiple times. I do that with all my picks too. When I'm doing the win margins, I go through... And I tally up the win or loss margins of all 28 or whatever games it is. And then I do it again. And then I do it again.
+
+And I make sure that number is consistent. If it's wrong, then I do it again. I make sure that it's perfect because I know my math can be screwed up sometimes. I love math. I'm really quick with math, but sometimes I can look at it the wrong way and I could skew something that's important. Um, Even a difference from 2.9 to 3.0 is the difference between half a unit and a full unit for me. Especially because it's so manual.
+
+I guess like what... What website did you use? I know you just started using it, but what website did you use for that?
+
+Thank you. I use statmuse. And then I'll go back and verify on ESPN. Make sure that all the scores are consistent.
+
+Let me give you a calculator for this.
+
+We're building this into like the actual Discord. So one, 'cause yeah, excuse me. I used to I used to like do it with I just didn't $100 because it made it easier but like yeah it's also the surrounding thing but this is Here. We're building a parlay calculator, but you can just put one leg in it and you can put the odds. So you put... One. Whatever dollars here or I mean whatever not dollars whatever odds so if your bet is minus 130 you put it here And then you put your wager you can just put 100 and it'll default to profit in units here for you and go to decimal points Okay.
+
+Gotcha. It's definitely a lot easier.
+
+Yeah, and then here's the site we actually steal the math from. But... Give me one second to-find this it's the odds converter so I just it is the parlay calculator where's the parlay calculator I actually can't find it. But yeah, $100 on a parlay, or $1 on a parlay for one unit. And then it is minus 130, and it is 0.77. units of profit. That's all.
+
+Yeah, it's definitely a lot easier than mine. That's what I was doing.
+
+Yeah, I'm just doing it manually. Yeah, I do love the manual aspect. but does it I just don't trust AI.
+
+I don't say I don't trust AI. AI has come in clutch many times, but... I've tested AI with... I had a class literally a few semesters ago that was all about trying to break AI and see what it can actually do. And so I would sit there for fun and just say like, who's, you know, What's the injury report for tonight's game against... Miami versus New England. What's... 20 yards this guy averaged I'll go back and I see the numbers are slightly off Like, or something is wrong.
+
+They're missing something big. Because it's, I mean, it's a chat bot. It's scraping for what it can find, but it can't always find everything. I would ask it to, can you give me the record of this team from 1987 or some shit? Like... Just testing it, just seeing how far it can go. It's just so much easier for me to do it manually because I know what I'm... I'm finding everything myself. I know that it's for real what I'm seeing.
+
+Rather than trusting AI for the short answer... Which is easy for some things, but other things it's not.
+
+Yeah, and I feel like the manual process, like, especially in the research aspect, like... the manual process and thinking about it and actually manually looking through it and the manual friction of taking the time like just gives you more time to validate it and like look oh yeah Yeah, it's like it also gives me a sense of accomplishment.
+
+I just did all this research. This is what I found. I put the work in. This falls on me if it's wrong, but like,That's my process.
+
+We're gonna run with it, so... Yeah.
+
+Yeah, exactly. Um. And so, I guess like, yeah, and then... So for the I'll send you the your spreadsheet because I'll give you I'll give you a spreadsheet for just I guess I might make it another mess. They're tracking spreadsheet like this just because it does look good and it is good for transparency and for promotion. So I'll probably make another one of these and I'll teach you how to use the spreadsheet because it will definitely be a lot harder, but it'll just be basically for.
+
+blunt numbers of tracking it. Sure.
+
+Yeah, no, I mean, I'm down. I like tracking my stuff. I like knowing... I mean, that was the whole point of using fake units for me was... strictly to track it, see if it works.
+
+If it does, then...
+
+Then I can start putting money up on it. I mean, I'm... Green like four out of the last seven days, I think so. I made my money back too tonight because I put 25 on a bet.
+
+Nice little hedge.
+
+Yeah, yeah. It wasn't even a hedge. I didn't even bet on the Pistons game. I just knew. I was just like, 15 and a half is too big. I was like, I hope they don't backdoor, but I have a feeling they will. So I slapped my free bonus, and then I also put 25 on it in hard rock because I put 25 on a bet. for tonight, which lost because of the Wizards and the Nets not covering their spread. So I was like, I'll just throw it on there, and if it wins, then I make my money back.
+
+That's cool. And I did. I technically only lost $3, I guess, was... A total loss on the night as far as Hard Rock goes, but then I made it back on... STEMI. Yeah, STEMI.
+
+Yeah, I guess like how do you track do you track your Um, yourself at all? Like... Do you just pick it? Or...
+
+I have Pickett. I've linked Pickett to my account. It will not track it for some reason, and maybe I just have to go through and reattach it. But the other problem is I use HardRock, which is my girlfriend's account, not connected to me. Okay. So I already know that that's going to be one section that's not being tracked. Um, So once I turn 21... thinking about re especially right before the NFL season because I do want to see how my NFL like season plays out like knowing how much I've made or lost.
+
+Um... When it comes up here next August. August, yeah. September. So when I turn 21 in May, so I'll probably reattach everything with all the apps that I use right now. On to pick it or on to um, what's it props cash? Is that the other one?
+
+Picket preps cash Er, for tracking?
+
+Yeah, yeah. I know there's another one.
+
+Um, just, I don't know, does props guys have tracking? It might be.
+
+I know there's two partners that you have for tracking. I know it's Pickett and something else. Oh.
+
+I know we only have, er...
+
+Oh, was it?
+
+Oh, real. Real?
+
+Oh, they're only for, like, looking if your live bet is hitting. Oh, gotcha.
+
+Okay.
+
+They're, like, the social ESPN. Gotcha. Okay. Okay.
+
+Well, yeah, I use Pickett, if anything, but...
+
+Yeah, no, picket, uh, that's... Definitely would have that issue with... I mean... I Yeah, I don't even have like a... 21 plus account and the 18 plus apps are so finicky. So it's kind of like, I don't know if it's me or Pickett or just like it's too annoying to like Have to do it and every time I want to look at it. I have to refresh it's like not there but like What is it called about the um... Sorry, I was just looking at this.
+
+Oh, you're good. with Yeah, like, with looking... Like Vanduul. Or like I don't know does hard rock show your all-time win and lossOh no, no.
+
+I could go back and look at all the history of my bats, but... I mean, I don't know how far back I can go. I never really looked. I know you can look at your history a little bit. I just haven't bothered. Um... bad habits, I would say, for a good bit of the NFL season before I actually like locked in was like, let me do something that's smart. with The knowledge I have of stats and stuff. And so that's why I started the NBA, because football's coming to a close, which is my favorite sport to play.
+
+watching bet on so I'm like See what I can do. See if I can put something together.
+
+Yeah, and I mean like... Like... Even like, just the... Because I use FLIF and I mean, I'm sure, because all I do is collect the free $2, I'm sure I've lost so much more than I've won on that app.
+
+But, like, I would be interested to, like, see how much of the...
+
+How much, like, I've played through, or, like...
+
+But, like, I can't even know who to pick it. Or, like... Oh, yeah.
+
+It's... It doesn't pick it up. It's... I like Flip a lot. It's... It's... It's... I go and balance out what is my best, what to use on a certain day, depending on what I'm looking at. Because, Fliff, when you put in money, get a little extra money. Like you get the $20 package it's like 21 29 you get 24 um which which is nice. What's that, basically a 20% profit boost or a little bit less?
+
+They give you 20%, but I'm so mad they just added the tax because they used to have it not be taxed, and it was like a 20% with no tax.
+
+Oh, yeah. No, it's taxed. I mean... I just look... I look and see I'm like... If lift gives me similar odds, um, because obviously you can't get profit boosts Like on hard rock or better if you use multiple different sports, so if I'm wanting to bet NBA and NCAA I like basketball, I can't use a profit boost. So if my odds are better for what I'm looking for on Fliff, I'll just use fluff. Um, But it just kind of depends.
+
+Like today, um... I almost used better for the Miami of Ohio game because I wanted to get an all on a team total. Miami and Hard Rock didn't have it but my but a better did you could all the total points for Miami of Ohio But I ended up just sticking with Hard Rock because... Um, I already had money in there that I won two days ago. I'll just use that and whatnot. So. Just depends.
+
+And with Hard Rock, I mean, I'm so jealous. I love... I love hard rock. I wish I was in Florida. why do you not or like what why do you use your girlfriend's account She's 21.
+
+I'm not.
+
+Oh, yeah, oh, yeah.
+
+So yeah, she oh she's 22, but she I'm saying she's older than 21 um and Yeah, so I use her account. And it's... What's that from 21 here? I turned 21 in three months or so. And I'll end up using mine and she'll Yeah, I mean...
+
+Because I've always thought about like, I mean, I always wanted to ask my dad for my social, but like Asian parents would never.
+
+But like, like, I don't know how it works.
+
+Can you deposit with your credit card on her account whenever you want?
+
+Or does she have no for you?
+
+I cash out her money and then she puts it in. because her card is linked to her ID. So when you're putting in my card, it's got a whole different name. It's like, whoa, that ain't going to work. So the money goes in from her account and it comes out to her account. And then she sent it to maybe a cash app or if she'd have like... withdraws it from the bank, she'll hash, whatnot. But, yeah, that's how I...
+
+And I only use hard rot because... There's not a lot of options as far as actual sports books goes in Florida because the Seminoles have a law and regulations against sports betting. They own Hard Rock.
+
+They do.
+
+Hard Rock is good. It's a good book. But it's nothing like Vandal or DraftKings, like those big dogs. They have so many options. Hard Rock's a little bit more limited, but I would say it's got more options than... like Fliff or other social sportsbooks does.
+
+Yeah. Yeah, like, hard work's good and all, I mean, just, like, the diversity is just, like, oh, it would be so nice if they would, like, not have that monopoly, and, like, with, I guess, like, with your... I guess this is like a question I have because do you try to keep your because I mean I like I keep I don't really count how much I deposit but I keep my withdraws like I only withdraw like once and like how often because and I know it's 600 bucks, or it used to be.
+
+I have no idea what taxes this year, how it's going to go, but I'm definitely going to get cooked. I'm going to have my dad do that shit. But, like, do you try to, like, keep it under 600? So like you don't get sent the form or do you just not care?
+
+No, I just don't. hair. If anything happens, that'll get handled.
+
+Are you going to pay taxes on that?
+
+Oh yeah, for sure.
+
+And so, wait, so, I guess like since You're gonna have to pay your girlfriend's taxes for that, right?
+
+Yeah. Yeah, no, she knows.
+
+Oh, okay, yeah. So she, do you have a guy for that? Like, that does your taxes?
+
+Yeah, yeah, my dad's got a guy. But eventually, eventually I will be that guy once I graduate. You're about to be that guy. I'll end up filing a check on God. Yeah. I'll be the one filing the taxes. But in the meanwhile, yeah, my dad helps me with all that. I'm blessed by it. That's great, yeah. Anyways, likes to know like... What is what?
+
+Yeah, my dad is definitely the same way.
+
+I don't think I would... Even if I... Yeah, I don't want to, but even if I did have to, I don't think he would let me, which is kind of nice right now. But like... Wait, what is your degree in one more time?
+
+Finance.
+
+Finance, yeah.
+
+A minor in statistics.
+
+Oh yeah, so do you like, are you up to date on the tech stuff?
+
+With like the sports betting? What'd you say? Are you up to date with the taxes, with the tax stuff with sports betting? Um...
+
+There is a new tax filing with it that I know of. Uh... I know Mons and Quilly were talking to me about it. Um, I don't know entirely, but I know that the guy that does... I uh, I'd say like through my dad and whatnot.
+
+I know he but Yeah, I'm just asking because like, I mean, like, this used to be more of a thing because like we had all the flip like, because of the people searching flip discord, they would join us and like, they would ask about flip taxes. And like, I'll just tell them if you withdrew more than 600, you'll get a form. But like, I don't even know what to tell people this year.
+
+So like, I was gonna ask if you do anything.
+
+No, because honestly, I don't know where that form comes at. I... I got no clue. I was thinking about that, too, after the call with Mons and Quilley. I'm like... Um... Like, yeah, yeah, so do you do your own... I'm like, hold on, bro. I didn't even think about that. I made up something on the spot because I'm like, I gotta... I forgot about that. Like, let me think about that. But, I mean, I'm... I'm not arrested, so I'm doing something.
+
+Yeah, they haven't come for you yet, so you're not doing anything wrong.
+
+Well, yeah, but if you don't hear from me, you know where I'm at.
+
+Yeah.
+
+Because with our partners, some of them, like, pay us through, like, a bank transfer. So, like, I pay LLC taxes on that. But, like, others, like, for example, Sleeper, they send it, like, in my Sleeper wallet. And it's, like, just so annoying because we've actually– we've done over probably, like– we've definitely done, like, 1,500 signups from them. So that's over 600. multiple times. So like I've been trying to either like figure out in like, oh, I have to withdraw this right now or like just Only do less than 600 so I don't get the form but like now I'm gonna be so cooked Is it if you withdraw more than $600 at a single period or is it just within the year?
+
+It was within the year that it used to be. You hadn't withdrawn more than 600 you would be like okay, I think or like they might not send you a form or at least that's what I-Bye. But I'm pretty sure this year it's 'cause it's like, I don't know if this year it counts your net wagers too, if it counts an individual bet as profit. That is really dumb, it should be realized profit. So then I would have to look at reading everything.
+
+Yeah, because I need to know, too, because, like, did they email it to you last year? What's the...
+
+So, Sleeper, they... Like, mail. Yeah, they sent me a form. Sleeper. Like, all the companies email you. It's... What is sports betting tax reform called? Uh. It is called a W2.
+
+Yeah.
+
+I don't see anything here, but I know I got one from Sleeper. But I guess like the biggest thing is like, because I know you have to pay. I just need to read. I don't want to say anything I don't know anything on, but I know it's like you have to pay a percent on even if you have losses. Um, So... Yeah, I don't know. It's just... I have to... Because if you deposited a thousand that would technically count as a loss.
+
+I don't know, unless you withdrew it.
+
+Yeah, which is so dumb.
+
+And then if you withdrew it, what would yeah I'm not.
+
+I don't see any forms from... Like any of the site, I'm looking up the name of the site and tax after it. I don't see nothing from nobody.
+
+That was at the worst set.
+
+Keywords.
+
+February 15th is when you get it by. Oh.
+
+Well, we better find out then, I guess.
+
+Deadline by February 15th. Yeah, for prizes of $600 or more. And like... That used to be like Like you could have, because I know I had like $1,000 in there, which technically would be $1,000 in prizes, but I only withdrew 600 or like 550, so I didn't get a form. Um... And then the one year I I was at 550 and then I was like, fuck it. I'm just withdrawing more. I don't care. Send me the form. So I don't know, but this year...
+
+Yeah. Yeah, it's something I really need to read into, but...
+
+Because I don't know what it would be like with losses of 600. Because... I don't know how many times I would have pulled out more than $600 this year.
+
+Um A totality of $600 I've probably crossed.
+
+Yeah, I guess like... I mean, does HardRock, um, hmm, I'm trying to even think, like, let me look at my Fliff app right now. Does Fliff tell you when you withdraw? No. Yes, maybe.
+
+Yeah, I think they email you. Is that what you're saying?
+
+No, like... Email is not good enough. I mean, like, yeah, it's fine. But, like, do they have a...
+
+log in the app of your deposits your purchases and Oh, no. I don't think they do. That's... Yeah, like...
+
+I think they would, right? But at the same time... Do social... I don't know if sweepstakes falls under the same regulations.
+
+Oh, yeah. And so, like, also, everything that I was saying, I'm under the impression of sweepstakes laws of the under 600. I know nothing about... Like... 20 if If you were asking me if this applied to FanDuel, I would be like, uh, I think so. I have no idea to be 1000% sure, but like... All of these I know were sweepstakes specific, especially for the sub 600.
+
+There is a... transaction tab but it doesn't total it up Oh wait, where did you see the transaction? If you click on go to the account part, click upon wallet. Um. and then click on the little The eye with the circle around it on the flip cash, it's gonna tell you recent transactions You can click on all transactions You'd have to go through, though, and... Yeah. It only goes back to the 21st for me.
+
+September 5th, 2024. Have I? Oh, hell yeah, I purchased Fluff Cash before 2024.
+
+Yeah, not helpful.
+
+I only ghosted... Yeah. When's January 17th, 2026? It goes back like three weeks.
+
+Three weeks. Yeah. Oh, that's so brutal. Let's see.
+
+I'm going to use the calendar. Let me see if I can go back. I can go all the way back to 2024, 2023. Let me go to April 1st, 2022. No transactions were made. I have to know like the exact date there's no idea to find anything I wonder when the first date of me...
+
+Like, did I get anything? No transactions on April 2022. For me.
+
+Yeah, like August 4th, 2025. I bought $2.10 Fire.
+
+Big ball over there, bro.
+
+Yeah, I mean, I had the experience for it, you know.
+
+I don't know if I was even... I gotta go with 2023, lowkey. 2023 is when I started. purchasing stuff.
+
+Yeah, I wish there wasYeah, I wish I could go back. And, uh... Like to see how much I've progressed, like even if I lost money in the past, like, oh well.
+
+My gosh, this is the day that I won $1,800 on... In my first week of college. My gosh. The only transaction on this day was a redemption of $1,500. I was spending. Oh my gosh. I'm just looking at this and it makes me sick. Quick. On the 16th, I go... I spent 50, 100, 100, 20, 20, 20 in one day.
+
+Oh, man.
+
+I deposited in there.
+
+Wait, what day is this?
+
+The 16th of 2023, I spent $310.
+
+Oh man, that's...
+
+I know that was a hell of money a long time ago too.
+
+Oh my god, yeah.
+
+I wish I could see more transactions, but I like just barely And you have to click on the specific day.
+
+Which is annoying.
+
+Yeah, I know you would. There's so many days to find that one.
+
+Yeah, I knew exactly where it would be about, 'cause it was my first week of college. Bye. Jeez, yeah, no, this is terrible. Hmph.
+
+I mean, but it's like, it'll be good to, would you want to see how much you progressed or no?
+
+Well, I know I'm more disciplined, I'll tell you that. 100% more disciplined with my money, thank the fucking Lord.
+
+My goodness.
+
+clearly I was Uh... Complete degenerate. Oh, it's terrible. Sorry.
+
+Too bad you can't like see your bets from I'd like to see what you were actually betting on with those deposits.
+
+You know, you might be able to, honestly. Uh, That you used to be able. Have fun Go ahead.
+
+No, I was going to say, you used to be able to just select a date. I don't know why they took it away.
+
+Oh yeah.
+
+Yeah, alright, go ahead and scroll to 2023, my guy.
+
+I mean, hey, I'm already at October of this year. Maybe I'll... Maybe I'll be able to make it, you know?
+
+Keep scrolling as we're talking.
+
+Maybe. You're my in September. I know one of them was Oakland. I have screenshots, I think, of those bets, but...
+
+Oh, I can't even go further than May 2nd.
+
+That's so dumb. Well, I won 50 bucks on the Rockets beating the Warriors again. There you go. I wonder if these were the playing... These might have been the playing games of my girlfriend. Victim. I'm not gonna lie. Then I proceeded to put $50 on a damn horse in the Kentucky Derby. Hi. Oh, I got you. i had the pacers win in six games i turned 40 to 200. what the heck What an absolute...
+
+Do you find, like... Do you remember what caused you to place those bets?
+
+I remember exactly what it was. Um... had a really shitty person at the time and found out that they were getting with my best friend and so I said Fuck it. And put a hundred bucks on a pet for fun. It was just being stupid. I was hanging out with my friends. um Went to sleep? Woke up at like 6 p.m. and four out of the six legs that hit. I was like, oh my goodness, what the heck? They were all drinking, so I went and took them to the bar and DD'd them.
+
+I came home, sat on the couch, and... And watch the last leg. It was FSU versus... Um... Southern, like Southern Missouri or some like... Super small team. And I watched it cash and then my friends call me they're like dude you want so much money bro you're gonna be rich I was like oh my god I was freaking it was it was crazy experience I wouldn't pick them up and they like they started like just like hugging me and like it Hit my bag.
+
+Let's go, bro. You're insane.
+
+Yeah, that was a great... And I did it two weeks later. I haven't done it since. Nothing like that, at least.
+
+That's awesome. How much did you...
+
+How much did you... You said you put 50 on that, John? 100.
+
+Oh, you put 100. How much did it pay? 18?
+
+18, yeah. And I did it two weeks later for another 17, which was... It was just, I just kept trying to replicate that the rest of the year. Basically just drained it all back down. That was my first like reality kick. Um... Moses. I was going after that chase, you know? I was being stupid.
+
+Yeah.
+
+And it's so like looking at it now, I'm like, oh my, how could I have spent that much money in a day on... Like, holy, that's terrible. That actually hurts me so deeply.
+
+Yeah, I remember like this was Last summer, or not this summer, but the summer before, I I had literally, I turned a like $25 or $50 deposit in my Thrillz account to like, I think... of I think like 1.5 over the course of like a month. Dang. This guy, Robert, had a nerf-y model. So it was the no-run first inning. And I was like, I was just... just tailing those. after like day after each other and I think I had a three leg Um, and I was like, ah, there's no way this is hitting.
+
+Um, but his model was like super confident on it. And I was like, ah, all right. And I was at my, um, I was at some, some random event. Um, and I was like, all right, I'll put a hundred on this one. Cause I was at a $50 unit at the time. Um, and I put a hundred dollars on it and it was a plus like 975, I think. And I got to find a screenshot. It's like so great, but that it was, um, it was so free.
+
+Peace. It's just so great. That's actually it. I can't believe it. Like, yeah, I spun up my balance. so crazy over the summer and I made it up to two bands and then I I kept abandon there and then withdrew a thousand and just like tried to bankroll the rest. No. They caught me abusing a glitch and took away a lot of the ballots that I had. Wow. That's rude. Yeah. And I, yeah, I was like, I'm really, like, pretty sure, like, you can't do that, even if it's, like, a glitch that's on you, but, like, they took away my money anyways, so I was like, ah.
+
+Yeah, I think they are technically allowed to, but it's dumb. Like, you made them say... Myroween. Why am I at fault for it, you know?
+
+Yeah, I gotta find it, but they were so bad. It was like, the event had already happened, and it was like... Like, it was like in the first half. It was like halftime. And it was like 1-0. And it was like first half money line minus 120. Like, okay, I'll take that. Thank you. Yeah.
+
+It looks free. Why not?
+
+Yeah, they got that.
+
+They should let you keep it. If it's their mistake, they should let you keep it, but... Do whatever they want, I guess. Yeah, I was like, it's promo to your app, but no, I guess it didn't help.
+
+They don't care. Like, whatever, they won't make enough money from...
+
+Yeah, this server is too small.
+
+Thank you.
+
+Okay, so sorry, that was like, That was a while. It's been a while. But I think the last thing on my agenda that I just want to cover is... is just Trust for Business Development. I'm going to be having new members join the server or like well obviously but um when my people join this server and join premium this is in development and this will be as soon as possible but basically when they start a subscription one they will get a premium walkthrough ticket and so I guess like just when it comes to the analyst team and really like activity wiseAnd not just like sending pics and in community engagement wise, like none of the other guys They've all been imported to just really send pics So it's like I'm really adjusting them to get to the like send pics and be more active in the community um so like one of the things that we're gonna have is these tickets um so every time a person joins the server they're gonna be open to super welcome ticket um and so um i'm gonna create a script um and i don't know what the script is gonna be or like not even a script but like um just a couple things are gonna be like hey these are possible things like we can help them with um and so like the whole point is like a couple questions about like, do you need help setting up your bankroll in the server and then direct them to the bankroll bot?
+
+Do you need help finding any partner promos? Direct them to the partner promo bot. Like a couple of things like that aspect. And Like, Just what I'm trying to get at is really while they're not ready yet in the coming week, there's going to be tickets that start being created in these threads. And you'll get I'll make it so you get tagged. So if you can just try to say what's up to these members in some of these threads, whenever you do have a chance, that would be great.
+
+Yeah, like the way that you say, like, what's up to people when they join? Yep, exactly. I was thinking about doing that. I tried to say what's up to Fred, but I mean, I know Fred personally is a little different.
+
+Fred doesn't count. But like just for example, for and then so for example, we don't have it right now open. But when Fred claimed his access here, he technically should have also gotten a premium walkthrough ticket opened. And I'm going to this this information needs to be updated when the ticket. Did it but also the message that they get when this tickets created will be updated Basically be like this is where you can find things in the premium now that you can see it And it'll be like a guide of like this is how you actually utilize the resources so for example Like we can direct them to our outlier information channel and say read through this channel and actually like The reason you look through this channel is to look at the underlying trends behind these things and then you can go look at the event and look at the other factors yourself and see are these trends worth following and like kind of that education aspect tailored towards the how do I value find value in the discord.
+
+Sure. And like, so basically I'm gonna update all the messaging to basically automatically say this and I have to figure it out still a little bit, but all you would have to do in this is I'm gonna make it pretty evident that they should say something. And then if they don't say anything, just be like, hey, is there anything that we can help you find value with? Yeah.
+
+Hell yeah. Okay. And then, yeah, and then that's it.
+
+Just um you see me. Uh, you see me send the semi thing.
+
+Yeah, and yeah, I love I tried to, I just copied your thing. Basically. I just copied the link, the embedded in it. Um, It's perfect. Yeah, that right there.
+
+Yeah. Technically, I wasn't even going to share this until we got our official link, but...
+
+If we don't, um, first thing, uh, because I texted the guy today, this morning, and he didn't text me back, um, and he's usually good, well, he was good about texting me, um, but, um... I'm gonna text him like if So, short thing short, if we don't get our, like, slash dropouts link, and it's only the code, I'm going to pause the daily poll and the stimmy promotion until we get the official link, just because we may lose, it might be a point where, like, more people start it and might use the link and not the code.
+
+Yeah. So I'll let you know by Friday on that. Yeah, no, for sure. I just, I thought about it because I've seen that and I was like... I was like, hold on, wait. I'm going to do something. Yeah, it's perfect. Perfect. Literally, the more you can embed links, Really it is better and this is the only case where like I might tell you did not embed this link But like it's just because we don't have their official link yet But like literally every single partner and then you'll have access.
+
+I guess one you can copy it all here Um, but two you'll have access to all of our official links again will be um in this uh that you can also just copy the instead of copying my message you can like Literally just copy the I have a partner promo message inside it Open this so like actually stimmy would be a bad one because I don't have anything in there but like chalkboard like the promo. Oh yeah, sign up for chalkboard real quick.
+
+Like, not actually, but this is like super easy to copy paste.
+
+What is chalkboard again?
+
+Um, you actually might have chocolate board. Oh, you do. It is DFS. I actually do love them. I do love them. It's because they're legal and PA. But their daily fantasy app. Ooh, let me check my drafters play. I had this today on drafters that banged.
+
+I actually have one. I think it just finished, but I was nervous to look. Um... I have Virginia and Pitt under. That was easy. And then I have St. Louis versus Davidson. eight and a half so we're about to find out right now if I turn 20 90 on stimmy Oh, hold on. It says end of the second. We might have done it. Oh. It's literally a 9 point game right now, so if Ashley is the end of it... then that we catch, but...
+
+This is and I don't know if it's actually ended or if it's just like my my absc list. Oh, is it the STEMI app that you're looking at it in?
+
+No, no. It's on my sports app. What sports app do you use?
+
+I used the score. It's probably such a random one. No, I've heard of it. Like, it is kind of... It is random, but...
+
+It's random. Oh, it's final. Oh my god. I had minus eight and a half that won by nine.
+
+Let's go. I had to do the math. Yeah, I turned my last 26 on the stimmy because I used the bonus for the... For the nuggets. And I had 26 and I was just looking, I was like, Yeah, let's do it. I took the under and it was 142 and I think they ended with 114. It was like three. And then this was the last leg and just one by nine. Exactly. Not a sweat at all. Not the slightest, right? I'll take it. That's 26 to 90.
+
+What's that 23 I got from the Nuggets? It's $100. Yeah. Beautiful. I'm going to send my money back on Hard Rock. And then I just made like an extra $70. Not my model, but I'll take it. Let's go brother So you're at 90 and you posited 20?
+
+No, I deposited 50.
+
+to get $225 bonus bets. And I think I lost one of the bonus bets. Um... I meant to use both my bonus bets, but I accidentally used 25. Of like my actual money instead of the promo. So I had like $31 and then I used the five bucks on Detroit. So I had 26 they got one of the free dollars. So I just put all that on to my bet tonight and then I use my other promo on the Nuggets game so I want to Back to back on stimmy so now I'm at like a hundred and 13 once this process ends?
+
+I mean, um... Hey, if anything, at least you lost the bonus picks and not like actual money picks. Oh, exactly. Yeah, no, exactly.
+
+Let's guess.
+
+Yeah, I'll take it though.
+
+I have one more question on my agenda to cover and it's just like business developmentally wise. Those are like, so just to, like, cause those are the, the welcome tickets and the premium tickets is, um, the welcome tickets is like, uh, and the goal with the welcome tickets is to encourage them to, um, Just claim the free three days here. And they also get DM'd a seven-day payment link, like a free trial through the seven days free access through payment link.
+
+So if they either do the free three days, that's great. And the way the bot works is no payment info, but if they use the Stripe link, it is payment info. So payment info preferential. That was my line. Stripe. link is okay, or I mean, buy is okay. The whole goal is we want more people in the server because when they're in the server, then we can engage with them more and they can actually, yeah.
+
+Like we don't want to sell. We want to give value. Sure. The selling comes with the give value. Yeah, exactly.
+
+Like I'm watching you mute yourself on the screen. You look great. But, and then the...
+
+The last thing is like, so now that you have an idea of whatTo do with the new people that will be coming into the server and of course like this I'm gonna be talking I'm gonna do my best to manage most of these and also Get the mod team to do more as well But just like this is what's so, you know, what's going to happen what to do? The server do you have any ideas for us business developmentally wise?
+
+like we can brainstorm now and like,Up top, up top, up top.
+
+For how we should get members into the server. Up top.
+
+I'll tell you what, I probably don't have any on the top of my head, but if I really sat here for a little bit and thought of them, I could.
+
+I kind of postponed the idea of social media because I know that you were, obviously that wasn't your main focus when we first called a few days ago. So I just didn't even bother thinking about it. But, um...
+
+I can definitely text you some ideas. Um, I think I mentioned a few too about... Doing like... Kind of like what Better does. Like... sitting down and like addressing a game or giving sides or like giving information and Kind of like if you've ever seen Odds Jams, like Odds Jams TikTok, they'll sit there and talk about arbitrage betting or how do you hedge or this. That's informational side of it. Like, Instagram posting, oh, this is our...
+
+This is our members play of the week. We had this much, this many winners this week. Like, Listen, I know you're not obviously trying to sell the We're giving picks out experience, but that might be a way for somebody to get in as far as like, hey, we give winners because we... do it the right way, you know? Yeah. And we want you to learn how to do it too. Yeah, and the framing on that is like, um...
+
+We kind of like...
+
+Um, and I 100% agree with everything that you're saying there on the social media, and especially with the, like, the sharing November weekly wins, like, just, like, exposing the success stories needs to be something that we, when we do social media, we need to, like, make sure is an important thing we're addressing. And like the community aspect of Like. Great. The community aspect of Just. I guess the community aspect that we're trying to dig towards is that we're placing every bet smarter.
+
+So it's like, you're going to be more profitable if you bet smarter.
+
+So we're a community of smarter bettors. And so that's kind of like... So we need to like... Yes, I agree. We need to do that. And then also, with the... Um.
+
+What's it called? With the streams, like, what did you have in mind? Did you have, like... For example, because like we could only theoretically we could only do one game at a time So would you have the idea of like putting this? like bet on stimmy and then sweating it with the community in like streaming that game in like entertainment Yeah, I mean, I think that could be, I think one of the things too, I know you already have a section for it, and I know maybe it's maybe a little bit of bias coming out.
+
+But... The ladder picks? Yeah. baking them a pole. Yep. So like giving kind of like, you know, how prize picks does taco discounts on their Twitter and you, you know, everybody picks of four or five different ones and that's what they make their, their taco discount. Yeah. We could do that with the ladder. Community votes on the ladder, which that might have already been a thing. I don't remember if it was, but it probably was a thing at one point.
+
+Okay, so let me talk you through that. So the two things that... I'm going to have to scroll a while back to this. But the ladder... I'm trying to bring back the ladder, but it's just like... I just feel like it's too much effort for me to research and like actually It's just yeah, I want to get a ladder pick out by 1 o'clock and with my school schedule I can't research So let me see do I have voting yet?
+
+This is in 2025 to 2025 so no voting in 2020 in 2025 But in 2024 then we did voting for like everybody sends up one pick a day. Um And we vote. But the only problem is like, we just... It's very hard to manage getting all the picks because there wasn't enough active community members. Here it is. Here we go. Here's one. Um, Like, basically, we just vote for one. I think I remember this. Yeah.
+
+I think I remember. Maybe this is why it's coming to me. Okay, so maybe once we have the community, that's something that will be like... Exactly, yeah. That'll be better. I used to do the latter more because somebody would just send me a pic. But now... Now nobody sends me pics so I just...
+
+Don't do it because like I don't feel like just picking something random and I want it to win and I don't wanna Like I like doing my research and I don't have the time to put in the research But what I was going to do with the ladder is basically we get fluffy V So some of these were kind of random, which is why we weren't doing the best But like basically when I get our flippy V sending I was thinking of doing that to just kind of promote our premium in the free have a call to action as much as possible.
+
+but Ideally, and then also we can switch the partner we do the ladder on as well. It doesn't have to be Fliff. I only use Fliff because it's $2 for free every day and you're usually losing the ladder. We definitely are going to bring this back. Perfect for STEMI. I'm just saying. That's a perfect way that once you get that solidified...
+
+I mean, because they're just like flip with the free dollar a day. Like, that's a good way to introduce them into it. Exactly.
+
+And then that's just like, the thing is, like, I would just need, instead of you doing, we might have to switch the app. You might have to do a different app for the poll and then a different app for the ladder challenge. But, like, we can, let me, I'll put this, like, I have a transcript going, so it'll be in my, also, Yeah. Seven.
+
+But they were all after. They were all after. But, um... But, like...
+
+Yeah, that's actually pretty good because we had three last night. But like if we get like 10 to 15 votes consistently, and that's like not even that hard, especially because we have a big server. And it's just like we have to get... It's just like I'm getting I'm trying to get my goal is to get one person back per day that I'm reaching out to. It's just like the hard part of like, while I'm reaching out to these people, the aspect ofThere are many.
+
+Enough community members to stay engaged.
+
+Yeah.
+
+Losing them if they don't see them. Top line. But like, basically when, We get like 10 to 15 maybe 20 daily consecutive votes on this, it'll be easy for us to host something and actually get like two or three people to consistently show up. Oh yeah. No, I mean... Yeah, if we can...
+
+I wouldn't, maybe you said this and I'm just not picking up on it, but as far as the community poll games, I know you said that we maybe stream a group tail or something. Um... Just streaming every poll, like every game, like with the poll, if we can, it's on TV. Even if we're not in there, is that possible? Can we just have the stream going? So...
+
+I just use this and I have like I have like three computers. I'm not gonna lie. It's kind of weird, but like I have two laptops and my desktop so I could throw it on whatever fucking shit and walk away. I could sign into my Dropout DJs account and log in to do it. So yeah, we can even if I'm not there Like we can make it happen Yeah, I mean, that'd be cool. That'd be perfect.
+
+Yeah, it's freemies can get you Anything. We can get the card, yeah.
+
+Yeah, honestly UFC too is huge. Especially because obviously it's PPV. Yeah. I know that we have, well, we had back-to-back UFC fights this past few weeks. First the first Saturday was better than the second one, but next time there's a big UFC card I think there's a big one coming up in March or April and streaming that Like, with everyone group tailing something, like, that would be such a vibe. Just sitting there, like...
+
+watching it and like texting in general or members chat or whatever and then Just watching it play out, that's definitely the... I know that's where you want to be.
+
+Yeah.
+
+And maybe like, I guess like the, the, the biggest event that's in near times is a Superbowl. Like maybe we could get something. Oh yeah.
+
+Maybe we could do it for the Superbowl. I don't know what I'm doing, but I might be. Yeah. I mean, Superbowl is what here in five days. Yeah.
+
+Um, I feel like the Super Bowl would be an easy way to start with a group. group ride and then streaming it. And a lot of people, it's hard at the Super Bowl because... Super Bowl parties. Yeah, that's what I was thinking. But...
+
+group tails is definitely yeah Yeah.
+
+Definitely able to happen. We definitely want to just encourage the aspect of group tailing as much as possible. And then, like, just, like, it makes it so much easier when, like, just sharing the picks and the partners. And then also for the Super Bowl, I have, like, I have $1,500 in this account. Oh, no, that's not me. It's all, like, promo funds, but, like, I don't give a fuck. I'll put on whatever...
+
+I'll put 500 bucks on whatever the fucking community votes. I mean... This is where you're like...
+
+Like even if it doesn't happen.
+
+going on. Say none of us really put the money down. Maybe one person puts the money down. So, uh... Me, Caden, JP, Kronos, and Poros, we're all tailing this parlay like for the big game tonight or something.
+
+All tailing this bet for the big game tonight. Riding with us or whatever. We streaming in Entertainment 1 or Entertainment 2. Yeah, yeah.
+
+And I guess, like, the only thing is, like, the problem is, right now, we shouldn't try to promo in the Discord that much. I mean, like, okay, yeah, we should. I should be sending announcements, and I'm working on that. That'll be coming soon. But, like, for the members who are active, like, our goal is, like, not to get them to pay, but just to, like, join the, like, the framing should be, like, join the community.
+
+So, like, the squad rides is, like, we definitely need to do that.
+
+you Yeah, like, and honestly for social media too, um, Something similar to the ladder challenge until we get that started. But like... Like, hey... The community put this together tonight, posting that on Twitter. Going in on. Sports talk. Talking about sports and whatnot. As far as the social media aspect of it. Yeah, and I guess, like, we... This is... I need to text this guy again.
+
+But there's this, I'm looking at, I'm looking at like this guy's one of them that I'm looking at a community acquisition for. And then like I have, There was these guys on snapchat that go to ASU But just like the college scene is so big and I don't know it might not be it's might not be social media and I bring up these guys because they have a social media page and I was thinking of also just getting them their social media shit, but it's kind of like just like the sports news like I don't even like I haven't started social media because I don't know how I want to brand us because like I Betting discord like the good old join link blah blah blah we did xxx like um cuz like I want to really Capture the differentiation that we're and we really only recently did this and I said it would still would make sense to do that social media, but it was just like, at the time it didn't make sense, but, like, now that we have that, like, even though I'm not sure how we want to approach it now, with that social media, like, just like the, the community aspect and that like just knowledge sharing is It's such differentiation then Like the best way I would put it is like we want to sell a course without framing it as selling a course.
+
+Yeah. And I know what you mean. Oh, I see him. Yeah, I mean, it's just getting people in there to, like, see what the community's like and, like, know that it's not, like...
+
+Oh, you'll tell me tonight. This is why. That's why like like I used to do I tried to make my own Discord last year. Okay. Like for fun. And I think I have two members and I think it's, my girlfriend and one of my friends, but it was called Fading Vegas and it was simply like finding edges. It was all about like finding the edge. Oh, totally. Like. what Vegas wants you to take or like when there's a trap set up or outliers like that was the whole like aspect of it I just never really like followed through with it But...
+
+I mean, that could also be a selling point. It's like, we are... like yes we sports bet this is about sports betting but it's not all about that like we're finding the edge and we're doing things smart we're managing our stuff correctly and we got to Killer ass community that's Like... I can see that kid jump out. We're all together in this. We think about this the right way. We're smart about it. Yada, yada, yada.
+
+Yeah, exactly. When I saw the kid, he didn't even do it. The...
+
+I don't even know if sharp is the right word. I guess sharp is the right word.
+
+I remember we were watching this one kid and he jumped down.
+
+If it's sharp, necessarily, but just like the... methods that you're doing that make it sharp. Yeah. And also, like, with your Discord, or not even with your Discord, but, like, with... Just like our age in the space and being in the Discord space on this age, like, Oh my God. Demographic. Like, There's especially so much in the community. The aspect that matters so much. Oh, in the long. Yeah, it's the community is a big thing, but it's really hard to get people to see the community without.
+
+Like...
+
+I guess it's hard to bring people in without to see that the community is actually like popping and smart and like everyone be talking to each other without giving them like a point of greed to get into it because I feel like a lot of people that are looking for a discord are looking for.
+
+Three ways to make money, essentially, in an ideal world. But once they get this discord and they see like, oh... There's like strategy behind it. There's a good community like.
+
+then they're in there for a different reason. I just don't, I don't know how easy it would be able to sell like, hey, we're a really cool friend group. Like, you know, like in a way of, selling as a community because some people might look for that but I feel like a lot of people that are looking for esports betting discord or in or just getting free picks but once they get in there That's how you shift them into educational and whatnot.
+
+Yeah, yeah. I guess, like, the biggest... And this is kind of, like, from the conversations that I've had with the Layup team is, like, the biggest issue that people have with the discords is they'll get the picks and everything, and, like, they'll get the free picks, but, like, they don't know, like... Like if they get bad analyst, they're like the analyst has a bad streak They don't know the strategy behind like how do manage their unit size while following somebody because like she's like oh Yeah, I just followed this guy because he told me to put This money on it and it's like he's like well Yeah, he had he lost the past 13 bets in a row.
+
+So by the 14th one you think like Like oh, yeah by the time if I double down on this like or you could just like realize that maybe after 13 you could wait until Like-He starts winning again. Yeah.
+
+Yeah, I mean, people, that's the... That's the huge thing. That's why I look at everyone's picks. I look at Kronos, look at Poros, look at their sides of it. I don't just straight up tell anybody. Like... But a lot of people do. A lot of people will just say, like, they'll look at something online, they're like, I'm putting that exact thing in. Then when they lose... But like, what the hell? Well, you didn't do any of the work.
+
+I lost and I put my hard work into it. You lost. because you looked and copied it you know Like I mean, I guess that's the tough part of people following your pics. Yeah. Yeah.
+
+There's a lot more pressure on you.
+
+Yeah. Yeah. And so, like, we can just focus on, like, or not focus, but, like, by pushing the... Not even pushing, but, like, just, like... I feel like it's not even like pushing it, but just like having knowledgeable community members is like Talking to them is a whole different thing. Like... It's a whole different thing to be able to say, like, why'd you bet on this? Oh, yeah, look at... what x posted and then to be able to talk to somebody and be like oh i was looking at this and blah blah blah blah blah blah like their last five they didn't hit any of these markers or my algorithm says this and like those are just the things that's so helpful to like actually look at and actually receive the communication because you can apply that so much more.
+
+Oh, yeah. Yeah, I mean... Asking people for their opinions is huge because you might be missing something that someone else isn't or vice versa.
+
+But some people don't see that. Some people do though. Some people want to learn. Some people want to be better. Yeah, I guess this might be kind of a side thought, but do you...
+
+How would you classify, like, or I guess this is probably, for the guys that you, like, just... chat up within that Snapchat group chat. Like, are they all college age? Like, 20-ish? Yeah, they all go to FSU. like How many of them do you think are actually educated?
+
+Maybe one. That's the thing. They're a bunch of frat guys with nothing wrong with frat guys, but they're sitting there like throwing. 300 bucks on something because they feel like it. But, I mean, they do talk ball. They're like, oh, this guy's got good defense and that, but... Nothing past that. They're not smart with the bankroll.
+
+He'll be like, oh yeah, Caleb Williams is going to go off tonight. Why?
+
+Yeah, yeah. Think that? Or, like, what's– you know, it's– and build the debate back and forth, like, oh, but the Bears got a good defense or– Oh, but it's Matthew Stafford, but it doesn't really go... Much deeper than like... basic stuff. It doesn't go into actual numbers or... like defense schemes, defensive schemes and whatnot. So... It's just finding people that They find that interesting and want to learn how to get better with that.
+
+It's not everybody, and that's where I guess other people, the ones that just want to be in for the picks. that's where they would just join just to look for the picks and just go after that. But I know there's people out there that want more than that for sure.
+
+Yeah, I guess like the biggest thing I'm trying to see here is it like because I mean, I mean, I'm at Syracuse right now. I mean, I'm not in a frat, but the frat environment is pretty heavy here. But it's just like. Would the... Would they be interested... in light Not even like, I guess like would they be interested in a community like this? Like where one, like I guess like would it be, what do you think would like if we wanted to market to them or like if you wanted to text one of these guys and say like I send pics in this server like, like What do you think would be either stopping them or what do you think they would need?
+
+Mean I guess it just depends like I Because some frat dudes are...
+
+you know, just off their ass all the time to say, yeah, let me put 100 on this.
+
+Or some, like, actually, like, want to talk ball and want to, like, I want to debate this stuff. You know, like some actually care about it on a deeper level.
+
+It's hard to know which one you're talking to. But I mean, I think the most enticing thing to people is... make money. I mean, um... That's what's gonna draw people in naturally because greed is a heavy thing. and But it could also be something as simple as like, yo, like, our premium or like say our premium because then that's you that's that's like a selling thing but like We give We can help you gather data that'll make you win more.
+
+you know, we're going to give you strategies that'll make you win more. As soon as they hear money, anything to do with money growing. is going to be Like an automatic, like... dopamine hit drag people in because it's just how it is unfortunately money's very valuable especially in the economy that we're in right now And so when they hear money, they dive towards it. So it doesn't necessarily need to be like, you will win money.
+
+we're going to give you the foundation to win more money, to be more likely to win more money.
+
+Yeah, and so I guess like because like the biggest thing is once we do give them that foundation is like dope The most likely... If we can make them make money once, they'll... Because like my thing is like If they make money once, they're going to show them making money. Um, Like. Like, well, they'll share their win. So, like, and their brothers will be like, where did you get that? And... Like, I guess, like, the biggest point is, like...
+
+That I'm trying to figure out or like drive to here is like so Once we get that first initial conversion like and we get him to like actually When like what makes him want to to like what makes him say I need my frat brothers in this I mean, if you could, like... It's...
+
+I'm trying to think of like... What way that would go, I mean... No, it's a hard question, yeah. Yeah, no, no, it's tough. Thank you.
+
+Um... Bye. Sorry, one second. Goodbye, Stefan. Yeah.
+
+Thank you. We're safe. Um... Because the initial thing I would want to say is like, oh, give a discount on premium, but then once again, that's... That's incentivizing the premium side of it, not the community side of it. Oh, one thing I'll say is it's going to be 100%. Or at least for the first 30 days. But we want to just tell them that we'll give it to them for free.
+
+Yeah, just like... but If you can get the one frat guy in there... Um...
+
+I would not give him premium. Yet. Tell them if you get five of your buddies in here, I'll give you free premium and all of them free premium for 30 days. Even though you're already going to give him free premium, that's going to bring in his numbers. Yeah, he needs to put it in his side. By putting it in his side, you're getting your... I like that a lot. Okay.
+
+So it's, I mean, It might seem unethical, but...
+
+At the end of the day, if they care about getting free premium, Um. If that's what you're there for... then they'll get what they want.
+
+Yeah. Yeah. Yeah, and then the price needs to be $50 then a month.
+
+Oh, yeah. Value. Big value. Because they're like, yo, I'm saving 50 bucks. Like...
+
+Once they get into it, Like, they'll be like, damn, I'm saving 50 bucks and I'm actually, like, winning. You know, like, they'll see that they're winning or see that they're at least getting structure to win. And they'll be like... Yo, this is good value and I'm getting this for free. And then at that point, that's where you tell them, like their other brothers, like the ones that came in Yo. Um, I don't know.
+
+If you get...
+
+If you get a... Or you could even low key, you could First guy, don't give him premium. You bring five people in, I'll give you and... Five brothers bring in seven days. You go then tell the five brothers and him, if you guys each get five people in, I'll give you and the brothers you bring in 30 days premium. I'll extend your premium. I'll give you more.
+
+Like I will I will basically quadruple your premium so like I'm limit and it's just like exponential here's the thing Instead of so think about it instead of free like Like, having them sign up for premium.
+
+Just think about, I guess it depends on what state they're in and then Also, this depends on what app we're sending the pics on, but I guess I could just... from the aspect of to something that they have to do. If they signed up for one of our parties, Partners. then Like... For to actually like place the bet And I guess it depends on what frat, I mean a lot of Syracuse kids aren't bookies because there's no legal sportsbooks in New York.
+
+Um. but Like, I guess like just the... Yeah, I guess I can. Sorry, I just like blanked on that, but... after the initial version like there's there's also the utility of instead of Um... pyramid scheming through the In bytes, we can also pyramid scheme through or like not even pyramid scheme but like just expand the invites and the people that they have to invite, or like all these people have to sign up for this app.
+
+and then then you guys all get free premium. Yeah, I mean, that works too. I know that Like you said, New York's a little tight on...
+
+who, like, what you can...
+
+What happens you can get through them But... Yeah, I mean, that's definitely one way. as well to get your conversions up rather than the premium. I'm using premium just as the example because that's all I've known with the Discord from back when. Yeah, yeah. But, I mean, yeah, that's an easy...
+
+That's an easy way to get it because we're learning this marketing class, but word of mouth is not marketing, but it's the strongest form of marketing. Um.
+
+Yeah. It matters. One person tells five people and those five people tell five people and it just exponentially grows. Yeah, cuz I guess like I like how you're thinking with the requirements. Because I guess like I'm very... I was thinking very just like...
+
+I just thinking very like that once they're All right. in the discord and they receive value that they'd want to like if they share it then anybody who asks Then they would want to receive that value too, but I guess like it's just the hard part of displaying that value Yeah, I mean... It's the same with like Layup.
+
+Got people in. Got me in there for $50 on a gift card. and then said, hey, if you go get more people, we'll give you more money.
+
+I'm not going to lie. That's why I went and got more people.
+
+I, I, I wouldn't like, you know, if they're like, hey, if you can get more people, that's cool. Maybe I would have got somebody else, you know, help them out.
+
+But I definitely got more than one person because I was also getting a reward out of it. I mean, that's just the way it is. Like, it sucks, but, like... That is what drives people 100%. So I guess that reward aspect... for making those conversions or getting people in there. If you get people popping, obviously sports betting is dominated by a younger crowd. Um, guys, typically. Obviously, there's exclusions But...
+
+Young crowd of dudes. I mean, just... Just talking ball. That's what sparks up a conversation is when people... Let's talk about sports back and forth and then... growing knowledge with each other That's like, that's... Yeah.
+
+And then I guess like one more thing that I'll bounce some ideas off you with is like the last thing is just like the engagement aspect of– so it's– So... It's hard for new people we acquire for them to... Stick around for if we're promoting an educated community of betters when there's not. that many active bettors right now. or just people that are active. So like the biggest thing is like, It's kind of a loop of we don't want to get these well we don't want to start getting these new people because like well we don't want to focus on getting these new people until we have um Or like I would say these do people as in ie the frat brothers that we want that high word of mouth from until we have like just more educated base of betters that are in the earth just like more active members in our premium all When I say premium, I would just mean more active members in our community.
+
+Yeah, and so like Um... So one, we're doing community re-engagement to try and like, so I'm messing, it's like I've sent an email campaign in the past and I'm going to send another one in the future. My emails are going to be about a month in our development cycle. But I'm like DMing a bunch of people that have paid for premium in the past. Like for example, Protozine, he was like a previous paying member that I just messaged out of the blue.
+
+got him to like, come back but the problem is like to help help these people not churn from not being active Yeah, I mean... What would you say was... The reason why the discord died.
+
+in the first place. What would you say was the sole reasoning for that decline? I'm listening to you. I'm going to go use the bathroom, but I got my headset on so I can hear you the whole time. I won't be able to reply for like two minutes. You're good. I'll monologue for you. So basically...
+
+I would just say about basically when I started my internship is when we started dying. So that was last year, almost a year ago. So February or March of 20 last March of last year. So right before last year's summer. So we always see a die off over summer because of baseball. So like that was normal. But I just over the summer. Well, I was just working. uh like in the previous summers it's just like i'm not doing anything anyway so i'm chatting the drop out dj's chats all day whatever whatever um more managing the staff um but i kind of put it more on the staff roles um to and i had done community acquisition with um he's not active as an analyst anymore but mike mj login and then another guy big bad betting man um but i acquired both of their servers um and they were kind of like my most active Like so I don't have to be an analyst sending pics every day.
+
+They were sending pics every day But they kind of just and this is also on me. I didn't do a good job managing them And then also I didn't do a good job of we fell into the issue of we raised our conversion our partnerships But did not raise our conversions and so also what I was kind of like promising these guys Well Mike and big bad man at betting man when I acquired their server one of the big pushes I was putting was well The custom LTV that we have is just so much greater because we have partnership conversions, so we're able to revenue more per month than you would if you just were to do $15 subscription.
+
+So that's kind of how we brought them over, but I didn't do a good job of pushing the conversions hard enough on them. So like... They had the space for the extra revenue, but they didn't. do anything to generate extra revenue. So just fell into a trap of over the summer and just The staff that I had left to be doing my activity were not active enough and then my My active staff that were just like active enough and keeping my active community members.
+
+And they also had like a bunch of community members that they brought that were active premium members alongside them. So we like lost all of those members. And then just like the aspect of I didn't reposition myself fast enough to get enough staff members back. As in it was only Dante who I mean you can you can probably see his hidden channel. It's a week, not helpful. And then JP, who's a little bit inactive.
+
+I mean, but everybody has a full time job now. So I really have the issue of needing staff expectations or needing things out of my staff, but not having the means and the systems in place to pay them. Yeah, no, I got you. I guess it's hard for... Were they being... Were staff being compensated at that time? Yeah. So staff were being paid at... Well, okay, so the problem was that just none of the people from these guys servers actually converted or like they didn't convert any of their members and I Struggled on converting their members usually like members that join the server like are pretty...
+
+Okay, so members that we previously have gotten, we were able to get, like, I would say about a 3% to 5% conversion rate, and that's across one partner. And so... But with, like... The people we were getting from the other people's servers, I just couldn't convert them at all. They just were not one converting their own members or our members so it was just I was the only one generating revenue. And they were getting paid.
+
+I guess, I guess like, I don't know if somehow it can be advertised, um, To me, it seems like a no-brainer. Every time you sign up for an app, you get free money. Yeah, I don't think you do that, though. Well, not saying I get paid for conversion, but every time that somebody signs up, They get free money out of a bonus bet.
+
+Well, yeah, like...
+
+Onyx. Yeah. Sign up in the promo code. Deposit $10. I got $200 at Boda's bed. Yeah, yeah, yeah. Okay, yeah, yeah, yeah. Sorry, I wasn't following what you were saying. Yeah, yeah, yeah. Yeah. Yeah, like that to me. That's why I signed up.
+
+I got $200 in free money. Yep. And I mean, I mean.
+
+I think I only made $50, but that's $54. Yeah. That's $54. You had eight chances. All you had to do was put it on one thing if you really wanted to. Each one of those things on one bet. And if they're smart with the betting tips that's advertised to them in the Discord, When they get this money, that's free money from... that you're not having to deposit. That's a kickstart to an NFL season. That's a kickstart to, if they're baseball fans, a kickstart to March Madness, a kickstart to NBA playoffs and finals.
+
+To me, when you're doing like you showed, where you see what is available in your state, You see things that are on there that you have not signed up for? That's free money sitting there. Yeah. You know, it's it's it's. If it's marketed as an investment rather than a gamble. Um... That's free money sitting on the table. that you could be pulling back in if you use the betting tips that we provide. and you know, like using the strategies that we, that we, are able to aid you in using.
+
+You have all this free money that's at your disposal now because of... The promos that we are able to offer you. And that should be able to convert like... So that's what I'm trying to get with Fred is and now that I see that you have the calculator.
+
+Thanks, sweetheart um I can show him, hey, if you don't have any of these apps, Sign up for it now. This is free bread during college.
+
+These are meals. This is gas money. This is if you go to the bar, I guess. Bar money, whatever. That's money sitting on the table for you to use.
+
+Yeah, so that's also one thing I'm going to make a point of saying this just to because I'm going to explicitly make a note to make a project of doing this later. But one thing that especially I was thinking of doing. is education-wise on the sweepstakes. Like, nobody reads the terms and conditions, okay? Like, nobody reads the terms and conditions. Let me go to, let me go to STEMI. This is just, nobody reads the terms and conditions, okay?
+
+And I work as an, I work, yeah, I'm an intern at a sweepstakes company, so I know how sweepstakes work, but you can mail in every single month to receive free money. So I'm going to, let me find this. Yeah, mailing address right here. Oh wait, no. I don't know where it is in here, but like you can you can just like send them uh and i have to find it and i'll link it in each of these but you can just send them a postcard and receive free money you can do with every single social sports book because it legally had they have to they legally have to give you free money if you send them a mail like a physical mail so like every month uh like i don't do this because like i But you really should.
+
+You should just send a mail of just... like Hey, can I get my free... Free sweeps? Like... And another thing of that is like just like the Your positioning on that like none of the other or like just the people that I acquired the analyst that I acquired really didn't have that positioning which is why I struggled or like And I didn't also enforce that outlook. But like just that outlook of like, like actually.
+
+Yes, like using and it is literally free money like yes, it might have a look like a playthrough like yes You might not get like the wager amount that your bonus risk was but like it is still free money that that's a free arbitrage bet if you want to arbitrage it and 100% like risk free or you can like actually just have more added like more advantage and like just I'm gonna update the document to put that in our strategies as well.
+
+But like just Like, it's not only the line shopping, but it's, like, that utilization. Yeah, exactly. It's something like... Not that we want to tell them download it and delete it, but it's simple as that. You make an account, put in money, Use your bonuses, make money, withdraw it, you'll have to touch the account again.
+
+realistically, I don't know if you really want to say, hey, you only have to use it one time, you're good. But...
+
+That is is that simple Yeah, like the framing I use is like just keep it in your, like withdraw most of your money, but keep it in your arsenal if there's a line you need to take advantage of or like some promo because like, I mean, some of them have like profit boosts or, but it's just like, it depends on the app, but just like there's so many like, and I'm not doing a good job of sending it out right now, but I get a lot of, let me see.
+
+I get emails every week for sleeper. So when is this for? This is for today. Oops, I was supposed to send that out today. But this is for this week. But like we have all these sleeper free promos. And what I'm going to start doing and getting on a better schedule. And I need to get a better honest, like I'm resetting my whole schedule for this. Once I like, I've still got a couple more partners. I can actually show you this too.
+
+you shoot my computer is lagging so much I'm looking at my transcript from our notes and it's like actually five minutes behind where it should be. Thank you. These are all the prospects that I've reached out to right now. So... like for additional partnerships But like right now we've contacted 1, 2, 3, 4, 5, 6, 7. seven different apps that we're looking to add

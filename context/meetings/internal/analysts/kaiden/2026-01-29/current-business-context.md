@@ -20,7 +20,7 @@ The goal is to teach members how to use resources and understand strategies behi
 - **Dante (Head Staff/Analyst):** May not be sticking around much longer. Status uncertain.
 - **Zach (Developer):** Part-time, has another job. Dax noted "he doesn't really do half the shit I ask him."
 - **Other analysts:** Activity is inconsistent. Analysts have been focused on sending picks, not on conversions.
-- **Kayden (new):** Being onboarded as an analyst on this call. Has an NBA model that's up 17-18 units. Motivated and ready to start immediately.
+- **Kaiden (new):** Being onboarded as an analyst on this call. Has an NBA model that's up 17-18 units. Motivated and ready to start immediately.
 
 Staff is described as "depreciated" — Dax onboarded people about a month ago but they trickled out because the positioning wasn't ready and there weren't many members coming in.
 

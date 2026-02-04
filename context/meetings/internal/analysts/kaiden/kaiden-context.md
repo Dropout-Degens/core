@@ -1,4 +1,4 @@
-# Kayden — Current Context
+# Kaiden — Current Context
 
 **Last Updated:** January 29, 2026
 **Role:** Analyst
@@ -8,13 +8,13 @@
 
 ## Background
 
-Kayden is a college student at FSU. He works at Outback. He's been a member of the Dropout Degens Discord since 2023, essentially from day one of the server. He also works with Layup (had a 45-minute onboarding call with them recently).
+Kaiden is a college student at FSU. He works at Outback. He's been a member of the Dropout Degens Discord since 2023, essentially from day one of the server. He also works with Layup (had a 45-minute onboarding call with them recently).
 
-His girlfriend is a social media influencer with 140,000 TikTok followers and is part of an esports team. Kayden runs his dad's business Instagram and has knowledge of social media marketing. He's offered to help with DD's social media when the time comes.
+His girlfriend is a social media influencer with 140,000 TikTok followers and is part of an esports team. Kaiden runs his dad's business Instagram and has knowledge of social media marketing. He's offered to help with DD's social media when the time comes.
 
 ## Why He's Here
 
-Kayden has an NBA prediction model that he's been running independently. He wanted an outlet to share his research with people who understand betting at his level — his girlfriend doesn't get it and he doesn't have friends who bet seriously. He reached out to Dax asking for an analyst channel.
+Kaiden has an NBA prediction model that he's been running independently. He wanted an outlet to share his research with people who understand betting at his level — his girlfriend doesn't get it and he doesn't have friends who bet seriously. He reached out to Dax asking for an analyst channel.
 
 His model is performing well:
 - Up 17-18 units overall on his NBA strategy
@@ -37,7 +37,7 @@ He said he's ready to start immediately — as soon as the channel is up, he'll 
 
 ## Compensation
 
-- **Base:** Not set. Kayden said he doesn't care about money right now.
+- **Base:** Not set. Kaiden said he doesn't care about money right now.
 - **Staff bonus:** Included in the 5% monthly bonus pool. Earns points for conversions and invite-based referrals. Double points if he both invites and converts someone.
 
 ## Access & Setup
@@ -60,7 +60,7 @@ He said he's ready to start immediately — as soon as the channel is up, he'll 
 ## Notes
 
 - Asked about Bet105 because he's worried about getting limited by sportsbooks if his model keeps winning. Dax explained it's offshore, crypto deposit, 5% vig, welcomes arbitrage bettors.
-- Kayden's only offshore experience was Stake before it had a U.S. version.
+- Kaiden's only offshore experience was Stake before it had a U.S. version.
 
 ---
 

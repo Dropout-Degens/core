@@ -1,15 +1,15 @@
-# Kayden 1:1 Summary — January 29, 2026
+# Kaiden 1:1 Summary — January 29, 2026
 
-**Attendees:** Dax Nguyen (CEO), Kayden (Analyst)
+**Attendees:** Dax Nguyen (CEO), Kaiden (Analyst)
 **Purpose:** Recruitment pitch, education-first pivot overview, role discussion, onboarding
 
 ---
 
 ## Background
 
-Kayden has been a member of the Dropout Degens Discord since 2023 — essentially from day one of the server. He previously DMed Dax asking about getting an analyst channel to share his NBA model picks. He's a college student at FSU, works at Outback, and has a girlfriend who is a social media influencer (140,000 TikTok followers, part of an esports team). Kayden also runs his dad's business Instagram and has knowledge of social media marketing.
+Kaiden has been a member of the Dropout Degens Discord since 2023 — essentially from day one of the server. He previously DMed Dax asking about getting an analyst channel to share his NBA model picks. He's a college student at FSU, works at Outback, and has a girlfriend who is a social media influencer (140,000 TikTok followers, part of an esports team). Kaiden also runs his dad's business Instagram and has knowledge of social media marketing.
 
-Kayden mentioned he also works with Layup. He had a 45-minute conversation with them recently. He was caught off guard when they asked what bank he uses but understood it after Dax explained they're a fintech company.
+Kaiden mentioned he also works with Layup. He had a 45-minute conversation with them recently. He was caught off guard when they asked what bank he uses but understood it after Dax explained they're a fintech company.
 
 ## Dax's Layup Work
 
@@ -17,7 +17,7 @@ Dax shared that he's been interning with Layup for almost a year, starting aroun
 
 ## Education-First Pivot
 
-Dax walked Kayden through the company's three stages:
+Dax walked Kaiden through the company's three stages:
 
 - **Year 1:** Broke off from the Fliff server. Scaled to about 3,000 members organically. Built first partnerships (three to five).
 - **Year 2:** Scaled partnerships from 3-5 to 25. Never ran paid marketing — stayed organic. Failed to scale conversions alongside partnerships. Staff weren't focused on converting members to partnerships.
@@ -25,7 +25,7 @@ Dax walked Kayden through the company's three stages:
 
 The positioning shift: instead of "tail this pick," it's "take this pick because I did X, Y, Z research — here's how you can replicate it." Dax wants members to become analysts themselves, equipped with knowledge to fact-check picks and find their own bets. He described it as essentially a course on how to create your own betting Discord, but framed as a community rather than a course.
 
-Kayden responded positively, noting that he personally does research first and then checks the Discord to see if others agree — using the community to validate his thinking.
+Kaiden responded positively, noting that he personally does research first and then checks the Discord to see if others agree — using the community to validate his thinking.
 
 ## Partnership Economics
 
@@ -72,50 +72,50 @@ Dax mentioned several tools:
 - **Partner Promo Bot:** Shows available partners by state and age. Future automation will create tickets when members claim a partner.
 - **Routine:** Dax's calendar/notes app where company information is stored. Staff will get access to view goals, projects, and partner resources.
 
-## Kayden's Role
+## Kaiden's Role
 
-Kayden is coming on as an **analyst**. He has an NBA model that he's been running independently. Key points:
+Kaiden is coming on as an **analyst**. He has an NBA model that he's been running independently. Key points:
 
-- Kayden's model predicted two upsets the night before, both hit. He made 4.7 units off five bets. He's up 17-18 units on his NBA strategy.
+- Kaiden's model predicted two upsets the night before, both hit. He made 4.7 units off five bets. He's up 17-18 units on his NBA strategy.
 - He was looking for an outlet to share his research — his girlfriend doesn't understand it and he doesn't have friends who bet at his level.
-- Kayden explicitly said he doesn't care about compensation right now. He enjoys what he does and wants to help the Discord succeed. He won't give a half-assed effort just because he's not getting paid immediately.
+- Kaiden explicitly said he doesn't care about compensation right now. He enjoys what he does and wants to help the Discord succeed. He won't give a half-assed effort just because he's not getting paid immediately.
 - He wants to start immediately — if the channel is up tomorrow, he'll be posting tomorrow.
 
 Expectations set:
 - **Daily picks:** Post whenever he has plays. Missing one day is fine; missing four days in a row then posting once then skipping three is not.
 - **Daily recaps:** Recap how picks performed before the next day's picks.
 - **Research framing:** Share the reasoning behind picks so members can ask questions and learn.
-- **Staff bonus eligibility:** Kayden will be included in the 5% bonus pool regardless of whether he takes a base percentage.
+- **Staff bonus eligibility:** Kaiden will be included in the 5% bonus pool regardless of whether he takes a base percentage.
 
 ## Social Media Offer
 
-Kayden offered to help with social media marketing when the time comes. He runs his dad's business Instagram and gets knowledge from his girlfriend who has 140,000 TikTok followers. Dax said social media is on the table but they need an active community first (20 daily active members) before focusing on marketing.
+Kaiden offered to help with social media marketing when the time comes. He runs his dad's business Instagram and gets knowledge from his girlfriend who has 140,000 TikTok followers. Dax said social media is on the table but they need an active community first (20 daily active members) before focusing on marketing.
 
-Kayden mentioned Betterment's approach of using people like Derek as faces for the brand on TikTok/Instagram. Dax acknowledged he's awful at social media content and wouldn't be a good face himself. Faceless content has been considered.
+Kaiden mentioned Betterment's approach of using people like Derek as faces for the brand on TikTok/Instagram. Dax acknowledged he's awful at social media content and wouldn't be a good face himself. Faceless content has been considered.
 
 ## Bet105 Discussion
 
-Kayden asked about Bet105 because he's worried about sportsbooks limiting him if his NBA model keeps performing. He'd heard Bet105 doesn't limit winners. Dax explained:
+Kaiden asked about Bet105 because he's worried about sportsbooks limiting him if his NBA model keeps performing. He'd heard Bet105 doesn't limit winners. Dax explained:
 
 - Bet105 is an offshore/bookie site, likely crypto deposit
 - They welcome arbitrage bettors and only take a 5% vig (hence "105")
 - DD just added them back to the partnership list because California banned everything else
 - Dax hasn't personally used Bet105 but is in contact with them and will share more info
 
-Kayden's only offshore experience was Stake before it had a U.S. version.
+Kaiden's only offshore experience was Stake before it had a U.S. version.
 
 ## Member Recruitment
 
-Dax asked Kayden to invite people to the server. Kayden said he's in a Snapchat group chat with about 50 FSU students who talk about sports betting constantly. He'll invite them. Dax will give Kayden a tracked invite link so all invites are attributed to him.
+Dax asked Kaiden to invite people to the server. Kaiden said he's in a Snapchat group chat with about 50 FSU students who talk about sports betting constantly. He'll invite them. Dax will give Kaiden a tracked invite link so all invites are attributed to him.
 
-Dax mentioned he's giving away free premium generously — anyone Kayden invites can get 30 free days. The $50/month subscription price is mainly to validate positioning and incentivize partnership conversions, not to gatekeep.
+Dax mentioned he's giving away free premium generously — anyone Kaiden invites can get 30 free days. The $50/month subscription price is mainly to validate positioning and incentivize partnership conversions, not to gatekeep.
 
 ## Next Steps
 
-- Dax to create Kayden's analyst channel immediately after the call
-- Dax to set up a notify role for Kayden
-- Dax to give Kayden a tracked invite link
-- Dax to add Kayden to the Routine organization so he can see goals, projects, and partner resources
+- Dax to create Kaiden's analyst channel immediately after the call
+- Dax to set up a notify role for Kaiden
+- Dax to give Kaiden a tracked invite link
+- Dax to add Kaiden to the Routine organization so he can see goals, projects, and partner resources
 - Dax to send follow-up with login instructions for the DD website and staff role assignment
-- Kayden to start posting as soon as the channel is live
-- Future: Kayden to help with social media once the community is more active
+- Kaiden to start posting as soon as the channel is live
+- Future: Kaiden to help with social media once the community is more active
