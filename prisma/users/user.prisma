@@ -101,6 +101,12 @@ model User {
 
 
     isBanned Boolean @default(false)
+
+    premiumTrialWalkthroughTicketId BigInt? @unique
+    premiumTrialWalkthroughTicket Ticket? @relation("PremiumTrialWalkthroughTicket", fields: [premiumTrialWalkthroughTicketId], references: [threadId])
+
+    premiumPaidWalkthroughTicketId BigInt? @unique
+    premiumPaidWalkthroughTicket Ticket? @relation("PremiumPaidWalkthroughTicket", fields: [premiumPaidWalkthroughTicketId], references: [threadId])
 }
 
 enum BETTING_STRATEGY {

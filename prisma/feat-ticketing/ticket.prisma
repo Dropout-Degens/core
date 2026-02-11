@@ -52,6 +52,9 @@ model Ticket {
     transcript TicketTranscript?
 
     associatedPartnerPromoClaim PartnerPromoClaim? @relation("PartnerPromoClaimProofTicket")
+
+    premiumTrialWalkthroughTicketUser User? @relation("PremiumTrialWalkthroughTicket")
+    premiumPaidWalkthroughTicketUser User? @relation("PremiumPaidWalkthroughTicket")
 }
 
 enum TicketStatus {
