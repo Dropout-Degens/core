@@ -1,0 +1,511 @@
+My bookie when I was 16 and I was playing slots at 100% until I hit big and then they asked me for my age verification. I had to wait two years to get paid out, bro. So fuck.
+
+The KYC. The KYC is like.
+
+Yeah, dude. They always hit you with that.
+
+You can put in as much money as you want, but it's like you want to take out anything.
+
+Yeah, you gotta verify all that shit. It is bad, dude. It literally took me two years. And then one day I like randomly got in it and I was like, dude, easiest 500 bucks ever. It's like free money.
+
+Just cash out. Like also, so do you know what, do you know Alex Monahan at Odds Jam? No. So, do you know what Odds Jam is? Yeah.
+
+It shows you all the odds, yeah?
+
+They're like a lot.
+
+They're like the arbitrage, right? Yeah, yeah, yeah.
+
+So we have a partnership with them. And so back two years ago, back when Alex, he recently sold a company for $160 million. And so we have a partnership with them. And like... We've been collecting their EV data. Let me look at my database right now. We have like 500,000 of their EV notifications in our database right now. And we have full permission to use them and send them in our Discord. Full that's so fire.
+
+That's crazy, bro Yeah here Oh, I see. But it's literally like every single MV bet. And then let me actually give you a channel to check out. Like, cause we did an algorithm last year for hockey and it was actually really good. We were up like 30, 40 units, but it's super hard. Cause so the way it works is we get like about 2000 notifications per day. So like we get a shit ton. We get three every five minutes.
+
+So like. Really?
+
+Yeah. So that's insane.
+
+is like we used to send them all out but that's like too many to send out so what we're doing is we're building an algorithm because what we can do is we've been collecting all this data so like they tell us about so we can go and see how well did they do on this on this bet and like so we've been I used to have to do it manually, but like, let me actually, let me just go through these spreadsheets with you.
+
+Dude, I see them. That's hilarious.
+
+Like, we used to do everything manually, so I've had input, like, and this is how we actually got the algorithm for the hockey EV. But, like, you can, this is a viewable spreadsheet, so you can, like, there's a dropdown you can mess around and click around in it. Yeah. But, like, it automatically updates, and you can, but we basically, we had to hand do all of these ones. But right now, I got access to an API, sports data API.
+
+So I've been scraping so many, like, notifications. to actually like get a filter. So we've got about 200,000 of the alerts parsed now. So we're building an algorithm to be like, when they say it's going to hit at this percent EV. So the EV is basically them saying it's going to be, this is happening at 70% chance with these other factors. Odds, right, okay. And so we can go look and say, when they say it's going to happen at 70% of the time, it actually happens 80% of the time.
+
+All of those. Right. And so basically, like, that's what we've been, this is like our old stuff, but Because this is all manual. So the last one we built was all manual. Like that's a 2025 hockey EV.
+
+Yeah, it's so cooked. I'm trying to get it back for– well, I'm getting 2026 back because basically after the break, I have time to process all of this season's data. So I'm going through this season's data.
+
+I'm going to have it like up for 2026 hockey EV, which is going to be fire, and then I'm going to get everything else up. But like we– I'm also going to get an MLB algorithm up, be insane but like um it's it's crazy like we we have so much stuff but like i'll since i got my internship i haven't been able to put so much time in this and then i'm also like a student i hate school right like i almost failed out last semester i want to drop out so bad but where do you go to school i go to school at syracuse university Oh, no shit.
+
+That's funny. Okay.
+
+So I didn't, I didn't, I was going to rush like SAE with a couple of my boys, but I didn't end up rushing. And, uh, I just like grinded. Uh, what year are you now?
+
+I'm a junior. Okay. Okay. You have a year and a half left. Damn bro. That's, that's chopped. That's real tough. Yeah. I'm like, uh, cause I like, dude, we'll just grind on this. And by the time you finish school, bro, you know, like you should be straight.
+
+Yeah. I was trying to like, Last semester, I tried, like, I've been having issues because, like, I mean, I just had staff issues because, like, all of my staff have been people that have been in, like, the Flip Discord. So it's just, like, they're all either college students or were Flip users. So they're, like, retarded or, like, don't have time and jobs.
+
+And they say they're going to help me out and, like, don't do anything. So, like, I had to shut up. Or I tried to buy out another community, but that was also a mistake.
+
+It was a good idea in, like, theory, but it did not work because they were all, like, 18 and I didn't have the time to manage them and they were all retarded. Like, and it's, like, not even that hard. But, like, I'll give you a little more context. Like, do you know the actual sports? Yeah. Like, so there's a big community in there with, like, 4,000, like, people. And I estimated that, like, 30 to 40% would be, like, 18 plus.
+
+So we can convert them on all of our partnerships. So, like, I was, like, all right, I'm going to, I was talking to this owner, and I paid him a tiny bit of money, like, nothing big. And, like, I was going to get his community to come over, but, like, they just didn't. They came over, and they were just retarded. And, like, yeah, it was just, like, they didn't convert at all.
+
+It was just not it.
+
+Yeah. And that was last semester, and I put a lot of time into that, and, like, it failed.
+
+And I was, like, almost failing my classes, so I had to, like, step back from everything and, like, focus on not failing. So over break, I've, like, stripped my staff down that I'm working on. Putting up my staff again.
+
+What does your staff do for you? So right now, I basically just had four. I had analysts and mods. My mods don't do shit, but they just ban bots that come in the server. But I'm working on, so I'm pivoting the Discord to be more education focused. Our value is really behind the fact that we have all these partnership integrations. And so we're going to teach you how to use them. And then you can take advantage of the free money.
+
+these apps give you when you're actually using these. Let me see. Every single notification that we get, it has a link to our partner. So if they don't have that app, odds are they're going to use our code. And so what we're going to do is we're raising our prices as well to right now we're $15 a month. That doesn't mean shit to me. I don't give a fuck. I'll give everybody free premium at this point.
+
+But we're going to raise our prices to $50 a month. And basically, we're going to give seven free days if they sign up for our code. But we're really just going to push the value of, yes, you're going to use our code. you're going to be able to get the value of the free money and the utilization of testing out these integrations.
+
+Yeah, right, totally. Dude, do we have some people that are in both of our premiums? That is fucking hilarious, bro. Doc say? Colson6207, he's all access on your thing. Cool. It is in my premium.
+
+No way. I don't think I've seen him in a while.
+
+Take the fourth person on the list. He's all access, bro. Yeah.
+
+Let me see. Let me check my backend. What is it? Uh... I don't know, he joined recently I think.
+
+No shit.
+
+Let me check.
+
+That's So funny.
+
+Mod view. Joined Two, six. Yeah. So he, he saw my, he joined yesterday.
+
+Yeah. He got that. So I got you. That's crazy. Thank you, brother. See what I mean? Like, why did, why, like, why did he buy yours?
+
+Uh, it was, he clicked the, so we have a, I think he, he definitely clicked a free thing. Let me see. Uh, so we have a server welcome ticket. It's like kind of broken right now, but we want everybody to claim free access so they can, and our EVs, like technically it's not sending right now. Cause we're, building algorithm uh we have flip ev that should be live um but my developer is like actually he is okay so this is this is retarded okay so i i've met this kid through my ex-girlfriend like a while ago like i was he was like i was 16 he was like 15 or like some shit so or like 17 and 16 and so he's been working on like he first helped me make the website and then he's been doing everything so like basically to get these like notifications in the discord We parse emails that Aj Jam sends to us.
+
+So like I get an email sent to my Dropout D-Den's email. I forward it to our bot. Our bot like parses it, takes all the information, stores it in our database, and then sends out that notification. And like basically that's– he wrote all of that. And we've got so much more that our bot does. But like– Like basically he just graduated high school last year and he got a job making frying pans. Like he's a full stack developer.
+
+Like he's an insanely smart kid. Like, right. Like, and he's, he was making frying pans at some company working 53 hours a week.
+
+What? Yeah. Yeah.
+
+Like, and he was like, yeah. Like when I was talking to him, like, he's like, yeah, I'm gonna have a lot of time to work on your projects after I graduate. And like, I was like, all right, perfect. And also, we revenue less than $1,000 a month after my failed acquisition. So I don't make enough to actually pay him because he makes whatever, like $60,000 a year through an average salary job. And so he's actually killing himself doing work over there.
+
+But he recently got promoted because he's going to re-automate all of their factories. He was telling me about it. He's like, yeah, like, they've been doing, there's some senior developers that are here for, like, 20 years, but they don't really do anything, and, like, I'm just gonna automate the processes that they're doing. And I was like, bro. He's gonna get a raise and like he's gonna work more here if he has time but like...
+
+Bro's too smart for his own good dude. He's like that's terrible.
+
+Yeah, but he's like, yeah, it's crazy.
+
+So you have experience coding too, huh?
+
+I don't know how to code at all. Well, I do, 'cause I'm learning it in my classes, but when it comes to actually anything on our code base, I don't know how to do it. It's not a language that I'm familiar with, but I'm very... Like, I have, like, three cloud accounts. Like, I'm very familiar with AI and, like, how to code with AI. It's just, like, he needs to approve all of the pushes that I would make.
+
+So it's just, like, I'm stalled.
+
+It's his baby, bro. Yeah. Only the person who builds it knows what to do with it, bro.
+
+Yeah, exactly.
+
+Which is always so valuable, bro. Like, now you literally can't do anything without him. Yeah.
+
+Last weekend, I forget. doing oh so i was i've been trying to also acquire this server with but i don't even know if he's interested but like this guy's been giving me the run around for like a week and a half and like i've been trying to get on a call with him and he's like oh yeah yeah give me like 15 minutes and then like 30 minutes later i'm like yo they just like later it's just like that so he i was like i got him on the phone for like 10 minutes and there's a way i have to be right back and it was like 2 a.m on like friday night like i i didn't go out that friday night because like i was trying to get on the phone with him so like it was too late friday night like all right so i stayed up till like 3 4 a.m trying to get because he's also like two times behind so it's like only 2 a.m so like i and i was up till 4 a.m and i was supposed to get on a dev call with him last saturday at 11 and i fucking slept through that shit and oh and like we've had i've had so much stuff like that i pushed like a week and a half ago that he was like yeah these need to be fixed and then we can push him and then we're gonna push him in that meeting so i've literally installed until I can get them back on.
+
+So it's so brutal.
+
+That's so fucked. So like when you were like in your peak of your server, was it going crazy?
+
+We never made more than 5k a month, but like, yeah, we were pretty, pretty good.
+
+Mean if I can't month when you're like 18. It's pretty cool. Yeah So with your with your website like like and people people just pay you through your own thing You pay no sort of service fee.
+
+So we used to be on WAP, but we uh-huh we hated like well We didn't hate. Oh, yeah We hate WAP because WAP was like just shitty a couple years ago like we were we were one of WAP's like very initial users like because like in early 2023 there is not that much like of the betting discords out there um but is that when you did it yeah that's when you went crazy was early 2023 uh-huh and literally flip was absolutely like okay i need to actually look into this and figure out how to look into like google search trends i actually look at google search trends but like flip the flip discord link was literally we would get like 20 people so like if you google flip discord right now um the first link is official discord link and it's like some random and it takes you to the flip flops discord server and it's like so like yeah i see this the reddit posts yeah so that was cooking in 2023 and 2024 because like flip nobody knew what flip was and all these little like young kids were getting into betting um so we had so so many people that were just coming in and like using flip and be like hey have a question about flip and we were just being able to like be like oh have you heard about this other social sports book or have you heard about this dfs app and it was like it was great but like and that's where you printed yeah but they didn't yeah but the problem was like they didn't we had too many bets was the problem and they didn't know like they were just trying to bet everything and like i have like all the spreadsheets like all of our analysts were doing well but all of our members weren't like making enough money to pay us and it was just like the problem they were like just Educated in just placing everything.
+
+And they were just placing their whole bankroll in a day. And it's just like, you gotta pick what you want to play and play a couple units.
+
+Dude, everyone does that, bro. Everyone just gambles, bro.
+
+And it's like, you're paying for something to like... And I had all the analysts on like really educated on unit sizes and like we were super good about saying hey take this one unit and like but we didn't translate to the knowledge term members and it's just like they really need it because there's like literally the freshmen are like in college that literally just figured out how to gamble and like their first hundred dollars in flip like and then when they lost it they were just like leave.
+
+So... Yeah, that's so bad.
+
+It's kind of cooked. So we're like repositioning everything and then we're going to remarket.
+
+Yeah, it's hard. I marketed very cheap to start with because I started posting videos and a month later started a premium. And I was like, "Dude, nobody here has a track record of what I've done. I don't know how I'm supposed to charge people." And people just kept joining. So I just kept slowly raising it. It was five bucks a week at first. And a bunch of people joined who are now grandfathered in at that.
+
+But it's like, they're definitely like, oh bro, like my mom doesn't pay me till Friday. Can I have MOU then? And you're like, oh Jesus Christ, dude, you should not be doing this. You're like, no, you can have it for free.
+
+Yeah, we had like, oh, it was so bad.
+
+Like so many people would be like, I can't put this on my credit card because my parents would think it's gambling.
+
+And I was like, oh my God.
+
+That is a big one, dude. That is a big one. My wife can't see this. I'm like, wait, why? Because I have a problem with gambling. I'm like, oh no.
+
+I haven't had any of those yet.
+
+Dude, the guy stay up on my chat. He posts pics every morning, but he has to leave his house and re-download Discord on his phone. He's like, I sent you a message last night. He's like, my wife's gone this weekend. I'll be on all day. I was like, no way, bro.
+
+That's what he looks forward to.
+
+Dude, I had, so in MLB, like I did all right. Like I probably in the first, from July when I started my premium to the end of the year, I probably did like 60 units in four months or whatever it was. And it was sick, but I had another guy who was giving out props and he killed it. Like he probably made a hundred units in those four months. And I was like, damn, like this is sick. And he disappeared after that.
+
+At the end of the season, I like paid him a bunch of money and I was like, dude, like here you go. And then he disappeared. And I was like, damn, like what the hell happened, bro? And basically after our fantasy football season ended, he had all the money for fantasy football. He like left the discord and stuff. And I was like, damn bro scammed. Turned out that he, the guy that was giving out all these winning picks, He got addicted to drinking and started gambling way too much money and lost all of his money and had to go into gambling rehab and everything.
+
+I was like, dude, this dude made me $20,000 this last year. He made me so much money betting on sports. At the same time, he was losing all of his money betting on sports. I was like, dude, that's so sad. I have no MLB props now, dude. I'm going to have to do that now.
+
+I love MLB. I don't lose my favorite too.
+
+So not last year, but the summer before, my friend had, or not my friend, but like some random guy that joined the Discord had a Nerfy model and it was absolutely insane. Like the 2020, I deposited $50 into my thrills, like betting account.
+
+Never touched it again.
+
+No, I deposited $50 and I spun it up to a band.
+
+And then I was like, holy shit. And I spun that band up to two bands and then I took out a band and I was like, all right, I'm taking this last band up to five bands. And so I was up to, like, 2.3 or 4. And I fucked up. So, like, there was some glitched bets on thrills. So I, like, hammered the fuck out of the glitched bets. And then they took away my money. And, like, I was like, oh, fuck. And, like, I was at 4.6K.
+
+Like, I was, like, 300 bucks off. And I was going to withdraw all five bids. And then they were like, we suspended your account. And we'll let you withdraw after our investigation.
+
+I was cooked.
+
+Yeah, I was over. That's so funny.
+
+It was a good summer though. It was crazy.
+
+Yeah, it is so far, dude. What a dog, dude. I know. I love the dog days of summer. All there is is MLB. I mean, for you, you're in the East Coast, so like– It starts at 1 p.m. for you normally, but it's like 10 a.m. for me. I wake up and I just rip Nerfies, bro.
+
+That must be so great. Oh, my God.
+
+Yeah, it sucks on days like today, though, because these bets start at 9 a.m., so people need bets. Yeah.
+
+I always stay up mad late, so I would never– I'm never up early, but that would be just so nice to wake up and be like, sports is already on.
+
+I can just sit in bed and just watch that shit.
+
+That's exactly how it happened today, dude. Like I like just passed out last night. We were at some comedy show and I got home and I guess I just fell asleep. and I I woke up this morning at like seven and I was like, dude, I have to get these plays out in the next like 30 minutes. And I've looked at them for like an hour so far. And I was like, dude, like. It's chill.
+
+I think I like, I have an alarm on my alarm clock that went off at like 1030. But like, I don't even remember that shit. Because I just remember waking up and it'd be like 1130.
+
+So I think I went to bed so early yesterday. Like I think I got home at like nine from that. I just fell asleep at like 9pm.
+
+Goodnight there.
+
+I mean, we went to like some free comedy show where it was just like anyone, it was like an open mic and. They had like seven featured like comedians that were like chill to start and then it turned into like open mic and The first dude, like, like, Like got on the mic and like turned, we were sitting in the front row. We got there late. So we were like in the front and he just like asked my girlfriend if she like likes getting her pussy eat or something like that.
+
+And we were like, all right, it's time to go. That's crazy. We were like, what is going on? That's crazy. It's like some couples here. You guys fucking tonight? You know, we're like, I get it, but I'm just leaving. You know? Yeah. Always the free comedy shit. Yeah, bro. I was like, nice. You guys are the comedy. That's what it is. Yeah, we left pretty fast. Dude, I'm playing Fortnite Reload right now.
+
+I'm just killing people.
+
+I have not played Fortnite.
+
+I don't even know.
+
+I hear the sticks. Are you Xbox or PS4?
+
+Dude, I used to play on a PC my whole life and I would play like hell. I would play Hell of League of Legends and Hell of Rocket League. Those would be the two games I would play. And then I went to college and I was like, dude, I should not bring my PC with me or I'm going to like not go outside. So I didn't bring my PC and then I was like, dude, PlayStation. So. Yeah, PlayStation I'd play so many video games if I had a PC.
+
+Non-stop.
+
+In high school, I hit Immortal in Valorant.
+
+I don't know if you know when that is.
+
+Yeah. I hit Immortal episode 4, I think. And then I just stopped playing it. I just haven't had the time to play that much games.
+
+Dude, you know like college esports, they're like really not high ranked. Yeah, they're like actually mid.
+
+I probably could have like played esports, but that would be really good.
+
+I saw today it was like Boise State played San Diego State in Rocket League. And I was like, dude, like, you know, and people were like– They were like, that's why he's grand champ and everyone else in this lobby is champ three. And I was like, I'm grand champ, bro. What? I'm grand champ on a PlayStation, dude. This is crazy.
+
+Yeah, but those are the weird kids, though. They don't shower and– Yeah.
+
+Yeah. You're the casual. I'm definitely a casual. I'm definitely in the middle of this. I have 17 kills, bro. I am slaying, right? Oh, I'm getting lasered. Oh, no, I'm one tap now. What a nerd, dude. The first real player I think I ran into. He's just pushing me. I'm so fucked. I'm more fucked than LeBron James, dude. All right, he's just going to push me. I have to fight him. Okay, he's goaded. Okay.
+
+I don't want to play this game anymore, bro. You win. You win, dude.
+
+I got him. No way. You just got his ass?
+
+Wait, there's another one. Wait, I have no shock and ammo. Boom! I missed him. He's one tap. He's one tap. He's running. Wait, I have 14 health and he's running. Get fucked. Got him. You like that. You like that. I'm like that dude. Fortnite has like, you like respawn now and shit. So like, I think these people are respawning.
+
+I gotta check this shit back out.
+
+Dude, I'd be so bored all the time. Like looking in school, it was like, Way easier to not be bored. Well, my girlfriend goes to work, which is like Monday through Friday. Or I guess she doesn't work on Wednesday and Friday, but a couple days a week she goes to work and it's like– At 9 a.m., I'm like, damn, bro. What the fuck do I do today? It's like the only way I ever sell premium is on TikTok Live.
+
+That's the only time someone's ever joined my premium group is when I'm on TikTok Live. And I just get banned every single time. But it's like yesterday, I didn't get banned all day. And I probably had like 25 people, like new paid subscribers. Because I could just sit on it all day. And today, I'm now banned for the next three days. And it's like, all right, bro. No new income. No new income today.
+
+Did you go live this morning? Bye. I went live on my backup account, but like, it's just not the same. Yeah. Let's see. Oh, shit. I should have had one, two, three... Three people resubbed this morning. Hold up. Are these fucks broke? Dude, a lot of them are broke. Can't lie. A lot of them I get payment tried but failed.
+
+What do you use?
+
+I use Dub Club. It's kind of ass. They take a lot of money. All three of them pay, bro.
+
+Look at them. They have money.
+
+Stripe takes like 3% from us. But WAP takes 30% plus another 3%.
+
+Oh, really? I don't have to deal with Stripe. Stripe takes nothing from me.
+
+Well, it's built into the Dub Club actually.
+
+Dub Club takes the percent and deals with the stripe. Yeah. Yeah. It's 10%, right? I get 15, but I've only revenued them $10,000.
+
+They take 15% on every...
+
+It used to be 20 for the first couple of months.
+
+Holy shit. Okay. Yeah. I'm happy about it. They take 3% on our Stripe transactions.
+
+Dumb Club or Stripe does. Yeah. We get a 5% on everything. I think when I revenue them like 25 grand, it goes down to that. But you got to remember, I push as many people as I can to pay me for through likeThrough Venmo. Yeah, yeah, that makes sense. I mean, and then I just write it down. I have like 130 people that pay me that way. And it's like a little bit more of a pain in the ass. Like honestly, if I look at my chart right now, there's probably some people I have to message, like expired February 5th, expired February 7th, and I have to message them and remove them and all that shit.
+
+But like, I don't pay fees. I don't pay taxes. Like, I have to pay taxes on the money I make from Dub Club. You do too, you know? Yeah, yeah, yeah.
+
+So what I'm thinking of doing is, like, so there's Dub Club, there's WAP, and there's Winnable. I'm trying to figure out Dub Club, WAP, Winnable.
+
+anything else, but like, basically Yeah, those are the three platforms people sell on. And then people have their own websites like you do. Or just like Gladiator Analytics is one dude that I see who just has his own website to sell his stuff like you do. Yeah.
+
+So what I'm thinking of doing is I'm going to make a Dub Club, a Winnable, and a WAP account.
+
+And so I'm just going to promote us on there. And then everybody who comes in, I'm just going to get them onto our Stripe plan.
+
+Yeah, that's kind of what I do. I tell a lot of people after their first sub, like, hey, if you just want to pay me this next month, I'll take five bucks off your month and you can just pay me, which definitely violates my deal with Dub Club. Like 100%. But I don't know for sure.
+
+So does telling people, give them 20 bucks to sign up for Novig. Yeah.
+
+Really? Nobody cares. Nobody cares. As long as they get the... Is that hella not allowed?
+
+Oh, yeah. Hella not allowed.
+
+That's in our things we technically wouldn't be able to do it and then so I'm assuming dub club in their partnership agreements isn't able to do it and the reason like you're okay like kind of doing it is because like they can't enforce and check everybody but like technically I don't think you should I'm small bro I'm like not even top 100 on dub club Not that they would even give a shit but it's just like if Novig found out they would be the ones giving a shit because they were like all these users might not come back Interesting.
+
+Yeah, so like I know a lot about the affiliate industry like yeah, that's that makes sense though.
+
+I just I Figured that that was too easy.
+
+So there's actually so there's a huge pyramid scheme company that came around They were called hot streak so basically They had to pivot. Okay, cool. So... Basically what they were doing for a while is they were having people sign up for their app use their like link or sign up code and they would pay your they would deposit for you like they would give you $150 deposit like they would and so like how it worked is like it was some crazy pyramid scheme shit I gotta find it in my old notebook like oh my gosh like so it was like a crazy circle jerk with like five different hands So basically, Hot Streak has a deal with FanDuel, DraftKings, etc.
+
+And so they would get paid whenever...
+
+Someone would sign up.
+
+middleman that went to like the affiliates and the affiliates were also another middleman so it was like some crazy circle jerk And that was the whole company?
+
+Yeah. Like their whole business was just like getting people to sign up as affiliates. Yeah. Nice. So it was a pyramid scheme.
+
+I really wanted, I got, I got paid for my deposit, but like, I really, I really did not want to push that shit. But like, Okay.
+
+That's basically how it works.
+
+laughter It's hella funny. Dude, I got to do that, dude. It's so funny, dude. People kept asking me, they're like, so what is this company that I'm talking to? And I was like, oh, dude, it's just like a sports startup. They're just going to talk about sports. The amount of people that were like, why don't you have a startup? I was like, what? That's the most random DM ever.
+
+Yeah, why don't you just invest a couple thousand of your dollars and then do some startup.
+
+I was like, this is my startup, bro.
+
+Your Discord is a startup, basically.
+
+Turtle.ypixllc, bro. It's hella funny.
+
+So is it just you as a capper or an analyst right now?
+
+I pay nobody else. Like I have people that like, Enjoy the mod. You know, they like enjoy muting people in chat, but... I basically, I had to pay people when I was like first like blowing up. I had to, I had a lot of scammers join my thing every single like, and they just spam their shit every single day. That was such a pain in my ass. So I had to pay people for that. But then I figured out how easy it is to like stop that.
+
+And I went in and changed all that. And now it never happens. It rarely happens. Like the fact that it happened the last couple of days, Which means that one of my invite to server links that I have open has been like grabbed by the scammers. Yeah. And they just have it in their little group chat or whatever that they're just going to keep doing. So I just have to go to my like invites and see which one like is corrupted.
+
+Yeah.
+
+Oh, this one's genius. This is an invite link that starts people on the join premium page. That's pretty smart.
+
+So, okay. Yeah. Let me show you something.
+
+Wait, let me pull up a screenshot for you real quick.
+
+A couple of these have like 700 uses and it's like, okay, those are definitely schmazzers.
+
+Let me show you. Yeah, we have a ton of bot stamp issues, but like we haven't even done anything yet, but we're going to.
+
+Let me get back here. Hold up. I'm here. Watch stream.
+
+So we have all of our invite links in the rules channel. Dude, that's insane, bro. some other random things, but we now are gonna switch it to all of them being from our bot. And so like some of these are, like we posted this one in the drafting server. So right now, let me see. I'm in the draft team server like as a server booster so like you You can click on my thing and just come to my Discord. I posted this a week ago and it already got grabbed by bots.
+
+I got to find this screenshot. The admin from the DraftKings server joined and I was like, oh, that's an admin. And then it was just a bot account of the admin.
+
+It's just a fake admin account. You're like, fuck. -That's so funny. You have so many Discord messages, bro. It sucks. Use the same Discord for work too. It's crazy, bro.
+
+This is from yesterday. Oh no, this is from two days ago. three days ago but like when whatever like I lose all my all my DMs get lost like it's so bad yeah bro go on I forget to respond to so many people I'm like oh my bad we get so many of these thoughts too like Fucking go, dude.
+
+A huge start to the day. Did you get a, get a dub? I mean, they're up by 19. Yeah, we have minus 12 and a half, but they're up by 19. Oh, nice. See ya. I love that my chat's like so dead. I love that, dude. I can't wait for MLB, bro. It's gonna be so fun.
+
+Yeah, my chat's so dead right now.
+
+Dude, my least favorite is when like, like some people are fucking idiots and to be honest, it's the Daniel kid in my chat every single day. Like, I don't know if you're talking to that Daniel guy. But it's LeBron James, 1786, or Daniel, one of the two of them. Yeah.
+
+What about him?
+
+He just asks me every single day. Like yesterday, he'll ask me every single day, like, what are your X amount of favorite bets? And like yesterday, I have one bet that's one and a half units and the other two are one units and he'll message me every single day, which one's your favorite? And then like the day before I have two and he'll message me, which two are your favorite? And every single day I respond with the one and a half unit bets.
+
+And I kid you not, he asked me again the next day. And it's just like, some people are like, Jesus Christ, bro, this cannot be. Yeah.
+
+That's so funny. I can't find a G.
+
+LeBron.
+
+Yeah, hopefully you don't have him. There's some people that I'm so happy that you didn't sign up. Like, so happy. They're some idiots, bro.
+
+I saw the one guy that said, like, I don't care about their $50 gift card. Or like, I did too much work for that $50 gift card.
+
+Dude, that's the kid you did not want to talk to is Sean. That is the last kid you want to talk to, dude. You'd ask him a question and he would just be like, I don't know, dude, I just like cocaine and bitches. And you're like, bro, shut up. Like actually shut up, dude.
+
+That's so funny. I'd be even more caring for my boss to go chat with.
+
+He like talks shit to people and then he'll like post his bet and it'll be like 20 bucks. And someone will be like, bro, how'd you just talk all that shit to me and you bet 20 bucks on this game? And he'll be like, shut up. You probably didn't even have sex yesterday. It's like, what? Bro, like. He's like, I literally go to Bama and I'm in a frat, dude. And you're like, oh my God. That's so personality.
+
+Yeah. I get my premium payments from his mom's Venmo.
+
+No, no. No, no, no.
+
+I'm like, bro, this is terrible. No, that is not you. Shit is so funny, dude. Oh, man. Oh, dude.
+
+That's crazy.
+
+Yeah, it's pretty stupid. The mom's Venmo is so wild. Damn, they hit a three. Damn, there's 15 minutes left.
+
+That reminds me of one or two of my friends that have their mom memo for shit. Like, what are you doing?
+
+Yeah, and it's like, what are you doing? You're like, bro, you got to work that one out. At least ask your mom to Venmo you first, bro.
+
+You can do that.
+
+Have her pay you and then you can pay me. Why did you buy that by Venmo? Yeah, it was really funny. In college, it was really funny because you would just see who's mother Venmo'd me for rent this month. And you'd be like, oh, how interesting. You'd go with your friend to the bar and they're like, dude, can you give me a drink? You're like, let me check who Venmo'd me for rent this month. You know, you're like...
+
+That's so funny. Shit's so funny. It is really funny. Bye.
+
+So I have a question I was looking at your court in the lake so is no big as I was looking at your announcements So is no big and then have you other any is there any other ones besides underdog that you've done?
+
+Dude, I've really done no... like partnerships other than like literally 99% of the income I've made has come from people joining premium, which is crazy, bro. Like there are, you know, 700 people in this discord and it's made 25 grand in the first six months. You know, you're like, bro, how, how I have 2,500 followers. How have I made 25 grand, bro? Like, you know what I mean? Like that's retarded.
+
+So it's, it's like, I, I, I can't imagine when I have like, as of right now, like no one, like I did the Novig thing and it's like, I promoted it for like a month and a half. And I think like seven people have done it. Which is like... Not a lot at all. Yeah, right. That's like, yeah. Well dude, hella people resubbed this morning. That is good. Fucking idiots are paying 20 bucks a week, bro. I feel so bad.
+
+Do you have a monthly plan or no?
+
+Yeah, 75% of the time I'm on at least 20 bucks a week or 20 bucks a month. Like most of the time. I just got so hot in the last couple weeks, I was like, I'm not doing promos right now. And I ran one like promo right before I got super hot and it was five bucks for the week and then it's 20 bucks every week after. And like a bunch of people joined that and there's like, they couldn't have done anything to like not be on the 20 week, $20 a week thing, you know?
+
+Yeah. And they all stayed because I haven't lost in fucking forever, except for yesterday, bro. Fucking bullshit. I've actually lost the last two days now, dude. Really? I gotta update my tracker, dude.
+
+Fuck. I talked to so many people about their tracking. What do you use, I guess?
+
+My Excel spreadsheet, bro. Oh, yeah. I love spreadsheets.
+
+I love, love, love spreadsheets.
+
+I mean, mine's so simple. Like mine is so simple. Mine is... I just have to do it myself. That's annoying. Why did I give out as my free pick yesterday? UConn, they lost.
+
+I built, I used to build, have a AI bot built that like would put mine into my spreadsheet but then I like kept forgetting to post my pics before the bot would run and then it's like, oops.
+
+I built a bunch of really stupid fucking spreadsheets when I worked for the city of San Diego. I like did their data management in their real estate. And it was like, I was building the fucking stupidest models for like $100 million financial models for their like revenue and shit. And I was like, dude, this is so stupid. Like it felt so dumb because I was like, oh, guys, like, you know, this person owes us $460,000.
+
+And they were like, okay, that's not that bad. Move on to the next person. And you're like, what? What do you mean, bro? Let me get that then. I'll take 1% of that. It's just like you're like, dude, No one gives a fuck here. We're like chalking up, oh, that's only $2 million. Dude, fuck them, dude. You're like, what? We're just going to let them have it? It's got to be 15 mil to burn the radar. Dude, I want to work with you guys, dude.
+
+That's crazy. So you studied data analytics or data science?
+
+Yeah, data analytics and finance. I actually have like seven AAs. and I have a finance degree with a minor in data analytics.
+
+Damn, that's... That's nice. Right now I'm a data analytics minor and I have a concentration in innovation design and startups.
+
+It's kind of weird, but it was the freest class ever because I have the Discord.
+
+I literally didn't do a single thing for class and I was like...
+
+Here's my Discord.
+
+okay so you did a whole bunch of shit see i did community college two years after high school because like i was just like making a shit ton of money selling like illegal products in high school to where i was like fuck it i'm not going to college and my parents like you should really like go to college like let us take you to some city colleges at least and they took me to santa barbara city college it's like sits on a bluff over the beach in santa barbara and i was like damn i could go to school here and like my four best friends were all going thereI was like, I can do that.
+
+So you went there. So I went there and then I like gambled my ass off for a year. And then the next year I was like, I started gambling like responsibly and like I got really into that. So then I went to school for finance and data analytics. I love that. And then because I was like, dude, I'll be a wealth manager and I'll manage people's money and stuff. And then I applied for that after school and they were like, yeah, dude, you want to sell life insurance?
+
+And I was like, hell no, bro. I'd rather sell pics, my boy. Yeah. Hell no, dude. I don't want to call random people about them dying. I'd love to talk to 18-year-olds about who we're betting on today. That sounds way more fun.
+
+Yeah.
+
+When it comes to what you actually want to do in life, would I rather call Random people and like get yelled at or like not get the sale or should I just like talk about betting like Yeah, I didn't think making like those data models for those was fun, but I'd rather do it for like businesses and be like, all right, like I'm going to go consult for mom and pop taco shop and be like, all right, boys, like, honestly, let me just look over your stuff, give you my advice.
+
+And if you make money, you can pay me. You know, if you make more money, you can pay me. Yeah. But like, there's no money in that. You're just like being a good person.
+
+I got a film posted.
+
+Yeah, you could get one good person.
+
+going even though like he didn't have any signups is like i would just be like hey you want to you want to give this guy code and they will give you signups um so like um if you're interested yeah i got you people that i might be able to reach out with um and then the second thing that like i wanted to like just throw up in the air and then like um i want to like just say first off like completely like my discord right now like i'm still like i'm still like in a really big rebuilding stage and like um we don't make enough that like it would be incentivizing for you at the moment.
+
+But like I am rebuilding my team. And so like we have a lot of like offerings and our customer LTV like from our partnerships is about $1,500 a month.
+
+No shit, dude. Not a month, but just $1,500. Yeah, LTV.
+
+Yeah. Yeah. But it's going to be at least $2,000. I think it's going to be $2,500. It depends on who I can talk to for like getting when I turn 21 about like the real books. um codes um but we're gonna have like 40 maybe 50 partnerships um so but but like basically what i'm trying to get at is like um right now i have a minimal team so i have um a solid amount of like basically i run everything on a rev share and i'd be able to give percentages out um so i'd be open to like just uh if you think it would be something that you'd be interested in um like i'd be open to expanding a like a staff offer or like bringing you onto the team and For like my discord.
+
+Yeah, I'd love to help you. You don't even need to pay me necessarily. I think I would definitely be down to help you. You have a lot bigger of a group than I do. And I think that like, in a sense, obviously, not to a full extent, but that can be valuable for me too. So if I help you, it's totally fine. Like, I'd love to help you in a sense. I'm sure there's a way where I could be helpful. some sort of staff in your discord helping you with things that could also slightly benefit me to where you don't have to pay me you knowYeah, yeah.
+
+And I know you said it's like not super active right now and that's fine. My thing's not big either, but I think, Like... Obviously, I don't know what your staff necessarily entails, but I think it's more beneficial for both of us to just use each other to continue to get bigger. You know what I mean?
+
+Yeah, that makes sense.
+
+But I'm definitely down to help. I definitely spend a lot of time at this computer. And if I'm not on TikTok Live or banned from TikTok Live, I do look for shit to do during the day.
+
+Like, so I have a staff call in eight minutes that I have to run to, but.
+
+With people from your Discord? Yeah. Do you want me to hop in it?
+
+It's just a one-on-one with one of my guys.
+
+Sick. There you go. But I can hop on with you like back later today. But like the, the whole thing, I want to offer you like two things is like one I'm super, I would love for just one to like give you like either a staff role, but like for the just either engagement or like just help in, I can just open up and like tell you what we're working on and you can like say, Hey, this is, I want to help out on this.
+
+So like we need like X and X. And then also the aspect of like, I can help you get another couple codes or like see i could talk to my partner exactly yeah um and then uh like the other thing that i wanted to potentially offer and then this is like i'm gonna keep this as a rolling offer because i have to like i'm looking at just basically when it comes to where i'm at with my community um like i basically need to do a community re-engagement campaign or i need to do a community acquisition to validate my positioning um with just like the education and partnership approach um so right now i'm like either like i'm i basically about like a 20 like 15 to 20 stake that i'm um looking to give out to in another acquisition um basically um so it'd be basically i i would be open to and this would be like and it doesn't make as much sense revenue wise for you as right now but like it would be a growth thing if you think you're and it would be more of a community merge um that we would be interested in um and then And I'm just gonna throw this in the air because I do have to run soon But like and this is like just something that if it does pique your interest we can talk about but like these are the two opportunity like wavelengths that I'm on Yeah, sounds good.
+
+Sounds good. I'll think about both of them. Um... Yeah, it's really tough. This is such a weird space, at least from what I've noticed, where a lot of people, like even when I'm like, oh, like talk to this company, they're all like, is this a scam? Am I going to a bad place? You know, so I and I've never like. really done anything like that. So you would definitely have to take more of a lead on like every sort of like, I don't know if merge is necessarily the right thing.
+
+Cause I don't think these, like, I don't know. I don't, I don't fully understand that at this point. Um, but, But I definitely understand the point of like... growing and I, I, I think it was, I don't know how to go about having people that I know, like be comfortable with anything, dude, you know? Yeah. Everyone thinks everything is predatorial.
+
+I understand.
+
+And especially like, okay. So like, and my positioning in a space and I want to be like, uh, and, uh, I want to be like very open and like, you can ask me anything and I'd be completely open to share. Um, but like my positioning in this space is like, um, I really don't want to like, and this is more of a value positioning is like, I don't, They want to charge that much for my premium, but I'm raising my prices to $50 a month to like validate the like actually positioning offers.
+
+But we want to really push that. Like we don't want to push the sale of premium. We want to push the sale of value. So like we're like you can like not only do your analysts like send the pics, but the whole point is like we have all these tools that you can get. Like you might only be making two extra dollars on this bet because you took it on this app. Two extra dollars on this bet over 100 bets is $200 that you're making.
+
+Right. So, like, pushing, like, the education value of, like, you use our partners to line shop.
+
+So, like, and also what it comes to, like, what a merge would, like, kind of look like. And then, like, just to kind of, like, ease kind of those things. Like, I've done this in the past, and it actually does work a little bit. I had a hard time because the guy just stopped posting picks, which sucked, and he left. Basically, like, we would all, I would want to get all of your members into our premium for free, like, for the first month for free.
+
+We would get them on that plan for free. And, like, our goal is to just basically re-ink, and we have a whole, I can explain this later to you, but we have a whole ticketing system. So, like, once they're in our system, they're in our system forever. And, like, anytime they do an action, it's linked to them. And, like, if they churn, it opens an automatic ticket with them and our mod staff, and we get notified.
+
+et cetera. But like basically our whole goal is to be more We're building a community of knowledgeable bettors. We want to sell a course on how to be a knowledgeable bettor without framing it as selling a course and it just being a community of knowledgeable bettors.
+
+Understood. Understood. Um, I don't know if this is what you were saying, but like, I will be keeping my own premium in Discord. Or was that not your plan?
+
+I guess we would try to acquire you into our Discord. Basically, we're trying to move your members into our super because we can't necessarily Send our odds jam TV and that's one of the big points and then you'd also like We can't send the odd jammy V with our partnership into other servers we can only send it locally so like We would want to like bring as much I see what you mean and if that's something that like I don't want to push that at all if that's something that to build your own thing.
+
+So I don't wanna push that. Yeah, well, in a sense, if like, you know, let's say my community is revenuing more than yours, then that is like negative value. You know what I mean? The idea of, Me running my own and me working with you to promote to a lot of members that I know and offer things such as a free month of yours. is also something that's like... Semi-tough because... yours could be better and they could leave mine.
+
+Yeah. You know? So, so I, and I totally understand, but like, like, you know, if, if business a revenues $5,000 a month and business B revenues, $2,000 a month, business a wouldn't go into business B, you know? Yeah. I understand the, the longevity idea of that. But in, in terms of like, Yeah. An overall revenue thing as of right now. I don't see how I could like stop doing my dub club payments through all those members and be like, hey, go and join this one.
+
+No, 100%. And like also like another thing is like right now, like I kind of only want to float it because like we just aren't like we were, we only spent like $200 on just getting an organic post up. So we'll have that up for the next three months. But that's basically all that we have spent on marketing right now. But like basically we're just not, at a place where we're revenueing that much and we're like more in the rebuilding systems andA hundred percent.
+
+And I'm more than happy to help you out. The quick way, and I know you have to run, that comes to my head is some sort where, yeah, you offer like people that I know a free month. I back it. I say, hey, like go get a month of this. It's super educational. It's completely different than mine. You know, like you're just going to like learn and you'll see like value here. And we have some way to see like if people continue after that free month.
+
+then we go from there, you know? Yeah. But I, yeah. That's where I'm at in that.
+
+Yeah, okay, cool.
+
+I'm going to also just...
+
+I have an AI note that's okay with you. Yeah, sure.
+
+I'm just gonna like just go through everything and then I'm like working on getting all my docs together as well so I'll also just like I'll follow up with you and just like nothing like to like Thank you.
+
+just have a think about it and we can just like have another talk on it.
+
+Yeah, no stress. I definitely wanna work together. I think it could definitely be beneficial for both of us.
+
+And I don't wanna offer something that's like really would be disadvantageous to you.
+
+And like, I want something that would-Yeah, and maybe you see the value in it and I don't, and we have different opinions on something or something like that. And it doesn't matter, you know, but we'll figure something out and we will definitely, help each other out. Yeah, sounds good. All right, I'm going to run for now.
