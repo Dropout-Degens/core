@@ -1,0 +1,103 @@
+Okay, so it is February 7th, 2025, and this is basically going to be my ASAP to-dos. So, I don't know, I wish I could... There's a better way to Okay, so like I just need to raise okay, so my number one ASAP to do is raise My... Pricing to $50 Per Month, OK? So that is my number one thing that I have to do. And so what do I have to do to raise my pricing? Okay, so the first thing that I need to do is Okay, well...
+
+The biggest thing that I need to do, I will say, is publish Eevee. And so what does publish EV actually look like? Okay. I mean Just take a second to telescope this. So basically, When I say publish EV, that means I have to basically... So I have taken my old EVView EV and DFS. View. And I have made them in a way that they're publicly viewable. So I need to find a way Or no, I don't need to find a way, but I need to update this into my...
+
+Evie info And so that'll allow me to just say in my EV info, hey, This is Like... Okay, yeah, and so that'll allow me to update my EV info and just say this is like actually how because we don't send any EV out right now So basically means to update our information and say hey when it's coming out This is how we've done it in the past and validated it and currently while our the way we are doing it is Like a little bit more of an algorithm and it's secret.
+
+This is how you can kind of get a general sense of how we look at these markets and then Like, basically, like... Yeah. Once we do that... Then we can... Yeah, so once you publishize the EV info, it'll make it just, like, we just need to update all that information in the channel to be, like, accurate. And, like, the whole goal of that is we want our people, we want people to look at it and be like, oh, this is really cool.
+
+Like, This is really interesting and they have a lot of data and this is actually really impressive the way they do this Because we spent I spent so much time doing all that so I need to get it out there So we need to actually update our EV info and then the next thing I need to do out of that Like is actually for our current EV. I think I was trying to do it and it was just super hard for me and the AWS.
+
+So... Well, OK. So basically, on a high level, I need to publish, I'm going to focus on Because I know the focus, and I could do this, because I have downtime before the NHL. So I need to publish NHL before... The season comes back. That is my number one goal. And so if AWS isn't a good idea, then we can go back to actually just putting it in the Google Sheets. Okay. That is fine. and we can view it in the Google Sheets and it'll it's it's like Yeah, it's completely the same data.
+
+So... then Um... Yeah, and so then the next thing I need to do for publishing EV is actually get on a call with Bellcube. Because I have published, flip equals published. Like, Fliff EV is published. But it's sending in the wrong channels. So we need to fix those channels. And then what else do we need to do? Like yeah, we need to fix those so they're sending in the flip only channel and not the other ones so that is specifically for flip and then we also need to release the new EV for hockey one I can get that and that is an ASAP.
+
+And then, okay. So the next thing I need to do for raising my prices is well We need to update the I'm just going to say the whole ticketing system. This is one of the other AESAPs. Especially the premium walkthrough. The premium walkthrough needs to be in ASAP. So-So yeah, the premium walkthrough. So I'm going to just take a pause on before I go to updating the ticketing system because yes, that is important.
+
+One thing I want to tangent and note on is that the staff visibility, we need to update the staff visibility. and like this staff. So first like First, I have a bunch of staff that I need to get. Old Staff Login. to website and remove their roles. Okay, cool. So yeah, first the old staff log in to the website and remove their roles. So we need to just get all of our staff off the staff if they're not a staff.
+
+And then the next thing we need to do is we actually need to get more info. So like in the mod view, if uh... like I need to look in the server for one second. So yeah, so when a mod clicks on Apps get profile so 1. First thing, there's two of them, so like which one are we supposed to use? I'm going to do the staff. This is a question to ask Zach. Do the staff have access to the git profile admin or just the git profile?
+
+And so when they do get profile, I want to know all of the demographic info that we have as well on this person. So done. So like I want to know, so in the partner promo bot, I want to know, Bankroll or not bankroll, uh, state. Age range or age like thing 18 plus 21 plus etc and then I also want to know Like I also just want to know Yeah, I also want to know... Like... There yeah the bank robot info Where they came from?
+
+And I might add some more to this, but I just basically want to know more about this person. How many times they've done a membership, if it's been paid or not, that kind of stuff. And then the next thing I want to do is in the lobby entrance, I want to get it Yeah, when they join, I want to get where they're from. I want to display where they're from. Because when we know when they're from, that's when we can start to like just understand more about the person and if they're easier to convert or not.
+
+And then the next thing. is going to be Um... Yeah. I guess And then in the mod and in the tagging in the audit log. And we'll get into this a little later after we go through the ticketing system, so you'll probably need to link back to this. But in the audit log, it needs to update the staff tags. per channel because they're going to be different depending on like what like what staff team actually should get tagged.
+
+Sometimes it should just be staff, sometimes it should be mod. Yeah, so like, yeah. like the free access will be staff and mod or staff and head staff And yeah. But like I'll figure it out as we go but like they'll be different for each channel. So basically now I need to go into what what is the next ASAPs for raising my pricing to $50 per month. Not only do I need to update the ticketing system to be like.
+
+Um, that's it. premium walkthrough what else do I need to update um I need to update the value we give. Like, we need to... Not only with the tickets, we need to update our strategies and value. So this is like in every channel we have, we like the betting tips, like there's some value in there, but we need to update more value. And then like... Just the aspect of... how to convey that value. And then like... Just the aspect of... how to convey that value. I'll talk more about that in a bit, but
+
+And so Like I need to update all of my content like just all the content needs to be updated and Like, I need to... Yeah, so like... So yeah, I need to update my ticketing system and then I need to update my strategies and content. And then I actually need to do my staff stuff. Like all of my staff need to not only be... Okay, cool. So like... All my staff they need to be The analyst needs to be onboarded for the conversions and then their percentages where applicable.
+
+And then I think so with my analysts, I've talked to everybody but Luke. So let me see where it is. Okay, and so like Basically going to With all of the analysts, Um... Yeah, I think it would be really cool to do a team call with the analysts and say, Who's doing the best this week? Are we actually converting this week? Track wise, tracking wise, I'll make sure everybody's updating their tracking spreadsheets.
+
+And yeah, we'll do a weekly analyst meeting with all of the analysts in one call. So, and I'll onboard them for that. And then they also just need to... They need to start being more engaged in the server and so we need to get that kicked off. So I'll put that on my calendar for early next week or like just next week. Um. Yeah, so I'm going to propose Three different ones. Different times. Yeah, I'll propose three different times in the group chat.
+
+I'll do a Wednesday at 10:00. Yeah, and so we either will do it on Monday, Wednesday, or Fridays. So one of them can be-There, there. I'll give them three options. And if they can't make the analyst weekly, they will have to schedule a one-on-one. Um. Yeah, they will have to text me and schedule a one-on-one. really just another thing that I'll mention from this is I want them to be proactive. And then I will need to do a weekly with JP sometime soon.
+
+Starting next week. And then I really don't have any other mods. Bacon's gonna get... Yeah. And so basically Analyst weekly and then You can do one of those and then-Yeah, okay, cool. And then the next thing that I will be doing is is After I update the Shadows and content Thank you. uh... yeah i got i guess I'm going to put this on the next page, but this is kind of like operations, like operational stable.
+
+I need to update like the... The backend database. For like our expenses and our partnerships. . And then also like the just the aspect of the building developmentally. I'm just going to side put the building developmentally because I need to be focusing on talking with Zach for that. That's a conversation that needs to be with Zach. So I guess one of the things that I'll need to get together is an agenda for an ASAP must-do, and then these are the things that I'm going to be working on and I need you to prove.
+
+But there are a few things that he needs to push ASAP. But Basically... We've spent Money, we've spent money already on our marketing budget. We spent $200 on a promotion, but it lasts for the next three months. So we're going to get about 200 new people that are going to come in that are going to start testing our onboarding and they're going to be looking directly for what we have to offer. So we need to make sure like we just need to validate our positioning with them.
+
+So yeah. And-So... Big thing is Evie Another big thing is the content and then Like there's really not that much and then we can just start selling again. We like we're just not selling it like And then like of course I need to do a re-engagement campaign I need to go chat with everybody and be like hey, sorry that took me so long But I spent the last week getting my staff on boarded and starting to look through the data Or like I've been looking through the data.
+
+I've got this in our development cycle so it'll be released by like This this day Yeah, and so... So yeah, so I can basically just start working on that. Let me just pause to give a little bit of a reset to recap context. Let me just give this... And so... I'm just gonna go talk a little bit. So Right now in the EV 2025 channel, that's just public. So and this is just a context dump to add a little bit more context.
+
+So to my EV information, going back to that, I need to update my just there's an EV information channel that's an overview channel. So I need to first. I guess I'm just gonna purge everything from that channel. We know nothing from Um, yeah. I need to purge the EV and update all of our information. So that channel needs to be completely done. Um, so the season comes back late March, so I have like a week or two.
+
+Um, so I'm basically just going to copy a new copy of the DFS sheet and I'll figure it out. I'm really just only going to focus on hockey. Um. What is the ideal premium walkthrough experience? It's like... I I add a little bit of context, but we need to talk to them and see what are your pains. It's going to be going back to the mom test. And this is going to go back to the external conversation with the lab team, but, like, this is, like, really just we need to go to mom test and say, what are your pains?
+
+Oh, okay, so we have a solution for this, and we're also going to get together a question bot of, like, what are, what do you... What are these blah blah blah? So for the expired sub ticket, we need to see where do we fail in their value. Hey, what was wrong with our servers today? that you're not going to subscribe? Or like, what can we do? Or what did you... Like, just on that aspect. Like, just...
+
+Get across with that. Um... And we want to offer them like we want to say hey we realized by you not subscribing we must have failed some way so what can we do to fix that for you and really then we want to say, okay, we understand. Have you found value from X, Y, Z? And then we can say, OK, so how How about this? Why don't you sign up with our partner And normally you get seven free days, but if you do it in this re-engagement ticket, we'll give you 14 free days for signing up for the ex-partner.
+
+And so that's kind of what I'm looking at. And so kind of like when the content value, like... No, I'm gonna have to I'm just gonna have to go through all think that's when it comes to like I was kind of talking about I'm not talking about in this transcript, but in a little earlier I was talking about the the discord just going through the discord itself and getting all the content Like pulled and so I have a channel breakdown of it in the in the github that I just created but basically like it's and And it's just like, we'll go through that.
+
+And in betting tips right now, yes, it's good right now. Like the tips are good, but we just need to update it. Like we need to add, like there's so much more strategy. I'll just put it in strategies like, like. Like, yeah. And... This is over the next few months. And so they're going to land in the lobby, the rules channel. And so we also, this is just like, we need to update our onboarding as well.
+
+It's just one thing is, but like. We like just like the whole server is gonna be updated but Luke was moving last week, so I just shot him a text to see if he's going to. be able to chat this weekend or if it's next sometime over the week is going to work best. Um, and then. Re-engaging I'm gonna be chatting literally everybody that I can that is in the server that I can find in our database Literally every single person their discord and I'm gonna be messaging messaging messaging individually and then been like hey and Like yeah, I'm super sorry like it's super hard for me to keep up with all my DMS like and I'm really just trying to be active in the server So just please tag me there.
+
+I think that's the best way to go about it And like I'm gonna be just try to be so active when it comes It's just like it's hard to be active when there's no community and there's no community when it's an active so really that cycle so we got a and then the aspect of I'm bringing in the staff to kind of break that cycle right now and so I think that's a lot of context that really follows up. and So Basically right now what I want to do is Start working.
+
+through everything. What I'm not gonna do right now is, like, verbatim the EV, but I am gonna start, like... Like, I'm not gonna go start doing the EV, even though it's, like, our number one priority, because it's gonna take me a little bit longer. But, like, I just need to just... to knock out all of the quick actionables. So like let me just start Drawing down random stuff. Okay, so some quick actionables that I can take are message All with Staff Roll to...
+
+We sign into Website So I'm going to look, I just put that into a little quick action plan. So I'm going to look at that currently.
+
+So, yeah.
+
+I'm going to start just taking some of these. Um.
+
+So I'm gonna do After Luke...
+
+Okay, so yeah, so like after the analysts, so for the analysts, And then I also need to schedule with JP.
+
+um Yeah.
+
+Yeah, we'll talk about things in the staff weekly then. Yeah, cool.
+
+Okay.
+
+Okay, yeah. And then, so for cleaning up the Discord, I need to message all staff roles to be sent into the website and remove. This is kind of like a tangent right now, but I'm just going to keep it running just to give a little bit more context on everything I'm doing and I'll give another recap. This is all going to be put into multiple transcriptions and used for context. Move.
+
+update We... rolls to remove all members. Reset. All notify And bot roles purge Yeah, I can't even delete the old channels until I get on the phone with Zach.
+
+Yeah, and so another thing that I'll have to do is, like, I have a bunch of staff-facing content that I keep in routine. So, like, those documents that I'll actually need to update are in there. I have like official... Okay, so... Hmm.
+
+Yeah, so I have three types of documents. I have context, I have staff, And then I have official which are just like word docs.
+
+And those are all stored separately in different places. Which is kind of funny. But it's fine. I don't really mind. But... What else do I have to do for cleaning up? Um...
+
+Yeah, delete all old threads. Cool, I actually don't have that much to do on those.
+
+And then-Yeah, and then so the longer ticking things are my Evian tickets.
+
+So-Yeah, so... So-Yeah, so
+
+I'ma let you know. Okay.
+
+And so I just spent a couple... No, I would just say like the past hour or two doing a bit of stuff. So I recently just... Um. Messaged of the... DAF. One sec. Okay, so basically you spent the last couple of hours going through stuff and I messaged all of the staff that have this staffed entity role but haven't been removed from the database yet. And then the next thing that I did, The next thing that I did was just like I updated a bunch of the EV rolls and stuff.
+
+So not the information, but actually the back end rolls. And I ingested some new EV. But I also just... cleaned up everything thing when it comes to the old notify roles and like basically when it pushes we'll be ready to push um like and then um i i'm right now i'm gonna be purging and tracking all of our invite links and then i also just um yeah that's another thing that's gonna be huge is Have to purge and redo all of our invite links So that's what I'm gonna be focusing on right now

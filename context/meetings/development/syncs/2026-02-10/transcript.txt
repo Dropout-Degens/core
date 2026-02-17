@@ -1,0 +1,1107 @@
+One of the biggest complaints in the software world about engineers who like don't do stuff in their hobbies and they've only learned from school is is that they don't actually know how to do anything in the software development world. they know maybe how to open IntelliJ And how to write a quick, dirty program in Java that looks like tutorial code and has comments worse than chat GPTs. Neither of which you're supposed to have comments nor comments written by ChatGPT in the style of ChatGPT, but here we are.
+
+And, yeah.
+
+That's about it.
+
+It's so bad because everything, like...
+
+All of the comments in my, like, I don't know.
+
+I don't even want to comment my code because it feels like if I comment my code that it's like I'm using AI and like it's just like Well, here's the thing.
+
+So the way comments are supposed to work This gets into, there's this beautiful thing we talk about called split brain.
+
+If the same thing is happening in two different places, and one of them changes but the other doesn't, there are problems.
+
+Let's say you have a line of code where you're doing a couple different things to clean up a string.
+
+Maybe you replace any white space with scores, and the first thing you do is you trim any white space on the beginning or end. Alright, cool. So then you write a comment, remove white space, and fill in underscores. But then...
+
+Later on... you decide, oh, we need to add some extra processing.
+
+The pound symbol, the hashtag, We need to replace that with the word "numb." And so you add that too, but you forget to update the comment.
+
+Now... people reading the comment I completely miss the fact that you're also... replacing the hashtag. Question. Why can't they just read the code? Because the code should say what it's doing. The code should say string.replace whitespace underscore.
+
+dot replace #num It should be readable. If it's not readable, that's a sign you need to make a separate function and abstract things out and all that.
+
+Your code should be readable like English. Yeah.
+
+Given the context of function name and what program you're working in and all that, you should be able to read it like English.
+
+If you can't, there's probably a problem.
+
+Usually my code also. Who the fuck is this guy spamming my server? But like, When I comment it, the teacher's comments always look AI too.
+
+Oh, yes, because the teachers write tutorial code. They don't write code code. because they no they don't write codes they write tutorial code to write AI comments like not helpful at all They teach you how to write comments that tell you what the code does. Which is pointless because you can just read the code. Yeah.
+
+So school is important.
+
+The kinds of comments that Actually? need to exist? Our why comments. tell you why the code handles it in a certain way.
+
+Yeah, like, that's the most important thing. Because, like, if it then breaks something else, then if they update it later...
+
+Or if somebody's looking at the code and they're like, why would they do this? tells them exactly why you do this. If you're doing something weird, it's a good idea to explain that you're doing something weird and here's why. Yeah.
+
+Okay.
+
+For example, It's a line of code. It's a great little line of code. has a comment that I wrote. And that's a really good comment. Because, so for some context, in the Discord bot, We don't use process.env directly, like ever.
+
+We use a separate variable that's just env. which is validated at runtime and has strong type safety. In other words, The program checks when it starts to see if it has all the environment variables it needs. and my editor is able to say, oh, I know what variables exist. Really simple, really nice, really convenient. It's the way everyone should be doing environment variables.
+
+But Always a but. With Google App Engine. They set a couple that we don't normally have and that we don't use for literally anything else. But... we can use it for error reporting to add just a little bit of extra information about where the error came from. So we do. So inside a big function called report error, whose whole job is to take a A little bit of info about an error.
+
+shoot in some extra information, format it the way Google wants it, and send it off to Google's log service.
+
+There's that little line, event.setServiceContext.
+
+Quite literally setting context on the event and out the service.
+
+Congratulations.
+
+I can't read that.
+
+Whoa. Yeah. And it sets... The service... the name of the service, which is, um, context.part literally the part of the bot yeah the part of the bot that caused the problem,  And then, It also adds The ID. of the deployment. So, like, any time the code updates, that ID changes. Mm-hmm. But there's a big lingering question. Why did I use process.env? And why is GA deployment ID not anywhere else in the code?
+
+That's what the comment's for. The comment explains exactly what's going on there. Because yeah, there is weirdness. This looks a little out of place. This doesn't look quite right. This sends off a couple flags in your head that's like, hey, wait, that might not be right. That comment explains it all. Once you read that comment like oh that makes sense cool. Yeah, that's valid And we carry on. Exit explains.
+
+Why? It doesn't explain what. If I had just said, That comment had just been the line above that said, sets the service context on the event to the part of the bot that went wrong and the deployment ID That'd be a horrible comment. A, because it's too long and it's longer than the line of code itself. and b because it doesn't tell me why I did the thing that I did. it's actually better to not write those comments at all.
+
+because they just cause problems when you update one but forget to change the other.
+
+update the comment forget to update the code or vice versa and now you'll never have to update that comment unless you exactly change like well yeah unless you change you'll never have you'll never have to update the comment ever yeah And for why comments, Why comments only make sense if you're doing something weird.
+
+If you stop doing something weird, And you... either the comment no longer applies or you get rid of the code that has the comment on it in the first place.
+
+Yeah, exactly. Then the comment's just not needed. Mm-hmm.
+
+Well, the comment usually goes away with the code because you're removing code anyway.
+
+I mean, you literally, you cannot remove this entire line of code without removing that deployment ID comment. Yeah, it's embedded. ♪ Alright, awesome. Um, wait, um, before, okay, let me just look at one last thing before we jump. And two, three. Things okay, so like the the number one thing on the agenda is is basically to update the welcome tickets and then I want to update and like we need to get these fixed like ASAP just because I also I'll show you this as well.
+
+I put a bunch of stuff in the just manual uh schema um so i put all of our purged invites like where i just deleted every single invite basically uh because we were just getting so i put where they were from and deleted them and like if they were relevant here um and then basically when it comes to all of our invites um i i turned off our vanity link just recently but uh these ones are not corrupted yet so like i just kept them i forget uh where i forget what this one's We had some important members coming through it.
+
+I don't know what this one is. Random. Oh wait, no, it's like some, yeah, we're supposed to somewhere with that one and I can't update it. But basically like, I have all these now. Fuck you love, you can't have it in my code. But I'm basically only using these and if they get corrupted, I'm going to just kick them and use a new one. But basically, is the manual the best place to keep this? And then can you reference that in future in the bot?
+
+Technically, yes. But if I started using it in the bot, I would just move all the data over into the private schema.
+
+But even if I like deleted things... I'll just have to--What do you mean? Oh, I can manually...
+
+No, I would move the data over into the private scheme, and I would delete the counterpart in the... manual schema.
+
+But I guess like my thing is I would move it. If I had to remove an invite link and then update where it's...
+
+You're allowed to manually edit the database as long as you don't break stuff.
+
+Um. Okay.
+
+So that's your bar. It's your responsibility if you break something. Yeah, I understand.
+
+I know, I know. But you're allowed to edit the database.
+
+Just don't break something.
+
+But... I guess I just can't add columns, right?
+
+You cannot change the schema. Yep. Okay. No adding columns, no adding tables, no removing columns, no removing tables. That's a surefire way to break things.
+
+Okay, yeah, so then we can, okay, so before we get into that, I will tell you why, but before we get into that, I'm going to tell you a little bit more of what I randomly did over the weekend, or like not over the weekend, but just a little while ago, but just random. I am trying to use Claude, and I'm using Claude code a lot more, and it's just so much easier if I give it all of its context in one place, and I just figured GitHub, because I'm kind of like, I I've been like either switching my USB or just like whatever.
+
+I'm just going to use GitHub. And is that first? Is that an OK place to store the context? Right now. So right now, I threw it in core. Iots.
+
+Probably a good spot, actually.
+
+So first I threw a CloudMD document. This is mostly for me. I'll open this real quick. If I can, here we go. Um. But this is basically just like how I want my quad to act. It's empty. Are you fucking kidding me?
+
+So, what have you done this time?
+
+okay so there's no clod md file that's funny Well... You know.
+
+Where did I put that? No, I definitely have it somewhere.
+
+That's so funny.
+
+It exists. No, it's either locally or...
+
+Oh, it's local. I just haven't... I haven't put it in the quantum defile, but I have a personal... That's awkward.
+
+You're becoming a programmer step by step. Here we go.
+
+It's the draft cloud. It's not in the cloud of defile yet, but it's my draft cloud. Okay, but it's basically like... tells Claude how to act how it is for me and like Gives a little bit of context for me as well, like time constraints, attention, like... A response you give should be limited for these constraints, basically. More context. And so I also updated-the biggest thing out of this is the meetings.
+
+So I've been keeping a meeting note for every single meeting. And so I just started going through. And I go through them and I take the transcript. And then I have a quad. run just like a bunch of Well, for the development, I have technical decisions, systems context, this is mostly for Claude itself, and then a summary of the meeting, and then just what's actually going on in development. So I have it make all these documents, and it's mostly for context to pull off itself.
+
+I like this. So, I have some random stuff that's in here right now. That's like, for example, I have the Discord as a channel. Every single channel is a thing. I'm not going to do anything with this yet, but I'm like, I don't know what I'm going to do. But basically, is this the right place to store this context?
+
+Honestly, yeah. Also, I don't know what this-Here's the thing, that core library, is a, um... the submodule of all of our other repositories. Which means that that gets included in them as well. I would say that's definitely the right place for it. Perfect.
+
+Okay. Okay, so yeah, so I have two folders.
+
+Keep it contained. I don't know what your file structure is yet.
+
+Okay, so I have two. Make sure to keep it tame.
+
+I have one for docs that I might just throw in context, but I might just keep this as official. But also, I'm going, so I pay for routine as well, and I'm going to be, this is like, I have so much going on, but I'm updating our Drive.djns context to be just more, blah, blah, blah.
+
+I can't use this right now. OK, types. I've showed you this before a little bit, but mostly just... This is like what I'm gonna be showing Okay, this is just not my partners. Interesting. uh... uh... this recalls fear like this is i'm based in up to all So like this is what I would say is like internal context or yeah and then this would be just like external for the team and when I say like external it's more like just because like all the team are going to be paid more on a conversion basis so they're just more like independent contractors but I still want them to have the vision.
+
+Bear. Very fair.
+
+So I'll be updating both, like...
+
+context in here, but this will mostly be like AI con like AI. I'm not going to make any of these. This all AI going through it, processing it. But then it's gonna be like more for AI to go say, I can process, I can reference this and this and this. But like, yeah.
+
+AI is gonna get all of my vibes. It's gonna distill it into the,Yeah. meeting transcripts and then it's gonna read those meeting transcripts, get those vibes, distill them into quick bits of documentation and tidbits and things that I forgot to have clawed at into the agent's MD file and it's going to distill that and it's finally going to consume that and it's going to become a perfect software engineer replica of me.
+
+Of course.
+
+Exactly. It is going to steal your job. It is going to steal it. Exactly. No, I'm just kidding. But it is going to help a lot. Like, mostly, the most important thing is, like, now I can just go through all of these meetings. And, like, I have mostly, like, I'm going to do a weekly meeting with all the analysts and stuff. But, like, basically everything when it comes to context. And it's so much easier because it's been really hard for me especially because, like, just like me bouncing my head off the wall um like so like yeah that makes sense so like all these meetings are super helpful for like just because like when i say something and i don't write it down i'll just fucking forget it and it's like oh that was such a good idea why did i not remember that um and it's like uh and it'll just make it a lot easier for me to say oh so this is what we're sharing uh with all the other guys Oh man, what popular product is there?
+
+There's some product that has like on its big marketing page, like to say is to forget, to write is to remember. There's some product that has that on it. It's a really big product. I think it's Monday, actually. I'm pretty sure it's Monday. You've never heard of Monday? What is that? they're only like one of the biggest project management startups out there. So ubiquitous, they don't even feel like a startup.
+
+Um... Oh.
+
+I've never seen this.
+
+Yeah, they're great. They're a pleasure to work with.
+
+So I'm assuming you have them? Oh, yeah.
+
+Dude, I wrote literally everything I do at work and more goes in there. Everything. So you do it through work? Because it lets me. Oh, that's through work. Through work. Work has it. I'm crazy. Probably our most avid user of it at this point. Okay. Because I have a 120 day review. Um, And by... Golly, does this give me a lot of material to point to.
+
+My whole process goes in there.
+
+All of my thoughts every time that I change what I'm thinking, every time I discover new ideas about what we could do for our architecture, every time I talk to somebody about a project, I post an update in Monday. Everything goes in there because everything. can be traced back to what work I did. Everything can be taken in context of what my value to the company is if there's pages and pages and pages worth of it.
+
+Oh, yeah. And I'm sure there's so many, so much. Like... Like, Layup has a lot of... Layup has a lot in our Notion. Like, oh my god. Yeah, we have a lot in our Notion. I'll just say that. But, like... I couldn't even imagine how much she ears has. Oh my gosh.
+
+No, it's really like, it's mostly just me. Like there are a couple people who touch Monday There are a lot of people who kind of just have their little routine. Then there's me who has like... Yeah, six different projects that I could be working on at any given moment. Three to four of those are blocked at any given moment. One of them I still have to coordinate with Dean and with Earl and with Don, get everything set up so that we can switch everything over tomorrow.
+
+And one of them I just have to keep splitting spreadsheets and... One of them, I probably have to go down to the warehouse at some point and talk to all the guys, see how they use their thing, get their little workflow so I can merge their spreadsheets and it's a whole thing.
+
+Oh, yeah. I'm sure there's so much you have to like. And there's so many people that you probably have to go through that like don't even like talk to. Oh, man.
+
+And they're like, oh, wait. Oh, man. Oh, I can't even. I can't even imagine. Oh, my gosh. But... They're paying me for it.
+
+That's the part. That's the important part.
+
+Not only are they paying me for it, I've got just enough people in there who are really pushing for me to be able to get stuff done that I know it's going to happen one way or the other.
+
+Oh, yeah.
+
+And they're pushing in the right ways. They've had, like, our... The IT guy who mostly works around our area... Like they've had some projects they've wanted him to do for a while, but he's always had a million other projects. Yeah. They've had some ideas for what they could have done, but never quite the people with the skills to do them. They've had all these ideas, but... What they've done with me is they said, all right, We found a kid.
+
+who can Basically figure anything out if you give them enough time. And... He already knows how to do computers and how to optimize things for good business case. He knows how to centralize documentation. He knows how to work with weird data. He's demonstrated this time and time again. Cool. Well, Part of our problem with these sorts of people is we need to be able to keep them on track. So naturally, I have a guy who is like basically my dedicated project manager.
+
+So he's like, you need anything? I'm on it.
+
+Well, it's... If anybody wants something done, they go through him first. Oh, shit. Like... And though I do ignore this sometimes, um... Officially, I'm not even supposed to let people talk about projects to me until I have his approval. like that's that's like the the the degree that they're trying to stop side projects from happening because they know what happened with ryan and they're like crap we can't let that happen again we need we need to have a guy on this and we can't have our guy on this turn into the guy who replaces all the laptops again We can't do that.
+
+We have to have somebody to streamline our processes. And if he's just running ethernet wires around the building, That's not what we need. So I've got a project manager. Of course, I do have my own project management and I have to scope everything out and I have to actually understand the jobs and all that. But I've got my project manager. Really? How about this? I'll call him my bouncer. He's my bouncer.
+
+He's my... That's actually awesome. Get away.
+
+Get away. You can't... No, stop bothering him. He has more important things to be working on. Get away from...
+
+You're too low on the food chain. Get out of here.
+
+And if things are really going too slow, I have some of the biggest guns of the company. ready to be like Get on that. Get on it. Get it done. Stop dragging your feet. Yes.
+
+There's gonna be no dragging with you around.
+
+Well, not if we decide to go to him on certain issues. We've pretty much decided between us, like, we're not gonna pull curtain on things unless it gets, like, Bad. He's pretty much the nuclear option. He's the shut up, stop making excuses, get it done, stop, drop what you're doing. He's that kind of guy. And he's high up enough in the company that it matters. That's good. So we got... I have weapons in my sleeve if I need to use them.
+
+I'm not quite at the point where I need to yet, but...
+
+Okay, awesome. So the next thing on our agenda is like now that we just got the content out of the way, the next thing is we need to fix the welcome tickets. And before we do that, I want to like basically with now going back to the super base content. Ooh. With the active invites, basically, I want to say, basically, once somebody joins, I want a message from the Dropout DJ spot saying that they came from...
+
+X domain. I put more information earlier. Let me see where I said. Um... But I basically want to know what link they're from and so like to tell us where they're from and then That's basically it but I want and I'll start updating the content more But like I just want when somebody joins the server the dropout DGN spot says from Discord me, for example. Yeah.
+
+Should be fairly doable. Honestly, that should be something that Claude could whip up.
+
+Yeah, but the thing I wanted to bring in with this is can we have the welcome ticket be created after the this message gets sent, would that fix the bug?
+
+It looks like, and this is annoying, it looks like it's still not... pulling in their join methods and update ideas. Oh, that's annoying.
+
+So we can just remove that. Just remove that. Just make it do everybody.
+
+I mean, that's that's ridiculously doable.
+
+Yeah, it's...
+
+Did I make that required? I didn't think I did. I need to check that. I did make it required. Okay, cool. So I just set it to empty and then we're fine.
+
+Yeah, and then in the end, the only thing being what to What I do is not make it for link, And I want to just start excluding a link from the joins. But I guess it doesn't really matter that much.
+
+But at the same time, if we're still not getting what link they're joining from in the first place, that won't really matter.
+
+Yeah. Okay, so yeah, let's just remove that and then that'll get the welcome tickets opening and then we're also just removing every single bot spam link So we just shouldn't have that much of an issue or we still will but we'll hopefully combat most of the bot spam issue and also it'll tell us Just more knowing it'll be good to know where they joined from And also like it does seem to take a little bit.
+
+So like it could just wait This interaction could wait Um. But-I do want to start that. So I guess like... It is probably something cloud code could whip out. But yeah, I guess. I'll whip that up on Cloud Code real quick. on my test account. And then while you're fixing the welcome tickets, and then we'll move on to the next thing. Bing.
+
+And that should be deploying now. Awesome.
+
+And so the next thing while you're kind of doing tickets, can you please have... I already did. Well, I guess that's a new thing, but the next thing is just the premium walkthrough tickets. Can we get those to start sending? Um...
+
+Let me check the database, what's going on there. Premium walkthrough. Oh. Right. We wanted those to send once they signed up the first time.
+
+Yes. Yeah, just the first time. So like if they... If they've already had a membership in there are excluded from getting a new ticket.
+
+I wonder. What data we can grab from the Stripe webhook? Because I'm sure we can grab some interesting data from this.
+
+I'm actually going to, while you're looking at that, I'm going to let you know of something else that I'm considering doing. So right now. I'm going to raise our prices to $50 a month. in the near future. All right. For marketing, I'm also going to put us on WAP, actually back on WAP. I don't know how I'm going to do it.
+
+Good thing I've not taken any of the WAP code out. Amazing.
+
+But I'm also going to get Dove Club and Winnable, Unwinnable, and Dove Club. So I'm basically going to do subscriptions through all three of those sites. But the goal is to... Oh boy. eventually turn them off of the dub club etc and get them onto our site which After growth.
+
+Yeah. Problem is we don't currently have the to justify not using those platforms. Yeah. Makes sense.
+
+So like, what-We're not going to use them to like, we're not going to merge everybody over, but we're just going to use them as like a marker. Yeah. So we'll just-So that'll be another method that people will come through. So I also just want to make you aware of that, just because, like, We're gonna be doing... Like I still want it to be I guess like it can't necessarily be through us but like I guess, be cognizant of how we ingest that data.
+
+Or could we do I guess like Because when somebody joins the server, Can we do this? So like when they have a certain role, we also give them another role. What do you mean?
+
+And when they join the server, they shouldn't have any rules.
+
+Like if, no, they joined through like one of the other platforms, like they find us on WAP and they sub through there and they join the discord there. I guess... I'm trying to think. Actually, no, that's not mine. Irrelevant, but... Yeah, I guess just cognizant of when those people join, they would need a premium walkthrough ticket created. Hmm. Like I can't give you a good picture right now because I don't have any of them set up so But.
+
+We will have I gotta say, we get a lot of EV alert emails.
+
+Oh, I I got more for you, by the way.
+
+Well, the current ones are making a ba-doop every time we get one. Because they're currently all funneling into the errors channel. Despite the fact that I've not pushed any code changes to make that happen.
+
+That's on me. I should let you know.
+
+Okay.
+
+ingesting 1, 2, 3, 4, 5, 6, 7, no, no, 5 more channels. New.
+
+Problem is... 6. The error reads something to the tune of... Object promise. is not a known sports book. Which is a very odd error to be getting. at any point, Unless... Code changes were introduced that would cause such a bug. Uh-oh.
+
+Well, there haven't been any issues for the Daily Grind fantasy plays so far.
+
+Oh, so are they still working?
+
+Yeah. I think so.
+
+Yeah. You know what? Okay. If it works, it works. Don't question the process.
+
+I don't know if it uses EV or odds to hit.
+
+Well, that's... That's why it needs to know the information. The problem is it can't determine what sports book it is because all it's getting is a, hey, buddy, we'll get you that information at a future point in time. Hint, hint, wink, wink, it's all vibes. They're getting one of those rather than just knowing what sportsbook it is.
+
+Interesting. That's stupid, but they put it.
+
+But I don't know how. Well, that part of the code. isn't getting it.
+
+That makes sense.
+
+Realistically, it would just need to wait. That's all that would need to happen. But why it's not getting it is beyond me. Unless it's just logging wrong. It could be logging wrong. It could be logging it wrong. I'm gonna check if it's logging it wrong. Probably going to be in post event. No. in post event. Billy Graham though. Let's just read the error message. The error message will give me more information.
+
+Yeah, it's going to... Okay, yeah, I could have read the error message and it would have told me exactly where it was. Okay. Interesting.
+
+This guy was not the most...
+
+Yeah, sportsbook name is a problem. Yeah, I am just logging it wrong, it looks like. Jeez. I feel silly for that one. Oh, and what's crazier,Oh, that I feel good. Goofy for that one. Oh, I'm just logging the wrong name. I'm locking the wrong variable. Wait, why didn't it catch that? I don't know why it didn't catch that. What I do know is I can fix that one weird logging bug. Uh... um One second.
+
+I have to go grab something from my kitchen. Also, I see you just... How dare you? Next.
+
+Fix the logging bug. Awesome.
+
+What's it called? But for the welcome ticket messages, I guess like, can you actually have it be sent twice?
+
+I have a what?
+
+The-Okay, let me ask this question. Does, actually yes, we can differentiate between a paid membership and a free trial, correct? Yes. So... I want it to be only created on their first paid membership and their first free trial. So the first of each. Not first.
+
+Overall, that's going to be that's a little more complicated. I should I should note how much It's a little... I don't know. Okay. That's how you know it's fun. If the answer is I don't know... You're entering Potentially very complicated, potentially not complicated at all territory.
+
+If that's too much to ask for, then it can just be the first one. But...
+
+I do find it very interesting. While I was updating the Stripe library, I have a thing in there. thatIt makes sure that we handle every event the Stripe API could send us. Just so that we're not caught off guard by some crazy new event that then crashes the program. You know how it is. So... I make sure that we handle all of the events. One of the events that they sent they started sending is trial will end.
+
+So I think it's a very interesting event for them to send.
+
+Who sends that, Stripe? Yeah, Stripe.
+
+Interesting. Trial will end.
+
+And it's from our trials that we run?
+
+Any free trial, really. But yeah. Interesting.
+
+Who gets the notification?
+
+That's just our... They sent it to our code. It's just like subscription created, subscription deleted, subscription updated, subscription paused, subscription pending update applied, subscription pending update expired, subscription resumed, subscription trial will end. Okay. And they've got literally hundreds of other events that they can send.
+
+So what we can do with that is we That is, we can use that for email marketing.
+
+That's almost exactly what it's meant for, yes.
+
+Okay, so. AI meeting note synthesizer, please make an explicit note of this for future planning when we do email marketing to, I don't know, but you can put more context on this, but.
+
+Customer.subscription.trial will end. That's the name of your webhook event.
+
+Awesome. And so we can send, when we're considering email marketing, we can get something going more. Awesome. I have some ideas about it. Basically, when somebody, like, for example, they just use the trial, the server welcome trial for three days, we can get them to, one, like, they can't, they have to use the link next. So we can start sending them the link and say, hey, here, it's about to expire.
+
+Take another seven days, but then-You'd actually have to input your payment And that kind of thing. And then we can have the alternative of, or you could get seven free days. through the partners. And the free access. Awesome. It'll be so much easier to do all these things as well. So I just finished this bot. Alright, I just finished it with quad. Um. I'm going to have it. Also, I sent Remember the updates that I made to the branch?
+
+Okay, question. Hey, what's up? Okay, so for this But... Um. for adding it to Just our code base. I guess I can... How would you describe the way that the messages are sent in like the pretty embed format?
+
+Components v2. It should know what that is. We have examples of that all over the code base. Like literally everywhere. Just about every message we send is... Components V2. Because it just looks good. So that's what we do. Awesome.
+
+I'm gonna have, I'm gonna have Cloud Lake. Spin up a post. Um, and then, I guess, I know you're still working to the premium tickets right now. But the next thing I wanted to let you know is that If EV is sending in like The wrong channel is currently? It's sending in Just like... Basketball EV rather than the Flippy Bee channel. And this is the only one with the case, so I'm sure we just didn't update the information.
+
+Basically, I don't know why I just completely blanked on one. What I was saying.
+
+Um, I was having issues with Flippy B sending stuff to the wrong channels.
+
+Yeah, but can we just basically... Can you help me? Let me basically update the FLIF EV. But just add a clause for if it's FLIF specifically the Sportsbook FLIF. And 15. That's the criteria to send it in. the flip channel rather than the channels. And then the other thing is I also just updated the channel IDs. So they're all new channels. I can do the channel ID part, but...
+
+Honestly, you can probably do both of them because I very much built the filters in a way. I'm like, hey, this guy keeps asking me to add filters. I'm gonna build a system for these filters so that they're filters.
+
+Okay, awesome.
+
+So it's somewhere trying to remember where. EV alert handling is probably in there. Golly gee. And so in the Discord bot, source EV alert handling. There are three files you're going to want to take a look at. Hard-coded channels, hard-coded data, Hard-Coded Paintings Those are your tickets. Awesome. Hard-coded channels. is set up inProbably the best way I could think of and probably still can think of What it is.
+
+Because it's one object per channel. This object contains the filter The channel ID. And if we want pings in that channel, the configuration for those pings as well. Okay. All of that. one spot chunked together nice and editable, all contained. There's no jumping back and forth between code. It's all right there. And your code editor can very much help you out in this. Awesome. Can tell you what you can and can't do.
+
+I'm gonna set like Okay, good. I'm gonna set quad on it then. Or not necessarily set quad on it, but have it help me just fix that.
+
+I would have it help you with the filters. I don't know that I'd recommend having it, um... Help with like the channel IDs or the names of the channels. I find that they're not reliable enough for that.
+
+Oh, that's, yeah, I will, I can manually, yeah, I will definitely manually update the IDs, at least. That is the... When it comes to the... Oh. You have to... You have to, if you are this, you have to send in this channel. I think I could do that, but I don't know if it would be 100% right, so I might have to use some assistance there, but...
+
+I can figure it out.
+
+At the end of the day, the filter format, if you take a look at it, it's not like... It's not crazy.
+
+Yeah, I actually didn't have to use... Actually, I did for the formatting of how to do and/or. But like basically, I didn't need to use AI that much for the filters.
+
+It was pretty...
+
+Oh, not those filters. These ones are simpler. These are even simpler. The ones for the channels.
+
+I haven't even looked at...
+
+Yeah.
+
+I should have listened and pulled up on VS Code while you were saying that, but I didn't. But...
+
+Even simpler is-Yeah, these ones are simpler.
+
+like quite literally Screenshot time. Like, these filters are ridiculously simple. And your code editor can literally give you all of the options for what you can do up front. It's as bloody simple as it gets.
+
+And I also figured out that Claude Excuse me. Cloud Code just opens in my IDE as well. Nice. Can you do me a favor? Also, can you move the active and purged invites over to the private schema?
+
+Why is that?
+
+I'm going to start using that then.
+
+You're going to need to update the Prisma schema first. The Prisma schema is going to have to match the schema you already have. We're going to have to... publish We're going to have to... It's more complicated than you think it is. Yeah, it is a big thing. It's more complicated than you think it is.
+
+So this is something that Claude could easily do, though.
+
+It's something Claude could do, yes. But you'll have to know how to tell Claude how to do it. So what it needs to do And I can write this down. It's fairly simple steps. It just needs to know the steps to take.
+
+You could just talk it out.
+
+First thing it needs to do. Well, I'll write it down as well because you're going to want this to reference because you're not going to want to get this wrong. Okay. So the first thing you need to do is Update the Prisma schema. This is pretty much just the database schema stored in text files. It needs to be updated because otherwise you're not going to be able to actually interact with it through our code.
+
+Our code doesn't use SQL. We only use SQL for very complicated queries, like most of a lot of the partner promo stuff, because we have to, especially with the jurisdictions and stuff and like states, countries, regions within those states, all that. Because of all that, we've got a lot of recursion, and that doesn't play nicely with Prisma's format. So we have native SQL queries that handle all that.
+
+Boom. For the most part, we try to keep everything as... in JavaScript as we can. And that includes our database queries. We don't write SQL for the most part. Really? So Prisma is It does two things. It generates the database schema based on the text files that we have. And... it generates a library for us that we can then use to query that database without writing a lick of SQL. And that's how it works.
+
+So... Yeah, it's very nice. It's Over time, I've come to appreciate there's a library called Drizzle a lot more. It's a similar idea. But it's... Better suited for most use cases because it does a few things a lot better. The first thing it does better is is that it doesn't store, it doesn't create its own little format for the schema. it stores it in JavaScript. The whole thing is stored in JavaScript, which means you can move around and you can get the data out of it a lot easier.
+
+It means you can do some crazy stuff. You could do some crazy stuff with Drizzle, just from the data that you have exposed, because it's all in JavaScript. It's modeled after SQL, the way you actually structure your queries. It's like you quite literally write. Like... You would read a drizzle query the same way you'd read an SQL query. The syntax is just a little different. It's very powerful. But it's also really easy to do the things you need to do.
+
+And it's all, it's what we call type safe. In other words, your editor will scream at you if you do something wrong. It'll give you those little red squiggles, and that's what we need. Because we don't want to push bugs to production. We want the red squiggles to tell us they're there before we push them. Drizzle gives you those too, same way Prisma does. Thank you. Interesting. We need those.
+
+So would you recommend– or I guess like is that a whole different software like Git or is it– It's... Like do you use drizzle and get help?
+
+No, so It's... It doesn't really fit into the... Is it software? Is it a library dichotomy? Because it's a little bit of both. Same with Prisma. Prisma leans more toward being software than a library if we're going to put them on a spectrum there. But they're both kind of... kind of in the middle. So what they do... Half of them is just code that somebody wrote that you include in your project. 25%.
+
+is figuring out like how to take your schema that you wrote and turn that into SQL for the database? Another 15% of that is figuring out a good way to create... incremental migrations. In other words, we'll spit out an SQL file Then if you change the database, we'll make an SQL file that just... applies the changes since the last SQL file. And then the last 10% is finding a good way to actually connect to the database and send your queries over now that you've got the SQL.
+
+It's a whole thing. And a fair part of that involves running code that has nothing to do with your code base. When you're creating migrations that That has nothing to do with your code base. Your code base does not really have anything to do with database migrations. But Drizzle and Prisma sure have to have a way to run those, so you're effectively running a separate program when you do that. There are things like that where it's...
+
+little things that aren't quite... don't quite fit in the dichotomy. Yeah. But generally they, they work as tools inside your code base. Yeah. They get downloaded with PNG npm install. Yeah. If that's the way you need to think about it, that's the way you need to think about it.
+
+That does help.
+
+They get installed with PNPM install.
+
+So they're like a program instead of program. Uh...
+
+Very, very...
+
+If you're...
+
+2 year old. Maybe.
+
+Asterisks, but not really. Asterisks.
+
+Yeah, actually I don't know how I would classify like...
+
+I don't know how I'd classify it either. All I'll say is that it's a tool. It's a tool in a library. Or... We can skip that whole classification altogether and call them what they are. They're ORMs. ORMs. ORMs, I forget exactly what they stand for. I know one of them, the first one's object. Object relational mapping, congratulations. So, what that means is we're mapping between objects, which is just like...
+
+anything in a programming language where you can say this dot this, and relational referring to relational databases, which is just, you know, Can you say this thing has an ID on it? If so, let's do a left join on that table so we can pull in all that information from that table and do stuff with it in our query. That's the relational part. Object Relational Mapping. takes the information out of the relational database, and puts it into an object format.
+
+takes the data from an object format, gets it into the relational database. That's an ORM. They're very... They have very specific needs and what they do is very unique to them. It is not really... a good way to classify them in most other primitives. that we have, like the idea of it being a standalone program or it being a library. They don't quite fit. There's something else. They're an ORM. What'd you do?
+
+I forgot to make a branch.
+
+I just made the changes. Fuck.
+
+I mean...
+
+I don't think this one's like that dangerous.
+
+You didn't commit it, did you? No, no, I didn't commit it. You should be able to create a branch and your changes carry over, if I understand correctly. Stash them first. How do I? Okay, I forgot you have to stash.
+
+Okay, so I'm in this Discord bot. Good.
+
+Did it change bot handler?
+
+Yeah, I added one thing.
+
+added Okay, maybe I added like a couple things.
+
+It referenced it.
+
+What in the world would it have done in Bot Handler? Oh, there's something weird with the... Something about the guild ID. What?
+
+Yeah, let me just...
+
+Just unstage all these changes.
+
+So what did it say it did? Oh, it just registered a listener inside Bot Handler. That's... I know it shouldn't be doing that. What it should be doing is it should be awaiting Client promise from the client broker file and But that's fine. You should be able to... Git stash, then switch branches, then Git pop. That should be...
+
+I'm just going to ask it to do those. I could just say either reverse changes or...
+
+It's going to give you lower quality results if you do that.
+
+Okay, so what I do All right.
+
+So, first thing you gotta do is you gotta stash your changes. That's just kind of... There's a reason they use box icons. It's kind of just like, put everything in a box, put it in the basement for the moment. We're doing some upstairs. We're painting. Mm-hmm. So... Where does GitHub... Okay. So, you remember those three dots where you have the... Where it's got, like, push and stuff like that? Yeah.
+
+Click those three dots again. And in there, there's going to be some about stashing. So these ones up a little bit. Yeah, those ones, those ones, more actions. Stash. This is your friend. So look through all those options. So, the first section we've got is stash. That's take all of your changes and put them in a box. The next is apply, which lets you take the look at everything in the box and copy it over.
+
+Keep the box. Okay, wait. Pop will get rid of the box and take everything out. Up and out. What'd I do? So what you need to do for now is to stash it. So it's going to ask you to give it a message. What are you stashing, basically?
+
+Okay, so do stash and then...
+
+Do you have the click include and track as well? Yeah.
+
+Yep, enter and then it's going to stash your changes.
+
+All right, they're in a box now. Now you need to switch branches.
+
+Oh, no, I don't see them. I was just always there.
+
+All right, so we got to go here. New branch from Min? It's Min, not Orange and Min. I don't know what that is. Branch name. Welcome. Messaging. Enter. Okay, I'm in my branch.
+
+Now we need to pop that stash. Oh, boy. So, it's pretty much the exact same thing you just did. But rather than hit stash, you hit pop. So It's still understache, but they're not understache. You have popstache.
+
+Latest or stache?
+
+Just hit pop stash just so you can get familiar with this workflow. And it's going to ask you what stash you want to pop. Select that stash. And you'll pop the stash. It takes everything out. Passes the box away. Bada bing, bada boom, you just switched branches. Congratulations.
+
+Okay, so now it's doing things that it doesn't need to be doing, right?
+
+Well, it It's... using old patterns that are problematic. So what it should do is it should say clientPromise.then. and then register the handlers there. It's the same thing It's client promise is one variable. It's one variable name. Client Promise. Got it. There we go.
+
+Yeah. Is that it? Just tell it to do that? Yep.
+
+It'll probably figure out what it means from there and bada-bing, bada-boom. Choreographing? What does it mean, choreographing?
+
+They got fancy with these. I've seen some new ones. It's been like...
+
+I don't even know. I'm doing some weird shit.
+
+I mean, they need to keep the marketing up because they're kind of losing the game a little bit with that. They're trying, man.
+
+Does that look right? Yes. That looks right. Oh, okay.
+
+You can do that. There we go. Yeah.
+
+Yeah. There we go. It took its stuff out of Bot Handler. Congratulations. Awesome.
+
+Oh my goodness, it's still importing itself though.
+
+I don't know. I did this earlier, so it's removing this.
+
+Oh, is it?
+
+Or is it?
+
+half removing it.
+
+ide get Diagnostic. Sure, you can get that.
+
+That was a bad idea. Because it's going to look at all those weird ID things and be like, wait, what's going on?
+
+My credits are going to be...
+
+Oh, not bad.
+
+It's okay, I got two more accounts that I can go through.
+
+Also, it resets in like two hours.
+
+I can't wait two hours. I need to buy a new account. It doesn't need their client anymore because it knows it's in our client. Yeah.
+
+Yeah. Wait, you have to prove every file edit? I have it set to that.
+
+Or at least you can... Interesting.
+
+I don't want to do anythingThat's an odd way to have it. It's an odd way to have it set up. Every edit you gotta approve.
+
+Well, I don't know what it's doing, dude. What if it, like... It changes everything. And this way I can be like, wait, what are you like...
+
+That's why you get branches. And you don't let it run commands without permission.
+
+Oh, well, it's...
+
+Oh no, this thing's going in my fucking home directory, dude, so... This is like...
+
+It's running. So, that's... Yeah. Probably not the smartest thing.
+
+Okay, but I mean If you have it set up to where you don't have... Where it can't even edit files without asking you first, I mean, hey, it can't cause harm.
+
+Yeah, but half the time when it asks me, I'm like, yeah, sure. Like, I know what it's doing anyway, so... I don't know, it's... Bye. Double-edged sword, but...
+
+Off Fatigue Okay, so these all look good then? Yeah, it looks like it's, you know, If it figured out the right pattern. So stay tuned.
+
+It's kind of all figured out. Um...
+
+Ah, see, I've been looking at what Claude's doing. Check inside VS Code. Let's see what changes it made. Why is it not showing me a diff view? What's going on there? All right. So... Control S is not going to show you a div view that's going to save. So, wait, wait, move your mouse back over there? There's a button, the leftmost button on the right. Click it. Oh, I guess that works too. That's not what I was looking for, but that works.
+
+That should probably do it. No, that just splits view. Oh, shit. So back in the changes... The changes area. On any of the files, when you hover over them... There's a button. There are like three buttons on the right side. Mm-hmm. The button on the very left of that, try that button. Left. Why is it not doing something? Oh, because that's a new file. Okay, there we go. There we go. That's what I need.
+
+Cool. Let me actually let you read this.
+
+Hold on. Cool. Added this.
+
+All right. Remove that import. Remove that line. Yeah, remove that line. Oh, shit. Bing. Cool. And this? And, uh... That's fun. Yeah, it probably does need the invites in 10. Yeah, kill that blank line. Yeah. May as well get rid of it in the diff. Fuck you. And bada bing, bada boom, that's everything. Stage that. Yay. That's good. Stage that file. An invite tracker. Oh, boy. Here you go.
+
+Imports all those things from Discord. Oh.
+
+Dot JS is not right.
+
+All right, so what I'm going to need you to do is I'm going to need you to install all the dependencies for this project, which is way simpler than that sounds. Uh-oh. So. There's a nice program out there called PNPN. Actually, we have Node install. You have Node installed. I do. Type core. or pack use in the terminal. Yeah, like that. All right, cool, cool, cool. Now type core pack use PNPM. Oh, what is it not like?
+
+Big bet.
+
+That makes sense. There you go. Oh, already up to date. All right, now PNPM install.
+
+That's it? Yep. Oh.
+
+Well, that's wrong. Oh Oh. Uh... Because it's in the wrong folder. It needs to be in the Discord bot folder.
+
+It is in the Discord folder, right?
+
+Not the terminal. Not the current directory of the terminal. All right, now PNPM install.
+
+See, I learned that. in my class.
+
+Be proud of that.
+
+Be very proud of that.
+
+Uh oh.
+
+Eee. And it can't find the odds email worker there. Oh, that's going to be a thing, isn't it? Uh-oh. Yeah, it's going to be a thing. Cool, quick little command you can run. That should fix that problem. Asterisks. Let's see. Nope.
+
+Oh my god. What just happened here? Oh, we just deleted all my shit. What? Alright, what did it delete?
+
+Is that bad? Oh shit, what just happened? Oh shit.
+
+That's odd. Especially since it clones stuff into empty directories. Were you storing your stuff inside of there?
+
+Oh, wait, no.
+
+In that core?
+
+Nope, it's here. I was just jumping.
+
+Yeah, I thought you were storing your stuff up there. I'm like, what?
+
+Alright, no, I'll be done. Alright.
+
+Now try that PNPM install again. Let's see what happens.
+
+There we go. I was about to be like, where did that all go?
+
+You know what? I know why all those deleted files appeared. Because Git hadn't downloaded the files yet. That's why. So it's like, hey... All these files, Git says there should be all these files here. But I don't see them. They must be deleted. Because Git hadn't downloaded them yet. That's what it was. And they're like, oh, okay, those files are here now. We can stop panicking. Uh-oh.
+
+Command failed.
+
+Yeah, it's going to scream about that, but it's okay because it actually worked. So we're fine. Oh, hey, guys. The reason it's mad is because it doesn't have database credentials, which means because Prisma is just... sometimes there's a reason that I've kind of moved away from Prisma these days because Prisma does crap like this, where in order to write custom SQL queries, It needs Access to a Postgres database.
+
+So that it can infer the types of your queries. rather than like Running them? Being sane. It's really strange the way they need to do it. when you generate the code For your library. It wants access to the database. So that it can... Dude, it's really strange. I don't understand why they designed it like that. I'm sure it made sense in their heads, but man, was it a stupid decision. Sometimes I don't know what they're thinking.
+
+I gotta love the big tech companies.
+
+They're not even a big tech company. They're a startup.
+
+I kind of love this startup. tech companies. Good catches.
+
+All those errors are gone now. Your editor is going to help you out a little bit more. It's like, oh yeah, I know these things. I know what this is. So is this all good then? Yeah, looks like it.
+
+Okay, and then I can just commit those.
+
+Let's give it a shot. Yeah. I'll have to do a... I have to do my pass on GitHub and then bada bing bada boom. And sync.
+
+Do I publish the branch?
+
+I gotta sync them here. Yes.
+
+Oh, I have to publish a branch with a message? Oops, no message with my branch then. We don't.
+
+Ranch created anyway.
+
+Well, all checks.
+
+Awesome. And so... Um... Question.
+
+Oh, oh, my mic was muted. That merged straight to main. Oh, that's going to be fun. I hope the build passes. What's up? Uh...
+
+Is that bad? Oh you merged my My calculators?
+
+No, I didn't. I created a pull request so I could view it properly. I was going to say. Hint, it can't be merged right now. Like, even if I wanted to, it would fail to build the bot. The bot wouldn't even deploy. It's not right.
+
+Yeah, so uh It wanted to add stuff to the database, but didn't change the schema. For the database. Okay, so...
+
+It didn't edit the Prisma files. So we can, it can start there. It needs to, you know, check the errors that it had. Oh, Well, you know what? Now that... And... Wait a minute. Okay. So the first thing we need to get you set up with is we need to get you, oh man, this is gonna be a little more complicated. It is, isn't it? Oh, this is going to be fun. It's going to be a load of fun. All right. Oh, and you're on Windows too.
+
+That makes the, well, actually, I think Windows was fairly easy to get it set up with. Superbass is good docs for it. Uh, no, okay, it sucked on Windows, that's right. Oh, well, it's still... That's still what you got to do.
+
+Alright, tell me what I gotta do. I'm all ears.
+
+You have to install The Supabase CLI. which requires also that you install Docker. I have Docker. Docker desktop. Oh, you do? Nice.
+
+Nope, not on this computer. Ah.
+
+Ah. You'll need Docker Desktop and you'll need the Supabase CLI. Okay, cool.
+
+Command line interface, just terminal, right?
+
+Well, that requires you get scoop first. So you gotta follow their link and get scoop. Shit. Yeah, Scoop scoops its own little can of worms.
+
+Where's the link for Scoop, my stupid?
+
+It was right there. It was right there. Look, look, look, look, look, the next line above. Nope, that's not it. That's not it. The line right there, right there.
+
+There we go. That is not helpful.
+
+at all okay it is helpful but like it's not helpful at all open a powershell terminal and run okay cool Bing bong. Okay, and then I can add that. And then I can do it. I don't need to do that. Okay. So, Docker desktop. Okay. Download. Download for.
+
+That cookie banner on the bottom is going to be the death of everyone.
+
+I hate cookies.
+
+AMD or Air? I'm an AMD.
+
+I'm going to say it. Unverified download block.
+
+Oh my goodness. It's literally Docker Desktop. Chrome, get your crap together, man. Get yourself together. Oh, shit. I got a Chrome extension that you're going to love.
+
+Tell me it just like...
+
+It rejects all. Automatically.
+
+Aww. Huh?
+
+I love that Oh shit This is installed Okay, so I guess one question I have while this is downloading is for these kind of things, we need a better process for Like me to be able to say hey, I did this. Can you take a look at it and give me feedback? Overbust. Make a pull request.
+
+Just in the pull request You make a pull request. And you say, hey, Zach, I made a pull request. Pull requests are built for this. That's what they're designed for. Awesome.
+
+And so... Okay, cool. Do you... I guess... The... Only thing I would say is like I was gonna double up and put them in context in my Find the notes app routine. So I could also like, I'm also gonna just put a PRD, the PRD document behind it in that just as well. Would you use that as well?
+
+Remind me what PRD stood for?
+
+product requirement documentation. Okay. I actually have some right now. I'll show you. if my app doesn't want to break up.
+
+But basically...
+
+If you link it in the pull request, sure. I just need to be able to have everything in one spot. Okay.
+
+Cool. So I will put the routine link. Okay, that's easy enough. Yeah. Cool. And I'm also going to link the pull request in this. But in our development here, I have like, I don't know how I was going to do it, but right now I have a review for things like that I want to put through review. Like I need you to look at the arbitrage calculator to see what we need to do better. It's just like one of these files.
+
+Funny note while I'm looking through this. There's been such a problem recently. with like really low effort vibe coded contributions. To the point where less than one in 10 pull requests created these days meet the code standards required to even submit a pull request to a given repository. There's been such a problem That GitHub has considered giving repository owners the ability to disable pull requests.
+
+Right.
+
+Like, that's crazy.
+
+Like, just flat, because it's been that much of a problem.
+
+So, yeah, you can't actually do that anymore. Yeah, no more vibe coding. That's crazy.
+
+no more contributions to this library because, uh, people have been submitting so much crap that it's not even worth it wow Also, I have to restart my computer real quick.
+
+Enjoy. Enjoy.
+Looked around real quick.
+
+Yeah, I did. Where's that coming from? Just right here. That's funny. Let me get a sketchy account. Ah, all the theme-a-bobs. Uh... Luckily, you can hit skip up there at the top and you won't have to worry about any of that. Windows subsystem for Linux is going to be mad at you, isn't it? Yippee.
+
+It said something about that, but I closed it. I'm not going to lie.
+
+Okay. There should be an admin prompt somewhere hiding away. There we go. WSL is going to update itself and docker is going to be like, okay, cool, WSL is actually worth using now. Cool. I wonder what version I even had of that That's probably the version that comes stock with Windows, which is ancient. Everything that comes stock with Windows is ancient. Unless Windows Update touches it, of course, which it doesn't.
+
+Hold on, you gotta wait for it to actually finish installing WSL before you can... There we go.
+
+Oh.
+
+Sign in for what?
+
+No, it doesn't need you to sign in. Wait, wait, wait. Hold on. Let me get... Is virtualization support wasn't detected? All right. Alright, let's pop open that webpage. Feel free.
+
+I'm gonna sign in first. I'm gonna sign up.
+
+You can go in with GitHub.
+
+Would that be easier?
+
+Yes. Probably. I'd even say it was that much easier.
+
+What is my username?
+
+Uh, make one.
+
+Let's try that one.
+
+I don't know. Fuck. Your name's too generic. How dare you?
+
+I think I already have an account Through layup.
+
+Oh, that would make sense.
+
+Which I don't want to do.
+
+We Oh my goodness, Teams keeps harassing you.
+
+I need to uninstall. I don't even use Teams for anything.
+
+No, no you didn't I could have told you that was a bit of a sham, but sure.
+
+Wasting my time. I didn't have to make no fucking account. Fuck. Delete that shit.
+
+Alright. So.
+
+I'm gonna make this bigger for you.
+
+I'm gonna need you to scroll down. All right, let's take a look at all of it. Oh, that was good. There we go. Let's take a look at this.
+
+What the fuck is that? Okay.
+
+Brodom?
+
+Keep scrolling, unscrolling.
+
+All right, there we go.
+
+Yeah, this is the case. Okay, cool. Run commuter this. No.
+
+Why was it sending it to this page? This is... This is... This does not seem to be the right page for what it wants.
+
+WSL update install. Do we need? Oh shit. Do you need this installed?
+
+Search the page. Now, search the page for... Just the word virtual. You're not going to be able to use there, Serge. You gotta use browser search for this one. There we go. All right, for more information, see virtualization. Click that. Here we go. Whoa, don't scroll around. It's gorgeous. The red spot. Scroll up just a little bit. There we go. Yeah, so you're gonna have to follow this.
+
+Virtual machines TV. Okay, virtual machines platforms. Windows subsystems for Linux.
+
+Alright, those are both enabled. All right.
+
+Okay, it must be possible to Run. PSUsers is working.
+
+Take a look at the text block just below that. You scrolled past it. To go all the way past it. There we go. Right there. Your mouse was on. The text, the text right below that code block. There we go. Read that.
+
+Features and maybe Check virtualization is turned on.
+
+Click the virtualization is turned on link. That's... This is going to be your thing. Ooh, which keybind did you use? Control-Shift-Escape. The correct one.
+
+There's multiple Yes.
+
+Oh boy. There are so many ways to make Task Manager appear. It's amazing. All right, this is the really fun one. I wonder if their article is going to tell you about... how how you get that turned on.
+
+Administrative console prompt. Run this and restart Windows. No.
+
+Oh. So it's not going to tell you. So what you're going to need to do... You're going to need to Google instructions for turning on virtualization support in your BIOS for whatever brand of computer you have.
+
+My motherboard?
+
+Yeah. Usually it's your motherboard. If you built the computer yourself, yeah.
+
+Enter BIOS. Navigate to the setting. That looks right. Should I follow this?
+
+Yeah, make sure you write that down somewhere because you're not going to have it while you're in the bios.
+
+I'm taking a picture of it. No. All right. I will go try that right now, then. Read its tips. Read its tips first. Read its tips. You don't get caught out in the cold.
+Oh shit. And all problem What this does... Izzit runs a local copy of Supabase. on your computer. Oh boy. Why is this useful? Because you get a database. That is local. You need that database. Because Prisma Remember how Prisma wants that database in order to do the thing? This is it.
+
+Yeah, you're going to need the database. Gonna need the database.
+
+Oh boy, it's got almost a gig to pull. Half a gig.
+
+Oh yeah. Oh, these Docker images are... Honky.
+
+We might be here for like a couple more minutes. Yeah, quite possibly. So I've pretty much settled on the best way to track these tickets. is quite literally going to be I just store the IDs of the tickets that we create for these particular purposes on the user field and that works to call it that.
+
+That's going to be what it is.
+
+So you're just going to link all the tickets on the user table?
+
+For the paid walkthrough and the trial walkthrough, yeah. It's just... I mean, Slightly better than having the Boolean, that's why.
+
+Yeah, that's smart. It's... Yeah, that's what we're going to end up doing. Because otherwise, we have to rely on imperfect detection methods and vibes. Yeah. And I don't know if you've picked this up, But I don't run on vibes. I guess not. Okay. But awesome. Yeah, that works.
+
+Vibes are how you make mistakes. And I don't like mistakes.
+
+I make too many of them as it is. Oh boy, I'm gonna have to do a lot of updates to the partner promo bot, man. All of our partners have like non-updated states that I'm gonna... I'm just gonna have Claude do it. It's gonna be pretty easy, but like... That one's literally a... See, that's SQL, so. It's like literally.
+
+That's what I ended up having to introduce raw SQL for. was the partner promos thing.
+
+That's funny. Ooh, actually, okay, I have a question. So while we're waiting for this, I'm going to give you a theoretical. Okay, so in Green Doubt... so Basically, I want to... Every time a person sends a message with an image, I want to store all of that.
+
+store the image or do something more to it?
+
+So I'm going to say it would need multiple things. So I guess like First, I would need a table for each image. Right? Yeah. I mean, a table for each message and then how would you store these in the database? Would you just store PNG file? Can you do that?
+
+So what you do... is Look at these beautiful things. You could theoretically store a PNG file. Please, for the love of all that is holy, don't do that.
+
+Yeah, I figured. So I wasn't going to fuck around and start doing that without asking.
+
+It can be done. But that is one of the biggest bastardizations of databases you could possibly imagine. So don't do that. Yeah. We got these beautiful things called storage buckets. Literally all it is. It's a place for you to dump files. Okay. But that's it. It's a place for you to dump files. You give them a name. You dump them in there. And that's that. Supabase comes with storage buckets. Awesome.
+
+If you look over, if you're in Supabase and you look over on the side, they've got a little spot called Storage. And you can just make buckets as you please. So? we would end up creating We probably end up creating a bucket for these images. and we dump them in there. And then we just store whatever ID we use, put that in the database, whatever key we use.
+
+The message it was sent from, right?
+
+Yeah, that's fair. So we could just probably use the message ID in the bucket.
+
+Okay, cool. And so then it would get... So then one, okay cool, so then one of these would have just that information and then, okay, and if I wanted to store this information, I would need another table for this as well. And so I would need to, okay, and so I would just store each of these, not each of these, but this, each of these parlays, so like three leg parlay as a table. Plus 561. And then, OK, cool.
+
+So, let me actually just open up Subabase so I can actually understand the buckets or the storage. So where is the storage?
+
+You know that little sidebar where you hit table editor SQL on? Yeah, storage. And then... drops you right in the spot where you need you can make buckets to your heart's desire Theoretically, how would that work?
+
+Huh?
+
+The Supabase client has... The Soudbase library has a lot of utilities, which is kind of writing to it. It's built very nicely.
+
+I was more thinking across schemas, so this is a better question. So the storage bucket, it doesn't matter if it's in the manual or the private schema? It's not in a schema. So it's just in storage?
+
+Storage buckets are completely separate from the database.
+
+Cool. So... Okay, yeah, so I would just need to reference all of these would need to go back to what message that they came from, and then all of the messages would have to link to the... Would it need to link to the storage bucket? No.
+
+So what you would end up doing is you would have The flow would be something like this. Once you receive the information, you got the image, you got the... data that you're going to put in the database. The first thing you do is you do two things at once. Get right to the database and say, "Hey, I got this." and you upload the image. Once the image is uploaded, you go back to the database and you say, hey database, I finished uploading the image.
+
+And that's your flow. that's all you need Because... once you... because we're basing everything off of the message ID, We don't need to keep track of our own IDs or anything like that. You can quite literally make the message ID the primary key for that table. Like... You can just straight up do that. I've done that for a number of things. Like the tickets, the primary key for the tickets is the threat ID.
+
+And there can be many to one.
+
+Oh, yeah.
+
+do as you please with the relations yeah But it doesn't necessarily have to actually be related in that Tickets channel. Awesome. Yeah. Cool. Awesome, that's really helpful.
+
+Do as you please with relations. Go ham. Do whatever you want.
+
+So, yeah, I can– oh, yeah. So that's super easy that I can just do it. So what I was thinking of– Yeah. I'll just give you a little bit of context is what I was thinking of– It should be a very clonable thing.
+
+Oh, yeah. So I'm going to download every single message in here, and then I'm going to turn that into– because I used to track how much people won in Greened Out, but it's just too much. But let me actually show you.
+
+This is at Layup. Super awesome. Look at this. Ledger. Let me just go back to– you bankroll.capital or actually no this is a bad example this is bad but basically we built the bot a bot layout and I can add this and it goes like it tracks this so like I know that this is um Oh shit, this screenshot has already been tracked. What? No it hasn't. Um But basically, yeah, it just takes all the information from this, so I can get all the information.
+
+Not, maybe not, but... Um. What I'm going to do is I'm going to track everything in here. So we can say X1. X amount of money or shared X amount of wins. And then I can also have a sum of we had X amount of shared wins in February.
+
+I'm very curious. Right click one of those images, open it in a new tab. I want to see what the URL is. This one? Yeah, right click that, open in a new tab. Oh. That's very interesting. Oh, that's extra interesting.
+
+Tell me more. They did something.
+
+So what they're doing. is Oh. They're doing something funky. So what they're doing is they're loading the image... In JavaScript... And then saying, hey, JavaScript, Create me a link. that can only be used from this page. Dude, that's odd. That's strange. Why are they doing that?
+
+This is really vibe-critical. This is like an MVP product. So this literally took the weekend to figure out. This is something that we want to implement into our app, i.e. bet tracking into the app. app, but like this is like some randomized product. I see. Man, is that odd. I will guarantee you, AI did this.
+
+Actually, that doesn't shock me. I mean, if it's doing something that odd, yeah, probably.
+
+I mean, well, this is from our code base, so I don't know. Like, all of our IDs are stored this way. I don't even know.
+
+Well, yeah, that's just a normal UUID. That could be anything. What I'm looking at, at the very start of that URL, is the word blob. Yeah.
+
+Yeah, because what does that mean?
+
+So that means that that URL... The way that URL came about The way it was born. Is inside a JavaScript? There was a blob object, which just means there was just a bunch of ones and zeros somewhere. They're like, these all go together. This is probably a file. Mm-hmm. There was a blob somewhere. Big old hunk of ones and zeros. And the JavaScript said, hey, I'm going to need to use this somewhere in the HTML.
+
+probably like probably going to display an image or something. And so it then said to the browser, hey, browser, can you make me a URL that refers uniquely to this blob? And the browser was like, Okay, here you go. Have a URL. And that's what you get back.
+
+Interesting.
+
+So, uh... Yeah, who knows where it came from.
+
+That's interesting. You definitely wouldn't do it. How would you do it?
+
+Oh, I would do it. It's so much easier. So what I want you to do, I want you to go back to the bankroll.capital tab. Hit F12 on your keyboard. Cool, go over to the network tab. Hit disable cache at the top. and reload the page. Bada bing, bada boom. Where are the images? There's the images. Go over to the right. You see all those images over there that they had to load? Mm-hmm. On the network tab? The ones that don't start with blob, click one of them.
+
+ones that don't start with blob. Yeah. Ooh, they're storing things in Firebase. There we go. So, I would just take that URL and I would put-I would use that. Rather than using the rather than creating a separate URL. Oh Oh, it's authenticated. Uh-huh.
+
+Why are they authenticating that request?
+
+Why aren't they just using a cookie? Why are they...
+
+We don't want to share the data at all.
+
+Why are they doing it that way? No, that's horrid. Okay, I understand a little bit more about why they're doing it the way they're doing it. I still hate it. How would you do it? But I understand a little bit more. Okay. Now that I understand what they're doing and why they're doing it and what weird requirements they have, I'm going to take a wild guess and say that they don't have access to a proxy server.
+
+They don't have access to a server to sit between The user and Firebase. Hmm. Firebase is... Yeah. Given an understanding of what Firebase is, Superbase is an alternative to Firebase. Yeah. Supabase was designed from the ground up to be an open source version of Firebase. Mm-hmm. That's what it was built as. So that should give you a vague idea of what Firebase is. Yeah. It's run by Google. So yeah.
+
+So... Firebase, like Supabase has a database It has storage. It has the ability to handle authentication all on its own, which I honestly never use because... I always find that I really don't like the way that Superbase handles authentication. So on and so forth. So... What Firebase is doing there. Is they're saying hey If you give us the right passphrase... We'll give you this image. But what I don't understand...
+
+is why they have to trigger that with JavaScript. So there are two much better ways to do that. The first is to use a proxy. What that means is you just have a server sit between you and Firebase. That server would then add the passphrase. The client never has to know, the server never has to know. Server never has to know who the user was. user never has to know that it's actually Firebase. That server just kind of sits in between.
+
+Server checks if the user has permission. If so, adds the token. off to Neverland. The other way to handle it... is to just put it in the query string. You know how URLs a lot of times will have a little question mark after them and a lot of crazy data after that? Yeah. So the way what that does is is it lets you say, hey, I want to pass some extra information to this URL. If you take a look at Google's search URL, if you just type in something to Google, You'll notice the URL, if you just take everything before the question mark, looks really normal.
+
+Mm-hmm. Then you can take after the question mark, Q equals and everything to the first ampersand and it looks really normal. And then everything after that is just insanity. So what's happening there is is That little question mark lets you send extra information. It's like function arguments. It lets you send extra information to the web page. Mm.
+
+And say like, oh, this person is blah, blah.
+
+Or in this case for like Google search, User is searching for some weird keyboard smash. Then apparently it thinks I actually meant Twitter. I don't know how it came to that conclusion. But you know what? Sure.
+
+We'll take it.
+
+It got there somehow.
+
+And that's all that matters.
+
+So you could easily store the authentication token inside the query string. Very notably, Both of these solutions let you get away with not having to... Download the image. And then create. A URL for it. In JavaScript. Because that's a little over-engineered, I feel. Yeah.
+
+Yeah, that might be a little much on the engineering. But, yeah, that's interesting. I mean, I'm sure there's a case behind it, but...
+
+Well, they have a reason for doing it. It's just not a good one.
+
+A convenience more case. Yeah.
+
+Yeah, that could be vibe-coded.
+
+Yeah, I'm going to say this is definitely, or not definitely, but I think it's from a template website as well. That helped. Probably. I know we got it up in a weekend, so. But I know that I'm gonna do that for the green doubt channel probably and so that'll be a fun one Also, I have a question. How come Dante Stiles is staff link. He just signed into the website again. I guess I can I mean Several staff, Dante, expiration.
+
+He doesn't have any staff rolls. Do this. So let me just refresh them.
+
+See what error it's going to give you.
+
+He just signed in. So, oh, there we go. I can't find it.
+
+Oh, welcome.
+
+I just need to recalculate. Okay, cool. Okay, cool. Then anyways, back to this. I have super base then and we have this. Okay.
+
+Now, Claude should be able to see its errors. Claude should be able to see... Hey, that's not right. Ooh, ooh. Ooh. Thank you. Wait a minute. Create a file called .env. Inside the discord bot Folder. .env is the file you want to create.
+
+dot EMV. Yep.
+
+Now I want you to copy So in their-The little terminal down below. Why don't you take all that information and just copy it? There's a lot of it. All the little things they have in those tables. Grab all of it. Okay. Paste it in there. Now you can have to format that So the way that a .env file looks Is it's just... Name in quotes? equals a value in quotes. Really simple? Yeah, I like that. Here's the other catch though.
+
+None of those values are useful. So I remember how we were going through a bunch of environment variables and you were putting them in a password manager.
+
+Mm-hmm. These are those?
+
+but these are for local development.
+
+Interesting. So...
+
+Which you're going to have to do. is go into the .core folder. And source... And then ENV validator.
+
+new file or SRC okay yeah An ENV validator.
+
+Yeah. In here, What you see before you is a big list of all of the environment variables. You don't need all of them. But you sure need some of them. So... Hmm. Let's see if there's a good way to get those. Just like a list of those for you.
+
+I could just ask Claude here.
+
+Oh yeah, ask Claude to... generate a sample ENV file for you. Or even,Taste the information from Supabase. fit from super bass And say, hey. Put this in an ENV format. As you see in Anvy Validator, bada bing, bada boom, it should be able to figure that out. Gotta say. Cloud Code is an absolute masterclass CLI design.
+
+I actually do love... I love working in CLI. because of this I've actually never worked in the command line interface before this.
+
+I figured as much. Cloud code was a lot of people's introduction to CLIs.
+
+Cloud Code is like a lifesaver though.
+
+Oh yeah, I forgot I had an example.env in there. That I literally have... Set to always be accurate. Like I have... I have tests. so that I cannot even make a deployment unless this is correct. Sometimes I feel silly.
+
+You already had this figured out.
+
+Hey, at least Claude found it. See?
+
+The benefits of AI.
+
+Dude, it's too late. I probably need sleep.
+
+It is getting really late. This is... Okay, so this is like for... Oh, jeez.
+
+There we go. It's got the stuff for you.
+
+The only bell cube you can use these since WAP does not offer. Should I? Say anything? No, no, come on. Let's see. This is for the arbitrage bot, right?
+
+This is for anything, really. This is setting up the project. so that you can do development with it. But good this time. All right. And now... You should be good. You should be set.
+
+Awesome. Awesome. So, okay, so... Since it's getting late, I just want to check the agenda, make sure we just checked everything off. Welcome DM messaging. Yes, I'm going to update that. I don't really need anything from you other than... firm that it's just in markdown format or something it's in like a v2 yep yep i need to update the content yep that's completely fine i can do that so yeah uh welcome tickets are fixed they are working um the ad user information okay so i'll come back to that in a second flip ev so this is passed on to me with the uh did you fix it for the new ev ingesting I know you pushed some.
+
+All I did was I fixed the logging. Okay, I mean it should It should be really simple to add. Yeah.
+
+Honestly, don't even tell me. Let me figure it out. Feel free.
+
+You gave me a lot of context earlier when we talked about it. Fair enough. Yes.
+
+Do not tell me again now because I will use the the power of the AI I've hopefully been putting together to actually when it comes to helping me with that. So that's on me. And then the premium walkthrough tickets. Tell me again, did you push the thing for that?
+
+No, not at all. Not at all. That one's going to take a little bit of work.
+
+Not too much.
+
+And you know how to do it. Yep. Okay. It's very, very doable.
+
+Okay, so realistically like just talking like speaking from a business dev and where I want to get the server for like I'm really just trying to just personalize and get the education pivot and then walk through everybody and give them the more personalized. So I would say business dev wise, we're really not stalled on anything except for those tickets now that the welcome tickets are created and that the tickets that those tickets aren't even as much of a stall considering hopefully everybody gets free premium in the server welcome.
+
+those as the ticket until Those are fixed, but for now, I'm going to just say that's your only priority other than reviewing the code work that are like that the code work, but the quad code work that I'm doing. For now. All right. uh... but just to finish things off make sure uh... are so i think some not to sell it is set up to make sure that this works through the the dropout DNN spot and then we can call it thereYeah, make sure what works through the Dropout DJ spot.
+
+Just the whole interaction that we created for the, just sending a message of where they came from.
+
+I mean How do you want to test?
+
+I guess is it pushed?
+
+Um, should be. Um, I don't know. I gotta check it out. Should tell us. Yeah, that's live. Okay, cool. Live as of an hour ago.
+
+So then technically this person should have Had it sent. Right. Yeah. So then there is potentially an issue. Potentially. Okay, so how can we investigate that real quick?
+
+Real quick, does it exist?
+
+How can we investigate that? Well...
+
+I need to find out how to... Where do I have that link? Here's that link. So. This or here I'm about to post. is a link to the logs. I'm not signed in with that account and it's too late for me to sign in with that account.
+
+And you'll just have to find anything relevant to you.
+
+I can't really give you too much more guidance than that one, unfortunately.
+
+We'll have to do this on this again. Uh-huh. Okay, I can't switch right now, but um... Okay, so in the logs, What would it be called for a user to the serverWhatever Claude wrote for the logs there.
+
+Here's the thing. Logs don't happen automatically. The way logs happen, is if your code says to write a log, a log's written.
+
+um That change exists.
+
+That's pretty much all I got at the moment is just adding stuff to the database. I know what needs done just needs done. In the meantime... My eyelids are getting heavy. I need sleep.
+
+Yes. I will let you go. I will I'll just start to kind of look into this and to bug this. but Yeah, if you could take a look into just the Yeah, that tickets when not not anytime soon, but when you do have a chance And we'll be in another week or two.
+
+at the code review and the tickets to Fairly simple things just need done. Awesome.
+
+If I run into to any problems. Honestly, like, Would it would you prefer? I'll just throw any problems I have, I'll just throw in the generalOn Dev Chat. I'll just give you a tag. Mm-hmm. and see what you can offer advice-wise. Yeah.
+
+Yeah, sounds good.
+
+All right, so sounds good. Thanks for your time today. All right, so sounds good. Thanks for your time today. Yeah, and have a good night. You as well. Good night. Have a good one. Bye-bye.
