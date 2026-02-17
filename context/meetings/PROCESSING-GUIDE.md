@@ -6,7 +6,7 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 
 ## Internal Meetings (`meetings/internal/`)
 
-**Meeting Types:** analysts, mods
+### Type 1: 1-on-1 Meetings (analysts, mods)
 
 **File Structure (4 files):**
 1. `summary.md` - Meeting overview, participants, topics, outcomes
@@ -19,6 +19,23 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 - Each person folder should have a `{name}-context.md` file summarizing their current role/status
 - Process each transcript INDEPENDENTLY - do not mix context between meetings
 - Focus on: Role clarity, compensation structure, expectations, business context
+
+### Type 2: Weekly Syncs (`internal/analysts/weekly-meeting/`)
+
+**Indicators:** Group call with multiple analysts, Dax presenting updates, Q&A format
+
+**File Structure (4 files):**
+1. `summary.md` - Meeting overview, all participants, topics covered, key outcomes
+2. `action-items.md` - Tasks organized by person (Dax, then each analyst), grouped by timeframe
+3. `current-business-context.md` - Business state updates shared during the meeting (partners, tools, growth, revenue)
+4. `ongoing-expectations.md` - Expectations that apply to ALL analysts from this meeting (not individual)
+
+**Processing Rules:**
+- These are group update meetings — primarily Dax presenting to the analyst team
+- Content is broader and less personal than 1-on-1s (business updates, tool demos, growth strategy)
+- Action items should be broken out per person where applicable
+- Ongoing expectations apply to the group, not individuals — individual expectations belong in their 1-on-1 files
+- Do NOT update individual `{name}-context.md` files from weekly syncs — those are updated from 1-on-1s only
 
 ---
 
@@ -159,23 +176,54 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 
 ---
 
-## Example Command Structure
+## Pre-Processing Steps (REQUIRED)
+
+Before writing any files for a meeting, you MUST do the following:
+
+### 1. Read existing processed meetings for style and tone
+- Read 2-3 recently processed meetings of the **same type** (e.g., if processing an analyst 1-on-1, read another analyst 1-on-1)
+- Match the heading structure, depth, formatting, and tone
+- This ensures consistency across all processed meetings
+
+### 2. Read `{name}-context.md` files for every person mentioned
+- Read the context file for every person who appears in the transcript
+- This prevents misspellings, wrong names, and missing background context
+- If a context file is empty or doesn't exist, note that it needs to be created after processing
+
+### 3. Read the most recent `current-business-context.md` for accurate facts
+- Read the most recently processed `current-business-context.md` from any meeting type
+- Compensation structures, partner counts, revenue numbers, staff status, and tool states change between meetings
+- Even though each transcript is processed independently, business facts must be accurate to the current state
+- When the transcript contradicts a previous meeting's context (e.g., new compensation terms), the transcript takes priority
+
+## Processing Command Structure
 
 When processing a new meeting folder:
 
 ```
-1. Identify meeting type from folder path and transcript preview
-2. Select appropriate file structure from this guide
-3. Read entire transcript (in chunks if needed)
-4. Create all files for that meeting
-5. Verify files are in correct folder: meetings/{category}/{subcategory}/{date}/
+1. Read 2-3 existing processed meetings of the same type (style reference)
+2. Read {name}-context.md files for all participants mentioned
+3. Read the most recent current-business-context.md (facts reference)
+4. Identify meeting type from folder path and transcript preview
+5. Select appropriate file structure from this guide
+6. Read entire transcript (in chunks if needed)
+7. Create all files for that meeting
+8. Verify files are in correct folder: meetings/{category}/{subcategory}/{date}/
+9. Update or create {name}-context.md files for participants (see below)
 ```
 
-## Context File Maintenance
+## Context File Maintenance (REQUIRED)
 
-Some folders should have a `{name}-context.md` file that gets updated periodically:
+After processing a meeting, you MUST update or create `{name}-context.md` files for participants:
+
 - `internal/analysts/{name}/{name}-context.md` - Analyst's current role and status
 - `internal/mods/{name}/{name}-context.md` - Moderator's current role and status
 - `development/syncs/zach-context.md` - Developer's current context
 
-These files should be updated after processing new meetings for that person.
+**Rules:**
+- If the context file is empty or doesn't exist, **create it** after processing the meeting
+- If the context file already exists, **update it** with any new information from the meeting (new role details, compensation changes, access setup, etc.)
+- Update the `Last Updated` date at the top of the file
+- Context files should include a **Meeting History** table at the bottom (see existing context files for format)
+- Context files are updated from **1-on-1 meetings only** — do NOT update individual context files from group/weekly meetings
+- Read existing context files (e.g., `kaiden-context.md`, `mark-context.md`) for the standard structure before creating a new one
