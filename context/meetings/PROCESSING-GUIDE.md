@@ -143,6 +143,49 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 
 ---
 
+## Strategy Meetings (`meetings/strategy/`)
+
+### Type 1: Project Planning (`strategy/projects/`)
+
+**Indicators:** Solo planning session (Dax), prioritizing projects, scoping work, creating to-do lists, sequencing blockers and dependencies
+
+**File Structure (4 files):**
+1. `summary.md` - Session overview, format (solo/collaborative), focus area, core thesis
+2. `priorities.md` - Numbered priority list with blockers, dependencies chain, sequencing logic
+3. `project-scopes.md` - Detailed scope for each project discussed (what needs to happen, requirements, questions)
+4. `action-plan.md` - Concrete tasks organized by timeframe (completed, ASAP, short-term, after all above)
+
+**Processing Rules:**
+- These are often solo stream-of-consciousness sessions — Dax thinking out loud and planning
+- The priority ordering matters — capture the explicit sequencing and dependency logic
+- Action items in `action-plan.md` should use checkbox format (`- [ ]` / `- [x]`) for tracking
+- Mark items completed during the session as `[x]` with a "Completed During Session" section
+- `project-scopes.md` should read like mini PRDs — specific enough to hand off or reference later
+- `priorities.md` should include a dependencies chain showing how projects gate each other
+- If a session covers a single deep-dive project, `project-scopes.md` may have only one section but with more depth
+- If a session is a broad backlog dump, `project-scopes.md` may have many shorter sections
+
+### Type 2: Positioning (`strategy/positioning/`)
+
+**Indicators:** Solo session (Dax), discussing company vision/mission, market positioning, brand identity, strategic goals, quarterly roadmap, Discord architecture design
+
+**File Structure (4 files):**
+1. `summary.md` - Session overview, format, focus area, core thesis
+2. `vision-and-positioning.md` - Market differentiation, brand identity, culture/values, target demographic, competitive positioning
+3. `systems-and-operations.md` - How the vision translates to operations: Discord channels, ticketing systems, conversion funnels, staff bonus, user journey flows
+4. `roadmap.md` - Stages, quarterly goals, sequencing, blockers, dependencies, key metrics
+
+**Processing Rules:**
+- These are strategic vision sessions — Dax thinking through identity, positioning, and direction
+- Content spans from high-level ("what are we?") to operational ("how does each channel serve this?")
+- Vision-and-positioning should capture the "why" — market differentiation, culture, brand direction
+- Systems-and-operations should capture the "how" — concrete channel designs, user flows, staff incentive structures
+- Roadmap should capture the "when and what order" — stages, quarterly goals, dependencies
+- Sessions may lean heavily on one file over others (e.g., a channel walkthrough will be systems-heavy, a goals session will be roadmap-heavy) — that's expected
+- These sessions build on each other over time — each one refines and extends the positioning, but process each transcript independently
+
+---
+
 ## General Processing Instructions
 
 ### Universal Rules
