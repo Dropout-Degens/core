@@ -136,29 +136,112 @@ Returns: full boxscore with player stats
 
 ### Supported League Paths
 
-#### Basketball
-| CSV `league` value | ESPN path |
+#### Basketball ✅ Built
+| ESPN path | Notes |
 |---|---|
-| `nba` | `basketball/nba` |
-| `ncaab` | `basketball/mens-college-basketball` |
-| `wnba` | `basketball/wnba` |
-| `ncaaw` | `basketball/womens-college-basketball` |
-| `australia - nbl` | `basketball/nbl` |
+| `basketball/nba` | |
+| `basketball/mens-college-basketball` | NCAAB |
+| `basketball/wnba` | |
+| `basketball/womens-college-basketball` | NCAAW |
+| `basketball/nbl` | Australia NBL |
 
-#### Hockey
-| CSV `league` value | ESPN path |
+Not supported: EuroLeague, France LNB Pro A, Germany BBL
+
+#### Hockey ✅ Built
+| ESPN path | Notes |
 |---|---|
-| `nhl` | `hockey/nhl` |
+| `hockey/nhl` | |
+| `hockey/mens-college-hockey` | Not yet built |
 
-**Not supported by ESPN:** EuroLeague, France LNB Pro A, Germany BBL — these return empty results or 400 errors. Rows in those leagues will be skipped with "game not found".
+Not supported: AHL, KHL
 
-#### Tennis
-| ESPN path | Status |
+#### Tennis ⚠️ Partially supported — see Tennis notes below
+| ESPN path | Notes |
 |---|---|
-| `tennis/atp` | 200 — works |
-| `tennis/wta` | 200 — works |
+| `tennis/atp` | |
+| `tennis/wta` | |
 
-**Tennis is partially supported — see notes below.**
+#### Baseball 🔲 Not yet built
+| ESPN path | Notes |
+|---|---|
+| `baseball/mlb` | |
+| `baseball/college-baseball` | |
+
+Not supported: KBO, NPB
+
+#### Football 🔲 Not yet built
+| ESPN path | Notes |
+|---|---|
+| `football/nfl` | |
+| `football/college-football` | NCAAF |
+| `football/cfl` | |
+| `football/xfl` | |
+
+Not supported: USFL
+
+#### Soccer 🔲 Not yet built
+| ESPN path | Notes |
+|---|---|
+| `soccer/eng.1` | Premier League |
+| `soccer/usa.1` | MLS |
+| `soccer/esp.1` | La Liga |
+| `soccer/ger.1` | Bundesliga |
+| `soccer/fra.1` | Ligue 1 |
+| `soccer/ita.1` | Serie A |
+| `soccer/ned.1` | Eredivisie |
+| `soccer/por.1` | Primeira Liga |
+| `soccer/mex.1` | Liga MX |
+| `soccer/bra.1` | Brasileirao |
+| `soccer/arg.1` | Argentina Primera |
+| `soccer/uefa.champions` | Champions League |
+| `soccer/uefa.europa` | Europa League |
+| `soccer/uefa.europa.conf` | Conference League |
+| `soccer/fifa.world` | FIFA World Cup |
+| `soccer/concacaf.champions` | CONCACAF Champions |
+| `soccer/conmebol.libertadores` | Copa Libertadores |
+| `soccer/jpn.1` | J-League |
+| `soccer/aus.1` | A-League |
+| `soccer/sco.1` | Scottish Premiership |
+| `soccer/tur.1` | Super Lig (Turkey) |
+| `soccer/eng.w.1` | WSL (Women's England) |
+
+Not supported: K-League, NWSL
+
+#### MMA 🔲 Needs investigation before building
+| ESPN path | Notes |
+|---|---|
+| `mma/ufc` | Fight result structure differs from team sports |
+| `mma/bellator` | |
+
+#### Golf 🔲 Needs investigation before building
+| ESPN path | Notes |
+|---|---|
+| `golf/pga` | |
+| `golf/lpga` | |
+
+Not supported: European Tour, College Golf
+
+#### Available but no alert data yet
+| ESPN path | Notes |
+|---|---|
+| `racing/f1` | Formula 1 |
+| `lacrosse/pll` | |
+| `lacrosse/nll` | |
+| `lacrosse/mens-college-lacrosse` | |
+| `volleyball/mens-college-volleyball` | |
+| `volleyball/womens-college-volleyball` | |
+| `australian-football/afl` | |
+
+#### Not supported by ESPN
+- NASCAR, IndyCar, MotoGP (only F1 works in motorsports)
+- Rugby (all formats — NRL, Six Nations, Super Rugby, Top 14)
+- Cricket (all — IPL, Big Bash, World Cup)
+- Boxing
+- Softball
+- Skiing, Swimming, Cycling, Horse Racing
+- Darts, Snooker
+- Handball, Water Polo, Field Hockey
+- Esports (all)
 
 ### Player Stats Location in Summary Response
 
