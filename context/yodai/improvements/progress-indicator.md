@@ -1,24 +1,36 @@
 # Progress Indicator for Long Tasks
 
 ## Problem
-When YodAI runs a complex multi-step task (multiple tool calls, Supabase queries, file writes), the user sees nothing. No indication of what's happening or how long it will take. Feels like the bot is stuck or broken.
+When YodAI runs a complex multi-step task (multiple tool calls, Supabase queries, file writes), the user sees nothing. No indication of what is happening or how long it will take. Feels like the bot is stuck or broken.
+
+## When to trigger
+Only activate this for tasks where a plan clearly needs to be established first — multi-step work that requires sequencing. NOT for:
+- Simple questions or lookups (single tool call)
+- Short conversational replies
+- Quick reads (e.g. "what is on my calendar")
+
+Trigger when the task clearly requires 3+ steps or multiple tool calls to complete.
 
 ## Solution
-For any task that will take more than one tool call:
 
 1. **Post a plan first** — before starting the work, send a message outlining the steps:
-   e.g. "Here's my plan:
+   e.g. "Plan:
 1. Read Supabase schema
 2. Query EVAlertEvent
 3. Cross-reference EVActualStat
 4. Summarize findings"
 
-2. **Progress updates** — send a Telegram message at each major step with a simple progress bar:
-      
-3. **Time estimate** — include a rough time estimate in the first progress message based on number of steps
+2. **Progress updates every 5 seconds** — while working, send an updated progress message every 5 seconds:
+   Updating the same message if possible, or sending a new one.
+   Format: current step + simple bar
+   e.g. "Step 2/4 — querying Supabase |====------| 40%"
+        "Step 3/4 — cross-referencing stats |========--| 75%"
+
+3. **Time estimate** — include a rough estimate in the plan message based on number of steps
 
 ## Implementation Notes
-- Trigger when: response.stop_reason == "tool_use" and more than 1 tool call expected
-- Progress messages sent via the Telegram bot (need access to update object or chat_id in the agent loop)
-- Plan detection: before first API call, have a lightweight pass that outlines steps (or detect from tool call count)
-- Keep progress messages short — one line each, edit in place if Telegram allows (or send new)
+- Trigger condition: task requires 3+ tool calls or explicit multi-step sequencing
+- Progress ticker runs on a background thread, sends update every 5 seconds via Telegram
+- Needs chat_id passed into the agent loop so the ticker can send independently
+- Stop ticker when agent reaches end_turn
+- Keep messages short — one line each
