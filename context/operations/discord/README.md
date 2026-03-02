@@ -17,6 +17,9 @@ Scripts and explorations for the Dropout Degens Discord bot. All original source
 
 ## Folder Contents
 
+### `channel-map.md`
+Full map of every permanent channel in the DD server — name, ID, and type, organized by category. Use this to look up a channel ID before writing any script that targets a specific channel. Ticket threads are excluded (they're temporary per-member threads). Generated March 2026.
+
 ### `examples/`
 Basic working scripts to use as building blocks. Start here when building something new.
 
