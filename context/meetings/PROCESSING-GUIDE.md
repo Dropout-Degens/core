@@ -141,6 +141,26 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 - Marketing/promotion plans
 - Success metrics and timeline
 
+### Type 5: Exploratory Relationship
+
+**Indicators:** Cold outreach or random DM turning into a call, no defined partnership structure yet, both sides exploring what value exchange could look like, no formal commitment expected
+
+**File Structure (4 files):**
+1. `summary.md` - Who the person is, what was discussed, what each side offered
+2. `next-steps.md` - Action items for Dax and the other party, open items, follow-up plan
+3. `opportunities.md` - Each opportunity proposed, with Dax's read on each (pursue / defer / off the table)
+4. `relationship-dynamics.md` - Dax's read on the person, what they actually want from DD, what DD could get in return, red flags to watch, and how to approach future conversations. Keep this actionable — not a biography.
+
+**Focus Areas:**
+- Who the person is and what they actually do
+- What they're offering and what they want in return
+- Which opportunities are worth pursuing vs. ignoring
+- Credibility — has it been verified?
+- What's explicitly off the table
+
+**Folder-Level File:**
+Every external relationship folder should have an `ongoing-thoughts` or `final-thoughts` file at the folder root (not inside a date folder). This is a living document summarizing the overall relationship arc — update it as new meetings happen. It covers: where the relationship stands, what each side wants, what's pending, what's off the table.
+
 ---
 
 ## Strategy Meetings (`meetings/strategy/`)
@@ -175,6 +195,9 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 3. `systems-and-operations.md` - How the vision translates to operations: Discord channels, ticketing systems, conversion funnels, staff bonus, user journey flows
 4. `roadmap.md` - Stages, quarterly goals, sequencing, blockers, dependencies, key metrics
 
+**Alternative for file #3 — `strategies-discussed.md`:**
+When a positioning session spends significant time articulating betting strategies or educational frameworks (e.g., bankroll management, unit sizing, variance, line shopping), use `strategies-discussed.md` instead of `systems-and-operations.md`. This file formats and cleans up the strategies as proper educational content — not raw notes, but readable frameworks. Use this when the session is more educational-content-focused than operational-design-focused.
+
 **Processing Rules:**
 - These are strategic vision sessions — Dax thinking through identity, positioning, and direction
 - Content spans from high-level ("what are we?") to operational ("how does each channel serve this?")
@@ -190,10 +213,11 @@ This guide defines how to process meeting transcripts in the `meetings/` folder.
 
 ### Universal Rules
 1. **Read fresh for each meeting** - Do not carry context from previous meetings unless explicitly told
-2. **Adapt file structure** - If content doesn't fit standard structure, create appropriate files
-3. **Be specific** - Include dates, names, numbers, specifics (not vague summaries)
-4. **Capture action items** - Always extract who does what by when
-5. **Maintain context** - These files are for AI/future reference, not just humans
+2. **Self-contained docs** - Each file must make sense without reading the others. Never reference "first call," "second call," or meeting order. A file should read cleanly in isolation.
+3. **Adapt file structure** - If content doesn't fit standard structure, create appropriate files
+4. **Be specific** - Include dates, names, numbers, specifics (not vague summaries)
+5. **Capture action items** - Always extract who does what by when
+6. **Maintain context** - These files are for AI/future reference, not just humans
 
 ### How to Determine File Structure
 1. Read the first 100-200 lines of transcript
