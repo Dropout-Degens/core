@@ -8,3 +8,6 @@ BOT:  You've got 4 events today — all back-to-back content posts in the mornin
 
 That's it for the day. Pretty light schedule.
 
+[21:19:56] USER: Thanks on Thursday. Who do I have a call with?
+BOT:  You've got a call with **Turtle Daddy** on Thursday from **12:30 PM – 2:00 PM EST**.
+
