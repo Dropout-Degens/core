@@ -1,3 +1,9 @@
+# MOVED - See open improvements
+
+This improvement was moved back to `context/yodai/improvements/discord-channel-mapping.md` on 2026-03-03 because it was not fully completed.
+
+---
+
 # Discord Channel Mapping Improvement
 
 ## Problem
