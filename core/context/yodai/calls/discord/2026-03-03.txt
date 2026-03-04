@@ -3,3 +3,10 @@
 
 What's the channel ID you want me to read from?
 [20:07:41] asiad_: From the call you are in
+[20:07:46] BOT: I don't have access to voice channel transcripts or real-time call data. The `read_discord_channel` function only works with **text channels** — it reads message history, not voice call audio or transcripts.
+
+If you want me to:
+- **Read messages from a text channel** — give me the channel ID
+- **Transcribe audio from a voice call** — you'd need to export the audio file first, then I can transcribe it using Google Speech-to-Text
+
+Which one do you need?
