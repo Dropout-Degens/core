@@ -11,3 +11,6 @@ If you want me to:
 
 Which one do you need?
 [20:07:54] asiad_: Okay can you see it
+[20:07:59] BOT: I still need the **channel ID** to read it. 
+
+Can you provide the channel ID of the text channel you want me to access?
