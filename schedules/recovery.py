@@ -8,12 +8,13 @@ If >3 missed schedule instances, sends a batched summary instead of running them
 """
 import logging
 import os
+import time
 from datetime import datetime, timedelta
 
 import pytz
 import requests
 
-from schedules.uptime import get_last_offline_gap
+from schedules.uptime import get_last_offline_gap, log_schedule_run
 
 log = logging.getLogger(__name__)
 TZ = pytz.timezone("America/New_York")
@@ -114,11 +115,16 @@ def check_and_recover(registry: list[dict]):
     for m in missed:
         scheduled_str = m["fired_at"].strftime("%H:%M EST")
         log.info(f"Recovering missed schedule: {m['name']} (was due {scheduled_str})")
+        t = time.monotonic()
         try:
             m["fn"]()
+            dur = time.monotonic() - t
             log.info(f"Recovery OK: {m['name']}")
+            log_schedule_run(m["name"], "RECOVERED", f"due {scheduled_str}", dur)
         except Exception as e:
+            dur = time.monotonic() - t
             log.error(f"Recovery failed for {m['name']}: {e}")
+            log_schedule_run(m["name"], "FAILED", f"recovery err: {str(e)[:60]}", dur)
             _send_telegram(
                 f"❌ Missed task `{m['name']}` (due {scheduled_str}) failed to recover: `{e}`"
             )
