@@ -10,3 +10,4 @@ If you want me to:
 - **Transcribe audio from a voice call** — you'd need to export the audio file first, then I can transcribe it using Google Speech-to-Text
 
 Which one do you need?
+[20:07:54] asiad_: Okay can you see it
