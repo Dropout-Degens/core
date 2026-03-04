@@ -1,1 +1,4 @@
 [20:07:31] asiad_: Can you access the transcript
+[20:07:36] BOT: I can access Discord messages from text channels using `read_discord_channel`, but I need the **channel ID** to pull the transcript.
+
+What's the channel ID you want me to read from?
