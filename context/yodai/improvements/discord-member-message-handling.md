@@ -15,7 +15,7 @@ Implement a system that allows messages from other Discord members, but with con
 - Can read and write to GitHub
 - No rate limits or restrictions
 
-### Authorized Members (JP + specified team members)
+### Authorized Members (any member in channel, except excluded)
 - Can query Supabase (read-only)
 - Can read GitHub files and list directories
 - **Cannot** write/edit GitHub files
@@ -24,7 +24,10 @@ Implement a system that allows messages from other Discord members, but with con
 - Rate limits apply
 - Can ask questions and get analysis
 
-### All Other Members
+**Excluded Members:**
+- 1092950872713076907 (blocked from all YodAI interaction)
+
+### All Other Members (outside this channel)
 - Can mention/tag YodAI
 - Limited response capability (greeting, info only)
 - Cannot query databases or access GitHub
@@ -43,13 +46,20 @@ Implement a system that allows messages from other Discord members, but with con
 - `update_manual` — **blocked**
 - `merge_github_branch` — **blocked**
 
+**Excluded member check:**
+- If sender ID = 1092950872713076907 → no response, block all operations
+
+## Channel Scope
+- Primary channel: 1477573766623002676 (AsiaD)
+- Any member in this channel can interact with YodAI (except excluded IDs)
+
 ## Dependencies
 - Message source detection (`message-source-detection.md`) — to identify sender
 - Discord channel mapping (`discord-channel-mapping.md`) — to know which channels to monitor
 
 ## Next Steps
-1. Define exact list of authorized members (JP + others?)
-2. Implement permission checks on all tool calls
+1. Implement permission checks on all tool calls
+2. Add member ID validation (excluded list)
 3. Add audit logging for all member queries
 4. Set up rate limiting per member
 
