@@ -157,6 +157,28 @@ Every script appends these columns to the output CSV:
 | `Longest Reception` / `Player Longest Reception` | Player's longest reception in yards | Over/Under vs line | ESPN `receiving` category, `LONG` label |
 | `Kicking Points` / `Player Kicking Points` | Kicker's total points scored | Over/Under vs line | ESPN `kicking` category, `PTS` label |
 | `FG Made` | Field goals made (int, not made/att) | Over/Under vs line | ESPN `kicking` category, `FG` label — parse "3/4" → 3 |
+| `Pass Yards` / `Player Passing Yards` | Player's passing yards | Over/Under vs line | ESPN `passing` category, `YDS` label |
+| `Pass Attempts` / `Player Passing Attempts` | Player's pass attempts | Over/Under vs line | ESPN `passing` category, `C/ATT` label — parse "24/35" → 35 (index 1) |
+| `Pass Completions` / `Player Passing Completions` | Player's completions | Over/Under vs line | ESPN `passing` category, `C/ATT` label — parse "24/35" → 24 (index 0) |
+| `Pass TDs` / `Player Passing Touchdowns` | Player's passing TDs | Over/Under vs line | ESPN `passing` category, `TD` label |
+| `INT` / `Player Interceptions` | Player's interceptions thrown | Over/Under vs line | ESPN `passing` category, `INT` label |
+| `Rush Yards` / `Player Rushing Yards` | Player's rushing yards | Over/Under vs line | ESPN `rushing` category, `YDS` label |
+| `Rush Attempts` / `Player Rushing Attempts` | Player's rush attempts | Over/Under vs line | ESPN `rushing` category, `CAR` label |
+| `Rush TDs` | Player's rushing TDs | Over/Under vs line | ESPN `rushing` category, `TD` label |
+| `Longest Rush` / `Player Longest Rush` | Player's longest rush in yards | Over/Under vs line | ESPN `rushing` category, `LONG` label |
+| `Tackles + Ast` / `Player Tackles + Assists` | Player's total tackles (solo + assisted) | Over/Under vs line | ESPN `defensive` category, `TOT` label |
+| `Sacks` / `Player Sacks` | Player's sacks | Over/Under vs line | ESPN `defensive` category, `SACKS` label — stored as float (0.5 for shared sacks) |
+| `Moneyline` (football) | Signed point margin (bet_team_score - opp_score) | Same as actualStat | From final scores in header.competitions[0].competitors[].score |
+| `Point Spread` | Covered margin (margin + spread) | Same as actualStat | positive = covered, negative = didn't cover |
+| `Total Points` | Combined final score (both teams) | Over: total - line / Under: line - total | Sum of both teams' final scores |
+| `Team Total` | Bet team's final score | Over: score - line / Under: line - score | One team's final score only |
+
+### Tennis
+
+| Bet Type | actualStat | difference | Example |
+|---|---|---|---|
+| `Moneyline` | Game margin from bet player's perspective: (bet player total games won) - (opp total games won) | Same as actualStat | Bet on Djokovic, he wins 6-4 6-3: actualStat = (6+6)-(4+3) = +5 |
+| `Total Games` | Total games played across all sets, both players combined | Over: total - line / Under: line - total | Sets 6-4 4-6 6-4: total = 30, line=27.5 → diff=+2.5 |
 
 ### Key Rules
 - **actualStat is always a single number** — never a score like "3-8". Raw scores are a bug.
@@ -245,7 +267,7 @@ Not supported: EuroLeague, France LNB Pro A, Germany BBL
 
 Not supported: AHL, KHL
 
-#### Tennis ⚠️ Partially supported — see Tennis notes below
+#### Tennis ✅ Built (moneyline + total games)
 | ESPN path | Notes |
 |---|---|
 | `tennis/atp` | |
@@ -259,7 +281,7 @@ Not supported: AHL, KHL
 
 Not supported: KBO, NPB
 
-#### Football ✅ Built (receiving + kicking scripts ready)
+#### Football ✅ Built (passing, rushing, receiving, kicking, defensive, team markets)
 | ESPN path | League | Notes |
 |---|---|---|
 | `football/nfl` | NFL | 30,420 rows in allnewfootball.csv |
@@ -395,7 +417,8 @@ To target a category: loop `statistics[]` and filter by `.name == 'receiving'` e
 
 #### Special parse cases for football
 - `FG` (kicking): `"3/4"` format → `int(raw.split('/')[0])` to get made count
-- `C/ATT` (passing): `"24/35"` format → split similarly if needed
+- `C/ATT` (passing): `"24/35"` format → completions = `int(raw.split('/')[0])` = 24, attempts = `int(raw.split('/')[1])` = 35
+- `SACKS` (defensive): stored as float — 0.5 is valid for a shared sack
 - All other football stats are plain integers
 
 ---
@@ -481,48 +504,64 @@ py H:/dropout_degens/claude/newdata/scripts/fetch_basketball_assists.py
 
 ---
 
-## Tennis API — Investigation Notes
+## Tennis API
 
-> **Status: Partially supported. To be built out.**
+> **Status: Built. Moneyline and Total Games supported.**
 
-Tested February 2026. Both `tennis/atp` and `tennis/wta` return 200 from the scoreboard endpoint, but the structure is different from basketball/hockey and the summary endpoint does not work.
+Tennis uses the **scoreboard endpoint only** — the summary endpoint returns 400 for all tennis match IDs. No player stat breakdowns are available through ESPN (aces, double faults, etc. are always empty).
 
-### What works
-- Scoreboard returns active tournaments and all match results
-- Each match has: player names, set-by-set scores (`linescores`), and a `winner: true/false` flag
-- Enough data to process **match winner (moneyline-style)** bets
+### Structural difference from basketball/hockey
 
-### What doesn't work
-- **Summary endpoint returns 400** for all tennis match IDs — no detail page
-- `statistics: []` is always empty on competitor objects — no aces, double faults, first serve %, etc.
-- No player stat breakdowns available at all through ESPN
+Tennis matches are **not** at top-level `events[]`. They are nested inside tournament groupings:
 
-### Key structural difference from basketball/hockey
-Tennis matches are **not** at the top-level `events[]`. They are nested:
 ```
-response.events[]
-  .groupings[]          ← rounds (e.g. Round of 64, Quarterfinals, Final)
-    .competitions[]     ← individual matches
+response.events[]                 ← tournaments
+  .groupings[]                    ← rounds (Round of 64, Quarterfinals, Final, etc.)
+    .competitions[]               ← individual matches
+      .startDate                  ← ISO date string — MUST filter by this to target a date
       .competitors[]
-        .athlete.displayName    ← player name
-        .winner                 ← True/False
-        .linescores[]           ← set scores, e.g. [{value: 6}, {value: 4}]
-        .statistics             ← always empty []
+        .athlete.displayName      ← player name (guard against empty — will false-match everything)
+        .winner                   ← True/False
+        .linescores[]             ← [{value: 6.0}, {value: 4.0}, ...] one entry per set
+        .statistics               ← always empty []
 ```
 
-The scoreboard is not filtered by date the same way — it returns the full active tournament(s) with all matches. Filtering to a specific match date requires checking `competition.startDate`.
+The scoreboard returns the **full active tournament** with all rounds, not just one date. Always filter by `competition.startDate` to isolate the correct matches.
 
-### What you can build with this
-- Match winner processing (who won the match) — viable
-- Set score margin bets — viable (linescores give games per set)
+### actualStat by bet type
 
-### What requires a different data source
-- Any player stat props (aces, double faults, service games won, etc.) — ESPN does not expose these. Would need the Tennis Abstract API, ATP/WTA official data, or a paid provider.
+| Bet Type | betPrediction format | actualStat | difference |
+|---|---|---|---|
+| `Moneyline` | `"Player Name"` (winner predicted) | Game margin from bet player's perspective: (bet player total games) - (opp total games) | Same as actualStat. Win if `winner=True`, Loss otherwise |
+| `Total Games` | `"Over 20.5"` / `"Under 20.5"` (no player prefix) | Total games played across all sets, both players combined | Over: total - line / Under: line - total |
 
-### Next steps when ready to build
-1. Check what `betType` values exist in the tennis CSV
-2. If match winner only — adapt the moneyline pattern using `competition.competitors[].winner`
-3. If stat props — investigate alternative APIs before building
+**Total games calculation:**
+```
+Player A linescores: [6, 4, 6]
+Player B linescores: [4, 6, 4]
+Total = 6+4+6+4+6+4 = 30
+Sum ALL linescore values for BOTH competitors across ALL sets.
+```
+
+### Date handling for tennis
+
+- `eventTime`: Unix timestamp when populated, or literal string `'null'`
+- `receivedTime`: always Unix timestamp
+- When `eventTime` valid: search offset `[0]` only
+- When `eventTime` is `'null'`: search `receivedTime +0 and +1` days
+
+### Limitations
+
+- Player stat props (aces, double faults, service games won) — ESPN does not expose these. Would require Tennis Abstract API, ATP/WTA official data, or a paid provider.
+- No summary endpoint — all data comes from scoreboard only.
+
+---
+
+## Soccer — Not Yet Built
+
+Raw data exists: `allnewsoccer.csv`
+
+ESPN supports soccer via paths like `soccer/eng.1`, `soccer/usa.1`, etc. (see Supported League Paths above). Scripts have not been built yet. When ready, use the basketball/football pattern — scoreboard to find the game, summary for stats.
 
 ---
 
